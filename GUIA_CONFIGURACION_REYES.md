@@ -48,6 +48,14 @@ Para **NO romper tu correo**, usaremos el método de "Registros A" y no el cambi
 *   **Datos / Valor:** `75.2.60.5`
     *(Esta es la dirección IP del balanceador de carga de Netlify)*.
 
+    > **⚠️ SOLUCIÓN AL ERROR DE CONFLICTO:**
+    > Si al agregar este registro te aparece un recuadro rojo que dice:
+    > *"Un registro en este ajuste predeterminado está con conflicto..."*
+    >
+    > **SOLUCIÓN:** Haz clic sin miedo en el botón blanco que dice **"REEMPLAZAR AJUSTE PREDETERMINADO"** (a la derecha).
+    > *   Esto borrará automáticamente las IPs viejas de Squarespace (198.185...) y pondrá la nuestra de Netlify (75.2.60.5).
+    > *   Esto es exactamente lo que queremos para que el sitio se vea.
+
 **Registro 2 (Para www):**
 *   **Host:** `www`
 *   **Tipo:** `CNAME`
