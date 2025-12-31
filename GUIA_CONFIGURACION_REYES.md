@@ -1,86 +1,73 @@
 # Guía Definitiva: Configuración de Dominio para Reyes Computing
 
-Esta guía te explicará exactamente cómo conectar tu sitio web, Netlify, GitHub y tu dominio `reyescomputing.com` (comprado en Squarespace).
+Esta guía está personalizada para tu configuración actual. Sigue estos pasos exactos para conectar tu dominio `reyescomputing.com` (Squarespace) a tu sitio web.
 
 ---
 
-## Paso 1: Confirmar Conexión con GitHub
+## Paso 0: Renombrar tu Sitio en Netlify (Para evitar confusiones)
 
-Actualmente tu código ya está en GitHub y tienes el archivo `netlify.toml` listo. Esto significa que Netlify puede "escuchar" tus cambios.
-
-1.  Asegúrate de que los últimos cambios (incluyendo este archivo y el archivo `CNAME` que acabo de crear) estén subidos a GitHub (yo me encargo de esto al finalizar).
-2.  En **Netlify**, asegúrate de que el sitio está conectado a tu repositorio `reyes-computing`. Si ya lo hiciste, salta al paso 2.
-
----
-
-## Paso 2: Configurar Dominio en Netlify
+Para que no tengas que buscar direcciones extrañas, vamos a ponerle un nombre fácil a tu sitio.
 
 1.  Inicia sesión en [Netlify](https://app.netlify.com/).
-2.  Ve a tu sitio (`reyes-computing`).
-3.  Haz clic en **"Domain management"** (o "Site configuration" > "Domain management").
-4.  Haz clic en el botón **"Add a domain"**.
-5.  Escribe: `reyescomputing.com`
-6.  Haz clic en **Verify**.
-7.  Haz clic en **Add domain** (Netlify te preguntará si eres el dueño, di que sí).
-8.  Netlify te mostrará unas alertas de "Check DNS configuration". Esto es normal.
+2.  Entra a tu sitio actual (el que tiene el nombre raro).
+3.  Ve a **"Site configuration"** (Configuración del sitio).
+4.  Haz clic en el botón **"Change site name"**.
+5.  Escribe exactamente: `reyes-computing`
+    *   *(Si te dice que ya está tomado, prueba con `reyescomputing-web` o `reyes-computing-cloud`).*
+6.  Guarda los cambios.
+    *   **IMPORTANTE:** Ahora tu dirección segura será: `https://reyes-computing.netlify.app` (o el nombre que hayas elegido).
 
 ---
 
-## Paso 3: Configurar DNS en Squarespace (CRUCIAL)
+## Paso 1: Configurar DNS en Squarespace
 
-**IMPORTANTE:** En tu captura de pantalla vi que tienes activado "Se renueva automáticamente en Google Workspace". Esto significa que probablemente usas Gmail para correos corporativos (ej. `control@reyescomputing.com`).
+Viendo tu captura de pantalla, ya estás en el lugar correcto.
 
-Para **NO romper tu correo**, usaremos el método de "Registros A" y no el cambio de Nameservers.
-
-### Instrucciones para Squarespace:
-
-1.  Ve a tu [Panel de Dominios de Squarespace](https://account.squarespace.com/domains).
-2.  Haz clic en tu dominio `reyescomputing.com`.
-3.  En el menú lateral izquierdo (como en tu foto), haz clic en **DNS**.
-4.  Busca la sección **"Registros personalizados"** (o "Custom Records").
-5.  Si ves registros antiguos que apunten a otro hosting (que NO sean los de Google/GMail), bórralos. **NO borres nada que diga "MX" o "Google" o "Mail"**.
+1.  En esa pantalla de **Squarespace Dominios**, haz clic sobre la fila que dice **`reyescomputing.com`** (donde está el logo verde de "Activo").
+2.  En el menú lateral izquierdo que aparecerá, haz clic en **DNS**.
+3.  Busca la sección llamada **"Registros personalizados"** (o "Custom Records").
+    *   *Nota: Si ves registros antiguos que no sean de Google/Gmail, bórralos.*
 
 ### Agrega estos 2 registros exactos:
 
-**Registro 1 (Para el dominio raíz):**
-*   **Host:** `@` (Si no te deja poner `@`, déjalo vacío).
+**Registro 1 (Para que funcione sin www):**
+*   **Host:** `@`
 *   **Tipo:** `A`
 *   **Datos / Valor:** `75.2.60.5`
-    *(Esta es la dirección IP del balanceador de carga de Netlify)*.
+    *   *(Si Squarespace te muestra un error rojo de "Conflicto", haz clic en el botón **"REEMPLAZAR AJUSTE PREDETERMINADO"**).*
 
-    > **⚠️ SOLUCIÓN AL ERROR DE CONFLICTO:**
-    > Si al agregar este registro te aparece un recuadro rojo que dice:
-    > *"Un registro en este ajuste predeterminado está con conflicto..."*
-    >
-    > **SOLUCIÓN:** Haz clic sin miedo en el botón blanco que dice **"REEMPLAZAR AJUSTE PREDETERMINADO"** (a la derecha).
-    > *   Esto borrará automáticamente las IPs viejas de Squarespace (198.185...) y pondrá la nuestra de Netlify (75.2.60.5).
-    > *   Esto es exactamente lo que queremos para que el sitio se vea.
-
-**Registro 2 (Para www):**
+**Registro 2 (Para que funcione con www):**
 *   **Host:** `www`
 *   **Tipo:** `CNAME`
 *   **Datos / Valor:** `reyes-computing.netlify.app`
-
-    > **❓ ¿DÓNDE ENCUENTRO ESTA DIRECCIÓN?**
-    > 1. Ve a tu panel principal en [Netlify](https://app.netlify.com/).
-    > 2. Haz clic en tu sitio.
-    > 3. Mira en la **esquina superior izquierda** de la pantalla, justo debajo del nombre de tu equipo. Verás un enlace verde que dice algo como `nombre-de-tu-sitio.netlify.app`.
-    > 4. **Esa es la dirección que debes copiar y pegar aquí.**
-    > 5. (Nota: Si tu sitio se llama `reyes-computing` en Netlify, entonces la dirección es `reyes-computing.netlify.app`).
+    *   *(Asegúrate de poner aquí el nombre que elegiste en el Paso 0 + .netlify.app).*
 
 ---
 
-## Paso 4: Esperar y Verificar
+## Paso 2: Conectar el Dominio en Netlify
 
-1.  Los cambios de DNS pueden tardar desde 10 minutos hasta 24 horas en propagarse.
-2.  Netlify detectará automáticamente el cambio y emitirá un certificado SSL (HTTPS) gratuito para que tu sitio sea seguro (candadito verde).
-3.  Prueba entrar a `https://reyescomputing.com`.
+Ahora volvemos a Netlify para decirle que el dominio es tuyo.
+
+1.  Ve a tu sitio en Netlify (`reyes-computing`).
+2.  Haz clic en **"Domain management"** en el menú izquierdo.
+3.  Haz clic en **"Add a domain"**.
+4.  Escribe: `reyescomputing.com`
+5.  Haz clic en **Verify** y luego en **Add domain**.
 
 ---
 
-## Resumen de Archivos Agregados
+## Paso 3: Esperar el Certificado de Seguridad (HTTPS)
 
-*   **CNAME:** He agregado un archivo llamado `CNAME` en tu código con el valor `reyescomputing.com`. Esto ayuda a Netlify (y otros servicios) a reconocer tu dominio oficial desde el código fuente.
-*   **Canonical Link:** He agregado una etiqueta en tu `index.html` para mejorar tu SEO y decirle a Google que `reyescomputing.com` es la fuente original.
+1.  Al principio podría decir "Waiting on DNS propagation". Es normal.
+2.  Espera unos minutos (o hasta 1 hora).
+3.  Netlify activará automáticamente el candadito verde (SSL) para tu sitio.
 
-¡Listo! Con esto tu imperio digital estará en línea.
+---
+
+## Resumen Final
+
+Una vez hechos estos pasos, tu sitio será accesible en:
+*   `https://reyescomputing.com`
+*   `https://www.reyescomputing.com`
+
+¡Avísame cuando hayas completado el Paso 1 para verificarlo desde aquí!
