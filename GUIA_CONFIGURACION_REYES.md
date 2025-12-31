@@ -60,7 +60,13 @@ Para **NO romper tu correo**, usaremos el método de "Registros A" y no el cambi
 *   **Host:** `www`
 *   **Tipo:** `CNAME`
 *   **Datos / Valor:** `reyes-computing.netlify.app`
-    *(Asegúrate de poner la URL exacta que Netlify te dio para tu sitio, usualmente termina en `.netlify.app`. Si tu sitio en Netlify se llama distinto, usa ese nombre)*.
+
+    > **❓ ¿DÓNDE ENCUENTRO ESTA DIRECCIÓN?**
+    > 1. Ve a tu panel principal en [Netlify](https://app.netlify.com/).
+    > 2. Haz clic en tu sitio.
+    > 3. Mira en la **esquina superior izquierda** de la pantalla, justo debajo del nombre de tu equipo. Verás un enlace verde que dice algo como `nombre-de-tu-sitio.netlify.app`.
+    > 4. **Esa es la dirección que debes copiar y pegar aquí.**
+    > 5. (Nota: Si tu sitio se llama `reyes-computing` en Netlify, entonces la dirección es `reyes-computing.netlify.app`).
 
 ---
 
