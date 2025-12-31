@@ -15,9 +15,11 @@ Esta es la forma profesional de hacerlo. Cada vez que guardes cambios en tu cód
 3.  En tu panel (Team Overview), haz clic en el botón **"Add new site"** > **"Import an existing project"**.
 4.  Selecciona tu proveedor de Git (ej. **GitHub**).
 5.  Busca y selecciona el repositorio de `reyes-computing`.
-6.  Netlify detectará automáticamente la configuración gracias al archivo `netlify.toml` que hemos creado.
-    *   **Build command:** (Déjalo vacío)
-    *   **Publish directory:** `.` (Punto)
+6.  Netlify detectará automáticamente la configuración gracias al archivo `netlify.toml` que hemos creado. Si te pide llenar los campos manualmente ("Build settings"), usa estos valores:
+    *   **Branch to deploy:** Selecciona `main` (o `master`).
+    *   **Base directory:** (Déjalo vacío).
+    *   **Build command:** (Déjalo vacío).
+    *   **Publish directory:** Escribe un punto: `.`
 7.  Haz clic en **"Deploy site"**.
 
 ¡Listo! En unos segundos tu sitio estará en vivo. Netlify te dará una URL (ej. `reyes-computing.netlify.app`) que podrás cambiar después por tu dominio propio.
