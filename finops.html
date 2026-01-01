@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyes Computing | FinOps</title>
+    <meta name="description" content="Auditoría FinOps. Reduce costos de AWS/GCP y asegura tu infraestructura.">
+
+    <!-- Tailwind CSS (CDN for Environment Compatibility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts: Manrope (Modern) & Space Mono (Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        reyes: {
+                            black: '#050505',
+                            dark: '#121212',
+                            gold: '#FFD700', /* Gold for Authority/King */
+                            cyan: '#00F0FF', /* Cyberpunk/Crypto feel */
+                            slate: '#2A2A2A',
+                            text: '#E0E0E0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Grid Background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased bg-reyes-black text-reyes-text bg-grid scroll-smooth">
+
+    <!-- Navbar -->
+    <nav class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto border-b border-white/10 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-crown text-reyes-gold text-xl"></i>
+            <a href="/" class="text-xl font-extrabold text-white tracking-widest uppercase font-mono">
+                Reyes<span class="text-reyes-gold">Computing</span>
+            </a>
+        </div>
+
+        <!-- Desktop Menu with Email -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-mono text-gray-400">
+            <a href="/finops.html" class="text-reyes-gold transition">FinOps</a>
+            <a href="/devops.html" class="hover:text-reyes-gold transition">DevOps</a>
+            <a href="/seguridad.html" class="hover:text-reyes-gold transition">Seguridad</a>
+            <a href="/contacto.html" class="text-reyes-cyan hover:text-white transition flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+            <a href="/contacto.html" class="px-5 py-2 border border-reyes-gold/50 text-reyes-gold text-sm uppercase tracking-widest hover:bg-reyes-gold hover:text-black transition font-bold">
+                Auditoría Inicial
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-reyes-gold text-2xl focus:outline-none z-50">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+        <a href="/finops.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">FinOps</a>
+        <a href="/devops.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">DevOps</a>
+        <a href="/seguridad.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">Seguridad</a>
+        <a href="/contacto.html" class="text-reyes-cyan text-lg font-mono flex items-center gap-2 mobile-link">
+            <i class="fa-solid fa-envelope"></i> Contacto
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 pt-32 pb-24 md:pt-40 text-center md:text-left flex flex-col md:flex-row items-center relative">
+        <div class="md:w-3/5 md:pr-12">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                <span class="bg-gradient-to-r from-reyes-cyan to-[#0080FF] bg-clip-text text-transparent">FinOps</span> (Ahorro)
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl font-light">
+                Auditoría forense de tu factura. Encontramos dónde se escapa el dinero en recursos zombie y negociamos planes de ahorro con AWS/GCP.
+            </p>
+            <p class="text-md text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="/contacto.html" class="px-8 py-4 bg-white text-black font-bold text-lg hover:bg-reyes-gold transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    Solicitar Auditoría
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 text-center text-gray-600 text-sm font-mono bg-[#020202]">
+        <div class="mb-4">
+            <span class="text-white font-bold text-lg uppercase">Reyes<span class="text-reyes-gold">Computing</span></span>
+        </div>
+        <p class="mb-6">Infraestructura de Clase Mundial para Latam.</p>
+        <div class="flex justify-center items-center space-x-2 text-reyes-gold mb-8">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:control@reyescomputing.com" class="hover:text-white transition">control@reyescomputing.com</a>
+        </div>
+        <div class="flex justify-center space-x-6 text-2xl mb-8 opacity-50">
+            <i class="fa-brands fa-aws"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-microsoft"></i>
+        </div>
+        <p>&copy; 2025 Reyes Computing S.A.S. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Custom Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

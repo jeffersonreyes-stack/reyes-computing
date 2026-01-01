@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyes Computing | Contacto</title>
+    <meta name="description" content="Agenda tu Auditoría de Diagnóstico. Sin costo. Sin compromiso.">
+
+    <!-- Tailwind CSS (CDN for Environment Compatibility) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts: Manrope (Modern) & Space Mono (Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        reyes: {
+                            black: '#050505',
+                            dark: '#121212',
+                            gold: '#FFD700', /* Gold for Authority/King */
+                            cyan: '#00F0FF', /* Cyberpunk/Crypto feel */
+                            slate: '#2A2A2A',
+                            text: '#E0E0E0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Grid Background */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased bg-reyes-black text-reyes-text bg-grid scroll-smooth">
+
+    <!-- Navbar -->
+    <nav class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto border-b border-white/10 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+        <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-crown text-reyes-gold text-xl"></i>
+            <a href="/" class="text-xl font-extrabold text-white tracking-widest uppercase font-mono">
+                Reyes<span class="text-reyes-gold">Computing</span>
+            </a>
+        </div>
+
+        <!-- Desktop Menu with Email -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-mono text-gray-400">
+            <a href="/finops.html" class="hover:text-reyes-gold transition">FinOps</a>
+            <a href="/devops.html" class="hover:text-reyes-gold transition">DevOps</a>
+            <a href="/seguridad.html" class="hover:text-reyes-gold transition">Seguridad</a>
+            <a href="/contacto.html" class="text-reyes-gold transition flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </a>
+            <a href="/contacto.html" class="px-5 py-2 border border-reyes-gold/50 text-reyes-gold text-sm uppercase tracking-widest hover:bg-reyes-gold hover:text-black transition font-bold">
+                Auditoría Inicial
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-reyes-gold text-2xl focus:outline-none z-50">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+        <a href="/finops.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">FinOps</a>
+        <a href="/devops.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">DevOps</a>
+        <a href="/seguridad.html" class="text-2xl font-mono text-white hover:text-reyes-gold transition mobile-link">Seguridad</a>
+        <a href="/contacto.html" class="text-reyes-cyan text-lg font-mono flex items-center gap-2 mobile-link">
+            <i class="fa-solid fa-envelope"></i> Contacto
+        </a>
+    </div>
+
+    <!-- Lead Gen Form -->
+    <section class="py-32 max-w-4xl mx-auto px-4">
+        <div class="bg-[#0A0A0A] p-8 md:p-12 border border-white/10 relative overflow-hidden shadow-2xl">
+            <!-- Background Decoration -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-reyes-cyan/5 rounded-full blur-3xl -z-10"></div>
+
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Agenda tu Auditoría de Diagnóstico</h2>
+                <p class="text-gray-400">Sin costo. Sin compromiso. Solo para empresas que facturan más de $1k USD en nube.</p>
+            </div>
+
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" action="/success.html" class="space-y-6" novalidate>
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-reyes-gold uppercase tracking-widest mb-2 font-mono">Nombre</label>
+                        <input type="text" name="name" id="name" class="w-full p-4 rounded-none bg-[#121212] border border-[#333] text-white transition-all duration-300 focus:outline-none focus:border-reyes-gold focus:shadow-[0_0_15px_rgba(255,215,0,0.2)]" placeholder="Tu nombre" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-reyes-gold uppercase tracking-widest mb-2 font-mono">Empresa</label>
+                        <input type="text" name="company" id="company" class="w-full p-4 rounded-none bg-[#121212] border border-[#333] text-white transition-all duration-300 focus:outline-none focus:border-reyes-gold focus:shadow-[0_0_15px_rgba(255,215,0,0.2)]" placeholder="Nombre de tu Startup" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-reyes-gold uppercase tracking-widest mb-2 font-mono">Email Corporativo</label>
+                        <input type="email" name="email" id="email" class="w-full p-4 rounded-none bg-[#121212] border border-[#333] text-white transition-all duration-300 focus:outline-none focus:border-reyes-gold focus:shadow-[0_0_15px_rgba(255,215,0,0.2)]" placeholder="ceo@empresa.com" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un email válido.</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-reyes-gold uppercase tracking-widest mb-2 font-mono">Gasto Nube Mensual</label>
+                        <select name="cloud_spend" class="w-full p-4 rounded-none bg-[#121212] border border-[#333] text-white transition-all duration-300 focus:outline-none focus:border-reyes-gold focus:shadow-[0_0_15px_rgba(255,215,0,0.2)] text-gray-300">
+                            <option>Menos de $1,000 USD</option>
+                            <option>$1,000 - $5,000 USD</option>
+                            <option>$5,000 - $10,000 USD</option>
+                            <option>Más de $10,000 USD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-reyes-gold uppercase tracking-widest mb-2 font-mono">¿Qué te quita el sueño?</label>
+                    <textarea name="message" id="message" class="w-full p-4 rounded-none bg-[#121212] border border-[#333] text-white transition-all duration-300 focus:outline-none focus:border-reyes-gold focus:shadow-[0_0_15px_rgba(255,215,0,0.2)] h-32" placeholder="Ej: No entiendo mi factura de AWS, tenemos miedo de un hackeo, los despliegues son lentos..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-5 bg-reyes-gold hover:bg-white text-black font-extrabold text-lg transition uppercase tracking-widest font-mono mt-4">
+                    Solicitar Diagnóstico Ahora
+                </button>
+                <div class="text-center mt-4">
+                    <span class="text-xs text-gray-600 font-mono"><i class="fa-solid fa-lock mr-1"></i> NDA disponible bajo solicitud.</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 text-center text-gray-600 text-sm font-mono bg-[#020202]">
+        <div class="mb-4">
+            <span class="text-white font-bold text-lg uppercase">Reyes<span class="text-reyes-gold">Computing</span></span>
+        </div>
+        <p class="mb-6">Infraestructura de Clase Mundial para Latam.</p>
+        <div class="flex justify-center items-center space-x-2 text-reyes-gold mb-8">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:control@reyescomputing.com" class="hover:text-white transition">control@reyescomputing.com</a>
+        </div>
+        <div class="flex justify-center space-x-6 text-2xl mb-8 opacity-50">
+            <i class="fa-brands fa-aws"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-microsoft"></i>
+        </div>
+        <p>&copy; 2025 Reyes Computing S.A.S. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Custom Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                }
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+
+            // --- Form Validation Logic ---
+            const contactForm = document.getElementById('contactForm');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    let isValid = true;
+
+                    // Get fields
+                    const name = document.getElementById('name');
+                    const company = document.getElementById('company');
+                    const email = document.getElementById('email');
+
+                    // Get error elements
+                    const nameError = document.getElementById('name-error');
+                    const companyError = document.getElementById('company-error');
+                    const emailError = document.getElementById('email-error');
+
+                    // Reset errors
+                    [nameError, companyError, emailError].forEach(el => el.classList.add('hidden'));
+                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
+
+                    // Validate Name
+                    if (!name.value.trim()) {
+                        nameError.classList.remove('hidden');
+                        name.classList.add('border-red-500');
+                        isValid = false;
+                    }
+
+                    // Validate Company
+                    if (!company.value.trim()) {
+                        companyError.classList.remove('hidden');
+                        company.classList.add('border-red-500');
+                        isValid = false;
+                    }
+
+                    // Validate Email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+                        emailError.classList.remove('hidden');
+                        email.classList.add('border-red-500');
+                        isValid = false;
+                    }
+
+                    if (!isValid) {
+                        e.preventDefault(); // Stop submission
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
