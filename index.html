@@ -12,10 +12,10 @@
     <!-- Font Awesome --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
      
-    <!-- Fonts: Playfair Display (Serif) & Manrope (Sans) -->
+    <!-- Fonts: Orbitron (Cyberpunk) & Manrope (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <script> 
         tailwind.config = { 
@@ -23,55 +23,55 @@
                 extend: { 
                     fontFamily: { 
                         sans: ['Manrope', 'sans-serif'], 
-                        serif: ['Playfair Display', 'serif'],
+                        orbitron: ['Orbitron', 'sans-serif'],
                     }, 
                     colors: { 
                         reyes: { 
-                            black: '#0a0a0a',
-                            navy: '#050A14', /* Deep Navy */
-                            gold: '#C5A059', /* Elegant Muted Gold */
-                            goldLight: '#E5C585',
+                            black: '#050505',
+                            navy: '#020202',
+                            cyan: '#00F3FF', /* Cyber Neon Cyan */
+                            cyanDark: '#008b91',
                             silver: '#A0A0A0',
                             white: '#E0E0E0'
                         } 
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(10,10,10,0.8), rgba(10,10,10,1)), url('https://placehold.co/1920x1080/000000/C5A059?text=Abstract+Gold+Threads')",
+                        'hero-pattern': "linear-gradient(to bottom, rgba(5,5,5,0.8), rgba(5,5,5,1))",
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)',
                     }
                 } 
             } 
         } 
     </script> 
     <style>
-        .text-gold-gradient {
-            background: linear-gradient(to right, #C5A059, #E5C585, #C5A059);
+        .text-cyan-gradient {
+            background: linear-gradient(to right, #00F3FF, #FFFFFF, #00F3FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .border-gold-gradient {
-            border-image: linear-gradient(to right, #C5A059, transparent) 1;
+        .border-cyan-gradient {
+            border-image: linear-gradient(to right, #00F3FF, transparent) 1;
         }
     </style>
 </head> 
 <body class="antialiased bg-reyes-black text-reyes-white">
  
     <!-- Navbar --> 
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-reyes-black/80">
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo (Use text if image fails, or img) -->
+            <!-- Logo -->
             <a href="/" class="flex items-center gap-3 group">
-                <!-- Using img tag for logo, fallback to text provided in alt -->
-                <!-- <img src="assets/images/logo.png" alt="Reyes Computing" class="h-10 w-auto"> -->
-                <!-- Since image.png is a screenshot of a 404 page (based on my check), I will use text for now to be safe, or just the Crown icon -->
-                 <i class="fa-solid fa-crown text-reyes-gold text-2xl"></i>
-                 <span class="font-serif text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-gold transition">Reyes<span class="text-reyes-gold">Computing</span></span>
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-10 w-auto">
+                 <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
             </a>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="#problem" class="hover:text-reyes-gold transition">El Problema</a>
-                <a href="#solution" class="hover:text-reyes-gold transition">Solución</a>
-                <a href="#why-us" class="hover:text-reyes-gold transition">Nosotros</a>
-                <a href="/contacto.html" class="px-6 py-2 border border-reyes-gold text-reyes-gold hover:bg-reyes-gold hover:text-black transition uppercase text-xs font-bold tracking-widest">
+                <a href="#problem" class="hover:text-reyes-cyan transition">El Problema</a>
+                <a href="#solution" class="hover:text-reyes-cyan transition">Solución</a>
+                <a href="#why-us" class="hover:text-reyes-cyan transition">Nosotros</a>
+                <a href="/contacto.html" class="px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
                     Diagnóstico Inicial
                 </a>
             </div>
@@ -82,21 +82,20 @@
     <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <!-- Using placeholder for now as requested -->
-            <img src="https://placehold.co/1920x1080/000000/222222?text=Abstract+Cyber+Security+Lines" alt="Background" class="w-full h-full object-cover opacity-40">
+            <img src="assets/images/hero-bg.png" alt="Background" class="w-full h-full object-cover opacity-60">
             <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/50 via-reyes-black/80 to-reyes-black"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                Ingeniería Cloud que protege su Margen y <span class="text-gold-gradient italic">blinda su Operación</span>.
+            <h1 class="font-orbitron text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                Ingeniería Cloud que protege su Margen y <span class="text-cyan-gradient italic">blinda su Operación</span>.
             </h1> 
             <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-2xl mx-auto font-light leading-relaxed">
                 Especialistas en FinOps, DevOps y Web Security para Fintechs en Latam. Transformamos infraestructura costosa en activos eficientes.
             </p> 
 
             <div class="flex flex-col items-center gap-4">
-                <a href="/contacto.html" class="px-8 py-4 bg-reyes-gold hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(197,160,89,0.3)]">
+                <a href="/contacto.html" class="px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)]">
                     Solicitar Diagnóstico de Arquitectura
                 </a>
                 <span class="text-xs text-gray-500 flex items-center gap-2">
@@ -107,23 +106,23 @@
     </header>
  
     <!-- SECTION 2: THE PROBLEM -->
-    <section id="problem" class="py-24 bg-reyes-black relative border-t border-white/5">
+    <section id="problem" class="py-24 bg-reyes-black relative border-t border-reyes-cyan/10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <!-- Left: Text -->
                 <div>
-                    <h2 class="font-serif text-3xl md:text-4xl text-white mb-8">
-                        ¿Su infraestructura está <span class="text-reyes-gold">escalando</span> o solo está <span class="text-white border-b border-red-500">gastando</span>?
+                    <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-8">
+                        ¿Su infraestructura está <span class="text-reyes-cyan">escalando</span> o solo está <span class="text-white border-b border-red-500">gastando</span>?
                     </h2>
 
                     <div class="space-y-10">
                         <!-- Item 1 -->
                         <div class="flex gap-4">
                             <div class="mt-1">
-                                <i class="fa-solid fa-coins text-reyes-gold text-xl"></i>
+                                <i class="fa-solid fa-coins text-reyes-cyan text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-serif text-xl mb-2">Fugas de Capital (FinOps)</h3>
+                                <h3 class="text-white font-orbitron text-xl mb-2">Fugas de Capital (FinOps)</h3>
                                 <p class="text-reyes-silver font-sans text-sm leading-relaxed">
                                     Servidores sobredimensionados y recursos 'zombies' que inflan su factura de nube mes a mes sin generar valor.
                                 </p>
@@ -133,10 +132,10 @@
                         <!-- Item 2 -->
                         <div class="flex gap-4">
                             <div class="mt-1">
-                                <i class="fa-solid fa-rocket text-reyes-gold text-xl"></i>
+                                <i class="fa-solid fa-rocket text-reyes-cyan text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-serif text-xl mb-2">Cuellos de Botella (DevOps)</h3>
+                                <h3 class="text-white font-orbitron text-xl mb-2">Cuellos de Botella (DevOps)</h3>
                                 <p class="text-reyes-silver font-sans text-sm leading-relaxed">
                                     Despliegues lentos y manuales que retrasan nuevas funcionalidades y frustran a su equipo de desarrollo.
                                 </p>
@@ -146,10 +145,10 @@
                         <!-- Item 3 -->
                         <div class="flex gap-4">
                             <div class="mt-1">
-                                <i class="fa-solid fa-shield-halved text-reyes-gold text-xl"></i>
+                                <i class="fa-solid fa-shield-halved text-reyes-cyan text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-white font-serif text-xl mb-2">Riesgo Latente (Seguridad)</h3>
+                                <h3 class="text-white font-orbitron text-xl mb-2">Riesgo Latente (Seguridad)</h3>
                                 <p class="text-reyes-silver font-sans text-sm leading-relaxed">
                                     Vulnerabilidades en APIs y bases de datos que ponen en riesgo su cumplimiento con la DIAN/SAT.
                                 </p>
@@ -158,10 +157,10 @@
                     </div> 
                 </div> 
 
-                <!-- Right: Image (Isometric Server Placeholder) -->
+                <!-- Right: Image -->
                 <div class="relative">
-                    <div class="absolute -inset-4 bg-reyes-gold/10 rounded-lg blur-2xl"></div>
-                    <img src="https://placehold.co/600x600/111/C5A059?text=Isometric+Server+Repair" alt="Infraestructura Vulnerable" class="relative rounded w-full border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                    <div class="absolute -inset-4 bg-reyes-cyan/20 rounded-lg blur-2xl"></div>
+                    <img src="assets/images/devops.png" alt="Infraestructura Vulnerable" class="relative rounded w-full border border-reyes-cyan/20 shadow-neon grayscale hover:grayscale-0 transition duration-700">
                 </div>
             </div> 
         </div> 
@@ -170,57 +169,57 @@
     <!-- SECTION 3: THE SOLUTION -->
     <section id="solution" class="py-24 bg-[#050505]">
         <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-            <h2 class="font-serif text-3xl md:text-5xl text-white mb-4">Metodología de Optimización Integral</h2>
-            <div class="w-24 h-1 bg-reyes-gold mx-auto"></div>
+            <h2 class="font-orbitron text-3xl md:text-5xl text-white mb-4">Metodología de Optimización Integral</h2>
+            <div class="w-24 h-1 bg-reyes-cyan mx-auto shadow-neon"></div>
         </div>
  
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Card 1 -->
-            <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-gold transition group">
-                <div class="h-12 w-12 bg-reyes-gold/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-gold transition">
-                    <i class="fa-solid fa-chart-line text-reyes-gold group-hover:text-black"></i>
+            <a href="/finops.html" class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block">
+                <div class="h-12 w-12 bg-reyes-cyan/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-cyan transition">
+                    <i class="fa-solid fa-chart-line text-reyes-cyan group-hover:text-black"></i>
                 </div>
-                <h3 class="text-xl font-serif text-white mb-4">FinOps (Rentabilidad)</h3>
+                <h3 class="text-xl font-orbitron text-white mb-4">FinOps (Rentabilidad)</h3>
                 <p class="text-reyes-silver text-sm leading-relaxed">
                     Auditoría de costos y re-arquitectura. Alineamos su gasto en nube con sus objetivos de negocio. Pague solo por lo que usa.
                 </p>
-            </div>
+            </a>
  
             <!-- Card 2 -->
-            <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-gold transition group">
-                <div class="h-12 w-12 bg-reyes-gold/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-gold transition">
-                    <i class="fa-solid fa-code-branch text-reyes-gold group-hover:text-black"></i>
+            <a href="/devops.html" class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block">
+                <div class="h-12 w-12 bg-reyes-cyan/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-cyan transition">
+                    <i class="fa-solid fa-code-branch text-reyes-cyan group-hover:text-black"></i>
                 </div>
-                <h3 class="text-xl font-serif text-white mb-4">DevOps (Velocidad)</h3>
+                <h3 class="text-xl font-orbitron text-white mb-4">DevOps (Velocidad)</h3>
                 <p class="text-reyes-silver text-sm leading-relaxed">
                     Implementación de CI/CD pipelines seguros. Automatizamos desde el código hasta la producción para reducir errores humanos.
                 </p>
-            </div>
+            </a>
  
             <!-- Card 3 -->
-            <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-gold transition group">
-                <div class="h-12 w-12 bg-reyes-gold/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-gold transition">
-                    <i class="fa-solid fa-user-shield text-reyes-gold group-hover:text-black"></i>
+            <a href="/seguridad.html" class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block">
+                <div class="h-12 w-12 bg-reyes-cyan/10 flex items-center justify-center rounded-full mb-6 group-hover:bg-reyes-cyan transition">
+                    <i class="fa-solid fa-user-shield text-reyes-cyan group-hover:text-black"></i>
                 </div>
-                <h3 class="text-xl font-serif text-white mb-4">Web Security (Confianza)</h3>
+                <h3 class="text-xl font-orbitron text-white mb-4">Web Security (Confianza)</h3>
                 <p class="text-reyes-silver text-sm leading-relaxed">
                     Hardening de infraestructura y cumplimiento normativo. Protegemos los datos sensibles de sus clientes y su reputación.
                 </p>
-            </div> 
+            </a>
         </div> 
     </section> 
  
     <!-- SECTION 4: WHY US -->
-    <section id="why-us" class="py-24 bg-reyes-black border-y border-white/5 relative overflow-hidden">
+    <section id="why-us" class="py-24 bg-reyes-black border-y border-reyes-cyan/10 relative overflow-hidden">
         <!-- Background Decor -->
-        <div class="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none">
-            <img src="https://placehold.co/800x800/222/C5A059?text=Swiss+Watch+Mechanism" class="h-full object-cover grayscale mix-blend-screen">
+        <div class="absolute right-0 top-0 h-full w-1/2 opacity-20 pointer-events-none">
+            <img src="assets/images/security.png" class="h-full object-cover grayscale mix-blend-screen">
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-2xl">
-                <h2 class="font-serif text-3xl md:text-5xl text-white mb-8 leading-tight">
-                    No somos generalistas, <br>somos <span class="text-reyes-gold italic">especialistas</span>.
+                <h2 class="font-orbitron text-3xl md:text-5xl text-white mb-8 leading-tight">
+                    No somos generalistas, <br>somos <span class="text-reyes-cyan italic">especialistas</span>.
                 </h2>
                 <p class="text-lg text-reyes-silver mb-10 font-sans font-light">
                     A diferencia de las agencias de marketing que 'hacen webs', nosotros somos ingenieros enfocados en la arquitectura financiera de su tecnología. Entendemos que en una Fintech, un milisegundo es dinero y un error de seguridad es fatal.
@@ -228,15 +227,15 @@
 
                 <ul class="space-y-4 font-sans text-white">
                     <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-check text-reyes-gold"></i>
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
                         <span>Enfoque "Security-First" en cada línea de código.</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-check text-reyes-gold"></i>
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
                         <span>Transparencia total en la gestión de accesos.</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-check text-reyes-gold"></i>
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
                         <span>Estrategias diseñadas para escalar en México y Colombia.</span>
                     </li>
                 </ul>
@@ -246,15 +245,15 @@
 
     <!-- FOOTER -->
     <footer class="bg-[#020202] py-20 text-center px-6">
-        <h2 class="font-serif text-3xl md:text-4xl text-white mb-8">¿Listo para poner orden en su infraestructura?</h2>
+        <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-8">¿Listo para poner orden en su infraestructura?</h2>
 
-        <a href="/contacto.html" class="inline-block px-10 py-5 bg-white text-black font-bold uppercase tracking-widest hover:bg-reyes-gold transition mb-12">
+        <a href="/contacto.html" class="inline-block px-10 py-5 bg-white text-black font-bold uppercase tracking-widest hover:bg-reyes-cyan transition mb-12 shadow-neon">
             Hablemos de su proyecto
         </a>
 
         <div class="flex justify-center items-center gap-6 mb-12">
-            <a href="#" class="text-reyes-silver hover:text-reyes-gold text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:control@reyescomputing.com" class="text-reyes-silver hover:text-reyes-gold font-mono text-sm">control@reyescomputing.com</a>
+            <a href="#" class="text-reyes-silver hover:text-reyes-cyan text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:control@reyescomputing.com" class="text-reyes-silver hover:text-reyes-cyan font-mono text-sm">control@reyescomputing.com</a>
         </div> 
 
         <div class="text-xs text-gray-600 font-sans flex flex-col md:flex-row justify-center gap-4">
