@@ -11,10 +11,10 @@
     <!-- Font Awesome --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
      
-    <!-- Fonts --> 
+    <!-- Fonts: Orbitron (Cyberpunk) & Manrope (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <script> 
         tailwind.config = { 
@@ -22,18 +22,21 @@
                 extend: { 
                     fontFamily: { 
                         sans: ['Manrope', 'sans-serif'], 
-                        mono: ['Space Mono', 'monospace'], 
+                        orbitron: ['Orbitron', 'sans-serif'],
                     }, 
                     colors: { 
                         reyes: { 
-                            black: '#050505', 
-                            dark: '#121212', 
-                            gold: '#FFD700', 
-                            cyan: '#00F0FF', 
-                            slate: '#2A2A2A', 
-                            text: '#E0E0E0' 
+                            black: '#050505',
+                            navy: '#020202',
+                            cyan: '#00F3FF', /* Cyber Neon Cyan */
+                            cyanDark: '#008b91',
+                            silver: '#A0A0A0',
+                            white: '#E0E0E0'
                         } 
-                    } 
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)',
+                    }
                 } 
             } 
         } 
@@ -42,26 +45,29 @@
         /* Custom Grid Background */
         .bg-grid {
             background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-image: linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
         }
     </style>
     <!-- Page ID: success-confirm-v1 -->
 </head> 
-<body class="antialiased bg-reyes-black text-reyes-text bg-grid h-screen flex flex-col items-center justify-center text-center px-4"> 
+<body class="antialiased bg-reyes-black text-reyes-white bg-grid h-screen flex flex-col items-center justify-center text-center px-4">
  
-    <div class="max-w-2xl mx-auto">
+    <div class="max-w-2xl mx-auto p-8 border border-reyes-cyan/20 bg-[#0A0A0A] shadow-neon relative overflow-hidden">
+        <!-- Decorator -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-reyes-cyan/10 rounded-full blur-2xl -z-10"></div>
+
         <div class="mb-8">
-            <i class="fa-solid fa-circle-check text-6xl text-reyes-gold mb-4 animate-bounce"></i>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
-                Mensaje <span class="bg-gradient-to-r from-reyes-cyan to-[#0080FF] bg-clip-text text-transparent">Recibido</span>.
+            <i class="fa-solid fa-circle-check text-6xl text-reyes-cyan mb-6 animate-pulse shadow-[0_0_15px_rgba(0,243,255,0.4)] rounded-full"></i>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 font-orbitron uppercase">
+                Mensaje <span class="text-reyes-cyan">Recibido</span>.
             </h1>
-            <p class="text-xl text-gray-400 mb-8 font-light">
+            <p class="text-xl text-reyes-silver mb-8 font-light font-sans">
                 Nuestros auditores han recibido tu solicitud. Te contactaremos en menos de 24 horas.
             </p>
         </div>
 
-        <a href="/" class="px-8 py-4 bg-white text-black font-bold text-lg hover:bg-reyes-gold transition shadow-[0_0_20px_rgba(255,255,255,0.3)] inline-flex items-center gap-2"> 
+        <a href="/" class="px-8 py-4 bg-reyes-cyan text-black font-bold text-lg hover:bg-white transition shadow-neon inline-flex items-center gap-2 uppercase tracking-widest font-orbitron">
             <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
         </a>
     </div>
