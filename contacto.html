@@ -102,8 +102,12 @@
                 <p class="text-reyes-silver">Sin costo. Sin compromiso. Solo para empresas que facturan más de $1k USD en nube.</p>
             </div>
 
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" action="/success.html" class="space-y-6" novalidate>
-                <input type="hidden" name="form-name" value="contact">
+            <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="Nuevo Lead - Reyes Computing">
+                <input type="hidden" name="_next" value="https://www.reyescomputing.com/success.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
