@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyes Computing | Descarga Guía Gratuita</title>
+    <meta name="description" content="Descarga nuestra guía gratuita sobre Costos Ocultos en la Nube y optimiza tu presupuesto IT.">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonts: Orbitron & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif'],
+                    },
+                    colors: {
+                        reyes: {
+                            black: '#050505',
+                            cyan: '#00F3FF',
+                            silver: '#E2E8F0',
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased bg-reyes-black text-reyes-silver bg-grid scroll-smooth">
+
+    <!-- Navbar (Simplified) -->
+    <nav class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto border-b border-reyes-cyan/20 backdrop-blur-md fixed top-0 left-0 right-0 z-50 bg-reyes-black/90">
+        <div class="flex items-center space-x-2">
+            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-10 w-auto">
+            <a href="/" class="text-xl font-bold text-white tracking-widest uppercase font-orbitron hover:text-reyes-cyan transition">
+                Reyes<span class="text-reyes-cyan">Computing</span>
+            </a>
+        </div>
+        <div>
+            <a href="/" class="text-sm font-sans tracking-wide text-reyes-silver hover:text-reyes-cyan transition">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Sitio
+            </a>
+        </div>
+    </nav>
+
+    <!-- Landing Content -->
+    <section class="min-h-screen flex items-center justify-center pt-24 px-4 pb-12">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Left: Copywriting -->
+            <div class="order-2 md:order-1">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-orbitron leading-tight">
+                    ¿Sabes cuánto dinero estás <span class="text-reyes-cyan">perdiendo</span> en la nube?
+                </h1>
+                <p class="text-lg text-reyes-silver mb-8 leading-relaxed">
+                    El 32% del gasto en la nube se desperdicia en recursos mal gestionados. Descarga nuestra guía exclusiva <strong>"Costos Ocultos en la Nube"</strong> y descubre:
+                </p>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-3 text-reyes-silver">
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
+                        <span>Los 5 errores más comunes en facturación de AWS/GCP.</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-reyes-silver">
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
+                        <span>Estrategias para detectar recursos "zombie".</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-reyes-silver">
+                        <i class="fa-solid fa-check text-reyes-cyan"></i>
+                        <span>Cómo reducir tu factura hasta un 30% en 30 días.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="order-1 md:order-2">
+                <div class="bg-[#0A0A0A] p-8 rounded-lg border border-reyes-cyan/30 shadow-neon relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-reyes-cyan/10 rounded-full blur-2xl -z-10"></div>
+
+                    <h2 class="text-2xl font-bold text-white mb-2 font-orbitron text-center">Descargar Guía Gratuita</h2>
+                    <p class="text-center text-sm text-gray-400 mb-6">Recíbela en tu correo inmediatamente.</p>
+
+                    <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-5">
+                        <!-- Configuration -->
+                        <input type="hidden" name="_subject" value="Descarga Guía: Costos Ocultos en la Nube">
+                        <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-guia.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Autoresponse Link (Note: Standard FormSubmit might show this in body or requires Pro, fallback is success page) -->
+                        <input type="hidden" name="_autoresponse" value="Gracias por tu interés. Puedes descargar tu guía aquí: https://www.reyescomputing.com/assets/documents/Guia_Costos_Ocultos.pdf">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <!-- Name -->
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Nombre Completo</label>
+                            <input type="text" name="name" class="w-full p-3 rounded bg-transparent border border-gray-600 text-white focus:border-reyes-cyan focus:shadow-[0_0_10px_rgba(0,243,255,0.2)] transition outline-none" placeholder="Tu nombre" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Email Profesional</label>
+                            <input type="email" name="email" class="w-full p-3 rounded bg-transparent border border-gray-600 text-white focus:border-reyes-cyan focus:shadow-[0_0_10px_rgba(0,243,255,0.2)] transition outline-none" placeholder="tu@empresa.com" required>
+                        </div>
+
+                        <!-- Sector -->
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Sector de Trabajo</label>
+                            <select name="sector" class="w-full p-3 rounded bg-[#050505] border border-gray-600 text-white focus:border-reyes-cyan transition outline-none" required>
+                                <option value="" disabled selected>Selecciona tu sector</option>
+                                <option value="IT">IT / Tecnología</option>
+                                <option value="Publico">Sector Público</option>
+                                <option value="Administracion">Administración</option>
+                                <option value="Programacion">Programación / Desarrollo</option>
+                                <option value="Contabilidad">Contabilidad / Finanzas</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-lg transition uppercase tracking-widest font-orbitron shadow-neon mt-2">
+                            Obtener Guía PDF
+                        </button>
+
+                        <p class="text-xs text-center text-gray-500 mt-4">
+                            Tus datos están seguros. 100% libre de spam.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="text-center py-8 border-t border-white/5 bg-[#020202]">
+        <p class="text-gray-600 text-sm">&copy; 2025 Reyes Computing S.A.S.</p>
+    </footer>
+
+</body>
+</html>

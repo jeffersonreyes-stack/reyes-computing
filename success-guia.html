@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyes Computing | ¡Guía Enviada!</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        orbitron: ['Orbitron', 'sans-serif'],
+                    },
+                    colors: {
+                        reyes: {
+                            black: '#050505',
+                            cyan: '#00F3FF',
+                            gold: '#FFD700',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased bg-reyes-black text-white bg-grid h-screen flex flex-col items-center justify-center text-center px-4">
+
+    <div class="max-w-2xl mx-auto">
+        <div class="mb-10">
+            <div class="inline-block p-4 rounded-full bg-green-500/10 mb-6">
+                <i class="fa-solid fa-envelope-circle-check text-6xl text-green-400 animate-pulse"></i>
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6 font-orbitron">
+                ¡Tu Guía está en camino!
+            </h1>
+
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Hemos enviado el enlace de descarga a tu correo electrónico. <br>
+                <span class="text-sm text-gray-500">(Revisa tu bandeja de Spam si no lo ves en 5 minutos)</span>
+            </p>
+
+            <div class="bg-white/5 border border-white/10 p-6 rounded-lg mb-8">
+                <p class="text-sm text-gray-400 mb-4">¿No quieres esperar? Descárgala directamente aquí:</p>
+                <a href="assets/documents/Guia_Costos_Ocultos.pdf" download class="inline-flex items-center gap-2 px-8 py-4 bg-reyes-cyan text-black font-bold uppercase tracking-widest hover:bg-white transition rounded shadow-[0_0_20px_rgba(0,243,255,0.4)]">
+                    <i class="fa-solid fa-download"></i> Descargar PDF Ahora
+                </a>
+            </div>
+        </div>
+
+        <a href="/" class="text-reyes-cyan hover:text-white transition font-bold text-sm uppercase tracking-wider">
+            <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+        </a>
+    </div>
+
+</body>
+</html>
