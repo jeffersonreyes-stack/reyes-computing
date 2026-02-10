@@ -1,3 +1,8 @@
 [build]
+  command = "npm run build"
   publish = "."
-  command = "" # No build command needed for static HTML
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

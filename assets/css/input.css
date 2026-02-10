@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles from style.css */
+@layer utilities {
+  .text-cyan-gradient {
+    background: linear-gradient(to right, #00F3FF, #FFFFFF, #00F3FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .border-cyan-gradient {
+    border-image: linear-gradient(to right, #00F3FF, transparent) 1;
+  }
+
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+  }
+}
+
+/* High contrast rules */
+#servicios p, #servicios li, #servicios span, #servicios input,
+section p, section li, section span, section input,
+#contactForm p, #contactForm li, #contactForm span, #contactForm input,
+.service-card p, .service-card li, .service-card span,
+body p, body li {
+  color: #E2E8F0 !important;
+}
+
+#solution a.block,
+#solution .service-card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid #333 !important;
+  border-radius: 8px !important;
+  padding: 30px !important;
+  transition: all 0.3s ease;
+}
+
+#solution a.block:hover {
+  border-color: #00F3FF !important;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2) !important;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  background: transparent !important;
+  border: 1px solid #555 !important;
+  color: #FFFFFF !important;
+}
+
+#contactForm input::placeholder,
+#contactForm select::placeholder,
+#contactForm textarea::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+  border-color: #00F3FF !important;
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3) !important;
+}
