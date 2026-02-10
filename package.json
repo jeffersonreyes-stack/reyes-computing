@@ -1,0 +1,12 @@
+{
+  "name": "reyes-computing",
+  "version": "1.0.0",
+  "description": "Consultoría Cloud, FinOps y DevOps",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
