@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Meta Tags -->
+    <title>Google Ads y Publicidad Web | Reyes Computing</title>
+    <meta name="description" content="Aparece de primero cuando tus clientes ya están listos para comprar. Dominamos la red de búsqueda de Google.">
+    <link rel="canonical" href="https://www.reyescomputing.com/publicidad-web.html">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Built) -->
+    <link rel="stylesheet" href="assets/css/output.css">
+
+    <!-- Fonts: Orbitron (Cyberpunk) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="antialiased bg-reyes-black text-reyes-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-3 group">
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-16 w-auto">
+                 <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
+                <a href="/desarrollo-web.html" class="hover:text-reyes-cyan transition">Desarrollo Web</a>
+                <a href="/publicidad-web.html" class="text-reyes-cyan font-bold transition">Google Ads</a>
+                <a href="/publicidad-redes.html" class="hover:text-reyes-cyan transition">Social Ads (B2B)</a>
+                <a href="/contacto.html" class="px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
+                    Diagnóstico Inicial
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-reyes-cyan text-2xl focus:outline-none z-50">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+        <a href="/desarrollo-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Desarrollo Web</a>
+        <a href="/publicidad-web.html" class="text-2xl font-orbitron text-reyes-cyan transition mobile-link">Google Ads</a>
+        <a href="/publicidad-redes.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Social Ads (B2B)</a>
+        <a href="/contacto.html" class="px-6 py-3 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-sm font-bold tracking-widest shadow-neon mobile-link">
+            Diagnóstico Inicial
+        </a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-reyes-black/50 via-reyes-black/80 to-reyes-black bg-grid opacity-20"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <h1 class="font-orbitron text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                Aparece de primero cuando tus clientes ya están <span class="text-reyes-cyan">listos para comprar</span>.
+            </h1>
+            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Dominamos la red de búsqueda de Google. Capturamos la intención de compra exacta para maximizar el Retorno de tu Inversión (ROI).
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-4 w-full justify-center">
+                <a href="/contacto.html" class="px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center">
+                    Auditar mis Campañas de Google
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES (Beneficios/Metodología) SECTION -->
+    <section id="solution" class="py-24 bg-[#020202] border-y border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-center text-white mb-16 tracking-wide">
+                METODOLOGÍA <span class="text-reyes-cyan font-light">ESTRATÉGICA</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block service-card">
+                    <div class="w-14 h-14 bg-reyes-cyan/10 rounded flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-google text-2xl text-reyes-cyan"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-4 uppercase tracking-widest">Red de Búsqueda (Search)</h3>
+                    <p class="text-reyes-silver text-sm md:text-base leading-relaxed font-light">
+                        Tu anuncio en la primera posición para las palabras clave más rentables de tu industria.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block service-card">
+                    <div class="w-14 h-14 bg-reyes-cyan/10 rounded flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-filter-circle-dollar text-2xl text-reyes-cyan"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-4 uppercase tracking-widest">Optimización de Presupuesto</h3>
+                    <p class="text-reyes-silver text-sm md:text-base leading-relaxed font-light">
+                        Eliminamos los clics basura. Cada centavo invertido va dirigido a usuarios con intención real de compra.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-reyes-black border border-white/5 p-8 hover:border-reyes-cyan transition group shadow-lg hover:shadow-[0_0_15px_rgba(0,243,255,0.2)] block service-card">
+                    <div class="w-14 h-14 bg-reyes-cyan/10 rounded flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bullseye text-2xl text-reyes-cyan"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-4 uppercase tracking-widest">Retargeting Inteligente</h3>
+                    <p class="text-reyes-silver text-sm md:text-base leading-relaxed font-light">
+                        Perseguimos estratégicamente a los usuarios que visitaron tu web pero no compraron, hasta lograr la conversión.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="py-24 bg-reyes-black relative z-10 overflow-hidden border-b border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <i class="fa-solid fa-shield-halved text-5xl text-reyes-cyan mb-8"></i>
+            <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-white mb-8">
+                NUESTRO <span class="text-reyes-cyan">COMPROMISO</span>
+            </h2>
+            <div class="bg-[#050505] border border-reyes-cyan/30 p-8 md:p-12 shadow-[0_0_30px_rgba(0,243,255,0.1)]">
+                <p class="font-sans text-lg md:text-xl text-reyes-silver leading-relaxed font-light">
+                    "Nuestro compromiso es directo: incrementamos tus ventas. No hacemos páginas de adorno que nadie visita; implementamos un Combo Digital estratégico enfocado 100% en que el usuario deje sus datos o compre. Si tu objetivo es llegar a más clientes y hacer crecer tu negocio, construimos la presencia digital exacta para que lo logres."
+                </p>
+            </div>
+            <div class="mt-12">
+                <a href="/contacto.html" class="inline-block px-10 py-5 bg-reyes-cyan text-black font-bold uppercase tracking-widest hover:bg-white transition mb-12 shadow-[0_0_30px_rgba(0,243,255,0.4)]">
+                    Hablar con un Experto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] py-12 border-t border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            <a href="/" class="flex items-center gap-3 mb-6 opacity-50 hover:opacity-100 transition">
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-10 w-auto">
+                 <span class="font-orbitron text-lg font-bold tracking-widest uppercase text-white">Reyes<span class="text-reyes-cyan">Computing</span></span>
+            </a>
+            <div class="flex gap-6 mb-8">
+                <a href="https://www.linkedin.com/company/110759974/" target="_blank" class="text-reyes-silver hover:text-reyes-cyan text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:control@reyescomputing.com" class="text-reyes-silver hover:text-reyes-cyan font-mono text-sm flex items-center"><i class="fa-solid fa-envelope mr-2"></i>control@reyescomputing.com</a>
+            </div>
+            <div class="text-center font-sans text-xs text-reyes-silver/50 uppercase tracking-widest flex flex-col md:flex-row gap-4 items-center justify-center">
+                <span>&copy; 2025 Reyes Computing S.A.S.</span>
+                <span class="hidden md:inline text-reyes-cyan/30">|</span>
+                <a href="#" class="hover:text-gray-400 transition">Política de Privacidad</a>
+                <span class="hidden md:inline text-reyes-cyan/30">|</span>
+                <a href="#" class="hover:text-gray-400 transition">Aviso Legal</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        });
+    </script>
+</body>
+</html>
