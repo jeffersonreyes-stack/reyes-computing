@@ -35,8 +35,8 @@
             </p>
 
             <div class="bg-white/5 border border-white/10 p-6 rounded-lg mb-8">
-                <p class="text-sm text-gray-400 mb-4">¿No quieres esperar? Descárgala directamente aquí:</p>
-                <a href="https://drive.google.com/uc?export=download&id=1wh8XSNPVS3g7Q5kxr5cTUUF8ZyjDmfkp" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-reyes-cyan text-black font-bold uppercase tracking-widest hover:bg-white transition rounded shadow-[0_0_20px_rgba(0,243,255,0.4)]">
+                <p class="text-sm text-gray-400 mb-4">Tu descarga debería comenzar automáticamente. Si no es así, haz clic abajo:</p>
+                <a href="/assets/documents/guia-presencia-digital.pdf" download class="inline-flex items-center gap-2 px-8 py-4 bg-reyes-cyan text-black font-bold uppercase tracking-widest hover:bg-white transition rounded shadow-[0_0_20px_rgba(0,243,255,0.4)]">
                     <i class="fa-solid fa-download"></i> Descargar PDF Ahora
                 </a>
             </div>
@@ -47,5 +47,18 @@
         </a>
     </div>
 
+    <!-- Script for automatic download -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const link = document.createElement('a');
+                link.href = '/assets/documents/guia-presencia-digital.pdf';
+                link.download = 'guia-presencia-digital.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 1000); // 1 second delay
+        });
+    </script>
 </body>
 </html>
