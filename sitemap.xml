@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.reyescomputing.com/</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
     <loc>https://www.reyescomputing.com/index.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://www.reyescomputing.com/finops.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://www.reyescomputing.com/desarrollo-web.html</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://www.reyescomputing.com/devops.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://www.reyescomputing.com/publicidad-web.html</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
-    <loc>https://www.reyescomputing.com/seguridad.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <loc>https://www.reyescomputing.com/publicidad-redes.html</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
   <url>
     <loc>https://www.reyescomputing.com/contacto.html</loc>
-    <lastmod>2026-01-04</lastmod>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.reyescomputing.com/guia-presencia-digital.html</loc>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.reyescomputing.com/success.html</loc>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.reyescomputing.com/success-presencia-digital.html</loc>
+    <lastmod>2026-03-08</lastmod>
   </url>
 </urlset>
