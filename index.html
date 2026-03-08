@@ -40,6 +40,7 @@
                  <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
             </a>
 
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
                 <a href="/desarrollo-web.html" class="hover:text-reyes-cyan transition">Desarrollo Web</a>
                 <a href="/publicidad-web.html" class="hover:text-reyes-cyan transition">Google Ads</a>
@@ -48,8 +49,23 @@
                     Diagnóstico Inicial
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-reyes-cyan text-2xl focus:outline-none z-50">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div> 
     </nav> 
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+        <a href="/desarrollo-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Desarrollo Web</a>
+        <a href="/publicidad-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Google Ads</a>
+        <a href="/publicidad-redes.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Social Ads (B2B)</a>
+        <a href="/contacto.html" class="px-6 py-3 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-sm font-bold tracking-widest shadow-neon mobile-link">
+            Diagnóstico Inicial
+        </a>
+    </div>
  
     <!-- HERO SECTION -->
     <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -192,5 +208,34 @@
         </div> 
     </footer> 
 
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        });
+    </script>
 </body> 
 </html>
