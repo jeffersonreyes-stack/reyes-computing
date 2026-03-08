@@ -43,7 +43,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-reyes-cyan text-2xl focus:outline-none z-50">
+            <button id="mobile-menu-btn" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-reyes-cyan text-2xl focus:outline-none z-50">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -183,9 +183,14 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
 
+            function setMenuState(isOpen) {
+                mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menu principal' : 'Abrir menu principal');
+            }
+
             function toggleMenu() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
+                const willOpen = mobileMenu.classList.contains('hidden');
+                if (willOpen) {
                     mobileMenu.classList.remove('hidden');
                     mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
                     document.body.style.overflow = 'hidden';
@@ -194,8 +199,10 @@
                     mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
                     document.body.style.overflow = 'auto';
                 }
+                setMenuState(willOpen);
             }
 
+            setMenuState(false);
             mobileMenuBtn.addEventListener('click', toggleMenu);
 
             mobileLinks.forEach(link => {
