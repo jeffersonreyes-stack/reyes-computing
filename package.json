@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Consultoría Cloud, FinOps y DevOps",
   "scripts": {
-    "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "dev": "echo 'Pagina local: http://localhost:3000/index.html' && tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
     "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify"
   },
   "devDependencies": {
