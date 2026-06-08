@@ -1,0 +1,52 @@
+PROMPTS DE IMAGEN PARA PAQUETES COMERCIALES
+
+PAQUETE 1: IMPULSO COMERCIAL
+
+1. Imagen del producto
+Prompt:
+Hero section for a commercial consulting service called "Impulso Comercial", modern and professional small business growth concept, entrepreneur reviewing sales strategy on a laptop, clean desk, subtle charts on screen, premium but accessible branding, blue and white color palette, natural lighting, realistic, high detail, website marketing image, no text, 16:9
+
+2. Imagen del proceso
+Prompt:
+Step-by-step commercial strategy process for small businesses, consultant working with a client, reviewing offer, customer journey, WhatsApp sales script, simple funnel sketch on glass board, collaborative meeting, modern office, organized workflow, realistic business photography style, clean composition, no text, 16:9
+
+3. Imagen del resultado
+Prompt:
+Small business owner with confidence after organizing sales process, clear pipeline, more incoming leads, improved order and focus, optimistic professional atmosphere, subtle growth charts in background, realistic, warm lighting, trustworthy and modern brand image, no text, 16:9
+
+
+PAQUETE 2: SISTEMA DE VENTAS
+
+1. Imagen del producto
+Prompt:
+Hero image for a service called "Sistema de Ventas", business sales system dashboard, lead capture, follow-up pipeline, landing page and WhatsApp integration concept, modern digital sales infrastructure, sleek interface on laptop and phone screens, realistic, high detail, professional, no text, 16:9
+
+2. Imagen del proceso
+Prompt:
+Implementation of a sales system for a growing business, team setting up lead funnel, CRM stages, follow-up sequences, campaign adjustments, landing page optimization, data tracking on monitors, modern office environment, realistic business scene, structured and efficient workflow, no text, 16:9
+
+3. Imagen del resultado
+Prompt:
+Business receiving qualified leads and managing them efficiently, sales pipeline moving smoothly, notifications, meetings booked, team with clear commercial control, realistic modern business image, confident energy, subtle performance metrics, premium website visual, no text, 16:9
+
+
+PAQUETE 3: CRECIMIENTO COMERCIAL
+
+1. Imagen del producto
+Prompt:
+Premium hero image for a service called "Crecimiento Comercial", advanced business growth system, strategic consulting plus execution, analytics dashboard, campaign optimization, weekly performance management, sophisticated and high-value visual style, realistic, elegant lighting, premium branding, no text, 16:9
+
+2. Imagen del proceso
+Prompt:
+High-level commercial growth process, consultant and business team in weekly strategy session, reviewing analytics, optimizing conversion rates, adjusting campaigns, monitoring sales dashboard, collaborative execution, premium office setting, realistic corporate photography, dynamic but clean composition, no text, 16:9
+
+3. Imagen del resultado
+Prompt:
+Business scaling with stronger sales performance, full pipeline, better conversion, confident team, visible commercial momentum, refined analytics in background, premium and aspirational tone, realistic photography style, strong sense of growth and control, no text, 16:9
+
+
+NOTAS DE USO
+
+- Si la IA genera imágenes con texto, agregar al final: "no letters, no words, no typography".
+- Si quieres estilo más cinematográfico, agregar: "cinematic lighting, depth of field".
+- Si quieres algo más tipo ilustración 3D, reemplazar "realistic" por "3D illustration, premium isometric style".
