@@ -3,6 +3,29 @@
 @tailwind utilities;
 
 /* Custom styles from style.css */
+@layer components {
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .footer-links a,
+  .footer-meta a,
+  .footer-meta span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+}
+
 @layer utilities {
   .text-cyan-gradient {
     background: linear-gradient(to right, #00F3FF, #FFFFFF, #00F3FF);
