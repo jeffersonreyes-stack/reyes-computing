@@ -3,6 +3,24 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <!-- Google tag (gtag.js) - Google Ads -->
+    <!-- IMPORTANTE: Reemplaza AW-XXXXXXXXXX por tu ID real de Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
+    <!-- Evento de conversion: envio de formulario -->
+    <!-- IMPORTANTE: Reemplaza AW-XXXXXXXXXX/YYYYYYYYYYYY por la etiqueta de tu accion de conversion -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYYYY'
+      });
+    </script>
     <title>¡Mensaje Recibido! | Reyes Computing</title>
     <meta name="description" content="Hemos recibido su mensaje. Nuestro equipo experto en marketing digital para LATAM le contactará pronto.">
     <meta name="robots" content="noindex, nofollow">
