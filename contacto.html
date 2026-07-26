@@ -100,15 +100,21 @@
                         <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un email válido.</p>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Servicio que quieres impulsar</label>
-                        <select name="service_interest" class="w-full p-4 rounded-md bg-[#121212] border border-gray-500 text-white transition-all duration-300 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)] text-gray-300">
-                            <option>Sitio web de alta conversión</option>
-                            <option>Google Ads</option>
-                            <option>Social Ads B2B</option>
-                            <option>Presencia digital completa</option>
-                            <option>Estrategia comercial digital</option>
-                        </select>
+                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">WhatsApp / Teléfono</label>
+                        <input type="tel" name="phone" id="phone" class="w-full p-4 rounded-md bg-[#121212] border border-gray-500 text-white placeholder-gray-300 transition-all duration-300 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]" placeholder="+57 300 123 4567" required>
+                        <p class="text-red-500 text-xs mt-1 hidden" id="phone-error">El teléfono es requerido para contactarte.</p>
                     </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Servicio que quieres impulsar</label>
+                    <select name="service_interest" class="w-full p-4 rounded-md bg-[#121212] border border-gray-500 text-white transition-all duration-300 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)] text-gray-300">
+                        <option>Sitio web de alta conversión</option>
+                        <option>Google Ads</option>
+                        <option>Social Ads B2B</option>
+                        <option>Presencia digital completa</option>
+                        <option>Estrategia comercial digital</option>
+                    </select>
                 </div>
 
                 <div>
@@ -179,11 +185,13 @@
                     const name = document.getElementById('name');
                     const company = document.getElementById('company');
                     const email = document.getElementById('email');
+                    const phone = document.getElementById('phone');
                     const nameError = document.getElementById('name-error');
                     const emailError = document.getElementById('email-error');
+                    const phoneError = document.getElementById('phone-error');
 
-                    [nameError, emailError].forEach(el => el.classList.add('hidden'));
-                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
+                    [nameError, emailError, phoneError].forEach(el => el.classList.add('hidden'));
+                    [name, company, email, phone].forEach(el => el.classList.remove('border-red-500'));
 
                     if (!name.value.trim()) {
                         nameError.classList.remove('hidden');
@@ -195,6 +203,12 @@
                     if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
                         emailError.classList.remove('hidden');
                         email.classList.add('border-red-500');
+                        isValid = false;
+                    }
+
+                    if (!phone.value.trim()) {
+                        phoneError.classList.remove('hidden');
+                        phone.classList.add('border-red-500');
                         isValid = false;
                     }
 
