@@ -5,110 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
 
-    <title>Landing Page Mockup - DyB Viajes</title>
-    <meta name="description" content="Propuesta de diseño web de alta conversión para DyB Viajes.">
+    <title>Landing Page - DyB Viajes</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/output.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Fredoka+One&family=Inter:wght@400;600&family=Lato:wght@400;700&family=Merriweather:wght@700&family=Montserrat:wght@700&family=Nunito:wght@400;600&family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Quicksand:wght@500;700&family=Raleway:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
-        /* Mockup specific styles maintaining Reyes Computing aesthetic */
+        :root {
+            --primary: #0891B2;
+            --primary-hover: #0E7490;
+            --bg-color: #FFFFFF;
+            --text-color: #0F172A;
+            --text-muted: #475569;
+            --font-main: 'Nunito', sans-serif;
+            --font-heading: 'Raleway', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+        }
+
+        h1, h2, h3, .heading-font {
+            font-family: var(--font-heading);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
         .mockup-hero {
-            background: linear-gradient(to bottom, rgba(5,5,5,0.7), rgba(5,5,5,1)),
-                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%),
+                        url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
         }
-        .mockup-badge {
-            display: inline-block;
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid #00F3FF;
-            color: #00F3FF;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .text-muted-custom {
+            color: var(--text-muted);
+        }
+
+        .text-primary-custom {
+            color: var(--primary);
         }
     </style>
 </head>
-<body class="antialiased bg-reyes-black text-reyes-white">
+<body class="antialiased">
 
-    <!-- Mockup Header -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
+    <!-- Header -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white">DyB Viajes</span>
+                <span class="heading-font text-2xl font-bold tracking-tight text-gray-900">DyB Viajes</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide">
-                <a href="#servicios" class="text-reyes-silver hover:text-reyes-cyan transition">Servicios</a>
-                <a href="#nosotros" class="text-reyes-silver hover:text-reyes-cyan transition">Nosotros</a>
-                <a href="#contacto" class="px-6 py-2 border border-reyes-cyan bg-reyes-cyan text-black hover:bg-white transition uppercase text-xs font-bold tracking-widest shadow-neon">
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#servicios" class="text-gray-600 hover:text-primary-custom transition">Servicios</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-primary-custom transition">Nosotros</a>
+                <a href="#contacto" class="btn-primary px-6 py-2 rounded-full font-bold shadow-md">
                     Contactar
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Mockup Hero Section -->
-    <header class="relative min-h-[90vh] flex items-center justify-center pt-20 mockup-hero">
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <span class="mockup-badge font-orbitron">Sitio Web de Alta Conversión</span>
-            <h1 class="font-orbitron text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                Planifica tus vacaciones soñadas sin estrés.
-            </h1>
-            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Descubre los mejores destinos, vuelos y paquetes turísticos al mejor precio del mercado.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#contacto" class="bg-reyes-cyan text-black px-8 py-4 font-bold tracking-widest uppercase hover:bg-white transition shadow-neon w-full sm:w-auto text-center font-orbitron text-sm">
-                    Solicitar Información
-                </a>
-                <a href="#servicios" class="border border-white text-white px-8 py-4 font-bold tracking-widest uppercase hover:bg-white hover:text-black transition w-full sm:w-auto text-center font-orbitron text-sm">
-                    Ver Servicios
-                </a>
+    <!-- Hero Section -->
+    <header class="relative min-h-[85vh] flex items-center pt-20 mockup-hero">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <div class="max-w-2xl">
+                <span class="inline-block px-4 py-1 rounded-full text-sm font-bold bg-white/20 text-white backdrop-blur mb-6 uppercase tracking-wider">
+                    Agencia de Viajes
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                    Planifica tus vacaciones soñadas sin estrés.
+                </h1>
+                <p class="text-xl text-gray-100 mb-10 max-w-xl leading-relaxed drop-shadow-md">
+                    Descubre los mejores destinos, vuelos y paquetes turísticos al mejor precio del mercado.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="btn-primary px-8 py-4 rounded-full font-bold text-center text-lg shadow-lg">
+                        Agendar Cita
+                    </a>
+                    <a href="#servicios" class="px-8 py-4 rounded-full font-bold text-center text-lg border-2 border-white text-white hover:bg-white hover:text-black transition">
+                        Ver Servicios
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mockup Features Section -->
+    <!-- Features Section -->
     <section id="servicios" class="py-24 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="font-orbitron text-3xl md:text-4xl font-bold text-white mb-6">¿Por qué elegirnos?</h2>
-                <div class="w-16 h-1 bg-reyes-cyan mx-auto shadow-neon"></div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Nuestros Servicios</h2>
+                <div class="w-24 h-1 mx-auto" style="background-color: var(--primary);"></div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-reyes-black border border-white/5 p-8 service-card" style="background-color: rgba(255, 255, 255, 0.03); border: 1px solid #333; border-radius: 8px; padding: 30px;">
-                    <i class="fa-solid fa-star text-3xl text-reyes-cyan mb-6"></i>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-4">Landing Pages por Destino</h3>
-                    <p class="text-reyes-silver leading-relaxed">Páginas específicas (Ej: Cancún) con fotos espectaculares e itinerarios para captar a quienes buscan ese viaje.</p>
+                <div class="service-card p-8">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6" style="background-color: var(--primary); color: white;">
+                        <i class="fa-solid fa-star text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Landing Pages por Destino</h3>
+                    <p class="text-muted-custom leading-relaxed">Páginas específicas (Ej: Cancún) con fotos espectaculares e itinerarios para captar a quienes buscan ese viaje.</p>
                 </div>
 
-                <div class="bg-reyes-black border border-white/5 p-8 service-card" style="background-color: rgba(255, 255, 255, 0.03); border: 1px solid #333; border-radius: 8px; padding: 30px;">
-                    <i class="fa-solid fa-bolt text-3xl text-reyes-cyan mb-6"></i>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-4">Intención de Búsqueda</h3>
-                    <p class="text-reyes-silver leading-relaxed">Atraemos a viajeros que buscan activamente 'paquetes baratos' en tu ciudad para convertirlos en clientes.</p>
+                <div class="service-card p-8">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6" style="background-color: var(--primary); color: white;">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Intención de Búsqueda</h3>
+                    <p class="text-muted-custom leading-relaxed">Atraemos a viajeros que buscan activamente 'paquetes baratos' en tu ciudad para convertirlos en clientes.</p>
                 </div>
 
-                <div class="bg-reyes-black border border-white/5 p-8 service-card" style="background-color: rgba(255, 255, 255, 0.03); border: 1px solid #333; border-radius: 8px; padding: 30px;">
-                    <i class="fa-solid fa-shield-halved text-3xl text-reyes-cyan mb-6"></i>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-4">Remarketing de Viajes</h3>
-                    <p class="text-reyes-silver leading-relaxed">Mostramos tus destinos a personas que ya visitaron tu web para recordarles que soliciten su cotización.</p>
+                <div class="service-card p-8">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6" style="background-color: var(--primary); color: white;">
+                        <i class="fa-solid fa-check text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Remarketing de Viajes</h3>
+                    <p class="text-muted-custom leading-relaxed">Mostramos tus destinos a personas que ya visitaron tu web para recordarles que soliciten su cotización.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Banner -->
+    <section class="py-20" style="background-color: var(--primary); color: white;">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">¿Listo para dar el siguiente paso?</h2>
+            <a href="#contacto" class="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                Contáctanos Hoy Mismo
+            </a>
+        </div>
+    </section>
+
     <!-- Notice Banner -->
-    <div class="fixed bottom-0 left-0 w-full bg-reyes-cyan text-black py-3 px-4 text-center font-orbitron font-bold text-sm z-50">
-        <i class="fa-solid fa-info-circle mr-2"></i> ESTO ES UNA MUESTRA DE DISEÑO CREADA POR REYES COMPUTING
+    <div class="fixed bottom-0 left-0 w-full bg-gray-900 text-white py-3 px-4 text-center text-xs z-50">
+        <i class="fa-solid fa-info-circle mr-2"></i> Esta es una maqueta de diseño generada a medida para ilustrar cómo podría verse tu página web. Propuesta por Reyes Computing.
     </div>
 
 </body>
