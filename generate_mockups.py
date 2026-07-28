@@ -184,6 +184,58 @@ leads = [
         "pilar2_desc": "Cuidamos a nuestros animales, pero no te ponemos trabas imposibles. Completa un formulario sencillo y te guiaremos paso a paso hasta que estén juntos.",
         "pilar3_title": "Sanos y Listos para Amar",
         "pilar3_desc": "Todos nuestros peluditos se entregan desparasitados, vacunados y con evaluación veterinaria, listos para integrarse a su nueva familia."
+    },
+    {
+        "id": "el-quijote",
+        "company": "El Quijote",
+        "niche": "Dotaciones Institucionales B2B",
+        "theme": {
+            "primary": "#0369A1", # Sky-700 (Corporate Blue)
+            "primary_hover": "#075985", # Sky-800
+            "bg": "#F8FAFC", # Slate-50
+            "text": "#0F172A", # Slate-900
+            "text_muted": "#475569", # Slate-600
+            "font_main": "'Inter', sans-serif",
+            "font_heading": "'Montserrat', sans-serif",
+            "hero_img": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" # Corporate office/supplies
+        },
+        "hero_title": "Equipa a tu Institución o Empresa sin Complicaciones ni Demoras.",
+        "hero_subtitle": "Proveedores integrales de mobiliario, equipos de cómputo y material didáctico. Entregas puntuales en Túquerres y la región. Solicita tu cotización mayorista hoy mismo.",
+        "cta_primary": "Solicitar Cotización Corporativa",
+        "cta_secondary": "Ver Catálogo Institucional",
+        "trust_badge": "Proveedor de Confianza B2B - Garantía Total",
+        "pilar1_title": "Catálogo Integral en un Solo Lugar",
+        "pilar1_desc": "No pierdas tiempo buscando múltiples proveedores. Encuentra desde impresoras hasta escritorios y papelería especializada en nuestro completo catálogo digital.",
+        "pilar2_title": "Precios y Atención Mayorista",
+        "pilar2_desc": "Entendemos las necesidades de compras corporativas. Ofrecemos cotizaciones rápidas, atención personalizada y precios diseñados para volumen institucional.",
+        "pilar3_title": "Logística y Entrega Cumplida",
+        "pilar3_desc": "Garantizamos tiempos de entrega estrictos en Túquerres y zonas aledañas. Tu operación no puede detenerse, y nosotros aseguramos que no lo haga."
+    },
+    {
+        "id": "el-quijote",
+        "company": "El Quijote",
+        "niche": "Dotaciones Institucionales B2B",
+        "theme": {
+            "primary": "#0369A1",
+            "primary_hover": "#075985",
+            "bg": "#F8FAFC",
+            "text": "#0F172A",
+            "text_muted": "#475569",
+            "font_main": "'Inter', sans-serif",
+            "font_heading": "'Montserrat', sans-serif",
+            "hero_img": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+        },
+        "hero_title": "Equipa a tu Institución o Empresa sin Complicaciones ni Demoras.",
+        "hero_subtitle": "Proveedores integrales de mobiliario, equipos de cómputo y material didáctico. Entregas puntuales en Túquerres y la región. Solicita tu cotización mayorista hoy mismo.",
+        "cta_primary": "Solicitar Cotización Corporativa",
+        "cta_secondary": "Ver Catálogo Institucional",
+        "trust_badge": "Proveedor de Confianza B2B - Garantía Total",
+        "pilar1_title": "Catálogo Integral en un Solo Lugar",
+        "pilar1_desc": "No pierdas tiempo buscando múltiples proveedores. Encuentra desde impresoras hasta escritorios y papelería especializada en nuestro completo catálogo digital.",
+        "pilar2_title": "Precios y Atención Mayorista",
+        "pilar2_desc": "Entendemos las necesidades de compras corporativas. Ofrecemos cotizaciones rápidas, atención personalizada y precios diseñados para volumen institucional.",
+        "pilar3_title": "Logística y Entrega Cumplida",
+        "pilar3_desc": "Garantizamos tiempos de entrega estrictos en Túquerres y zonas aledañas. Tu operación no puede detenerse, y nosotros aseguramos que no lo haga."
     }
 ]
 
