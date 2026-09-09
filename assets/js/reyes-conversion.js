@@ -6,13 +6,12 @@ const REYES = {
   // WhatsApp comercial: +57 333 070 0828 (formato internacional, sin + ni espacios).
   WHATSAPP_NUMERO: '573330700828',
 
-  // Cuenta de Google Ads 552-938-8450 (la unica activa segun el panel de Ads).
-  ADS_ID: 'AW-5529388450',
+  // ID de conversion de Google Ads. OJO: no es el numero de cliente (552-938-8450),
+  // es el "ID de conversion" que aparece junto a la etiqueta en Objetivos > Conversiones.
+  ADS_ID: 'AW-18025178697',
 
-  // Etiqueta de la accion de conversion: Google Ads > Objetivos > Conversiones >
-  // (accion) > Configurar etiqueta. Es la cadena que va despues de la barra.
-  // Mientras este vacia solo se envia el evento generico a GA/Ads.
-  ADS_ETIQUETA_CONVERSION: '',
+  // Etiqueta de la accion "Clic WhatsApp" (categoria Contacto).
+  ADS_ETIQUETA_CONVERSION: 'J5ZoCID2qPIcEMnMiZND',
 
   MENSAJE_POR_DEFECTO: 'Hola Reyes Computing, quiero mi Diagnostico Digital gratis de 24 horas.'
 };
