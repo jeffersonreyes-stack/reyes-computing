@@ -14,8 +14,8 @@
     </script>
 
     <!-- SEO & Meta Tags -->
-    <title>Reyes Computing | Agencia de Mercadeo Web, Redes Sociales y Google Ads</title>
-    <meta name="description" content="Impulse sus ventas en LATAM con Reyes Computing. Expertos en marketing digital, publicidad en Google Ads, pauta en redes sociales y desarrollo web enfocado en conversiones B2B.">
+    <title>Reyes Computing | Aparece en Google: Ficha, Sitio Web y Anuncios</title>
+    <meta name="description" content="Dejamos tu empresa lista para que te encuentren: ficha de Google Business verificada, correo corporativo, sitio web y Google Ads. Entrega en 7 dias. Diagnostico gratis en 24h.">
     <meta name="keywords" content="agencia de marketing digital LATAM, publicidad en internet, pauta digital, mercadeo web, campañas en Google Ads, publicidad en redes sociales, leads B2B, estrategias de marketing LATAM, Reyes Computing">
     <link rel="canonical" href="https://www.reyescomputing.com/">
 
@@ -38,15 +38,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-18025178697');
-    </script>
+    <!-- Capa de conversion: WhatsApp + medicion de contactos -->
+    <script defer src="assets/js/reyes-conversion.js"></script>
 </head> 
 <body class="antialiased bg-reyes-black text-reyes-white">
  
@@ -60,11 +53,12 @@
             </a>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
+                <a href="google-business-profile.html" class="hover:text-reyes-cyan transition">Google Business</a>
                 <a href="desarrollo-web.html" class="hover:text-reyes-cyan transition">Desarrollo Web</a>
                 <a href="publicidad-web.html" class="hover:text-reyes-cyan transition">Google Ads</a>
-                <a href="sistemas-de-ventas.html" class="hover:text-reyes-cyan transition">Ventas</a>
-                <a href="contacto.html" class="px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    Incrementar Ventas
+                <a href="#paquetes" class="hover:text-reyes-cyan transition">Precios</a>
+                <a data-wa data-wa-origen="navbar" class="cursor-pointer px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Diagnóstico Gratis
                 </a>
             </div>
         </div> 
@@ -80,21 +74,24 @@
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <h1 class="font-orbitron text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                INCREMENTA TUS VENTAS LLEGANDO A <span class="text-reyes-cyan">MÁS CLIENTES</span>.
+                TU COMPETENCIA APARECE EN GOOGLE. <span class="text-reyes-cyan">TÚ NO</span>.
             </h1> 
             <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Incrementamos tus ventas combinando el poder de un sitio web estratégico con publicidad inteligente en Google y LinkedIn.
+                Ficha verificada en Google, correo corporativo, sitio web y anuncios. Dejamos tu empresa lista para que te encuentren y te escriban. Entrega en 7 días.
             </p> 
 
             <div class="flex flex-col items-center gap-6">
                 <div class="flex flex-col md:flex-row gap-4 w-full justify-center">
-                    <a href="contacto.html" class="px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center">
-                        Quiero llegar a más clientes hoy
+                    <a data-wa data-wa-origen="hero" data-wa-msg="Hola Reyes Computing, quiero mi Diagnostico Digital gratis de 24 horas para mi empresa." class="cursor-pointer px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> Quiero mi diagnóstico gratis
                     </a>
-                    <a href="guia-presencia-digital.html" class="px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon">
-                        <i class="fa-solid fa-shield-heart mr-2"></i> Fortalecer Mi Presencia Digital
+                    <a href="#paquetes" class="px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon">
+                        Ver paquetes y precios
                     </a>
                 </div>
+                <p class="text-sm text-reyes-silver/70 font-sans">
+                    Sin reuniones ni compromiso: te enviamos un informe de 1 página en 24 horas.
+                </p>
             </div>
         </div> 
     </header>
@@ -177,24 +174,97 @@
         </div> 
     </section> 
  
+    <!-- SECTION 3.5: PAQUETES CON PRECIO -->
+    <!-- TODO: confirmar los precios reales antes de publicar en produccion. -->
+    <section id="paquetes" class="py-24 bg-reyes-black border-t border-reyes-cyan/10">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="font-orbitron text-3xl md:text-5xl text-white mb-4">Precios claros, entrega con fecha</h2>
+            <div class="w-24 h-1 bg-reyes-cyan mx-auto shadow-neon mb-6"></div>
+            <p class="text-reyes-silver font-sans max-w-2xl mx-auto">Sabes qué recibes, cuánto cuesta y cuándo lo tienes. Sin cotizaciones eternas.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <!-- Paquete 1 -->
+            <div class="bg-[#0A0A0A] border border-reyes-cyan/30 p-8 flex flex-col shadow-neon">
+                <h3 class="text-2xl font-orbitron text-white mb-2">Arranque Digital</h3>
+                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Entrega en 7 días</p>
+                <p class="font-orbitron text-4xl text-white mb-1">$1.530.000</p>
+                <p class="text-reyes-silver font-sans text-sm mb-8">Pago único · IVA incluido</p>
+                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Ficha de Google Business verificada y optimizada</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Correo corporativo @tuempresa.com (1 buzón, 12 meses)</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Sitio web de 1 página enfocado en contacto</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Dominio y hosting incluidos el primer año</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Botón de WhatsApp y medición de contactos</span></li>
+                </ul>
+                <a data-wa data-wa-origen="paquete-arranque" data-wa-msg="Hola, me interesa el paquete Arranque Digital de $1.530.000. Quiero saber como empezar." class="cursor-pointer w-full text-center px-6 py-4 bg-reyes-cyan hover:bg-white text-black font-bold uppercase tracking-widest transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+                </a>
+            </div>
+
+            <!-- Paquete 2 -->
+            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col">
+                <h3 class="text-2xl font-orbitron text-white mb-2">Sitio de Conversión</h3>
+                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Entrega en 15 días</p>
+                <p class="font-orbitron text-4xl text-white mb-1">$2.800.000</p>
+                <p class="text-reyes-silver font-sans text-sm mb-8">Pago único · IVA incluido</p>
+                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Sitio de 5 páginas escrito para vender, no para adornar</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Textos de venta redactados por nosotros</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>SEO técnico para que Google te indexe bien</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Dominio y hosting incluidos el primer año</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Medición de WhatsApp, llamadas y formularios</span></li>
+                </ul>
+                <a data-wa data-wa-origen="paquete-sitio" data-wa-msg="Hola, me interesa el paquete Sitio de Conversion de $2.800.000." class="cursor-pointer w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+                </a>
+            </div>
+
+            <!-- Paquete 3 -->
+            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col">
+                <h3 class="text-2xl font-orbitron text-white mb-2">Motor de Clientes</h3>
+                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Mensual, sin permanencia</p>
+                <p class="font-orbitron text-4xl text-white mb-1">$600.000 <span class="text-lg text-reyes-silver font-sans">/ mes</span></p>
+                <p class="text-reyes-silver font-sans text-sm mb-8">Más la inversión en anuncios, que pagas directo a Google</p>
+                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Campañas de Google Ads en tu ciudad</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Optimización semanal de palabras clave y negativas</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Reporte mensual de llamadas y WhatsApp generados</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Costo real por cliente contactado, a la vista</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>La cuenta de Ads queda a tu nombre</span></li>
+                </ul>
+                <a data-wa data-wa-origen="paquete-motor" data-wa-msg="Hola, me interesa el paquete Motor de Clientes de $600.000 al mes." class="cursor-pointer w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+                </a>
+            </div>
+        </div>
+
+        <p class="max-w-3xl mx-auto px-6 mt-12 text-center text-reyes-silver font-sans text-sm">
+            Precios en pesos colombianos. Lo que ves es lo que pagas: no cobramos "ajustes de alcance" a mitad de camino.
+        </p>
+    </section>
+
     <!-- SECTION 4: GUARANTEE -->
     <section id="why-us" class="py-24 bg-reyes-black border-y border-reyes-cyan/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-8 leading-tight">
-                NUESTRO <span class="text-reyes-cyan">COMPROMISO</span> ES DIRECTO: INCREMENTAMOS TUS VENTAS
+                PRIMERO TE <span class="text-reyes-cyan">DEMOSTRAMOS</span>, DESPUÉS NOS CONTRATAS
             </h2>
             <p class="text-xl md:text-2xl text-reyes-silver mb-10 font-sans font-light leading-relaxed">
-                No hacemos páginas de adorno que nadie visita; implementamos un Combo Digital estratégico enfocado 100% en que el usuario deje sus datos o compre. Si tu objetivo es llegar a más clientes y hacer crecer tu negocio, construimos la presencia digital exacta para que lo logres.
+                Antes de venderte nada te enviamos un Diagnóstico Digital de 1 página: si tu negocio aparece o no en Google Maps, en qué posición estás frente a tres competidores, qué tan rápido carga tu sitio y qué te falta para que te escriban. Gratis y en 24 horas.
             </p>
+            <a data-wa data-wa-origen="garantia" data-wa-msg="Hola, quiero el Diagnostico Digital gratis de mi empresa." class="cursor-pointer inline-block px-10 py-5 bg-reyes-cyan hover:bg-white text-black font-bold uppercase tracking-widest transition shadow-neon">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Pedir mi diagnóstico
+            </a>
         </div> 
     </section>
 
     <!-- FOOTER -->
     <footer class="bg-[#020202] py-20 text-center px-6">
-        <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-8">¿Listo para incrementar tus ventas con una estrategia digital clara?</h2>
+        <h2 class="font-orbitron text-3xl md:text-4xl text-white mb-8">¿Tus clientes te encuentran hoy en Google?</h2>
 
-        <a href="contacto.html" class="inline-block px-10 py-5 bg-white text-black font-bold uppercase tracking-widest hover:bg-reyes-cyan transition mb-12 shadow-neon">
-            Quiero Más Clientes
+        <a data-wa data-wa-origen="footer" data-wa-msg="Hola, quiero saber si mi negocio aparece en Google. Me interesa el diagnostico gratis." class="cursor-pointer inline-block px-10 py-5 bg-white text-black font-bold uppercase tracking-widest hover:bg-reyes-cyan transition mb-12 shadow-neon">
+            <i class="fa-brands fa-whatsapp mr-2"></i> Averígualo gratis en 24h
         </a>
 
         <div class="flex justify-center items-center gap-6 mb-12">
