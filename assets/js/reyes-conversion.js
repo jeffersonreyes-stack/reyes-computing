@@ -13,7 +13,7 @@ const REYES = {
   // Etiqueta de la accion "Clic WhatsApp" (categoria Contacto).
   ADS_ETIQUETA_CONVERSION: 'J5ZoCID2qPIcEMnMiZND',
 
-  MENSAJE_POR_DEFECTO: 'Hola Reyes Computing, quiero mi Diagnostico Digital gratis de 24 horas.'
+  MENSAJE_POR_DEFECTO: 'Hola Reyes Computing. Tengo una empresa en ____ y vendemos ____. Quiero conseguir clientes por Google. Mi presupuesto aproximado para web/anuncios es ____.'
 };
 
 function construirEnlaceWhatsApp(mensaje) {
