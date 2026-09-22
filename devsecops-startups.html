@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) - Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18025178697');
+    </script>
+
+    <!-- SEO & Meta Tags -->
+    <title>DevSecOps & Pipelines CI/CD para Startups | Reyes Computing</title>
+    <meta name="description" content="Automatiza tus despliegues y asegura tu código antes de llegar a producción. Detección de secretos, escaneo Docker con Trivy y despliegues sin caídas para Startups.">
+    <meta name="keywords" content="DevSecOps startups, CI CD GitHub Actions, despliegues zero downtime, escaneo de secretos TruffleHog, seguridad docker trivy, consultor devops colombia">
+    <link rel="canonical" href="https://www.reyescomputing.com/devsecops-startups.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reyescomputing.com/devsecops-startups.html">
+    <meta property="og:title" content="DevSecOps & Pipelines CI/CD para Startups | Reyes Computing">
+    <meta property="og:description" content="Automatiza tus despliegues y asegura tu código antes de llegar a producción. Despliegues Zero-Downtime y seguridad shift-left.">
+    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/devops.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "DevSecOps and CI/CD Automation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Reyes Computing",
+        "image": "https://www.reyescomputing.com/assets/images/logo.png",
+        "url": "https://www.reyescomputing.com"
+      },
+      "areaServed": ["Colombia", "LATAM", "Remote"],
+      "description": "Automatización de pipelines CI/CD seguros, análisis de vulnerabilidades y despliegues zero-downtime para startups."
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Built) -->
+    <link rel="stylesheet" href="assets/css/output.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Capa de conversion: WhatsApp + medicion -->
+    <script defer src="assets/js/reyes-conversion.js"></script>
+</head>
+<body class="antialiased bg-reyes-black text-reyes-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 md:h-16 w-auto">
+                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-reyes-silver">
+                <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
+                <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Seguridad Fintech</a>
+                <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
+                <a href="#paquetes" class="hover:text-reyes-cyan transition">Planes</a>
+                <a data-wa data-wa-origen="navbar-devsecops" data-wa-msg="Hola Reyes Computing. Me interesa automatizar y asegurar el pipeline CI/CD de nuestra aplicación." class="cursor-pointer px-5 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Hablar con DevOps
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero-bg.png" alt="DevSecOps Pipelines" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-reyes-cyan/40 bg-reyes-cyan/10 mb-8 backdrop-blur-sm">
+                <span class="text-xs font-mono uppercase tracking-widest text-reyes-cyan"><i class="fa-solid fa-bolt mr-1"></i> Continuous Integration & Continuous Security</span>
+            </div>
+
+            <h1 class="font-orbitron text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                DESPLIEGA EN MINUTOS. <br><span class="text-reyes-cyan">CERO CAÍDAS. CERO SECRETOS FILTRADOS.</span>
+            </h1>
+
+            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Implementamos pipelines seguros en <strong class="text-white font-semibold">GitHub Actions o GitLab CI</strong>. Automatizamos pruebas, escaneo de vulnerabilidades en contenedores Docker y despliegues sin interrupción de servicio para startups tecnológicas.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
+                    Cotizar Pipeline DevSecOps
+                </a>
+                <a href="#proceso" class="w-full sm:w-auto px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon font-orbitron">
+                    Cómo Funciona el Pipeline
+                </a>
+            </div>
+
+            <!-- Pipeline Visual Bar -->
+            <div class="max-w-4xl mx-auto bg-[#0a0a0a] border border-gray-800 rounded-xl p-6 shadow-2xl">
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+                    <div class="p-3 bg-[#141414] rounded border border-gray-700">
+                        <span class="text-xs text-reyes-cyan font-mono block">PASO 1</span>
+                        <span class="text-xs font-bold uppercase text-white">Commit & Push</span>
+                    </div>
+                    <div class="p-3 bg-[#141414] rounded border border-gray-700">
+                        <span class="text-xs text-reyes-cyan font-mono block">PASO 2</span>
+                        <span class="text-xs font-bold uppercase text-white">Secret Shield</span>
+                    </div>
+                    <div class="p-3 bg-[#141414] rounded border border-gray-700">
+                        <span class="text-xs text-reyes-cyan font-mono block">PASO 3</span>
+                        <span class="text-xs font-bold uppercase text-white">Docker Build</span>
+                    </div>
+                    <div class="p-3 bg-[#141414] rounded border border-gray-700">
+                        <span class="text-xs text-reyes-cyan font-mono block">PASO 4</span>
+                        <span class="text-xs font-bold uppercase text-white">Trivy Scan</span>
+                    </div>
+                    <div class="p-3 bg-[#141414] rounded border border-reyes-cyan/40 bg-reyes-cyan/10 col-span-2 sm:col-span-1">
+                        <span class="text-xs text-reyes-cyan font-mono block">PASO 5</span>
+                        <span class="text-xs font-bold uppercase text-white">Live Deploy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- DOLORES TÉCNICOS -->
+    <section class="py-20 bg-[#070707] border-t border-b border-reyes-cyan/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Diagnóstico de Ingeniería</span>
+                    <h2 class="font-orbitron text-3xl md:text-4xl text-white font-bold mb-6 leading-tight">
+                        ¿POR QUÉ LOS DESPLIEGUES SIGUEN SIENDO UN <span class="text-reyes-cyan">DOLOR DE CABEZA</span>?
+                    </h2>
+                    <div class="space-y-6 text-gray-300 font-sans text-sm md:text-base">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-orbitron text-base">Despliegues manuales por SSH o scripts frágiles:</strong>
+                                Si solo una persona en tu equipo sabe cómo desplegar, tienes un punto único de fallo que retrasa lanzamientos críticos.
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-orbitron text-base">Filtración accidental de API keys y credenciales:</strong>
+                                Más del 60% de los incidentes en startups ocurren por llaves de AWS, Stripe o bases de datos subidas por descuido al repositorio.
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block font-orbitron text-base">Caídas en horas pico durante el lanzamiento:</strong>
+                                Desplegar una nueva versión reiniciando el contenedor a ciegas genera caídas de 2 a 10 minutos que espantan a tus usuarios.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-reyes-cyan/20 rounded-lg blur-2xl"></div>
+                    <img src="assets/images/devops.png" alt="DevSecOps Architecture" class="relative rounded-lg w-full border border-reyes-cyan/30 shadow-neon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EL FLUJO DEL PIPELINE SEGURO -->
+    <section id="proceso" class="py-24 bg-reyes-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Arquitectura Shift-Left</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white">
+                    QUÉ IMPLEMENTAMOS EN TU <span class="text-reyes-cyan">REPOSITORIO</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-xl bg-[#0d0d0d] border border-gray-800 hover:border-reyes-cyan/50 transition">
+                    <div class="text-reyes-cyan font-mono text-3xl mb-4">01.</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Secret Leak Prevention</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Configuración de TruffleHog / GitGuardian en pre-commit y CI para bloquear cualquier commit que contenga tokens, certificados o contraseñas.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#0d0d0d] border border-gray-800 hover:border-reyes-cyan/50 transition">
+                    <div class="text-reyes-cyan font-mono text-3xl mb-4">02.</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Container Hardening</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Optimización de Dockerfiles con imágenes ligeras (Alpine/Distroless), ejecución sin privilegios de root y escaneo de vulnerabilidades con Trivy.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#0d0d0d] border border-gray-800 hover:border-reyes-cyan/50 transition">
+                    <div class="text-reyes-cyan font-mono text-3xl mb-4">03.</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Zero-Downtime Deploy</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Estrategia Rolling Update o Blue/Green para que la nueva versión del contenedor reciba tráfico solo cuando pase el health check.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#0d0d0d] border border-gray-800 hover:border-reyes-cyan/50 transition">
+                    <div class="text-reyes-cyan font-mono text-3xl mb-4">04.</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Alertas en Tiempo Real</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Notificaciones automatizadas en Slack o Discord con el estado exacto del build, logs de fallos y confirmación de despliegue exitoso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAQUETES Y PRECIOS -->
+    <section id="paquetes" class="py-24 bg-[#080808] border-t border-b border-reyes-cyan/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Inversión Clara y Predecible</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    PLANES DE <span class="text-reyes-cyan">IMPLEMENTACIÓN DEVSECOPS</span>
+                </h2>
+                <p class="text-reyes-silver font-sans text-sm">
+                    Servicios de valor cerrado. Sin sorpresas por horas facturadas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Plan Sprint -->
+                <div class="p-8 rounded-xl bg-[#101010] border border-gray-800 flex flex-col justify-between hover:border-reyes-cyan/40 transition">
+                    <div>
+                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Sprint Rápido</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">CI/CD Automation Sprint</h3>
+                        <p class="text-gray-400 text-xs mb-6">Para startups con 1 aplicación web o API que necesita automatizar despliegues de inmediato.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">\$1.500 <span class="text-xs font-normal text-gray-400">USD (Pago único)</span></span>
+                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ \$6.000.000 COP / Entrega en 7 días</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Pipeline GitHub Actions o GitLab CI completo</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Detección de secretos (TruffleHog)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Despliegue automatizado a Staging y Producción</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Notificaciones del despliegue en Slack/Discord</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
+                        Elegir Sprint Rápido
+                    </a>
+                </div>
+
+                <!-- Plan Full DevSecOps -->
+                <div class="p-8 rounded-xl bg-[#121212] border-2 border-reyes-cyan flex flex-col justify-between relative shadow-neon">
+                    <div class="absolute -top-3 right-6 bg-reyes-cyan text-black text-[10px] font-extrabold font-mono uppercase px-3 py-1 rounded-full">
+                        Más Recomendado
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Setup Enterprise</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Full DevSecOps Engine</h3>
+                        <p class="text-gray-400 text-xs mb-6">Para scaleups o startups con microservicios y requisitos estrictos de seguridad.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">\$2.800 <span class="text-xs font-normal text-gray-400">USD (Pago único)</span></span>
+                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ \$11.000.000 COP / Entrega en 14-20 días</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Todo lo del Sprint Rápido</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Escaneo de vulnerabilidades Docker con Trivy</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Análisis estático SAST (SonarQube/Semgrep)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Arquitectura Zero-Downtime Rolling / Blue-Green</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Sesión de capacitación y transferencia técnica (2h)</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-xs uppercase tracking-widest transition text-center font-orbitron shadow-neon">
+                        Elegir Setup Completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-24 bg-[#050505] relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Hablemos de Ingeniería</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    AUTOMATIZA TU <span class="text-reyes-cyan">PIPELINE HOY</span>
+                </h2>
+                <p class="text-reyes-silver max-w-xl mx-auto font-sans text-sm">
+                    Cuéntanos sobre tu stack (GitHub, AWS, Docker, Kubernetes) y agendemos una llamada de 20 minutos con uno de nuestros ingenieros.
+                </p>
+            </div>
+
+            <div class="p-8 md:p-12 rounded-xl bg-[#0c0c0c] border border-reyes-cyan/30 shadow-neon">
+                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
+                    <input type="hidden" name="_subject" value="Lead DevSecOps Startups - Reyes Computing">
+                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Tu Nombre</label>
+                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Ej. Sebastián Herrera" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Empresa / Startup</label>
+                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Ej. SaaS Cloud Inc." required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Correo Corporativo</label>
+                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="sebastian@tuempresa.com" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Servidores / Nube Destino</label>
+                            <input type="text" name="cloud" id="cloud" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Ej. AWS ECS / DigitalOcean / Hetzner">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Detalles del flujo de despliegue actual</label>
+                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan h-28" placeholder="¿Cómo despliegan hoy? ¿Qué problemas o cuellos de botella están experimentando?"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-5 bg-reyes-cyan hover:bg-white text-black font-extrabold text-base transition uppercase tracking-widest font-orbitron shadow-neon">
+                        Agendar Sesión Técnica
+                    </button>
+                    <div class="text-center mt-3">
+                        <span class="text-xs text-gray-500 font-sans"><i class="fa-solid fa-lock mr-1 text-reyes-cyan"></i> Consulta amparada bajo estricto acuerdo de confidencialidad (NDA).</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] py-16 text-center px-6 border-t border-gray-900">
+        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
+            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 w-auto">
+            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
+        </a>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
+            <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
+            <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Ciberseguridad Fintech</a>
+            <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
+            <a href="contacto.html" class="hover:text-reyes-cyan transition">Contacto</a>
+        </div>
+
+        <div class="text-xs text-gray-600 font-sans">
+            &copy; 2025 Reyes Computing S.A.S. — Consultoría e Implementación DevSecOps. Cali, Colombia.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    let valid = true;
+                    const name = document.getElementById('name');
+                    const company = document.getElementById('company');
+                    const email = document.getElementById('email');
+                    const nameErr = document.getElementById('name-error');
+                    const compErr = document.getElementById('company-error');
+                    const mailErr = document.getElementById('email-error');
+
+                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
+                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
+
+                    if (!name.value.trim()) {
+                        nameErr.classList.remove('hidden');
+                        name.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!company.value.trim()) {
+                        compErr.classList.remove('hidden');
+                        company.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+                        mailErr.classList.remove('hidden');
+                        email.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!valid) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
