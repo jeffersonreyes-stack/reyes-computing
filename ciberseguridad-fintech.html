@@ -1,412 +1,102 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google tag (gtag.js) - Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18025178697');
-    </script>
-
-    <!-- SEO & Meta Tags -->
-    <title>Ciberseguridad Web, WAF & Cumplimiento para Fintechs | Reyes Computing</title>
-    <meta name="description" content="Protección perimetral WAF, blindaje de APIs y preparación para auditorías de cumplimiento (PCI DSS, SOC 2) para empresas Fintech en Colombia y LATAM.">
-    <meta name="keywords" content="ciberseguridad fintech, cloudflare WAF fintech, protección APIs bancarias, mitigación DDoS pasarelas de pago, cumplimiento SOC 2 Colombia, auditoría PCI DSS">
-    <link rel="canonical" href="https://www.reyescomputing.com/ciberseguridad-fintech.html">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.reyescomputing.com/ciberseguridad-fintech.html">
-    <meta property="og:title" content="Ciberseguridad Web, WAF & Cumplimiento para Fintechs | Reyes Computing">
-    <meta property="og:description" content="Protección perimetral WAF, blindaje de APIs y preparación para auditorías de aliados bancarios y reguladores.">
-    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/security.png">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Fintech Cybersecurity & Compliance Hardening",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Reyes Computing",
-        "image": "https://www.reyescomputing.com/assets/images/logo.png",
-        "url": "https://www.reyescomputing.com"
-      },
-      "areaServed": ["Colombia", "LATAM"],
-      "description": "Hardening de infraestructura, protección WAF anti-bots y preparación para auditorías de ciberseguridad en Fintechs."
-    }
-    </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS (Built) -->
-    <link rel="stylesheet" href="assets/css/output.css">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <!-- Capa de conversion: WhatsApp + medicion -->
-    <script defer src="assets/js/reyes-conversion.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciberseguridad y WAF Perimetral para Fintechs | Reyes Computing</title>
+  <meta name="description" content="Protección WAF para APIs transaccionales, mitigación anti-DDoS y cumplimiento PCI-DSS v4.0 y OWASP API Top 10 para Fintechs.">
+  <link rel="canonical" href="https://www.reyescomputing.com/ciberseguridad-fintech.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #090d16; --card-bg: #111726; --border: #1f293d; --primary: #3b82f6; --accent: #10b981; --text: #f3f4f6; --text-muted: #9ca3af; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid var(--border); background: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; }
+    .brand { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; color: #fff; text-decoration: none; }
+    .hero { padding: 80px 0 50px; text-align: center; }
+    h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    h1 span { color: #60a5fa; }
+    .hero-p { font-size: 1.15rem; color: var(--text-muted); max-width: 750px; margin: 0 auto 32px; }
+    .compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 60px 0; }
+    .comp-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; text-align: left; }
+    .comp-badge { background: rgba(16, 185, 129, 0.15); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.8rem; display: inline-block; margin-bottom: 12px; }
+    .dossier-box { background: linear-gradient(90deg, #111827, #1f2937); border: 1px solid #374151; border-radius: 14px; padding: 32px; margin: 50px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin: 40px 0 80px; }
+    .p-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 36px; }
+    .price { font-size: 2.6rem; font-weight: 800; color: #fff; margin: 16px 0; }
+    .btn-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 14px 24px; border-radius: 8px; font-weight: 700; display: inline-block; }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width: 800px) { .compliance-grid, .pricing-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body class="antialiased bg-reyes-black text-reyes-white">
+<body>
+  <nav><div class="container" style="display:flex; justify-content:space-between; align-items:center;"><a href="https://www.reyescomputing.com" class="brand">Reyes Computing</a><a href="https://wa.me/573128084929" class="btn-primary" style="padding:8px 16px;">WhatsApp Directo</a></div></nav>
+  
+  <section class="container hero">
+    <div style="display:inline-block; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); color:#60a5fa; padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:600; margin-bottom:20px;">Blindaje Perimetral WAF & Ciberseguridad</div>
+    <h1>Seguridad WAF y Mitigación Anti-DDoS para <span>APIs Fintech</span></h1>
+    <p class="hero-p">Protege tus pasarelas de pago y endpoints críticos contra ataques automatizados, inyecciones y fraude. Pasa tus auditorías bancarias con estándares PCI-DSS v4.0 y OWASP API Top 10.</p>
+    <a href="#contacto" class="btn-primary">Solicitar Diagnóstico WAF Express</a>
+  </section>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 md:h-16 w-auto">
-                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-            </a>
+  <div class="container compliance-grid">
+    <div class="comp-card">
+      <div class="comp-badge">PCI-DSS v4.0</div>
+      <h3>Protección de APIs Transaccionales</h3>
+      <p style="color:var(--text-muted); margin-top:8px;">Cumplimiento del requisito 6.4 con reglas WAF que bloquean payloads maliciosos y previenen fuga de tarjetas y datos financieros.</p>
+    </div>
+    <div class="comp-card">
+      <div class="comp-badge">OWASP API TOP 10</div>
+      <h3>Mitigación BOLA & Rate Limiting</h3>
+      <p style="color:var(--text-muted); margin-top:8px;">Filtro granular de peticiones por IP, mitigación de credential stuffing y protección contra abuso en APIs públicas.</p>
+    </div>
+    <div class="comp-card">
+      <div class="comp-badge">Superfinanciera</div>
+      <h3>Trazabilidad y TLS 1.3 Estricto</h3>
+      <p style="color:var(--text-muted); margin-top:8px;">Cifrado estricto de extremo a extremo, prevención de ataques Man-in-the-Middle y registro inmutable de eventos de seguridad.</p>
+    </div>
+  </div>
 
-            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
-                <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps CI/CD</a>
-                <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
-                <a href="#paquetes" class="hover:text-reyes-cyan transition">Planes</a>
-                <a data-wa data-wa-origen="navbar-fintech" data-wa-msg="Hola Reyes Computing. Represento una Fintech/plataforma de pagos y necesitamos blindar nuestra seguridad perimetral y APIs." class="cursor-pointer px-5 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    <i class="fa-brands fa-whatsapp mr-1"></i> Hablar con SecOps
-                </a>
-            </div>
-        </div>
-    </nav>
+  <div class="container">
+    <div class="dossier-box">
+      <div>
+        <h3>📋 Incluye Dossier de Ciberseguridad para Bancos Aliados</h3>
+        <p style="color:var(--text-muted); margin-top:4px;">Entregamos un informe técnico detallado en PDF firmado por Ingenieros Senior, listo para radicar ante auditores de pasarelas (Stripe, Wompi, PSE) y bancos.</p>
+      </div>
+      <a href="https://wa.me/573128084929?text=Hola,%20necesito%20el%20Dossier%20de%20Ciberseguridad%20Fintech" class="btn-primary" target="_blank" rel="noopener">Consultar con Ingeniero</a>
+    </div>
+  </div>
 
-    <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="Fintech Cybersecurity" class="w-full h-full object-cover opacity-50">
-            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
-        </div>
+  <section class="container" id="contacto">
+    <div class="pricing-grid">
+      <div class="p-card">
+        <h3>Plan Sprint WAF Fintech</h3>
+        <p style="color:var(--text-muted);">Configuración perimetral rápida y efectiva.</p>
+        <div class="price">$1,200 <span style="font-size:1rem; color:var(--text-muted);">USD</span></div>
+        <ul style="color:var(--text-muted); list-style:none; line-height:2; margin-bottom:24px;">
+          <li>✔ Setup Cloudflare Enterprise WAF</li>
+          <li>✔ Rate Limiting en endpoints transaccionales</li>
+          <li>✔ Mitigación anti-bot y anti-DDoS</li>
+          <li>✔ Configuración SSL A+ y HSTS</li>
+        </ul>
+        <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Sprint%20WAF%20Fintech" class="btn-primary" style="display:block; text-align:center;">Iniciar Sprint</a>
+      </div>
+      <div class="p-card" style="border-color:var(--primary);">
+        <h3>Plan Compliance Bancario</h3>
+        <p style="color:var(--text-muted);">Auditoría integral y soporte en homologación.</p>
+        <div class="price">$3,500 <span style="font-size:1rem; color:var(--text-muted);">USD</span></div>
+        <ul style="color:var(--text-muted); list-style:none; line-height:2; margin-bottom:24px;">
+          <li>✔ Todo lo del Plan Sprint WAF</li>
+          <li>✔ Pentest de APIs y microservicios</li>
+          <li>✔ Dossier de Seguridad para auditores bancarios</li>
+          <li>✔ Acompañamiento en llamadas con auditores</li>
+        </ul>
+        <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Plan%20Compliance%20Bancario" class="btn-primary" style="display:block; text-align:center;">Agendar Asesoría</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-reyes-cyan/40 bg-reyes-cyan/10 mb-8 backdrop-blur-sm">
-                <span class="text-xs font-mono uppercase tracking-widest text-reyes-cyan"><i class="fa-solid fa-building-columns mr-1"></i> Seguridad Perimetral & Cumplimiento Financiero</span>
-            </div>
-
-            <h1 class="font-orbitron text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-                BLINDA TUS APIS Y PASARELAS. <br><span class="text-reyes-cyan">CIERRA CONTRATOS CON BANCOS.</span>
-            </h1>
-
-            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Protegemos plataformas Fintech contra fraudes automatizados, ataques DDoS en capa 7 y abusos de bots. Preparamos tu infraestructura para superar las auditorías de seguridad más exigentes (<strong class="text-white font-semibold">SOC 2, PCI DSS y aliados bancarios</strong>).
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
-                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
-                    Solicitar Auditoría Perimetral
-                </a>
-                <a href="#capas" class="w-full sm:w-auto px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon font-orbitron">
-                    Ver las 4 Capas de Blindaje
-                </a>
-            </div>
-
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-b border-reyes-cyan/20 py-6">
-                <div>
-                    <span class="font-orbitron text-3xl font-extrabold text-reyes-cyan block">100%</span>
-                    <span class="text-xs text-gray-400 font-mono uppercase">Mitigación DDoS L7</span>
-                </div>
-                <div>
-                    <span class="font-orbitron text-3xl font-extrabold text-reyes-cyan block">A+</span>
-                    <span class="text-xs text-gray-400 font-mono uppercase">SSL Labs & Security Headers</span>
-                </div>
-                <div>
-                    <span class="font-orbitron text-3xl font-extrabold text-reyes-cyan block">24h</span>
-                    <span class="text-xs text-gray-400 font-mono uppercase">Reporte de Auditoría</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- EL DILEMA DEL CUMPLIMIENTO EN FINTECH -->
-    <section class="py-20 bg-[#070707] border-b border-reyes-cyan/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-reyes-cyan/20 rounded-lg blur-2xl"></div>
-                    <img src="assets/images/security.png" alt="Fintech Security Shield" class="relative rounded-lg w-full border border-reyes-cyan/30 shadow-neon">
-                </div>
-
-                <div>
-                    <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">El Cuello de Botella Regulatorio</span>
-                    <h2 class="font-orbitron text-3xl md:text-4xl text-white font-bold mb-6 leading-tight">
-                        UN ALIADO BANCARIO TE PIDE UN REPORTE DE SEGURIDAD. <span class="text-reyes-cyan">¿ESTÁS LISTO?</span>
-                    </h2>
-                    <p class="text-gray-300 font-sans text-sm md:text-base mb-6 leading-relaxed">
-                        En el sector financiero y de pagos, no basta con decir que eres seguro. Los bancos, adquirentes y reguladores exigen evidencia técnica:
-                    </p>
-                    <ul class="space-y-4 text-gray-300 font-sans text-sm">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-shield-halved text-reyes-cyan mt-1"></i>
-                            <span><strong>Políticas de WAF activas:</strong> Protección verificable contra inyecciones SQL, Cross-Site Scripting (XSS) y manipulación de payloads JSON.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-shield-halved text-reyes-cyan mt-1"></i>
-                            <span><strong>Control estricto de APIs:</strong> Rate limiting por IP y por API key para evitar ataques de fuerza bruta contra saldos o credenciales.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-shield-halved text-reyes-cyan mt-1"></i>
-                            <span><strong>Cifrado y Headers de Grado Bancario:</strong> Certificados TLS 1.3 con HSTS estricto y Content Security Policy que impida ataques de Clickjacking.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LAS 4 CAPAS DE BLINDAJE -->
-    <section id="capas" class="py-24 bg-reyes-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Arquitectura de Defensa en Profundidad</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white">
-                    LAS 4 CAPAS DEL <span class="text-reyes-cyan">BLINDAJE FINTECH</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="w-12 h-12 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-xl text-reyes-cyan mb-4 font-mono">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">1. WAF Perimetral</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
-                        Implementación de Cloudflare WAF con reglas avanzadas de OWASP, bloqueo de redes anónimas (TOR/VPNs maliciosas) y filtrado por geolocalización.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="w-12 h-12 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-xl text-reyes-cyan mb-4 font-mono">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">2. Bot & Scraping Shield</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
-                        Mitigación de bots automatizados que intentan probar tarjetas robadas (Carding), rellenar credenciales (Credential Stuffing) o raspar tus tasas en tiempo real.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="w-12 h-12 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-xl text-reyes-cyan mb-4 font-mono">
-                        <i class="fa-solid fa-lock"></i>
-                    </div>
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">3. Cifrado TLS Estricto</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
-                        Configuración de certificados SSL/TLS con cifrado extremo a extremo (*Full Strict*), deshabilitación de protocolos obsoletos y HSTS con preload para garantizar la calificación A+.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="w-12 h-12 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-xl text-reyes-cyan mb-4 font-mono">
-                        <i class="fa-solid fa-file-contract"></i>
-                    </div>
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">4. Reporte Ejecutivo</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
-                        Generación de un informe técnico y ejecutivo formal que certifica la remediación de vulnerabilidades perimetrales, listo para presentar a bancos y auditores.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAQUETES FINTECH -->
-    <section id="paquetes" class="py-24 bg-[#080808] border-t border-b border-reyes-cyan/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Inversión Especializada</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
-                    PLANES DE <span class="text-reyes-cyan">BLINDAJE FINTECH</span>
-                </h2>
-                <p class="text-reyes-silver font-sans text-sm">
-                    Inversiones directas con resultados auditables y reportes ejecutivos.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                <!-- Plan Shield Sprint -->
-                <div class="p-8 rounded-xl bg-[#101010] border border-gray-800 flex flex-col justify-between hover:border-reyes-cyan/40 transition">
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Paso 1 / Perímetro</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Fintech WAF Sprint</h3>
-                        <p class="text-gray-400 text-xs mb-6">Para plataformas de pago o billeteras que necesitan blindar su web y APIs contra bots y caídas.</p>
-                        
-                        <div class="mb-6 pb-6 border-b border-gray-800">
-                            <span class="text-3xl font-extrabold font-orbitron text-white">$1,200 <span class="text-xs font-normal text-gray-400">USD (Pago único)</span></span>
-                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ $4.800.000 COP / Entrega en 5 días</span>
-                        </div>
-
-                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Configuración WAF Cloudflare con reglas anti-DDoS</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Rate limiting en endpoints sensibles (/login, /checkout)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Implementación de CSP, HSTS y cabeceras A+</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Reporte técnico de blindaje post-intervención</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contacto" class="w-full py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
-                        Elegir WAF Sprint
-                    </a>
-                </div>
-
-                <!-- Plan Compliance Readiness -->
-                <div class="p-8 rounded-xl bg-[#121212] border-2 border-reyes-cyan flex flex-col justify-between relative shadow-neon">
-                    <div class="absolute -top-3 right-6 bg-reyes-cyan text-black text-[10px] font-extrabold font-mono uppercase px-3 py-1 rounded-full">
-                        Audit-Ready
-                    </div>
-
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Completo / Bancos</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Compliance Readiness</h3>
-                        <p class="text-gray-400 text-xs mb-6">Para fintechs en procesos de licenciamiento, conexión bancaria o auditoría SOC 2.</p>
-                        
-                        <div class="mb-6 pb-6 border-b border-gray-800">
-                            <span class="text-3xl font-extrabold font-orbitron text-white">$3,500 <span class="text-xs font-normal text-gray-400">USD (Pago único)</span></span>
-                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ $14.000.000 COP / Entrega en 15 días</span>
-                        </div>
-
-                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Todo lo del Fintech WAF Sprint</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Pentest y escaneo de vulnerabilidades OWASP API Top 10</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Hardening de servidor y aislamiento Zero Trust</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Dossier ejecutivo formal de seguridad para aliados</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Acompañamiento en sesión técnica con el auditor del aliado</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contacto" class="w-full py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-xs uppercase tracking-widest transition text-center font-orbitron shadow-neon">
-                        Elegir Compliance Readiness
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO DE AUDITORÍA PERIMETRAL -->
-    <section id="contacto" class="py-24 bg-[#050505] relative">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Confidencial & Seguro</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
-                    EVALÚA LA SEGURIDAD DE TU <span class="text-reyes-cyan">FINTECH</span>
-                </h2>
-                <p class="text-reyes-silver max-w-xl mx-auto font-sans text-sm">
-                    Ingresa el dominio o API que deseas auditar. Realizamos una prueba perimetral pasiva y te entregamos el reporte en 24 horas.
-                </p>
-            </div>
-
-            <div class="p-8 md:p-12 rounded-xl bg-[#0c0c0c] border border-reyes-cyan/30 shadow-neon">
-                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
-                    <input type="hidden" name="_subject" value="Lead Ciberseguridad Fintech - Reyes Computing">
-                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Nombre y Cargo</label>
-                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Ej. Valentina Gómez - CTO" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Empresa Fintech</label>
-                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Ej. NeoPago Colombia" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Correo Corporativo</label>
-                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="valentina@neopago.co" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Dominio / URL Principal</label>
-                            <input type="text" name="domain" id="domain" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="https://app.tuempresa.com">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Requisito específico o auditoría próxima</label>
-                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan h-28" placeholder="¿Están pasando por auditoría de aliados, sufriendo ataques de bots o buscando certificar su WAF?"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-5 bg-reyes-cyan hover:bg-white text-black font-extrabold text-base transition uppercase tracking-widest font-orbitron shadow-neon">
-                        Solicitar Diagnóstico Perimetral
-                    </button>
-                    <div class="text-center mt-3">
-                        <span class="text-xs text-gray-500 font-sans"><i class="fa-solid fa-lock mr-1 text-reyes-cyan"></i> Confidencialidad garantizada bajo estrictos estándares de protección de datos.</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#020202] py-16 text-center px-6 border-t border-gray-900">
-        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
-            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 w-auto">
-            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-        </a>
-
-        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
-            <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
-            <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps Startups</a>
-            <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
-            <a href="contacto.html" class="hover:text-reyes-cyan transition">Contacto</a>
-        </div>
-
-        <div class="text-xs text-gray-600 font-sans">
-            &copy; 2025 Reyes Computing S.A.S. — Seguridad Perimetral y Cumplimiento Fintech. Cali, Colombia.
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contactForm');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    let valid = true;
-                    const name = document.getElementById('name');
-                    const company = document.getElementById('company');
-                    const email = document.getElementById('email');
-                    const nameErr = document.getElementById('name-error');
-                    const compErr = document.getElementById('company-error');
-                    const mailErr = document.getElementById('email-error');
-
-                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
-                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
-
-                    if (!name.value.trim()) {
-                        nameErr.classList.remove('hidden');
-                        name.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!company.value.trim()) {
-                        compErr.classList.remove('hidden');
-                        company.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
-                        mailErr.classList.remove('hidden');
-                        email.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!valid) {
-                        e.preventDefault();
-                    }
-                });
-            }
-        });
-    </script>
+  <footer><div class="container"><p>© 2026 Reyes Computing S.A.S. · Ciberseguridad y Cloud para Fintechs · Bogotá, Colombia</p></div></footer>
 </body>
 </html>

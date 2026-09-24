@@ -1,372 +1,69 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google tag (gtag.js) - Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18025178697');
-    </script>
-
-    <!-- SEO & Meta Tags -->
-    <title>DevOps, Cloud & Ciberseguridad para Startups y Fintechs | Reyes Computing</title>
-    <meta name="description" content="Acelera tus despliegues y blinda tu infraestructura cloud. DevSecOps, Hardening WAF y soporte de infraestructura on-demand para Startups y Fintechs en Colombia y LATAM.">
-    <meta name="keywords" content="DevSecOps startups, ciberseguridad fintech, infraestructura cloud LATAM, CI CD GitHub Actions, Cloudflare WAF fintech, soporte devops colombia, cumplimiento SOC 2 PCI DSS">
-    <link rel="canonical" href="https://www.reyescomputing.com/startups-fintech.html">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.reyescomputing.com/startups-fintech.html">
-    <meta property="og:title" content="DevOps, Cloud & Ciberseguridad para Startups y Fintechs | Reyes Computing">
-    <meta property="og:description" content="Acelera tus despliegues y blinda tu infraestructura cloud. DevSecOps, Hardening WAF y soporte on-demand para Startups y Fintechs.">
-    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/logo.png">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "DevOps & Cybersecurity for Startups",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Reyes Computing",
-        "image": "https://www.reyescomputing.com/assets/images/logo.png",
-        "url": "https://www.reyescomputing.com"
-      },
-      "areaServed": ["Colombia", "LATAM"],
-      "description": "Servicios de DevSecOps, Ciberseguridad WAF y Soporte Cloud On-Demand para Startups y Fintechs."
-    }
-    </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS (Built) -->
-    <link rel="stylesheet" href="assets/css/output.css">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <!-- Capa de conversion: WhatsApp + medicion -->
-    <script defer src="assets/js/reyes-conversion.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infraestructura Cloud para Startups & Fintechs | Reyes Computing</title>
+  <meta name="description" content="Ingeniería Cloud On-Demand para Startups. Ahorra 19% de IVA (Art. 476 #21 E.T.) y reduce costos de nómina técnica fija.">
+  <link rel="canonical" href="https://www.reyescomputing.com/startups-fintech.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #090d16; --card-bg: #111726; --border: #1f293d; --primary: #3b82f6; --accent: #10b981; --text: #f3f4f6; --text-muted: #9ca3af; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid var(--border); background: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; }
+    .brand { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; color: #fff; text-decoration: none; }
+    .hero { padding: 80px 0 50px; text-align: center; }
+    h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    h1 span { color: var(--accent); }
+    .tax-box { background: rgba(16, 185, 129, 0.08); border: 2px solid var(--accent); border-radius: 16px; padding: 40px; margin: 40px 0; text-align: left; }
+    .btn-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 700; display: inline-block; }
+    .compare-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin: 50px 0; }
+    .c-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 36px; }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width: 800px) { .compare-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body class="antialiased bg-reyes-black text-reyes-white">
+<body>
+  <nav><div class="container" style="display:flex; justify-content:space-between; align-items:center;"><a href="https://www.reyescomputing.com" class="brand">Reyes Computing</a><a href="https://wa.me/573128084929" class="btn-primary" style="padding:8px 16px;">WhatsApp Directo</a></div></nav>
+  
+  <section class="container hero">
+    <div style="display:inline-block; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); color:var(--accent); padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:600; margin-bottom:20px;">Ahorro de Runway para Startups</div>
+    <h1>Escala tu Nube sin Nómina Fija y <span>Ahorra 19% de IVA</span></h1>
+    <p style="font-size:1.15rem; color:var(--text-muted); max-width:700px; margin:0 auto 32px;">Acceso a ingenieros Cloud & DevSecOps senior en 48 horas. Eliminamos el sobrecosto laboral y tributario de tu infraestructura.</p>
+    <a href="https://wa.me/573128084929?text=Hola,%20quiero%20conocer%20el%20modelo%20On-Demand%20para%20Startups" class="btn-primary">Consultar Modelo On-Demand</a>
+  </section>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 md:h-16 w-auto">
-                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-            </a>
+  <div class="container">
+    <div class="tax-box">
+      <div style="background:var(--accent); color:#064e3b; font-weight:800; display:inline-block; padding:4px 12px; border-radius:6px; font-size:0.85rem; margin-bottom:12px;">ESTATUTO TRIBUTARIO · ART. 476 NUMERAL 21</div>
+      <h2 style="font-size:1.8rem; margin-bottom:12px; color:#fff;">Servicios Cloud 100% Excluidos de IVA (0%)</h2>
+      <p style="color:var(--text-muted); font-size:1.05rem;">Por ley colombiana, los servicios de computación en la nube, administración y soporte de servidores prestados por Reyes Computing S.A.S. están <strong>legalmente excluidos de IVA</strong>. Tu empresa ahorra de entrada un 19% frente a agencias o consultoras no especializadas.</p>
+    </div>
+  </div>
 
-            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps CI/CD</a>
-                <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Seguridad Fintech</a>
-                <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
-                <a href="#pilares" class="hover:text-reyes-cyan transition">Servicios</a>
-                <a data-wa data-wa-origen="navbar-startups-hub" data-wa-msg="Hola Reyes Computing. Tengo una Startup/Fintech y me gustaría agendar una auditoría técnica express de infraestructura y seguridad." class="cursor-pointer px-5 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    <i class="fa-brands fa-whatsapp mr-1"></i> Auditoría Express
-                </a>
-            </div>
-        </div>
-    </nav>
+  <div class="container compare-grid">
+    <div class="c-card" style="border-color:#ef4444;">
+      <h3 style="color:#ef4444; margin-bottom:12px;">❌ Nómina DevOps Interna Tradicional</h3>
+      <ul style="color:var(--text-muted); list-style:none; line-height:2;">
+        <li>• Salario: $12M a $16M COP / mes por ingeniero</li>
+        <li>• Prestaciones sociales y liquidación (+52% de carga)</li>
+        <li>• Proceso de reclutamiento de 2 a 3 meses</li>
+        <li>• Dependencia de 1 sola persona</li>
+      </ul>
+    </div>
+    <div class="c-card" style="border-color:var(--accent);">
+      <h3 style="color:var(--accent); margin-bottom:12px;">✔ Reyes Computing On-Demand</h3>
+      <ul style="color:var(--text-muted); list-style:none; line-height:2;">
+        <li>• Planes cerrados desde $450 USD/mes o $1,500 por proyecto</li>
+        <li>• Cero cargas prestacionales ni pasivos laborales</li>
+        <li>• Disponibles en 48 horas con ingenieros senior</li>
+        <li>• Factura oficial con 0% de IVA (Ahorro del 19%)</li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="DevOps & Security Hub" class="w-full h-full object-cover opacity-50">
-            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-reyes-cyan/40 bg-reyes-cyan/10 mb-8 backdrop-blur-sm">
-                <span class="w-2 h-2 rounded-full bg-reyes-cyan animate-pulse"></span>
-                <span class="text-xs font-mono uppercase tracking-widest text-reyes-cyan">Infraestructura Crítica para Startups & Fintechs en LATAM</span>
-            </div>
-
-            <h1 class="font-orbitron text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-                ACELERA TUS DESPLIEGUES. <br><span class="text-reyes-cyan">BLINDA TU INFRAESTRUCTURA.</span>
-            </h1>
-
-            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Proveemos ingeniería <strong class="text-white font-semibold">DevSecOps</strong>, <strong class="text-white font-semibold">Hardening WAF</strong> y <strong class="text-white font-semibold">Soporte Cloud On-Demand</strong> para startups y empresas financieras que necesitan velocidad de entrega y cumplimiento sin los costos de un equipo interno de $6,000 USD/mes.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
-                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
-                    Solicitar Auditoría Técnica (20 min)
-                </a>
-                <a data-wa data-wa-origen="hero-startups-hub" data-wa-msg="Hola Reyes Computing. Queremos evaluar la seguridad y arquitectura de despliegue de nuestra startup." class="cursor-pointer w-full sm:w-auto px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon font-orbitron">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Hablar con un Ingeniero
-                </a>
-            </div>
-
-            <!-- Badges Tecnológicos -->
-            <div class="pt-6 border-t border-reyes-cyan/15 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-xs font-mono text-gray-400 uppercase tracking-widest">
-                <span><i class="fa-brands fa-github text-reyes-cyan mr-1"></i> GitHub Actions</span>
-                <span><i class="fa-brands fa-docker text-reyes-cyan mr-1"></i> Docker & Containers</span>
-                <span><i class="fa-solid fa-shield-halved text-reyes-cyan mr-1"></i> Cloudflare WAF</span>
-                <span><i class="fa-brands fa-aws text-reyes-cyan mr-1"></i> AWS & Multi-Cloud</span>
-                <span><i class="fa-solid fa-file-shield text-reyes-cyan mr-1"></i> SOC 2 / PCI DSS Readiness</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- DIAGNÓSTICO DEL MERCADO & DOLORES REALES -->
-    <section class="py-20 bg-[#070707] border-t border-b border-reyes-cyan/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="font-orbitron text-2xl md:text-4xl text-white font-bold mb-4">
-                    EL COSTO INVISIBLE DE LA <span class="text-reyes-cyan">DEUDA TÉCNICA</span>
-                </h2>
-                <p class="text-reyes-silver font-sans">
-                    En una startup o fintech en crecimiento, un fallo de seguridad o una caída de infraestructura no solo frena el desarrollo: destruye la confianza de inversores y clientes corporativos.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-lg bg-[#101010] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="text-reyes-cyan text-3xl mb-4 font-mono">01. / DESPLIEGUES</div>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-3">Miedo a producción</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Despliegues manuales por SSH, falta de pipelines reproducibles y retrasos de horas para publicar un cambio por temor a romper la base de datos o el entorno activo.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-lg bg-[#101010] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="text-reyes-cyan text-3xl mb-4 font-mono">02. / BLOQUEO B2B</div>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-3">Frenados por Compliance</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Bancos, aliados y clientes empresariales exigen reportes de seguridad perimetral, WAF y auditorías de vulnerabilidades antes de firmar o habilitar sus APIs.
-                    </p>
-                </div>
-
-                <div class="p-8 rounded-lg bg-[#101010] border border-gray-800 hover:border-reyes-cyan/50 transition">
-                    <div class="text-reyes-cyan text-3xl mb-4 font-mono">03. / COSTOS FIJOS</div>
-                    <h3 class="font-orbitron text-xl font-bold text-white mb-3">Escasez de Talento DevOps</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Contratar un ingeniero DevOps Senior interno cuesta más de $12M COP o $3,500 USD al mes. Tu startup necesita el resultado, no la sobrecarga salarial.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LOS 3 PILARES DE SERVICIO -->
-    <section id="pilares" class="py-24 bg-reyes-black relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Nuestras Soluciones Especializadas</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white">
-                    TRES EJES DE <span class="text-reyes-cyan">ALTO IMPACTO</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                <!-- Pilar 1: DevSecOps -->
-                <div class="group relative flex flex-col justify-between rounded-xl bg-[#0b0b0b] border border-gray-800 p-8 hover:border-reyes-cyan transition duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,243,255,0.2)]">
-                    <div>
-                        <div class="w-14 h-14 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-2xl text-reyes-cyan mb-6 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-code-merge"></i>
-                        </div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Para Startups de Software</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Pipeline DevSecOps CI/CD</h3>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Automatiza el ciclo de entrega desde el commit hasta producción. Integramos detección de secretos (evita filtraciones de API keys en GitHub), análisis SAST y escaneo de imágenes Docker (Trivy).
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-300 mb-8 font-sans">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> GitHub Actions / GitLab CI</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Despliegues Zero-Downtime</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Detección de secretos con TruffleHog</li>
-                        </ul>
-                    </div>
-                    <a href="devsecops-startups.html" class="inline-flex items-center justify-between py-3 px-4 border border-reyes-cyan/40 hover:border-reyes-cyan text-white hover:text-reyes-cyan font-orbitron text-xs uppercase tracking-widest transition">
-                        <span>Ver Detalles y Casos</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Pilar 2: Ciberseguridad Fintech -->
-                <div class="group relative flex flex-col justify-between rounded-xl bg-[#0b0b0b] border border-gray-800 p-8 hover:border-reyes-cyan transition duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,243,255,0.2)]">
-                    <div>
-                        <div class="w-14 h-14 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-2xl text-reyes-cyan mb-6 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-shield-virus"></i>
-                        </div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Para Fintechs & Pagos</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Seguridad Web & WAF</h3>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Blindaje perimetral para plataformas de pago, billeteras y servicios transaccionales. Reglas WAF anti-scraping, mitigación de ataques DDoS en capa 7 y cabeceras estrictas (CSP/HSTS A+).
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-300 mb-8 font-sans">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Protección de APIs contra abusos de bots</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Preparación para SOC 2 / PCI DSS</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Certificado de reporte ejecutivo para aliados</li>
-                        </ul>
-                    </div>
-                    <a href="ciberseguridad-fintech.html" class="inline-flex items-center justify-between py-3 px-4 border border-reyes-cyan/40 hover:border-reyes-cyan text-white hover:text-reyes-cyan font-orbitron text-xs uppercase tracking-widest transition">
-                        <span>Ver Solución Fintech</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Pilar 3: Infraestructura Cloud On-Demand -->
-                <div class="group relative flex flex-col justify-between rounded-xl bg-[#0b0b0b] border border-gray-800 p-8 hover:border-reyes-cyan transition duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,243,255,0.2)]">
-                    <div>
-                        <div class="w-14 h-14 rounded-lg bg-reyes-cyan/10 border border-reyes-cyan/30 flex items-center justify-center text-2xl text-reyes-cyan mb-6 group-hover:scale-110 transition">
-                            <i class="fa-solid fa-server"></i>
-                        </div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Suscripción Mensual</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Cloud On-Demand & FinOps</h3>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Tu equipo DevOps y de infraestructura como servicio. Monitoreo 24/7 de caídas, respaldos automáticos comprobados fuera del servidor y optimización continua de costos en AWS/GCP.
-                        </p>
-                        <ul class="space-y-3 text-sm text-gray-300 mb-8 font-sans">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Monitoreo proactivo de uptime y latencia</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Auditoría de costos cloud (FinOps)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan text-xs"></i> Planes desde $450 USD/mes sin permanencia</li>
-                        </ul>
-                    </div>
-                    <a href="infraestructura-nube-startups.html" class="inline-flex items-center justify-between py-3 px-4 border border-reyes-cyan/40 hover:border-reyes-cyan text-white hover:text-reyes-cyan font-orbitron text-xs uppercase tracking-widest transition">
-                        <span>Ver Planes y Tarifas</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO DE CONTACTO AUDITORÍA EXPRESS -->
-    <section id="contacto" class="py-24 bg-[#050505] relative border-t border-reyes-cyan/20">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Diagnóstico Gratuito</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
-                    SOLICITA TU <span class="text-reyes-cyan">AUDITORÍA TÉCNICA EXPRESS</span>
-                </h2>
-                <p class="text-reyes-silver max-w-xl mx-auto font-sans text-sm md:text-base">
-                    Analizamos tus repositorios, cabeceras perimetrales o infraestructura actual en 24 horas y te entregamos un reporte con los 3 puntos críticos a corregir.
-                </p>
-            </div>
-
-            <div class="p-8 md:p-12 rounded-xl bg-[#0c0c0c] border border-reyes-cyan/30 shadow-neon">
-                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
-                    <input type="hidden" name="_subject" value="Lead Startups & Fintech - Reyes Computing">
-                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Nombre y Apellido</label>
-                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]" placeholder="Ej. Carlos Mendoza" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Empresa / Startup</label>
-                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]" placeholder="Ej. PayFlow LATAM" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Correo Corporativo</label>
-                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]" placeholder="carlos@tuempresa.com" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Servicio de Interés</label>
-                            <select name="service" id="service" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)]">
-                                <option value="DevSecOps CI/CD">Pipeline DevSecOps CI/CD</option>
-                                <option value="Seguridad Fintech & WAF">Seguridad Web, WAF & Fintech</option>
-                                <option value="Soporte Cloud On-Demand">Soporte Cloud On-Demand & FinOps</option>
-                                <option value="Auditoría Integral">Auditoría Integral Completa</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Dominio web / Repositorio / Desafío actual</label>
-                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan focus:shadow-[0_0_15px_rgba(0,243,255,0.2)] h-28" placeholder="Cuéntanos sobre tu stack tecnológico actual (AWS, GitHub, Docker, etc.) y tu principal reto..."></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-5 bg-reyes-cyan hover:bg-white text-black font-extrabold text-base md:text-lg transition uppercase tracking-widest font-orbitron mt-4 shadow-neon">
-                        Solicitar Auditoría de 20 Minutos
-                    </button>
-                    <div class="text-center mt-3">
-                        <span class="text-xs text-gray-500 font-sans"><i class="fa-solid fa-lock mr-1 text-reyes-cyan"></i> Tratamiento de datos estricto bajo acuerdo de confidencialidad (NDA).</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#020202] py-16 text-center px-6 border-t border-gray-900">
-        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
-            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 w-auto">
-            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-        </a>
-
-        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
-            <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps Startups</a>
-            <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Ciberseguridad Fintech</a>
-            <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud On-Demand</a>
-            <a href="contacto.html" class="hover:text-reyes-cyan transition">Contacto General</a>
-        </div>
-
-        <div class="text-xs text-gray-600 font-sans">
-            &copy; 2025 Reyes Computing S.A.S. — Servicios de Computación Cloud y Seguridad Digital. Cali, Colombia.
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contactForm');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    let valid = true;
-                    const name = document.getElementById('name');
-                    const company = document.getElementById('company');
-                    const email = document.getElementById('email');
-                    const nameErr = document.getElementById('name-error');
-                    const compErr = document.getElementById('company-error');
-                    const mailErr = document.getElementById('email-error');
-
-                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
-                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
-
-                    if (!name.value.trim()) {
-                        nameErr.classList.remove('hidden');
-                        name.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!company.value.trim()) {
-                        compErr.classList.remove('hidden');
-                        company.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
-                        mailErr.classList.remove('hidden');
-                        email.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!valid) {
-                        e.preventDefault();
-                    }
-                });
-            }
-        });
-    </script>
+  <footer><div class="container"><p>© 2026 Reyes Computing S.A.S. · Infraestructura y Nube On-Demand · Bogotá, Colombia</p></div></footer>
 </body>
 </html>

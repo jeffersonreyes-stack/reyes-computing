@@ -1,423 +1,91 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google tag (gtag.js) - Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18025178697');
-    </script>
-
-    <!-- SEO & Meta Tags -->
-    <title>Infraestructura Cloud, FinOps & Soporte On-Demand | Reyes Computing</title>
-    <meta name="description" content="Tu equipo DevOps y SysAdmin como servicio mensual. Monitoreo 24/7, reducción de costos cloud (FinOps) y copias de seguridad automáticas para Startups.">
-    <meta name="keywords" content="soporte devops startups, finops colombia, administracion servidores cloud, monitoreo 24/7 uptime, disaster recovery backups, sysadmin on demand latam">
-    <link rel="canonical" href="https://www.reyescomputing.com/infraestructura-nube-startups.html">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.reyescomputing.com/infraestructura-nube-startups.html">
-    <meta property="og:title" content="Infraestructura Cloud, FinOps & Soporte On-Demand | Reyes Computing">
-    <meta property="og:description" content="Tu equipo DevOps y de infraestructura como servicio mensual. Monitoreo 24/7 y optimización continua de costos.">
-    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/finops.png">
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Cloud Infrastructure Management & FinOps On-Demand",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Reyes Computing",
-        "image": "https://www.reyescomputing.com/assets/images/logo.png",
-        "url": "https://www.reyescomputing.com"
-      },
-      "areaServed": ["Colombia", "LATAM", "Remote"],
-      "description": "Gestión continua de servidores cloud, monitoreo de disponibilidad 24/7 y optimización de facturas en AWS/GCP."
-    }
-    </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS (Built) -->
-    <link rel="stylesheet" href="assets/css/output.css">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <!-- Capa de conversion: WhatsApp + medicion -->
-    <script defer src="assets/js/reyes-conversion.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoreo Cloud 24/7 y FinOps para Startups | Reyes Computing</title>
+  <meta name="description" content="Monitoreo continuo de servidores, backups diarios comprobados y optimización de costos en AWS, GCP y DigitalOcean.">
+  <link rel="canonical" href="https://www.reyescomputing.com/infraestructura-nube-startups.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #090d16; --card-bg: #111726; --border: #1f293d; --primary: #3b82f6; --accent: #10b981; --text: #f3f4f6; --text-muted: #9ca3af; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 20px 0; border-bottom: 1px solid var(--border); background: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; }
+    .brand { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; color: #fff; text-decoration: none; }
+    .hero { padding: 80px 0 50px; text-align: center; }
+    h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    h1 span { color: var(--primary); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 50px 0 80px; }
+    .p-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+    .price { font-size: 2.4rem; font-weight: 800; color: #fff; margin: 16px 0; }
+    .btn-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 700; text-align: center; display: block; }
+    footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body class="antialiased bg-reyes-black text-reyes-white">
+<body>
+  <nav><div class="container" style="display:flex; justify-content:space-between; align-items:center;"><a href="https://www.reyescomputing.com" class="brand">Reyes Computing</a><a href="https://wa.me/573128084929" class="btn-primary" style="padding:8px 16px;">WhatsApp Directo</a></div></nav>
+  
+  <section class="container hero">
+    <div style="display:inline-block; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); color:#60a5fa; padding:6px 14px; border-radius:999px; font-size:0.85rem; font-weight:600; margin-bottom:20px;">Uptime 99.99% · Soporte 24/7</div>
+    <h1>Monitoreo Cloud 24/7 y <span>FinOps para Startups</span></h1>
+    <p style="font-size:1.15rem; color:var(--text-muted); max-width:700px; margin:0 auto 32px;">Vigilancia continua de servidores, alertas proactivas antes de caídas y reducción de hasta 35% en tu factura de AWS o GCP.</p>
+    <a href="https://wa.me/573128084929?text=Hola,%20quiero%20auditar%20costos%20y%20monitoreo%20cloud" class="btn-primary" style="display:inline-block; padding:14px 28px;">Solicitar Diagnóstico FinOps</a>
+  </section>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 group">
-                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 md:h-16 w-auto">
-                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-            </a>
+  <div class="container pricing-grid">
+    <div class="p-card">
+      <div>
+        <h3>Plan Essential</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Para startups en fase inicial.</p>
+        <div class="price">$450 <span style="font-size:1rem; color:var(--text-muted);">USD / mes</span></div>
+        <ul style="color:var(--text-muted); list-style:none; line-height:2; margin-bottom:24px;">
+          <li>✔ Monitoreo de uptime y latencia 24/7</li>
+          <li>✔ Backups diarios comprobados</li>
+          <li>✔ Alertas automáticas por Telegram/Slack</li>
+          <li>✔ SLA de respuesta &lt; 2 horas</li>
+          <li>✔ Excluido de IVA (0%)</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Plan%20Essential%20Cloud" class="btn-primary">Contratar Essential</a>
+    </div>
 
-            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
-                <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps CI/CD</a>
-                <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Seguridad Fintech</a>
-                <a href="#planes" class="hover:text-reyes-cyan transition">Planes Mensuales</a>
-                <a data-wa data-wa-origen="navbar-cloud" data-wa-msg="Hola Reyes Computing. Necesitamos soporte de infraestructura y monitoreo mensual para nuestros servidores." class="cursor-pointer px-5 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    <i class="fa-brands fa-whatsapp mr-1"></i> Consultar Disponibilidad
-                </a>
-            </div>
-        </div>
-    </nav>
+    <div class="p-card" style="border-color:var(--primary);">
+      <div>
+        <div style="background:var(--primary); color:#fff; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px; display:inline-block; margin-bottom:8px;">MÁS POPULAR</div>
+        <h3>Plan Pro FinOps</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Crecimiento activo y optimización de factura.</p>
+        <div class="price">$1,200 <span style="font-size:1rem; color:var(--text-muted);">USD / mes</span></div>
+        <ul style="color:var(--text-muted); list-style:none; line-height:2; margin-bottom:24px;">
+          <li>✔ Todo lo del Plan Essential</li>
+          <li>✔ Auditoría FinOps mensual de AWS/GCP</li>
+          <li>✔ Reducción de recursos ociosos (-20% a -35%)</li>
+          <li>✔ Canal directo Slack con Ingenieros Senior</li>
+          <li>✔ SLA de respuesta &lt; 30 minutos</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Plan%20Pro%20FinOps" class="btn-primary">Contratar Pro</a>
+    </div>
 
-    <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="Cloud Infrastructure" class="w-full h-full object-cover opacity-50">
-            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
-        </div>
+    <div class="p-card">
+      <div>
+        <h3>Plan Enterprise</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Operaciones críticas y alta disponibilidad.</p>
+        <div class="price">$2,500 <span style="font-size:1rem; color:var(--text-muted);">USD / mes</span></div>
+        <ul style="color:var(--text-muted); list-style:none; line-height:2; margin-bottom:24px;">
+          <li>✔ Todo lo del Plan Pro</li>
+          <li>✔ Gestión multi-cloud y Kubernetes</li>
+          <li>✔ Guardias nocturnas dedicadas 24/7</li>
+          <li>✔ SLA de respuesta inmediata &lt; 15 min</li>
+          <li>✔ Auditorías periódicas de seguridad</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Plan%20Enterprise%20Cloud" class="btn-primary">Contratar Enterprise</a>
+    </div>
+  </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-reyes-cyan/40 bg-reyes-cyan/10 mb-8 backdrop-blur-sm">
-                <span class="text-xs font-mono uppercase tracking-widest text-reyes-cyan"><i class="fa-solid fa-server mr-1"></i> Infrastructure as a Service & FinOps</span>
-            </div>
-
-            <h1 class="font-orbitron text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-                TU EQUIPO DE INFRAESTRUCTURA <br><span class="text-reyes-cyan">ON-DEMAND Y 24/7</span>
-            </h1>
-
-            <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Monitoreo activo de disponibilidad, respaldos automáticos comprobados y optimización de facturas en AWS/GCP. Toda la potencia de un equipo senior de infraestructura <strong class="text-white font-semibold">sin contratar un empleado de $14M COP al mes</strong>.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
-                <a href="#planes" class="w-full sm:w-auto px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
-                    Ver Planes de Suscripción
-                </a>
-                <a href="#comparativa" class="w-full sm:w-auto px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon font-orbitron">
-                    Comparativa de Costes
-                </a>
-            </div>
-
-            <!-- Features Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
-                <div class="p-4 bg-[#0d0d0d] border border-gray-800 rounded-lg">
-                    <i class="fa-solid fa-heart-pulse text-reyes-cyan mb-2"></i>
-                    <h3 class="text-xs font-bold text-white font-orbitron uppercase">Uptime 99.9%</h3>
-                    <p class="text-[11px] text-gray-400">Alertas inmediatas en caso de caída o saturación.</p>
-                </div>
-                <div class="p-4 bg-[#0d0d0d] border border-gray-800 rounded-lg">
-                    <i class="fa-solid fa-database text-reyes-cyan mb-2"></i>
-                    <h3 class="text-xs font-bold text-white font-orbitron uppercase">Backups Off-Site</h3>
-                    <p class="text-[11px] text-gray-400">Copias diarias cifradas fuera del servidor principal.</p>
-                </div>
-                <div class="p-4 bg-[#0d0d0d] border border-gray-800 rounded-lg">
-                    <i class="fa-solid fa-chart-line-down text-reyes-cyan mb-2"></i>
-                    <h3 class="text-xs font-bold text-white font-orbitron uppercase">FinOps Activo</h3>
-                    <p class="text-[11px] text-gray-400">Eliminación de recursos huérfanos y reducción de factura.</p>
-                </div>
-                <div class="p-4 bg-[#0d0d0d] border border-gray-800 rounded-lg">
-                    <i class="fa-solid fa-shield text-reyes-cyan mb-2"></i>
-                    <h3 class="text-xs font-bold text-white font-orbitron uppercase">Parches Críticos</h3>
-                    <p class="text-[11px] text-gray-400">Actualización preventiva de seguridad del OS y paquetes.</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- COMPARATIVA: CONTRATACIÓN INTERNA VS ON-DEMAND -->
-    <section id="comparativa" class="py-20 bg-[#070707] border-b border-reyes-cyan/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Eficiencia de Capital</span>
-                <h2 class="font-orbitron text-3xl md:text-4xl text-white font-bold mb-4">
-                    CONTRATAR UN DEVOPS SENIOR VS <span class="text-reyes-cyan">REYES COMPUTING</span>
-                </h2>
-                <p class="text-reyes-silver font-sans text-sm">
-                    Ahorra hasta un 70% en presupuesto operativo mientras accedes a un equipo multidisciplinario listo desde el día uno.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
-                <!-- Opción Tradicional -->
-                <div class="p-8 rounded-xl bg-[#0f0f0f] border border-red-500/30 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-red-400 uppercase tracking-widest block mb-2">Modelo Tradicional</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Ingeniero Interno</h3>
-                        <p class="text-3xl font-extrabold text-red-400 font-orbitron mb-6">~$3,500 USD <span class="text-xs font-normal text-gray-400">/ mes + prestaciones</span></p>
-
-                        <ul class="space-y-4 text-xs text-gray-300 font-sans">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-400"></i> Proceso de contratación y reclutamiento de 2 a 3 meses.</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-400"></i> Sobrecarga salarial, vacaciones, liquidaciones y licencias.</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-400"></i> Conocimiento limitado a la experiencia de una sola persona.</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-400"></i> No hay cobertura 24/7 si el empleado se enferma o renuncia.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Modelo Reyes Computing -->
-                <div class="p-8 rounded-xl bg-[#121212] border-2 border-reyes-cyan flex flex-col justify-between shadow-neon">
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest block mb-2">Modelo Reyes Computing</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-4">Cloud On-Demand</h3>
-                        <p class="text-3xl font-extrabold text-reyes-cyan font-orbitron mb-6">Desde $450 USD <span class="text-xs font-normal text-gray-400">/ mes (Sin permanencia)</span></p>
-
-                        <ul class="space-y-4 text-xs text-gray-200 font-sans">
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-reyes-cyan"></i> Inicio inmediato en menos de 48 horas.</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-reyes-cyan"></i> Facturación de servicio deducible de impuestos (Excluido de IVA Art. 476#21).</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-reyes-cyan"></i> Equipo con experiencia en AWS, GCP, Docker, Cloudflare y Linux.</li>
-                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-reyes-cyan"></i> Monitoreo automatizado 24/7 y SLA de respuesta rápida.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLANES DE SUSCRIPCIÓN -->
-    <section id="planes" class="py-24 bg-reyes-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Suscripción Mensual Flexible</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
-                    PLANES DE <span class="text-reyes-cyan">INFRAESTRUCTURA CLOUD</span>
-                </h2>
-                <p class="text-reyes-silver font-sans text-sm">
-                    Escala tu soporte a medida que crece el tráfico de tu aplicación.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Plan Essential -->
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 flex flex-col justify-between hover:border-reyes-cyan/40 transition">
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Para Apps & Startups Tempranas</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Plan Essential</h3>
-                        <p class="text-gray-400 text-xs mb-6">Monitoreo y mantenimiento preventivo para servidores en etapa semilla.</p>
-                        
-                        <div class="mb-6 pb-6 border-b border-gray-800">
-                            <span class="text-3xl font-extrabold font-orbitron text-white">$450 <span class="text-xs font-normal text-gray-400">USD/mes</span></span>
-                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ $1.800.000 COP / mes</span>
-                        </div>
-
-                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Monitoreo 24/7 de caídas y alertas</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Respaldo diario verificado fuera de sitio</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Parcheo mensual de seguridad del sistema operativo</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Hasta 3 horas de soporte técnico mensual</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contacto" class="w-full py-3 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
-                        Seleccionar Essential
-                    </a>
-                </div>
-
-                <!-- Plan Pro -->
-                <div class="p-8 rounded-xl bg-[#111111] border-2 border-reyes-cyan flex flex-col justify-between relative shadow-neon">
-                    <div class="absolute -top-3 right-6 bg-reyes-cyan text-black text-[10px] font-extrabold font-mono uppercase px-3 py-1 rounded-full">
-                        Más Popular
-                    </div>
-
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Para Startups en Crecimiento</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Plan Pro</h3>
-                        <p class="text-gray-400 text-xs mb-6">Infraestructura de alta disponibilidad, FinOps y soporte prioritario.</p>
-                        
-                        <div class="mb-6 pb-6 border-b border-gray-800">
-                            <span class="text-3xl font-extrabold font-orbitron text-white">$1,200 <span class="text-xs font-normal text-gray-400">USD/mes</span></span>
-                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ $4.800.000 COP / mes</span>
-                        </div>
-
-                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Todo lo del Plan Essential</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Auditoría mensual de costes cloud (FinOps)</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Mantenimiento y optimización de pipelines CI/CD</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Simulacro trimestral de Disaster Recovery</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Hasta 10 horas de soporte técnico mensual</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contacto" class="w-full py-4 bg-reyes-cyan hover:bg-white text-black font-extrabold text-xs uppercase tracking-widest transition text-center font-orbitron shadow-neon">
-                        Seleccionar Plan Pro
-                    </a>
-                </div>
-
-                <!-- Plan Enterprise -->
-                <div class="p-8 rounded-xl bg-[#0c0c0c] border border-gray-800 flex flex-col justify-between hover:border-reyes-cyan/40 transition">
-                    <div>
-                        <span class="text-xs font-mono text-reyes-cyan uppercase tracking-wider block mb-2">Para Plataformas Críticas</span>
-                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Plan Enterprise</h3>
-                        <p class="text-gray-400 text-xs mb-6">SLA corporativo, arquitectura multi-cloud y dedicación ampliada.</p>
-                        
-                        <div class="mb-6 pb-6 border-b border-gray-800">
-                            <span class="text-3xl font-extrabold font-orbitron text-white">$2,500 <span class="text-xs font-normal text-gray-400">USD/mes</span></span>
-                            <span class="text-xs text-reyes-cyan block font-mono mt-1">~ $10.000.000 COP / mes</span>
-                        </div>
-
-                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Todo lo del Plan Pro</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> SLA de respuesta crítica menor a 30 minutos</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Gestión de clústeres Kubernetes o microservicios</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Acompañamiento continuo en auditorías de seguridad</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-reyes-cyan"></i> Hasta 25 horas de ingeniería mensual</li>
-                        </ul>
-                    </div>
-
-                    <a href="#contacto" class="w-full py-3 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
-                        Seleccionar Enterprise
-                    </a>
-                </div>
-            </div>
-
-            <!-- Beneficio Tributario IVA -->
-            <div class="mt-12 p-6 rounded-xl bg-[#0d0d0d] border border-reyes-cyan/30 max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                <div class="w-12 h-12 rounded-full bg-reyes-cyan/10 flex items-center justify-center flex-shrink-0 text-reyes-cyan text-xl">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <div>
-                    <h4 class="font-orbitron font-bold text-white text-sm mb-1">Ahorro Inmediato del 19% de IVA (Art. 476 #21 Estatuto Tributario)</h4>
-                    <p class="text-gray-400 text-xs leading-relaxed">
-                        Como nuestros servicios de computación en la nube y mantenimiento de servidores están legalmente <strong class="text-white">excluidos de IVA (0%)</strong>, te rebajamos el 19% de sobrecosto impositivo frente a agencias o proveedores tradicionales.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO DE CONTACTO -->
-    <section id="contacto" class="py-24 bg-[#050505] relative border-t border-reyes-cyan/20">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-xs font-mono text-reyes-cyan uppercase tracking-widest mb-2 block">Cotización a Medida</span>
-                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
-                    DELEGA TU INFRAESTRUCTURA <span class="text-reyes-cyan">HOY</span>
-                </h2>
-                <p class="text-reyes-silver max-w-xl mx-auto font-sans text-sm">
-                    Cuéntanos cuántos servidores tienes y qué nube utilizas. Te enviaremos una propuesta formal en 24 horas.
-                </p>
-            </div>
-
-            <div class="p-8 md:p-12 rounded-xl bg-[#0c0c0c] border border-reyes-cyan/30 shadow-neon">
-                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
-                    <input type="hidden" name="_subject" value="Lead Infraestructura Cloud On-Demand - Reyes Computing">
-                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Nombre Completo</label>
-                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Tu nombre" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Empresa / Startup</label>
-                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="Nombre de tu empresa" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Correo de Contacto</label>
-                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan" placeholder="correo@empresa.com" required>
-                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Plan de Interés</label>
-                            <select name="plan" id="plan" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white focus:outline-none focus:border-reyes-cyan">
-                                <option value="Plan Essential ($450/mes)">Plan Essential ($450 USD/mes)</option>
-                                <option value="Plan Pro ($1,200/mes)">Plan Pro ($1,200 USD/mes)</option>
-                                <option value="Plan Enterprise ($2,500/mes)">Plan Enterprise ($2,500 USD/mes)</option>
-                                <option value="Auditoría FinOps Inicial">Auditoría FinOps Inicial</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-reyes-cyan uppercase tracking-widest mb-2 font-orbitron">Detalles de la infraestructura actual</label>
-                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#161616] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-reyes-cyan h-28" placeholder="¿Cuántos servidores o instancias tienen? ¿Qué proveedores de nube usan (AWS, GCP, DigitalOcean, Hetzner)?"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-5 bg-reyes-cyan hover:bg-white text-black font-extrabold text-base transition uppercase tracking-widest font-orbitron shadow-neon">
-                        Solicitar Propuesta de Soporte
-                    </button>
-                    <div class="text-center mt-3">
-                        <span class="text-xs text-gray-500 font-sans"><i class="fa-solid fa-lock mr-1 text-reyes-cyan"></i> Facturación de servicios cloud excluida de IVA bajo Estatuto Tributario Art. 476#21.</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#020202] py-16 text-center px-6 border-t border-gray-900">
-        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
-            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-14 w-auto">
-            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-        </a>
-
-        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
-            <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
-            <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps Startups</a>
-            <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Ciberseguridad Fintech</a>
-            <a href="contacto.html" class="hover:text-reyes-cyan transition">Contacto</a>
-        </div>
-
-        <div class="text-xs text-gray-600 font-sans">
-            &copy; 2025 Reyes Computing S.A.S. — Servicios Gestionados de Infraestructura Cloud y FinOps. Cali, Colombia.
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contactForm');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    let valid = true;
-                    const name = document.getElementById('name');
-                    const company = document.getElementById('company');
-                    const email = document.getElementById('email');
-                    const nameErr = document.getElementById('name-error');
-                    const compErr = document.getElementById('company-error');
-                    const mailErr = document.getElementById('email-error');
-
-                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
-                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
-
-                    if (!name.value.trim()) {
-                        nameErr.classList.remove('hidden');
-                        name.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!company.value.trim()) {
-                        compErr.classList.remove('hidden');
-                        company.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
-                        mailErr.classList.remove('hidden');
-                        email.classList.add('border-red-500');
-                        valid = false;
-                    }
-                    if (!valid) {
-                        e.preventDefault();
-                    }
-                });
-            }
-        });
-    </script>
+  <footer><div class="container"><p>© 2026 Reyes Computing S.A.S. · Monitoreo y FinOps Cloud · Bogotá, Colombia</p></div></footer>
 </body>
 </html>
