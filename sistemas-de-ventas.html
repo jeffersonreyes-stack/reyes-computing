@@ -65,7 +65,7 @@
     </div>
 
     <!-- HEADER CORPORATIVO UNIFICADO REYES COMPUTING -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
                 <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-9 w-auto group-hover:scale-105 transition">
@@ -89,6 +89,34 @@
             <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Abrir menu principal">
                 <i class="fa-solid fa-bars"></i>
             </button>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-reyes-black/50 via-reyes-black/80 to-reyes-black bg-grid opacity-20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <p class="font-orbitron text-xs md:text-sm text-reyes-cyan uppercase tracking-[0.4em] mb-6">Posicionamiento</p>
+                <h1 class="font-orbitron text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                    Reyes Computing es un <span class="text-reyes-cyan">sistema comercial</span> que integra todas las piezas del canal de ventas.
+                </h1>
+                <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl lg:mx-0 mx-auto font-light leading-relaxed">
+                    La diferencia no esta solo en hacer anuncios o paginas. Esta en coordinar demanda, experiencia, medicion y cierre bajo una sola estrategia de conversion.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 w-full justify-center lg:justify-start">
+                    <a href="como-funciona.html" class="px-8 py-4 bg-reyes-cyan hover:bg-white text-black font-bold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center">
+                        Ver el flujo
+                    </a>
+                    <a href="diagnostico-comercial.html" class="px-8 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center shadow-neon">
+                        Revisar mi sistema actual
+                    </a>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="rounded border border-reyes-cyan/20 overflow-hidden bg-[#050505] shadow-[0_0_35px_rgba(0,243,255,0.12)]">
+                    <img src="assets/images/sistema-ventas-producto.png" alt="Sistema de ventas digital" class="w-full h-full object-cover aspect-[4/3]">
+                </div>
+            </div>
         </div>
     </header>
 
