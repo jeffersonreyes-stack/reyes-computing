@@ -59,6 +59,7 @@
     footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
     @media (max-width: 900px) { .hero-grid, .pricing-grid, .dora-grid { grid-template-columns: 1fr; } .audit-form { grid-template-columns: 1fr; } }
   </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <nav>
@@ -172,7 +173,8 @@
         <input type="text" name="nombre" class="form-input" placeholder="Tu Nombre y Cargo" required>
         <input type="email" name="email" class="form-input" placeholder="Correo Corporativo" required>
         <input type="text" name="stack" class="form-input" placeholder="Stack actual (ej. AWS, Docker, Node)" required>
-        <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Solicitar Auditoría</button>
+            <div class="cf-turnstile my-4" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>
+                    <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Solicitar Auditoría</button>
       </form>
     </div>
   </section>
