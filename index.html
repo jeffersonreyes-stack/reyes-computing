@@ -177,6 +177,7 @@
  
     <!-- SECTION 3.5: PAQUETES CON PRECIO -->
     <!-- TODO: confirmar los precios reales antes de publicar en produccion. -->
+        <!-- SECTION 3.5: PAQUETES CON PRECIO Y OFERTAS -->
     <section id="paquetes" class="py-24 bg-reyes-black border-t border-reyes-cyan/10">
         <div class="max-w-7xl mx-auto px-6 text-center mb-16">
             <h2 class="font-orbitron text-3xl md:text-5xl text-white mb-4">Precios claros, entrega con fecha</h2>
@@ -185,64 +186,70 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <!-- Paquete 1 -->
-            <div class="bg-[#0A0A0A] border border-reyes-cyan/30 p-8 flex flex-col shadow-neon">
-                <h3 class="text-2xl font-orbitron text-white mb-2">Arranque Digital</h3>
-                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Entrega en 7 días</p>
-                <p class="font-orbitron text-4xl text-white mb-1">$1.530.000</p>
-                <p class="text-reyes-silver font-sans text-sm mb-8">Pago único · IVA incluido</p>
-                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Ficha de Google Business verificada y optimizada</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Correo corporativo @tuempresa.com (1 buzón, 12 meses)</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Sitio web de 1 página enfocado en contacto</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Dominio y hosting incluidos el primer año</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Botón de WhatsApp y medición de contactos</span></li>
-                </ul>
-                <a data-wa data-wa-origen="paquete-arranque" data-wa-msg="Hola, me interesa el paquete Arranque Digital de $1.530.000. Quiero saber como empezar." class="cursor-pointer w-full text-center px-6 py-4 bg-reyes-cyan hover:bg-white text-black font-bold uppercase tracking-widest transition">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+            <!-- Paquete 1: Landing Page Promo 50% -->
+            <div class="bg-[#0A0A0A] border border-reyes-cyan/50 p-8 flex flex-col justify-between relative shadow-[0_0_25px_rgba(0,243,255,0.15)]">
+                <div class="absolute -top-3 right-6 bg-red-600 text-white text-xs font-bold font-orbitron uppercase px-3 py-1 rounded">
+                    🔥 PROMO 50% OFF
+                </div>
+                <div>
+                    <h3 class="text-2xl font-orbitron text-white mb-2">Landing Page de Ventas</h3>
+                    <p class="text-reyes-cyan font-sans text-xs uppercase tracking-widest mb-4">Entrega en 5 días hábiles</p>
+                    <div class="text-red-400 line-through text-sm font-mono mb-1">Antes: $1.200.000 COP / $300 USD</div>
+                    <div class="font-orbitron text-4xl text-reyes-cyan mb-1">$599.000 <span class="text-xs text-gray-400 font-sans">COP / $150 USD</span></div>
+                    <p class="text-emerald-400 font-sans text-xs font-bold mb-6">~3,000 MXN · Facturable SAT / 0% IVA</p>
+                    <ul class="space-y-3 text-reyes-silver font-sans text-sm mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>1 Página de ventas optimizada para WhatsApp</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Ficha de Google Business verificada y optimizada</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Correo corporativo @tuempresa.com (12 meses)</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Dominio (.com / .co) y hosting incluidos por 1 año</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Botón flotante de WhatsApp y medición de contactos</span></li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20la%20Landing%20Page%20en%20promo%20de%20$599.000" target="_blank" rel="noopener" class="w-full text-center px-6 py-4 bg-reyes-cyan hover:bg-white text-black font-bold uppercase tracking-widest transition shadow-neon font-orbitron">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Aprovechar Promo 50%
                 </a>
             </div>
 
-            <!-- Paquete 2 -->
-            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col">
-                <h3 class="text-2xl font-orbitron text-white mb-2">Sitio de Conversión</h3>
-                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Entrega en 15 días</p>
-                <p class="font-orbitron text-4xl text-white mb-1">$2.800.000</p>
-                <p class="text-reyes-silver font-sans text-sm mb-8">Pago único · IVA incluido</p>
-                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Sitio de 5 páginas escrito para vender, no para adornar</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Textos de venta redactados por nosotros</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>SEO técnico para que Google te indexe bien</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Dominio y hosting incluidos el primer año</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Medición de WhatsApp, llamadas y formularios</span></li>
-                </ul>
-                <a data-wa data-wa-origen="paquete-sitio" data-wa-msg="Hola, me interesa el paquete Sitio de Conversion de $2.800.000." class="cursor-pointer w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+            <!-- Paquete 2: Sitio Web Empresarial -->
+            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col justify-between hover:border-reyes-cyan transition">
+                <div>
+                    <h3 class="text-2xl font-orbitron text-white mb-2">Sitio Web Empresarial</h3>
+                    <p class="text-reyes-cyan font-sans text-xs uppercase tracking-widest mb-4">Entrega en 7 a 10 días</p>
+                    <div class="font-orbitron text-4xl text-white mb-1">$1.350.000 <span class="text-xs text-gray-400 font-sans">COP / $350 USD</span></div>
+                    <p class="text-emerald-400 font-sans text-xs font-bold mb-6">~7,000 MXN · Facturable SAT / 0% IVA</p>
+                    <ul class="space-y-3 text-reyes-silver font-sans text-sm mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Hasta 5 secciones corporativas completas</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Catálogo de servicios y portafolio de proyectos</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Correos corporativos con dominio propio</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>SEO técnico avanzado para indexación en Google</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Medición de WhatsApp, llamadas y formularios</span></li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20cotizar%20el%20Sitio%20Web%20Empresarial" target="_blank" rel="noopener" class="w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition font-orbitron">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Cotizar Web Empresarial
                 </a>
             </div>
 
-            <!-- Paquete 3 -->
-            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col">
-                <h3 class="text-2xl font-orbitron text-white mb-2">Motor de Clientes</h3>
-                <p class="text-reyes-cyan font-sans text-sm uppercase tracking-widest mb-6">Mensual, sin permanencia</p>
-                <p class="font-orbitron text-4xl text-white mb-1">$1.600.000 <span class="text-lg text-reyes-silver font-sans">/ mes</span></p>
-                <p class="text-reyes-silver font-sans text-sm mb-8">Incluye anuncios en Google</p>
-                <ul class="space-y-3 text-reyes-silver font-sans mb-8 flex-grow">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Campañas de Google Ads en tu ciudad</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Optimización semanal de palabras clave y negativas</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Reporte mensual de llamadas y WhatsApp generados</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Costo real por cliente contactado, a la vista</span></li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>La cuenta de Ads queda a tu nombre</span></li>
-                </ul>
-                <a data-wa data-wa-origen="paquete-motor" data-wa-msg="Hola, me interesa el paquete Motor de Clientes de $1.600.000 al mes." class="cursor-pointer w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Lo quiero
+            <!-- Paquete 3: Motor de Clientes (Google Ads + Landing) -->
+            <div class="bg-[#0A0A0A] border border-white/10 p-8 flex flex-col justify-between hover:border-reyes-cyan transition">
+                <div>
+                    <h3 class="text-2xl font-orbitron text-white mb-2">Motor de Clientes</h3>
+                    <p class="text-reyes-cyan font-sans text-xs uppercase tracking-widest mb-4">Mensual, sin permanencia</p>
+                    <div class="font-orbitron text-4xl text-white mb-1">$1.600.000 <span class="text-xs text-gray-400 font-sans">COP / $400 USD /mes</span></div>
+                    <p class="text-gray-400 font-sans text-xs mb-6">Incluye anuncios y optimización en Google</p>
+                    <ul class="space-y-3 text-reyes-silver font-sans text-sm mb-8">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Campañas de Google Ads optimizadas en tu ciudad</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Incluye Landing Page de Ventas CRO dedicada</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Optimización semanal de palabras clave y negativas</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>Reporte mensual de llamadas y WhatsApp generados</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i><span>La cuenta de Google Ads queda a tu nombre</span></li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20el%20Plan%20Motor%20de%20Clientes%20Google%20Ads" target="_blank" rel="noopener" class="w-full text-center px-6 py-4 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black font-bold uppercase tracking-widest transition font-orbitron">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Contratar Motor
                 </a>
             </div>
         </div>
-
-        <p class="max-w-3xl mx-auto px-6 mt-12 text-center text-reyes-silver font-sans text-sm">
-            Precios en pesos colombianos. Lo que ves es lo que pagas: no cobramos "ajustes de alcance" a mitad de camino.
-        </p>
     </section>
 
     <!-- SECTION 4: GUARANTEE -->
