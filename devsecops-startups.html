@@ -1,187 +1,297 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingeniería DevSecOps y CI/CD para Startups | Reyes Computing</title>
-  <meta name="description" content="Automatiza tus despliegues con GitHub Actions, Docker y escaneo de secretos. Ingeniería DevSecOps senior on-demand. Ahorra 19% de IVA (Art. 476 #21 E.T.).">
-  <link rel="canonical" href="https://www.reyescomputing.com/devsecops-startups.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg: #090d16; --card-bg: #111726; --border: #1f293d; --primary: #3b82f6; --primary-hover: #2563eb; --accent: #10b981; --text: #f3f4f6; --text-muted: #9ca3af; --terminal-bg: #0a0e17; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    nav { padding: 20px 0; border-bottom: 1px solid var(--border); background: rgba(9, 13, 22, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; }
-    .nav-content { display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; }
-    .brand span { color: var(--primary); }
-    .btn-nav { background: var(--primary); color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
-    .hero { padding: 80px 0 60px; }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 6px 14px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; }
-    .badge-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent); }
-    h1 { font-size: 2.85rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
-    h1 span { background: linear-gradient(135deg, #60a5fa, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 32px; }
-    .hero-cta { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--primary); color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; }
-    .btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
-    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); text-decoration: none; padding: 14px 24px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: 0.2s; }
-    .terminal { background: var(--terminal-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; font-family: 'Fira Code', monospace; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-    .terminal-header { background: #141b2d; padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border); }
-    .dot { width: 12px; height: 12px; border-radius: 50%; }
-    .dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
-    .terminal-title { margin-left: 8px; font-size: 0.8rem; color: var(--text-muted); }
-    .terminal-body { padding: 20px; font-size: 0.85rem; line-height: 1.7; }
-    .t-cmd { color: #60a5fa; } .t-success { color: var(--accent); font-weight: 600; } .t-muted { color: #6b7280; }
-    .tax-banner { background: linear-gradient(90deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 20px 24px; margin: 40px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .tax-badge { background: var(--accent); color: #064e3b; font-weight: 800; padding: 6px 14px; border-radius: 6px; font-size: 0.9rem; }
-    .section-title { text-align: center; margin: 80px 0 40px; }
-    .section-title h2 { font-size: 2.2rem; margin-bottom: 12px; }
-    .dora-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .dora-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 24px; text-align: center; }
-    .dora-metric { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px; }
-    .pricing-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 40px; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
-    .pricing-card.featured { border-color: var(--primary); box-shadow: 0 0 30px rgba(59, 130, 246, 0.15); }
-    .featured-tag { position: absolute; top: -14px; left: 40px; background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-    .price-num { font-size: 2.8rem; font-weight: 800; color: #fff; margin: 16px 0; }
-    .price-num span { font-size: 1.1rem; color: var(--text-muted); font-weight: 400; }
-    .price-features { list-style: none; margin: 24px 0 32px; }
-    .price-features li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
-    .price-features li::before { content: "✔"; color: var(--accent); font-weight: bold; }
-    .audit-box { background: linear-gradient(180deg, #111726 0%, #0c1220 100%); border: 1px solid var(--border); border-radius: 16px; padding: 48px; margin: 80px 0; text-align: center; }
-    .audit-form { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 12px; max-width: 900px; margin: 32px auto 0; }
-    .form-input { background: #090d16; border: 1px solid var(--border); padding: 14px 16px; border-radius: 8px; color: #fff; font-size: 0.95rem; width: 100%; }
-    footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
-    @media (max-width: 900px) { .hero-grid, .pricing-grid, .dora-grid { grid-template-columns: 1fr; } .audit-form { grid-template-columns: 1fr; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Google tag (gtag.js) - Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18025178697');
+    </script>
+
+    <!-- SEO & Meta Tags -->
+    <title>Ingeniería DevSecOps y CI/CD para Startups | Reyes Computing</title>
+    <meta name="description" content="Automatiza tus despliegues con GitHub Actions, Docker y escaneo de secretos. Elimina caídas en producción y acelera entregas en México (SAT) y Colombia (0% IVA).">
+    <meta name="keywords" content="DevSecOps startups, github actions ci cd, automatizacion despliegues docker, deteccion de secretos trufllehog, zero downtime deployment, devops colombia, devops mexico">
+    <link rel="canonical" href="https://www.reyescomputing.com/devsecops-startups.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reyescomputing.com/devsecops-startups.html">
+    <meta property="og:title" content="Ingeniería DevSecOps CI/CD para Startups | Reyes Computing">
+    <meta property="og:description" content="Pipelines automatizados de despliegue con escaneo de seguridad SAST y contenedores Docker.">
+    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Built) -->
+    <link rel="stylesheet" href="assets/css/output.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Cloudflare Turnstile Captcha Script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <!-- Capa de conversion: WhatsApp + medicion -->
+    <script defer src="assets/js/reyes-conversion.js"></script>
 </head>
-<body>
-  <nav>
-    <div class="container nav-content">
-      <a href="https://www.reyescomputing.com" class="brand">Reyes <span>Computing</span></a>
-      <a href="https://wa.me/573128084929?text=Hola,%20solicito%20la%20Auditoria%20Express%20DevSecOps" class="btn-nav" target="_blank" rel="noopener">Hablar con un Ingeniero</a>
-    </div>
-  </nav>
+<body class="antialiased bg-[#070b14] text-gray-100 font-sans">
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge"><div class="badge-dot"></div> Entrega en 7 a 14 Días · 0% IVA (Art. 476#21)</div>
-        <h1>Ingeniería <span>DevSecOps</span> On-Demand: Despliegues Automáticos y Cero Caídas</h1>
-        <p class="hero-p">Automatiza tus pipelines con GitHub Actions, Docker Hardening y escaneo de secretos antes de producción. Ingeniería senior para startups sin costos fijos de nómina.</p>
-        <div class="hero-cta">
-          <a href="#auditoria" class="btn-primary">Solicitar Auditoría Express (Gratis) →</a>
-          <a href="#precios" class="btn-secondary">Ver Planes y Precios</a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-cyan-500/20 bg-[#070b14]/90">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-12 md:h-14 w-auto">
+                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-cyan-400 transition">Reyes<span class="text-cyan-400">Computing</span></span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-gray-300">
+                <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Hub Startups</a>
+                <a href="ciberseguridad-fintech.html" class="hover:text-cyan-400 transition">Seguridad Fintech</a>
+                <a href="infraestructura-nube-startups.html" class="hover:text-cyan-400 transition">Cloud On-Demand</a>
+                <a href="#paquetes" class="hover:text-cyan-400 transition">Planes</a>
+                <a href="https://wa.me/573330700828?text=Hola%20Reyes%20Computing.%20Queremos%20automatizar%20nuestro%20pipeline%20DevSecOps%20CI/CD." data-wa data-wa-origen="navbar-devsecops" data-wa-msg="Hola Reyes Computing. Queremos automatizar nuestro pipeline DevSecOps CI/CD." class="cursor-pointer px-5 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> Hablar con DevOps
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="terminal">
-        <div class="terminal-header">
-          <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
-          <span class="terminal-title">reyes-pipeline-audit — bash</span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero-bg.png" alt="DevSecOps Engineering" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/70 via-[#070b14]/90 to-[#070b14]"></div>
         </div>
-        <div class="terminal-body">
-          <p><span class="t-cmd">$ reyes-engine</span> run pipeline:verify --env=production</p>
-          <p class="t-muted">Scanning repository for vulnerabilities & secret leaks...</p>
-          <p class="t-success">[✓] TruffleHog: 0 Git secrets exposed</p>
-          <p class="t-success">[✓] Trivy: 0 CVEs found in base Docker image</p>
-          <p class="t-success">[✓] WAF / Cloudflare: TLS 1.3 & Rate Limiting active</p>
-          <p class="t-success">[✓] GitHub Actions: Zero-Downtime deploy in 42s</p>
-          <p style="color: #60a5fa; margin-top: 10px;">STATUS: 100% PRODUCTION READY · DOWNTIME: 0s</p>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 mb-8 backdrop-blur-sm">
+                <span class="text-xs font-mono uppercase tracking-widest text-cyan-400"><i class="fa-solid fa-code-merge mr-1"></i> CI/CD Seguro & Automatización en LATAM</span>
+            </div>
+
+            <h1 class="font-orbitron text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                DESPLIEGA CADA DÍA. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">CERO CAÍDAS EN PRODUCCIÓN.</span>
+            </h1>
+
+            <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Automatizamos tu pipeline desde el commit hasta producción con <strong class="text-white font-semibold">GitHub Actions / GitLab CI</strong>, escaneo de secretos (TruffleHog), contenedores Docker seguros y despliegues sin interrupción. Deducible <strong class="text-emerald-400 font-semibold">SAT México (CFDI 4.0)</strong> y <strong class="text-emerald-400 font-semibold">0% IVA Colombia</strong>.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
+                    Solicitar Auditoría CI/CD Express
+                </a>
+                <a href="https://wa.me/573330700828?text=Hola%20Reyes%20Computing.%20Queremos%20el%20Plan%20Sprint%20DevSecOps." data-wa data-wa-origen="hero-devsecops" data-wa-msg="Hola Reyes Computing. Queremos el Plan Sprint DevSecOps." class="cursor-pointer w-full sm:w-auto px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center font-orbitron">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Consultar con Ingeniero
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <div class="container">
-    <div class="tax-banner">
-      <div>
-        <h4>🏛️ Facturación B2B para Startups en México y Colombia</h4>
-        <p><strong>México:</strong> Factura comercial internacional en USD 100% deducible ante el SAT (0% IVA transfronterizo). <strong>Colombia:</strong> Excluido de IVA (0%) bajo Art. 476 #21 del E.T.</p>
-      </div>
-      <div class="tax-badge">Ahorro 19% IVA</div>
-    </div>
-  </div>
+    <!-- PLANES DEVSECOPS (DUALES USD / MXN / COP) -->
+    <section id="paquetes" class="py-24 bg-[#0a0f1d] border-t border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Inversión Especializada</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    PLANES DE <span class="text-cyan-400">INGENIERÍA DEVSECOPS</span>
+                </h2>
+                <p class="text-gray-300 font-sans text-sm">
+                    Resultados tangibles y código versionado. Facturación en USD, MXN o COP.
+                </p>
+            </div>
 
-  <section class="container">
-    <div class="section-title">
-      <h2>Estabilidad Medible bajo Estándares DORA</h2>
-      <p>Transformamos el flujo de desarrollo de tu equipo técnico con métricas reales de ingeniería.</p>
-    </div>
-    <div class="dora-grid">
-      <div class="dora-card"><div class="dora-metric">&lt; 15 min</div><h4>Lead Time</h4><p>Del commit local a producción sin fricciones.</p></div>
-      <div class="dora-card"><div class="dora-metric">&lt; 0.1%</div><h4>Change Failure Rate</h4><p>Despliegues estables con pruebas en staging.</p></div>
-      <div class="dora-card"><div class="dora-metric">0 seg</div><h4>Downtime</h4><p>Rolling updates con cero caídas.</p></div>
-      <div class="dora-card"><div class="dora-metric">100%</div><h4>Secret Protection</h4><p>Bloqueo de credenciales antes de llegar a GitHub.</p></div>
-    </div>
-  </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Plan Sprint DevSecOps -->
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 flex flex-col justify-between hover:border-cyan-400 transition">
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block mb-2">Proyecto 2 Semanas</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">DevSecOps Sprint</h3>
+                        <p class="text-gray-400 text-xs mb-6">Para startups que necesitan automatizar sus despliegues y eliminar procesos manuales.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">$1,500 <span class="text-xs font-normal text-gray-400">USD (Único)</span></span>
+                            <span class="text-xs text-emerald-400 block font-mono mt-1">~$28,500 MXN / ~$6.000.000 COP / Entrega 14 días</span>
+                        </div>
 
-  <section class="container" id="precios">
-    <div class="section-title">
-      <h2>Precios Cerrados y Predecibles</h2>
-      <p>Sin sorpresas de facturación ni contratos de permanencia obligatoria.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div>
-          <h3>Plan Sprint DevSecOps</h3>
-          <p style="color:var(--text-muted); font-size: 0.9rem;">Para 1 aplicación o microservicio crítico.</p>
-          <div class="price-num">$1,500 <span>USD / pago único</span></div>
-          <p style="color: var(--accent); font-weight: 600;">Entrega en 7 días</p>
-          <ul class="price-features">
-            <li>Pipeline completo en GitHub Actions / GitLab CI</li>
-            <li>Dockerización y optimización de contenedores</li>
-            <li>Escaneo de secretos con TruffleHog en commits</li>
-            <li>Despliegue sin caídas (Zero-Downtime)</li>
-            <li>Transferencia técnica y documentación</li>
-            <li>Factura deducible SAT (México) o 0% IVA DIAN (Colombia)</li>
-          </ul>
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Pipeline completo en GitHub Actions / GitLab CI</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Escaneo automático de secretos con TruffleHog</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Hardening de imágenes Docker (Alpine/Distroless)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Estrategia de despliegue Zero-Downtime</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
+                        Elegir DevSecOps Sprint
+                    </a>
+                </div>
+
+                <!-- Plan Enterprise DevSecOps + Cloud -->
+                <div class="p-8 rounded-xl bg-[#131b2e] border-2 border-cyan-400 flex flex-col justify-between relative shadow-[0_0_25px_rgba(0,243,255,0.25)]">
+                    <div class="absolute -top-3 right-6 bg-cyan-400 text-black text-[10px] font-extrabold font-mono uppercase px-3 py-1 rounded-full">
+                        Recomendado
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block mb-2">Proyecto + Suscripción</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">DevSecOps Enterprise</h3>
+                        <p class="text-gray-400 text-xs mb-6">Pipeline CI/CD completo + 3 meses de soporte Cloud On-Demand y monitoreo 24/7.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">$2,800 <span class="text-xs font-normal text-gray-400">USD (Único)</span></span>
+                            <span class="text-xs text-emerald-400 block font-mono mt-1">~$53,200 MXN / ~$11.200.000 COP</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Todo lo del DevSecOps Sprint</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Pruebas SAST/SCA integradas (SonarQube/Trivy)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Infraestructura como Código (IaC Terraform)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> 3 Meses de monitoreo 24/7 y backups comprobados</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 bg-cyan-400 hover:bg-white text-black font-extrabold text-xs uppercase tracking-widest transition text-center font-orbitron shadow-[0_0_15px_rgba(0,243,255,0.4)]">
+                        Elegir DevSecOps Enterprise
+                    </a>
+                </div>
+            </div>
         </div>
-        <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Plan%20Sprint%20DevSecOps" class="btn-secondary" style="text-align: center;" target="_blank" rel="noopener">Comenzar Sprint</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="featured-tag">Recomendado Startups</div>
-        <div>
-          <h3>Full DevSecOps Engine</h3>
-          <p style="color:var(--text-muted); font-size: 0.9rem;">Para arquitecturas multi-servicio en escalamiento.</p>
-          <div class="price-num">$2,800 <span>USD / pago único</span></div>
-          <p style="color: var(--accent); font-weight: 600;">Entrega en 14 días</p>
-          <ul class="price-features">
-            <li>Todo lo incluido en el Plan Sprint</li>
-            <li>Múltiples ambientes (Staging, UAT y Producción)</li>
-            <li>Docker Hardening con Trivy (Detección de CVEs)</li>
-            <li>WAF perimetral, SSL estricto A+ y Rate Limiting</li>
-            <li>Dossier de Seguridad para auditores y bancos</li>
-            <li>Acompañamiento post-lanzamiento por 30 días</li>
-          </ul>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-24 bg-[#070b14] relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Diagnóstico CI/CD Gratuito</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    EVALÚA EL PIPELINE DE TU <span class="text-cyan-400">STARTUP</span>
+                </h2>
+                <p class="text-gray-300 max-w-xl mx-auto font-sans text-sm">
+                    Analizamos el flujo de despliegues y repositorios de tu startup en 24 horas y te entregamos un reporte con los 3 puntos críticos a corregir.
+                </p>
+            </div>
+
+            <div class="p-8 md:p-12 rounded-xl bg-[#0d1322] border border-cyan-500/30 shadow-[0_0_30px_rgba(0,243,255,0.15)]">
+                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
+                    <input type="hidden" name="_subject" value="Lead DevSecOps Startups - Reyes Computing">
+                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Nombre y Cargo</label>
+                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="Ej. Andrés Ramírez - Lead Dev" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Empresa / Startup / País</label>
+                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="Ej. DevPay LATAM (México / Colombia)" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Correo Corporativo</label>
+                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="andres@tuempresa.com" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Servidor / Nube Destino</label>
+                            <input type="text" name="cloud" id="cloud" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="Ej. AWS, Hetzner, GCP, DigitalOcean">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Desafío o tecnología actual (GitHub, GitLab, Docker, etc.)</label>
+                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 h-28" placeholder="Cuéntanos cómo realizan los despliegues hoy (SSH manual, scripts, caídas) y qué buscan resolver..."></textarea>
+                    </div>
+
+                    <!-- Cloudflare Turnstile Captcha Widget -->
+                    <div class="cf-turnstile my-4" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>
+
+                    <button type="submit" class="w-full py-5 bg-cyan-400 hover:bg-white text-black font-extrabold text-base transition uppercase tracking-widest font-orbitron shadow-[0_0_20px_rgba(0,243,255,0.4)]">
+                        Solicitar Auditoría CI/CD
+                    </button>
+                    <div class="text-center mt-3">
+                        <span class="text-xs text-gray-400 font-sans"><i class="fa-solid fa-lock mr-1 text-cyan-400"></i> Confidencialidad garantizada bajo acuerdo NDA.</span>
+                    </div>
+                </form>
+            </div>
         </div>
-        <a href="https://wa.me/573128084929?text=Hola,%20quiero%20el%20Full%20DevSecOps%20Engine" class="btn-primary" style="justify-content: center;" target="_blank" rel="noopener">Agendar Implementación</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container" id="auditoria">
-    <div class="audit-box">
-      <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Auditoría Express de Código y Secretos</h2>
-      <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Detectamos llaves expuestas, fallas en tu Dockerfile y dependencias vulnerables en 20 minutos. 100% gratis y confidencial.</p>
-      <form class="audit-form" action="https://formspree.io/f/control@reyescomputing.com" method="POST">
-        <input type="text" name="nombre" class="form-input" placeholder="Tu Nombre y Cargo" required>
-        <input type="email" name="email" class="form-input" placeholder="Correo Corporativo" required>
-        <input type="text" name="stack" class="form-input" placeholder="Stack actual (ej. AWS, Docker, Node)" required>
-        <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Solicitar Auditoría</button>
-      </form>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="bg-[#03060c] py-16 text-center px-6 border-t border-gray-900">
+        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
+            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-12 w-auto">
+            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-cyan-400 transition">Reyes<span class="text-cyan-400">Computing</span></span>
+        </a>
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Reyes Computing S.A.S. — NIT 901.815.420-5 · México (CDMX, Guadalajara, Monterrey) · Colombia (Bogotá, Medellín, Cali) · Todos los derechos reservados.</p>
-      <p style="margin-top: 8px; font-size: 0.8rem;">Servicios de infraestructura y nube excluidos de IVA según el Artículo 476, numeral 21 del Estatuto Tributario.</p>
-    </div>
-  </footer>
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
+            <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Hub Startups</a>
+            <a href="ciberseguridad-fintech.html" class="hover:text-cyan-400 transition">Ciberseguridad Fintech</a>
+            <a href="infraestructura-nube-startups.html" class="hover:text-cyan-400 transition">Cloud On-Demand</a>
+            <a href="contacto.html" class="hover:text-cyan-400 transition">Contacto</a>
+        </div>
+
+        <div class="text-xs text-gray-500 font-sans">
+            &copy; 2026 Reyes Computing S.A.S. — Ingeniería DevSecOps LATAM. México & Colombia.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    let valid = true;
+                    const name = document.getElementById('name');
+                    const company = document.getElementById('company');
+                    const email = document.getElementById('email');
+                    const nameErr = document.getElementById('name-error');
+                    const compErr = document.getElementById('company-error');
+                    const mailErr = document.getElementById('email-error');
+
+                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
+                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
+
+                    if (!name.value.trim()) {
+                        nameErr.classList.remove('hidden');
+                        name.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!company.value.trim()) {
+                        compErr.classList.remove('hidden');
+                        company.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+                        mailErr.classList.remove('hidden');
+                        email.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!valid) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
