@@ -3,69 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reyes Computing | Ciberseguridad & Cloud On-Demand</title>
-    <link rel="stylesheet" href="https://chnijfs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Google tag (gtag.js) - Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18025178697');
+    </script>
+
+    <!-- SEO & Meta Tags -->
+    <title>Ciberseguridad Web, WAF & Cumplimiento Fintech | Reyes Computing</title>
+    <meta name="description" content="Protección WAF para APIs transaccionales, mitigación anti-DDoS L7 y preparación para auditorías bancarias (PCI DSS v4.0, Ley Fintech CNBV México y Superfinanciera Colombia).">
+    <meta name="keywords" content="ciberseguridad fintech, cloudflare WAF fintech, proteccion APIs spei, mitigacion ddos pasarelas de pago, cumplimiento SOC 2 colombia, auditoria pci dss mexico">
+    <link rel="canonical" href="https://www.reyescomputing.com/ciberseguridad-fintech.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reyescomputing.com/ciberseguridad-fintech.html">
+    <meta property="og:title" content="Ciberseguridad Web & WAF para Fintechs | Reyes Computing">
+    <meta property="og:description" content="Blindaje perimetral para APIs y pasarelas de pago. Supera auditorías bancarias y certifica tu infraestructura.">
+    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/security.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Built) -->
     <link rel="stylesheet" href="assets/css/output.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@b00;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Orbitron:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Cloudflare Turnstile Captcha Script -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <!-- Capa de conversion: WhatsApp + medicion -->
     <script defer src="assets/js/reyes-conversion.js"></script>
 </head>
-<body class="antialiased bg-reyes-black text-reyes-white">
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
+<body class="antialiased bg-[#070b14] text-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-cyan-500/20 bg-[#070b14]/90">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 group">
-                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-16 w-auto">
-                 <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
+                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-12 md:h-14 w-auto">
+                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white group-hover:text-cyan-400 text-reyes-cyan transition">Reyes<span class="text-cyan-400">Computing</span></span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="startups-fintech.html" class="hover:text-reyes-cyan transition">Hub Startups</a>
-                <a href="ciberseguridad-fintech.html" class="hover:text-reyes-cyan transition">Ciberseguridad 360</a>
-                <a href="devsecops-startups.html" class="hover:text-reyes-cyan transition">DevSecOps</a>
-                <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud 24/7</a>
-                <a href="#planes" class="hover:text-reyes-cyan transition">Planes</a>
-                <a data-wa data-wa-origen="navbar" class="cursor-pointer px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
+
+            <div class="hidden lg:flex items-center gap-7 text-sm font-sans tracking-wide text-gray-300">
+                <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Hub Startups</a>
+                <a href="devsecops-startups.html" class="hover:text-cyan-400 transition">DevSecOps CI/CD</a>
+                <a href="infraestructura-nube-startups.html" class="hover:text-cyan-400 transition">Cloud On-Demand</a>
+                <a href="#paquetes" class="hover:text-cyan-400 transition">Planes</a>
+                <a href="https://wa.me/573330700828?text=Hola%20Reyes%20Computing.%20Represento%20una%20Fintech%20y%20necesitamos%20blindar%20nuestra%20seguridad%20perimetral." data-wa data-wa-origen="navbar-fintech" data-wa-msg="Hola Reyes Computing. Represento una Fintech y necesitamos blindar nuestra seguridad perimetral." class="cursor-pointer px-5 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-[0_0_15px_rgba(0,243,255,0.3)]">
                     <i class="fa-brands fa-whatsapp mr-1"></i> Hablar con SecOps
                 </a>
             </div>
-            <button id="mobile-menu-btn" type="button" class="md:hidden text-reyes-cyan text-2xl focus:outline-none">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </nav>
-    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="Ciberseguridad Fintech" class="w-full h-full object-cover opacity-60">
-            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/50 via-reyes-black/80 to-reyes-black"></div>
+            <img src="assets/images/hero-bg.png" alt="Fintech Cybersecurity" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/70 via-[#070b14]/90 to-[#070b14]"></div>
         </div>
+
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <h1 class="font-orbitron text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-                CIBERSEGURIDAD360° Y <span class="text-reyes-cyan">SERVICIOS CLOUD ON-DEMAND</span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 mb-8 backdrop-blur-sm">
+                <span class="text-xs font-mono uppercase tracking-widest text-cyan-400"><i class="fa-solid fa-building-columns mr-1"></i> Seguridad Perimetral & Cumplimiento Financiero LATAM</span>
+            </div>
+
+            <h1 class="font-orbitron text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                BLINDA TUS APIS Y PASARELAS. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">CIERRA CONTRATOS CON BANCOS.</span>
             </h1>
-            <p class="text-lg md:text-xlreyes-silver max-w-3xl mx-auto mb-10 leading-relaxed font-sans">
-                Protección perimetral WAF, auditorías PCI-DSS v4.0, exención 0% IVA (Art. 476 #21) y facturación CFDI 4.0 para México y Colombia.
+
+            <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Protegemos plataformas Fintech contra fraudes automatizados, ataques DDoS en capa 7 y abusos de bots. Preparamos tu infraestructura para superar auditorías bancarias (<strong class="text-white font-semibold">PCI DSS v4.0, Ley Fintech CNBV México y Superfinanciera Colombia</strong>).
             </p>
-            <div class="flex justify-center gap-4">
-                <a data-wa data-wa-origen="hero" class="px-8 py-4 bg-reyes-cyan text-black font-bold uppercase text-sm tracking-widest hover:bg-white transition duration-300 shadow-neon cursor-pointer">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Contactar SecOps
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
+                    Solicitar Diagnóstico Perimetral
                 </a>
+                <a href="https://wa.me/573330700828?text=Hola%20Reyes%20Computing.%20Necesitamos%20el%20Dossier%20de%20Ciberseguridad%20Fintech." data-wa data-wa-origen="hero-fintech" data-wa-msg="Hola Reyes Computing. Necesitamos el Dossier de Ciberseguridad Fintech." class="cursor-pointer w-full sm:w-auto px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center font-orbitron">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Consultar con SecOps
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto border-t border-b border-cyan-500/20 py-6">
+                <div>
+                    <span class="font-orbitron text-3xl font-extrabold text-cyan-400 block">100%</span>
+                    <span class="text-xs text-gray-400 font-mono uppercase">Mitigación DDoS L7</span>
+                </div>
+                <div>
+                    <span class="font-orbitron text-3xl font-extrabold text-emerald-400 block">A+</span>
+                    <span class="text-xs text-gray-400 font-mono uppercase">SSL Labs & Security Headers</span>
+                </div>
+                <div>
+                    <span class="font-orbitron text-3xl font-extrabold text-cyan-400 block">24h</span>
+                    <span class="text-xs text-gray-400 font-mono uppercase">Reporte de Auditoría</span>
+                </div>
             </div>
         </div>
     </header>
-    <footer class="py-12 bg-reyes-black border-t border-reyes-cyan/20">
-        <div class="max-w-7xl mx-auto px-6 text-center text-reyes-silver text-xs font-sans space-y-4">
-            <div class="flex justify-center items-center gap-3 mb-4">
-                <img src="assets/images/logo.png" alt="Reyes Computing" class="h-10 w-auto">
-                <span class="font-orbitron text-lg font-bold tracking-widest uppercase text-white">Reyes<span class="text-reyes-cyan">Computing</span></span>
+
+    <!-- CUMPLIMIENTO REGULATORIO -->
+    <section class="py-20 bg-[#0c111e] border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Estándares Internacionales</span>
+                <h2 class="font-orbitron text-3xl md:text-4xl text-white font-bold mb-4">
+                    MARCOS DE <span class="text-emerald-400">CUMPLIMIENTO FINANCIERO</span>
+                </h2>
             </div>
-            <p> </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 hover:border-cyan-400/50 transition">
+                    <div class="text-emerald-400 text-xs font-mono font-bold uppercase mb-2">PCI DSS v4.0</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Protección de Datos Tarjeta</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Cumplimiento del requisito 6.4 con reglas WAF que previenen fuga de pan/tarjetas y manipulación de payloads transaccionales.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 hover:border-cyan-400/50 transition">
+                    <div class="text-emerald-400 text-xs font-mono font-bold uppercase mb-2">OWASP API TOP 10</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">BOLA & Anti-Credential Stuffing</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Filtro granular por IP y API key, mitigación de credential stuffing y protección contra autorizaciones rotas en microservicios.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 hover:border-cyan-400/50 transition">
+                    <div class="text-emerald-400 text-xs font-mono font-bold uppercase mb-2">Ley Fintech México (CNBV)</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">Blindaje SPEI & Pasarelas</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Controles perimetrales para Instituciones de Tecnología Financiera (ITF/IFPE). Blindaje de APIs para SPEI, STP y Stripe/Conekta.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 hover:border-cyan-400/50 transition">
+                    <div class="text-emerald-400 text-xs font-mono font-bold uppercase mb-2">Superfinanciera (Col)</div>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-2">TLS 1.3 & Trazabilidad Inmutable</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Cifrado estricto de extremo a extremo, prevención de Man-in-the-Middle y registro inmutable de auditorías perimetrales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAS 6 CAPAS DEL BLINDAJE 360° REYES COMPUTING -->
+    <section class="py-24 bg-[#070b14] relative border-t border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Ingeniería de Seguridad Integral</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    MATRIZ DE CAPACIDADES <span class="text-cyan-400">CIBERSEGURIDAD 360°</span>
+                </h2>
+                <p class="text-gray-300 font-sans text-sm md:text-base">
+                    Todo lo que implementamos para transformar la postura técnica de tu plataforma en un estándar de Grado Bancario A+.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Capa 1: Perímetro Web & Cabeceras -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">1. Perímetro HTTP & Headers A+</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Inyección de cabeceras de seguridad de grado bancario para prevenir ataques en el navegador del usuario:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>HSTS Estricto:</strong> 2 años + subdominios + Directiva Preload.</li>
+                        <li>✔ <strong>Content Security Policy (CSP):</strong> Prevención contra inyección de scripts XSS.</li>
+                        <li>✔ <strong>Anti-Clickjacking & MIME Sniffing:</strong> Directivas <code>X-Frame-Options: DENY</code> y <code>nosniff</code>.</li>
+                        <li>✔ <strong>Permissions & Referrer Policy:</strong> Aislamiento de APIs de hardware.</li>
+                        <li>✔ <strong>Ofuscación de Servidor:</strong> Eliminación de banners <code>Server</code> y <code>X-Powered-By</code>.</li>
+                    </ul>
+                </div>
+
+                <!-- Capa 2: Autenticación de Correo DMARC -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-envelope-shield"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">2. Autenticación de Correo (Anti-Spoofing)</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Protección total de identidad para evitar que ciberdelincuentes suplanten tu dominio corporativo:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>DMARC Estricto (<code>p=reject;</code>):</strong> Bloqueo y rechazo mundial inmediato de correos pirateados.</li>
+                        <li>✔ <strong>Reportes Forenses DMARC (<code>rua</code>):</strong> Monitoreo diario de intentos de suplantación.</li>
+                        <li>✔ <strong>SPF & DKIM Criptográfico:</strong> Firmado digital con llaves públicas/privadas (Google Workspace / SES / Resend).</li>
+                    </ul>
+                </div>
+
+                <!-- Capa 3: Aislamiento de Origen & Cifrado -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">3. Aislamiento de Origen & E2EE</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Aislamiento del servidor de origen o storage para evitar accesos no autorizados:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>Zero Public Access en Storage:</strong> Bloqueo de acceso directo en buckets de Amazon S3 / GCP Storage.</li>
+                        <li>✔ <strong>Origin Access Control (OAC):</strong> Acceso exclusivo mediante llaves de servicio firmadas por CDN/WAF.</li>
+                        <li>✔ <strong>Cifrado Extremo a Extremo:</strong> Cifrado AES-256 en reposo y TLS 1.3 en tránsito.</li>
+                    </ul>
+                </div>
+
+                <!-- Capa 4: Protección Anti-Bot & Rate Limiting -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">4. Protección Anti-Bot & Rate Limiting</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Defensa perimetral en capa 7 contra fraudes automatizados y abusos de API:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>Captcha Transparente (Turnstile):</strong> Validación invisible de usuarios humanos sin fricción.</li>
+                        <li>✔ <strong>Rate Limiting en Endpoints Sensibles:</strong> Control de frecuencia por IP en <code>/login</code>, <code>/checkout</code> y APIs transaccionales.</li>
+                        <li>✔ <strong>Honeypot Traps:</strong> Trampas para cazadores de formularios automatizados.</li>
+                    </ul>
+                </div>
+
+                <!-- Capa 5: DevSecOps & Repositorios -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">5. DevSecOps & Seguridad en Código</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Detección temprana de vulnerabilidades antes de publicar en producción:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>Escaneo de Secretos (TruffleHog):</strong> Prevención de fugas de API keys o credenciales en GitHub.</li>
+                        <li>✔ <strong>Análisis SAST & Contenedores (Trivy):</strong> Escaneo de imágenes Docker (Alpine/Distroless) y dependencias.</li>
+                        <li>✔ <strong>Quality Gates en CI/CD:</strong> Bloqueo automático de despliegues que no cumplan con el puntaje de seguridad.</li>
+                    </ul>
+                </div>
+
+                <!-- Capa 6: Dossier & Auditorías Bancarias -->
+                <div class="p-8 rounded-xl bg-[#0e1424] border border-cyan-500/30 hover:border-cyan-400 transition shadow-lg">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-xl text-cyan-400 mb-4 font-mono">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="font-orbitron text-xl font-bold text-white mb-2">6. Dossier & Auditorías Bancarias</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        Documentación y acompañamiento técnico formal para aliados y reguladores:
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-300 font-sans">
+                        <li>✔ <strong>Dossier Ejecutivo de Ciberseguridad:</strong> Certificado formal firmado por Ingenieros Senior listo para radicar.</li>
+                        <li>✔ <strong>Pentesting OWASP API Top 10:</strong> Reporte formal de pruebas de penetración perimetral.</li>
+                        <li>✔ <strong>Acompañamiento Técnico:</strong> Presencia en llamadas de homologación con auditores de Stripe, SPEI, Wompi o bancos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES FINTECH (DUALES USD / MXN / COP) -->
+    <section id="paquetes" class="py-24 bg-[#0a0f1d] border-t border-b border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Inversión Especializada</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    PLANES DE <span class="text-cyan-400">BLINDAJE FINTECH</span>
+                </h2>
+                <p class="text-gray-300 font-sans text-sm">
+                    Inversiones directas con resultados auditables y reportes ejecutivos. Facturación en USD, MXN o COP.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Plan 1: Fintech WAF Sprint -->
+                <div class="p-8 rounded-xl bg-[#111726] border border-gray-800 flex flex-col justify-between hover:border-cyan-400 transition">
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block mb-2">Paso 1 / Perímetro</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Fintech WAF Sprint</h3>
+                        <p class="text-gray-400 text-xs mb-6">Para plataformas de pago o billeteras que necesitan blindar su web y APIs contra bots.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">$1,200 <span class="text-xs font-normal text-gray-400">USD (Único)</span></span>
+                            <span class="text-xs text-emerald-400 block font-mono mt-1">~$22,800 MXN / ~$4.800.000 COP / Entrega 5 días</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Setup Cloudflare Enterprise WAF + Reglas Anti-DDoS L7</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Rate Limiting en endpoints transaccionales (/login, /checkout, /api/pay)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Configuración de cabeceras HSTS, CSP y X-Frame DENY (Score A+)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Reporte técnico de blindaje post-intervención</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-xs uppercase tracking-widest transition text-center font-orbitron">
+                        Elegir WAF Sprint
+                    </a>
+                </div>
+
+                <!-- Plan 2: Compliance Readiness -->
+                <div class="p-8 rounded-xl bg-[#131b2e] border-2 border-cyan-400 flex flex-col justify-between relative shadow-[0_0_25px_rgba(0,243,255,0.25)]">
+                    <div class="absolute -top-3 right-6 bg-cyan-400 text-black text-[10px] font-extrabold font-mono uppercase px-3 py-1 rounded-full">
+                        Audit-Ready
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider block mb-2">Completo / Bancos</span>
+                        <h3 class="font-orbitron text-2xl font-bold text-white mb-2">Compliance Bancario</h3>
+                        <p class="text-gray-400 text-xs mb-6">Para fintechs en licenciamiento, conexión bancaria o auditoría SOC 2 / PCI DSS.</p>
+                        
+                        <div class="mb-6 pb-6 border-b border-gray-800">
+                            <span class="text-3xl font-extrabold font-orbitron text-white">$3,500 <span class="text-xs font-normal text-gray-400">USD (Único)</span></span>
+                            <span class="text-xs text-emerald-400 block font-mono mt-1">~$66,500 MXN / ~$14.000.000 COP / Entrega 15 días</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs text-gray-300 font-sans mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Todo lo del Fintech WAF Sprint</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Pentesting y escaneo OWASP API Top 10</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Hardening de servidor y aislamiento Zero Trust</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Dossier ejecutivo formal de seguridad para auditores</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Acompañamiento en llamadas técnicas con el auditor bancario</li>
+                        </ul>
+                    </div>
+
+                    <a href="#contacto" class="w-full py-4 bg-cyan-400 hover:bg-white text-black font-extrabold text-xs uppercase tracking-widest transition text-center font-orbitron shadow-[0_0_15px_rgba(0,243,255,0.4)]">
+                        Elegir Compliance Bancario
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE AUDITORÍA PERIMETRAL -->
+    <section id="contacto" class="py-24 bg-[#070b14] relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2 block">Confidencial & Seguro</span>
+                <h2 class="font-orbitron text-3xl md:text-5xl font-extrabold text-white mb-4">
+                    EVALÚA LA SEGURIDAD DE TU <span class="text-cyan-400">FINTECH</span>
+                </h2>
+                <p class="text-gray-300 max-w-xl mx-auto font-sans text-sm">
+                    Ingresa el dominio o API que deseas auditar. Realizamos una prueba perimetral pasiva y te entregamos el reporte en 24 horas.
+                </p>
+            </div>
+
+            <div class="p-8 md:p-12 rounded-xl bg-[#0d1322] border border-cyan-500/30 shadow-[0_0_30px_rgba(0,243,255,0.15)]">
+                <form id="contactForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-6" novalidate>
+                    <input type="hidden" name="_subject" value="Lead Ciberseguridad Fintech - Reyes Computing">
+                    <input type="hidden" name="_next" value="https://www.reyescomputing.com/success-startups-fintech.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Nombre y Cargo</label>
+                            <input type="text" name="name" id="name" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="Ej. Valentina Gómez - CTO" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="name-error">El nombre es requerido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Empresa Fintech / País</label>
+                            <input type="text" name="company" id="company" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="Ej. NeoPago (México / Colombia)" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="company-error">El nombre de la empresa es requerido.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Correo Corporativo</label>
+                            <input type="email" name="email" id="email" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="valentina@neopago.co" required>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="email-error">Ingresa un correo válido.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Dominio / URL Principal</label>
+                            <input type="text" name="domain" id="domain" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400" placeholder="https://app.tuempresa.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-cyan-400 uppercase tracking-widest mb-2 font-orbitron">Requisito específico o auditoría próxima</label>
+                        <textarea name="message" id="message" class="w-full p-4 rounded-md bg-[#162035] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 h-28" placeholder="¿Están pasando por auditoría de pasarelas (Stripe, SPEI, Wompi), sufriendo ataques de bots o buscando certificar su WAF?"></textarea>
+                    </div>
+
+                    <!-- Cloudflare Turnstile Captcha Widget -->
+                    <div class="cf-turnstile my-4" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>
+
+                    <button type="submit" class="w-full py-5 bg-cyan-400 hover:bg-white text-black font-extrabold text-base transition uppercase tracking-widest font-orbitron shadow-[0_0_20px_rgba(0,243,255,0.4)]">
+                        Solicitar Diagnóstico Perimetral
+                    </button>
+                    <div class="text-center mt-3">
+                        <span class="text-xs text-gray-400 font-sans"><i class="fa-solid fa-lock mr-1 text-cyan-400"></i> Confidencialidad garantizada bajo acuerdo NDA.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#03060c] py-16 text-center px-6 border-t border-gray-900">
+        <a href="index.html" class="flex items-center justify-center gap-3 group mb-6">
+            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-12 w-auto">
+            <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-cyan-400 transition">Reyes<span class="text-cyan-400">Computing</span></span>
+        </a>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-mono uppercase tracking-widest text-gray-400 mb-8">
+            <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Hub Startups</a>
+            <a href="devsecops-startups.html" class="hover:text-cyan-400 transition">DevSecOps Startups</a>
+            <a href="infraestructura-nube-startups.html" class="hover:text-cyan-400 transition">Cloud On-Demand</a>
+            <a href="contacto.html" class="hover:text-cyan-400 transition">Contacto</a>
+        </div>
+
+        <div class="text-xs text-gray-500 font-sans">
+            &copy; 2026 Reyes Computing S.A.S. — Seguridad Perimetral y Cumplimiento Fintech. México & Colombia.
         </div>
     </footer>
-    <a data-wa data-wa-origen="flotante" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D36F] text-black font-bold px-5 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span class="hidden md:inline font-sans text-sm">Escribenos por WhatsApp</span>
-    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    let valid = true;
+                    const name = document.getElementById('name');
+                    const company = document.getElementById('company');
+                    const email = document.getElementById('email');
+                    const nameErr = document.getElementById('name-error');
+                    const compErr = document.getElementById('company-error');
+                    const mailErr = document.getElementById('email-error');
+
+                    [nameErr, compErr, mailErr].forEach(el => el.classList.add('hidden'));
+                    [name, company, email].forEach(el => el.classList.remove('border-red-500'));
+
+                    if (!name.value.trim()) {
+                        nameErr.classList.remove('hidden');
+                        name.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!company.value.trim()) {
+                        compErr.classList.remove('hidden');
+                        company.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+                        mailErr.classList.remove('hidden');
+                        email.classList.add('border-red-500');
+                        valid = false;
+                    }
+                    if (!valid) {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
