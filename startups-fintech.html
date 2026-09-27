@@ -87,43 +87,31 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="DevOps & Security Hub" class="w-full h-full object-cover opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#070b14]/70 via-[#070b14]/90 to-[#070b14]"></div>
-        </div>
+    <!-- HEADER CORPORATIVO UNIFICADO REYES COMPUTING -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-9 w-auto group-hover:scale-105 transition">
+                <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-7 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+                <a href="desarrollo-web.html" class="hover:text-cyan-400 transition">Desarrollo Web</a>
+                <a href="publicidad-web.html" class="hover:text-cyan-400 transition">Google Ads</a>
+                <a href="google-business-profile.html" class="hover:text-cyan-400 transition">Google Business</a>
+                <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Startups & Fintech</a>
+                <a href="planes.html" class="hover:text-cyan-400 transition">Planes & Precios</a>
+            </nav>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 mb-8 backdrop-blur-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">🇲🇽 México (CDMX, GDL, MTY) & 🇨🇴 Colombia (Bogotá, MED, Cali)</span>
-            </div>
-
-            <h1 class="font-orbitron text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 tracking-wide">
-                ESCALA TU NUBE SIN NÓMINA FIJA. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">BLINDA TU INFRAESTRUCTURA.</span>
-            </h1>
-
-            <p class="font-sans text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Ingeniería <strong class="text-white font-semibold">DevSecOps</strong>, <strong class="text-white font-semibold">Hardening WAF</strong> y <strong class="text-white font-semibold">Soporte Cloud On-Demand</strong> para startups y fintechs. Deducible de impuestos ante el <strong class="text-emerald-400 font-semibold">SAT México</strong> y <strong class="text-emerald-400 font-semibold">0% IVA en Colombia (Art. 476 #21 E.T.)</strong>.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
-                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-white text-black font-extrabold text-sm md:text-base uppercase tracking-widest transition shadow-[0_0_30px_rgba(0,243,255,0.4)] text-center font-orbitron">
-                    Solicitar Auditoría Express (20 min)
-                </a>
-                <a href="https://wa.me/573330700828?text=Hola%20Reyes%20Computing.%20Queremos%20evaluar%20la%20arquitectura%20y%20seguridad%20de%20nuestra%20startup." data-wa data-wa-origen="hero-startups-hub" data-wa-msg="Hola Reyes Computing. Queremos evaluar la arquitectura y seguridad de nuestra startup." class="cursor-pointer w-full sm:w-auto px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold text-sm md:text-base uppercase tracking-widest transition text-center font-orbitron">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Hablar con un Ingeniero
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" class="px-5 py-2.5 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon flex items-center gap-2 font-orbitron">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Diagnóstico Gratis
                 </a>
             </div>
 
-            <!-- Badges Tecnológicos -->
-            <div class="pt-6 border-t border-cyan-500/20 flex flex-wrap items-center justify-center gap-6 md:gap-10 text-xs font-mono text-gray-400 uppercase tracking-widest">
-                <span><i class="fa-brands fa-github text-cyan-400 mr-1"></i> GitHub Actions</span>
-                <span><i class="fa-brands fa-docker text-cyan-400 mr-1"></i> Docker Security</span>
-                <span><i class="fa-solid fa-shield-halved text-cyan-400 mr-1"></i> Cloudflare WAF</span>
-                <span><i class="fa-brands fa-aws text-cyan-400 mr-1"></i> AWS & GCP Multi-Cloud</span>
-                <span><i class="fa-solid fa-file-shield text-cyan-400 mr-1"></i> SOC 2 / PCI DSS v4.0</span>
-            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Abrir menu principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 

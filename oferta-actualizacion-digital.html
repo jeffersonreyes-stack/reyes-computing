@@ -42,22 +42,31 @@
         </div>
     </nav>
 
-    <header class="relative pt-36 pb-20 bg-reyes-black overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero-bg.png" alt="Actualización digital" class="w-full h-full object-cover opacity-45">
-            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
-        </div>
-        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
-            <p class="text-reyes-cyan uppercase tracking-[0.35em] text-xs font-bold mb-6">Oferta de prueba</p>
-            <h1 class="font-orbitron text-4xl md:text-6xl font-bold leading-tight mb-6">
-                Actualización Digital Comercial para llegar a más clientes y cerrar más <span class="text-reyes-cyan">ventas</span>.
-            </h1>
-            <p class="text-lg md:text-xl text-reyes-silver font-sans leading-relaxed max-w-3xl mx-auto mb-10">
-                Una oferta empaquetada para que tu negocio aparezca mejor, se vea confiable, explique lo que vende y convierta visitas en conversaciones de compra.
-            </p>
-            <a data-wa data-wa-origen="hero-oferta-actualizacion" data-wa-msg="Hola Reyes Computing, quiero la Actualización Digital Comercial para conseguir más clientes y ventas." class="cursor-pointer inline-flex items-center justify-center px-10 py-5 bg-reyes-cyan hover:bg-white text-black font-bold uppercase tracking-widest transition shadow-neon">
-                <i class="fa-brands fa-whatsapp mr-2"></i> Quiero esta actualización
+    <!-- HEADER CORPORATIVO UNIFICADO REYES COMPUTING -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-9 w-auto group-hover:scale-105 transition">
+                <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
             </a>
+            
+            <nav class="hidden lg:flex items-center gap-7 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+                <a href="desarrollo-web.html" class="hover:text-cyan-400 transition">Desarrollo Web</a>
+                <a href="publicidad-web.html" class="hover:text-cyan-400 transition">Google Ads</a>
+                <a href="google-business-profile.html" class="hover:text-cyan-400 transition">Google Business</a>
+                <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Startups & Fintech</a>
+                <a href="planes.html" class="hover:text-cyan-400 transition">Planes & Precios</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" class="px-5 py-2.5 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon flex items-center gap-2 font-orbitron">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Diagnóstico Gratis
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Abrir menu principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 

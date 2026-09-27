@@ -42,19 +42,33 @@
 <body class="antialiased bg-reyes-black text-reyes-silver bg-grid scroll-smooth">
 
     <!-- Navbar (Simplified) -->
-    <nav class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto border-b border-reyes-cyan/20 backdrop-blur-md fixed top-0 left-0 right-0 z-50 bg-reyes-black/90">
-        <div class="flex items-center space-x-2">
-            <img src="assets/images/logo.png" alt="Reyes Computing" class="h-16 w-auto">
-            <a href="index.html" class="text-xl font-bold text-white tracking-widest uppercase font-orbitron hover:text-reyes-cyan transition">
-                Reyes<span class="text-reyes-cyan">Computing</span>
+    <!-- HEADER CORPORATIVO UNIFICADO REYES COMPUTING -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-9 w-auto group-hover:scale-105 transition">
+                <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
             </a>
+            
+            <nav class="hidden lg:flex items-center gap-7 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+                <a href="desarrollo-web.html" class="hover:text-cyan-400 transition">Desarrollo Web</a>
+                <a href="publicidad-web.html" class="hover:text-cyan-400 transition">Google Ads</a>
+                <a href="google-business-profile.html" class="hover:text-cyan-400 transition">Google Business</a>
+                <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Startups & Fintech</a>
+                <a href="planes.html" class="hover:text-cyan-400 transition">Planes & Precios</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" class="px-5 py-2.5 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon flex items-center gap-2 font-orbitron">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Diagnóstico Gratis
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Abrir menu principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-        <div>
-            <a href="index.html" class="text-sm font-sans tracking-wide text-reyes-silver hover:text-reyes-cyan transition">
-                <i class="fa-solid fa-arrow-left"></i> Volver al Sitio
-            </a>
-        </div>
-    </nav>
+    </header>
 
     <!-- Landing Content -->
     <section class="min-h-screen flex items-center justify-center pt-24 px-4 pb-12">
