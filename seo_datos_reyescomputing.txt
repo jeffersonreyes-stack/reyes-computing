@@ -1,0 +1,59 @@
+--- Página: ciberseguridad-ia-cali.html ---
+Título: Ciberseguridad con IA en Cali | Reyes Computing
+Descripción: Protege tu negocio contra ataques digitales con inteligencia artificial. Reyes Computing ofrece seguridad web avanzada en Cali y Colombia.
+Palabras clave (keywords): ciberseguridad Cali, protección web con IA, seguridad digital Colombia, firewall inteligente, protección contra ransomware
+
+--- Página: contacto.html ---
+Título: Reyes Computing | Contacto Comercial para Incrementar Ventas
+Descripción: Cuéntanos qué quieres vender más y te contactamos con una propuesta clara para incrementar ventas mediante presencia digital, Google Ads y Social Ads B2B.
+Palabras clave (keywords): contacto comercial, incrementar ventas, leads calificados, google ads, social ads b2b, reyes computing
+
+--- Página: desarrollo-web.html ---
+Título: Desarrollo Web de Alta Conversión y Landing Pages en LATAM | Reyes Computing
+Descripción: Diseño y desarrollo de sitios web optimizados para marketing y ventas en LATAM. Transformamos tu presencia digital en una máquina de generación de leads B2B.
+Palabras clave (keywords): desarrollo web LATAM, diseño de landing pages, sitios web para ventas, optimización de conversiones, marketing web, embudos de venta, agencia de marketing digital, Reyes Computing
+
+--- Página: diagnostico-inicial.html ---
+Título: Redirigiendo a Contacto Comercial
+Descripción: No description found
+Palabras clave (keywords): No keywords found
+
+--- Página: guia-presencia-difital.html ---
+Título: Redirigiendo | Reyes Computing
+Descripción: No description found
+Palabras clave (keywords): No keywords found
+
+--- Página: guia-presencia-digital.html ---
+Título: Reyes Computing | Presencia Digital y Confianza a Través de Información de Valor
+Descripción: Aprenda cómo una presencia digital basada en información de valor fortalece la confianza, educa al mercado y acelera decisiones comerciales.
+Palabras clave (keywords): presencia digital, informacion de valor, confianza digital B2B, autoridad de marca, contenido educativo para empresas, Reyes Computing
+
+--- Página: index.html ---
+Título: Reyes Computing | Agencia de Mercadeo Web, Redes Sociales y Google Ads
+Descripción: Impulse sus ventas en LATAM con Reyes Computing. Expertos en marketing digital, publicidad en Google Ads, pauta en redes sociales y desarrollo web enfocado en conversiones B2B.
+Palabras clave (keywords): agencia de marketing digital LATAM, publicidad en internet, pauta digital, mercadeo web, campañas en Google Ads, publicidad en redes sociales, leads B2B, estrategias de marketing LATAM, Reyes Computing
+
+--- Página: publicidad-redes.html ---
+Título: Publicidad en Redes Sociales y Prospección B2B LATAM | Reyes Computing
+Descripción: Atraiga tomadores de decisiones y clientes B2B con estrategias de pauta avanzadas en LinkedIn y Meta Ads. Campañas de prospección optimizadas para todo LATAM.
+Palabras clave (keywords): publicidad en redes sociales LATAM, social ads, LinkedIn B2B, prospección B2B, Meta Ads, pauta digital, agencia de redes sociales, leads corporativos, marketing B2B, Reyes Computing
+
+--- Página: publicidad-web.html ---
+Título: Agencia de Google Ads y Publicidad en Buscadores LATAM | Reyes Computing
+Descripción: Maximice su ROI con campañas estratégicas en Google Ads. Atraiga clientes con alta intención de compra en todo LATAM a través de pauta digital especializada.
+Palabras clave (keywords): agencia de Google Ads LATAM, publicidad en buscadores, SEM, pauta en Google, campañas de búsqueda, marketing digital, generación de leads, publicidad web, Reyes Computing
+
+--- Página: success-ciberseguridad-ia.html ---
+Título: ¡Solicitud Recibida! | Reyes Computing
+Descripción: Hemos recibido tu solicitud de demo de protección. Nuestro equipo te contactará pronto.
+Palabras clave (keywords): No keywords found
+
+--- Página: success-presencia-digital.html ---
+Título: ¡Guía de Marketing Digital Enviada! | Reyes Computing
+Descripción: Gracias por descargar nuestra guía de marketing digital y estrategias web para LATAM. Revise su correo para acceder al documento.
+Palabras clave (keywords): No keywords found
+
+--- Página: success.html ---
+Título: ¡Mensaje Recibido! | Reyes Computing
+Descripción: Hemos recibido su mensaje. Nuestro equipo experto en marketing digital para LATAM le contactará pronto.
+Palabras clave (keywords): No keywords found
