@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+import os
+
+files = [
+    "ciberseguridad-fintech.html",
+    "startups-fintech.html",
+    "devsecops-startups.html",
+    "infraestructura-nube-startups.html",
+    "clientes-y-ventas.html",
+]
+
+template = """<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +37,7 @@
                 <a href="infraestructura-nube-startups.html" class="hover:text-reyes-cyan transition">Cloud 24/7</a>
                 <a href="#planes" class="hover:text-reyes-cyan transition">Planes</a>
                 <a data-wa data-wa-origen="navbar" class="cursor-pointer px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    <i class="fa-brands fa-whatsapp mr-1"></i> Hablar con SecOps
+                    <i class="fa-brands fa-whatsap| mr-1"></i> Hablar con SecOps
                 </a>
             </div>
             <button id="mobile-menu-btn" type="button" class="md:hidden text-reyes-cyan text-2xl focus:outline-none">
@@ -49,7 +59,7 @@
             </p>
             <div class="flex justify-center gap-4">
                 <a data-wa data-wa-origen="hero" class="px-8 py-4 bg-reyes-cyan text-black font-bold uppercase text-sm tracking-widest hover:bg-white transition duration-300 shadow-neon cursor-pointer">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Contactar SecOps
+                    <i class="fa-brands fa-whatsap| mr-2"></i> Contactar SecOps
                 </a>
             </div>
         </div>
@@ -64,8 +74,15 @@
         </div>
     </footer>
     <a data-wa data-wa-origen="flotante" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D36F] text-black font-bold px-5 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <i class="fa-brands fa-whatsap| text-2xl"></i>
         <span class="hidden md:inline font-sans text-sm">Escribenos por WhatsApp</span>
     </a>
 </body>
 </html>
+"""
+
+for file in files:
+    filepath = os.path.join("/home/jeffer/proyectos/reyes-computing", file)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(template)
+    print("* Actualizado " + file)
