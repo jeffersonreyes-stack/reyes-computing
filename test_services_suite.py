@@ -7,7 +7,8 @@ pages = [
     'startups-fintech.html',
     'devsecops-startups.html',
     'infraestructura-nube-startups.html',
-    'clientes-y-ventas.html'
+    'clientes-y-ventas.html',
+    'CLIENTES-Y-VENTAS.HTML'
 ]
 
 required_tokens = [
@@ -16,14 +17,17 @@ required_tokens = [
     ('output.css', 'Sistema de diseno corporativo Tailwind CSS'),
     ('Orbitron', 'Tipografia corporativa Orbitron'),
     ('challenges.cloudflare.com/turnstile', 'Protección anti-bot Cloudflare Turnstile'),
-    ('fa-whatsapp', 'Botonera WhatsApp corporativa')
+    ('fa-whatsapp', 'Botonera WhatsApp corporativa'),
+    ('assets/images/hero-bg.png', 'Imagen de fondo Hero corporativo 3D (hero-bg.png)'),
+    ('<header', 'Estructura HTML oficial con etiqueta <header> en Hero'),
+    ('<nav', 'Barra superior de navegación fija con etiqueta <nav>')
 ]
 
 passed_tests = 0
 total_tests = len(pages) * len(required_tokens)
 
-print('🔍 EJECUTANDO SUITE DE PRUEBAS DE IDENTIDAD CORPORATIVA Y SEGURIDAD...')
-print('=' * 70)
+print('🔍 EJECUTANDO SUITE DE PRUEBAS EXTENDIDA DE IDENTIDAD Y MAQUETACIÓN VISUAL...')
+print('=' * 80)
 
 for page in pages:
     if not os.path.exists(page):
@@ -41,11 +45,11 @@ for page in pages:
         else:
             print(f'  ❌ [FALLÓ] {description} FALTA en {page}')
 
-print('\n' + '=' * 70)
+print('\n' + '=' * 80)
 print(f'RESULTADO DE LA SUITE: {passed_tests}/{total_tests} Verificaciones Aprobadas ({(passed_tests/total_tests)*100:.1f}%)')
 
 if passed_tests == total_tests:
-    print('🎉 ¡TODAS LAS PÁGINAS CUMPLEN 100% CON LA IDENTIDAD CORPORATIVA OFICIAL!')
+    print('🎉 ¡TODAS LAS PÁGINAS CUMPLEN 100% CON LA IDENTIDAD Y ESTRUCTURA MAQUETADA!')
     sys.exit(0)
 else:
     print('⚠️ ALGUNAS PRUEBAS FALLARON.')
