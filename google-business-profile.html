@@ -33,7 +33,7 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-9 w-auto group-hover:scale-105 transition">
+                <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-12 w-auto group-hover:scale-105 transition">
                 <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
             </a>
             
@@ -59,6 +59,11 @@
 
     <!-- HERO -->
     <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero-bg.png" alt="Background" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-reyes-black/60 via-reyes-black/85 to-reyes-black"></div>
+        </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-reyes-cyan/10 border border-reyes-cyan/30 text-reyes-cyan font-mono text-xs uppercase tracking-widest mb-8">
                 <i class="fa-solid fa-location-dot"></i> Posicionamiento Local & Google Maps
