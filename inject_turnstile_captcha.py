@@ -4,7 +4,7 @@ import re
 import os
 
 TURNSTILE_SCRIPT = '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>'
-TURNSTILE_WIDGET = '<div class="cf-turnstile my-4" data-sitekey="1x00000000000000000000AA" data-theme="dark"></div>'
+TURNSTILE_WIDGET = '<div class="cf-turnstile my-4" data-sitekey="0x4AAAAAAFE4OGm_xxNsWqtq" data-theme="dark"></div>'
 
 files_modified = 0
 
