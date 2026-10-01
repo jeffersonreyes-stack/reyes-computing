@@ -111,6 +111,7 @@
       .sticky-bar { display: block; }
     }
   </style>
+    <script defer src="assets/js/reyes-conversion.js"></script>
 </head>
 <body>
 
@@ -181,8 +182,8 @@
     <div class="benefits-grid">
       <div class="b-card">
         <div class="b-icon">⚡</div>
-        <h3>Carga en menos de 1 segundo</h3>
-        <p>El 50% de las ventas se pierden si una página tarda más de 3 segundos en abrir. Nuestras páginas cargan al instante en celulares.</p>
+        <h3>Optimización de carga en móviles</h3>
+        <p>Optimizamos imágenes y recursos para facilitar la navegación desde celulares. El tiempo de carga depende del dispositivo y la conexión.</p>
       </div>
       <div class="b-card">
         <div class="b-icon">💬</div>
@@ -192,7 +193,7 @@
       <div class="b-card">
         <div class="b-icon">🎯</div>
         <h3>Diseño 100% para Móviles</h3>
-        <p>Más del 85% de tus clientes te verán desde un teléfono. Diseñamos pensando en la comodidad del pulgar y la compra fácil.</p>
+        <p>Diseñamos para que tus clientes puedan leer la oferta y contactarte desde un teléfono o una computadora.</p>
       </div>
     </div>
   </div>
@@ -221,7 +222,7 @@
             <li>Dominio (.com o .co) y Hosting por 1 año</li>
             <li>Optimización ultra-rápida para celulares</li>
             <li>Formulario de cotización directa</li>
-            <li>Factura deducible SAT (México) / 0% IVA (Colombia)</li>
+            <li>Facturación e impuestos según servicio y país</li>
           </ul>
         </div>
         <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20la%20Landing%20Page%20en%20promo%20de%20$599.000" class="btn-card green" target="_blank" rel="noopener">
@@ -242,7 +243,7 @@
             <li>Integración con Google Maps y WhatsApp</li>
             <li>Correos corporativos con tu dominio</li>
             <li>Optimización SEO para aparecer en Google</li>
-            <li>Factura deducible SAT (México) / 0% IVA (Colombia)</li>
+            <li>Facturación e impuestos según servicio y país</li>
           </ul>
         </div>
         <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20cotizar%20el%20Sitio%20Web%20Empresarial%20de%20$1.350.000" class="btn-card blue" target="_blank" rel="noopener">
@@ -289,19 +290,6 @@
     </a>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('mobile-menu-btn');
-      const menu = document.getElementById('mobile-menu');
-      if (btn && menu) {
-        btn.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => {
-          link.addEventListener('click', () => menu.classList.add('hidden'));
-        });
-      }
-    });
-  </script>
+
 </body>
 </html>

@@ -15,7 +15,7 @@
 
     <!-- SEO & Meta Tags -->
     <title>Google Business Profile y Posicionamiento Local en Google Maps | Reyes Computing</title>
-    <meta name="description" content="Optimización estratégica de Perfil de Negocio en Google (Google Business Profile) y SEO Local para aparecer de primero en búsquedas locales y Google Maps en México y Colombia.">
+    <meta name="description" content="Optimización estratégica de Perfil de Negocio en Google (Google Business Profile) y SEO Local para mejorar tu presencia en búsquedas locales y Google Maps en México y Colombia.">
     <link rel="canonical" href="https://www.reyescomputing.com/google-business-profile.html">
     <link rel="stylesheet" href="assets/css/output.css">
     
@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script defer src="assets/js/reyes-conversion.js"></script>
 </head>
 <body class="bg-reyes-black text-white font-sans antialiased selection:bg-reyes-cyan selection:text-black">
 
@@ -69,7 +70,7 @@
                 <i class="fa-solid fa-location-dot"></i> Posicionamiento Local & Google Maps
             </div>
             <h1 class="font-orbitron text-3xl md:text-6xl font-black uppercase text-white tracking-tight leading-tight mb-8">
-                APARECE DE PRIMERO EN <span class="text-reyes-cyan">GOOGLE MAPS</span> CUANDO TUS CLIENTES BUSCAN EN TU CIUDAD
+                MEJORA TU PRESENCIA EN <span class="text-reyes-cyan">GOOGLE MAPS</span> CUANDO TUS CLIENTES BUSCAN EN TU CIUDAD
             </h1>
             <p class="font-sans text-lg md:text-xl text-reyes-silver max-w-3xl mx-auto font-light leading-relaxed mb-10">
                 Optimizamos tu Perfil de Negocio en Google (Google Business Profile) para dominar las búsquedas locales, generar llamadas telefónicas inmediatas y atraer clientes a tu local o empresa.
@@ -92,7 +93,7 @@
                 <div class="bg-reyes-black border border-white/5 p-8 rounded">
                     <i class="fa-solid fa-map-pin text-3xl text-reyes-cyan mb-4"></i>
                     <h3 class="font-orbitron text-xl font-bold mb-2">Dominio de Google Maps</h3>
-                    <p class="text-reyes-silver text-sm">Aparece en el Top 3 local (Local Pack) cuando usuarios cerca de ti buscan tus servicios.</p>
+                    <p class="text-reyes-silver text-sm">Mejoramos la información y relevancia de tu perfil para búsquedas locales. La posición depende de Google, la ubicación y la competencia.</p>
                 </div>
                 <div class="bg-reyes-black border border-white/5 p-8 rounded">
                     <i class="fa-solid fa-star text-3xl text-reyes-cyan mb-4"></i>
@@ -174,18 +175,22 @@
                 <h2 class="font-orbitron text-2xl md:text-4xl font-bold">SOLICITA TU AUDITORÍA <span class="text-reyes-cyan">GRATUITA</span></h2>
                 <p class="text-reyes-silver text-sm mt-2">Analizamos la visibilidad de tu negocio en Google Maps sin compromiso.</p>
             </div>
-            <form action="contacto.html" method="GET" class="space-y-4">
+            <form id="localAuditForm" action="https://formsubmit.co/control@reyescomputing.com" method="POST" class="space-y-4">
+                <input type="hidden" name="_subject" value="Solicitud de auditoría Google Business - Reyes Computing">
+                <input type="hidden" name="_next" value="https://www.reyescomputing.com/success.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
                 <div>
                     <label class="block font-orbitron text-xs text-reyes-silver uppercase mb-2">Nombre o Empresa</label>
-                    <input type="text" required placeholder="Ej. Restaurante San Fernando" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
+                    <input type="text" name="name" autocomplete="organization" required placeholder="Ej. Restaurante San Fernando" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
                 </div>
                 <div>
                     <label class="block font-orbitron text-xs text-reyes-silver uppercase mb-2">Teléfono / WhatsApp</label>
-                    <input type="tel" required placeholder="Ej. +57 312 808 4929" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
+                    <input type="tel" name="phone" autocomplete="tel" required placeholder="Ej. +57 312 808 4929" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
                 </div>
                 <div>
                     <label class="block font-orbitron text-xs text-reyes-silver uppercase mb-2">Enlace o Nombre en Google Maps (opcional)</label>
-                    <input type="text" placeholder="Ej. Mi Negocio en Cali / CDMX" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
+                    <input type="text" name="google_business" placeholder="Ej. Mi Negocio en Cali / CDMX" class="w-full p-4 bg-reyes-black border border-white/10 text-white rounded focus:border-reyes-cyan focus:outline-none">
                 </div>
                 <div class="cf-turnstile my-4" data-sitekey="0x4AAAAAAFE4OGm_xxNsWqtq" data-theme="dark"></div>
                 <button type="submit" class="w-full py-4 bg-reyes-cyan text-black font-bold uppercase tracking-widest hover:bg-white transition">

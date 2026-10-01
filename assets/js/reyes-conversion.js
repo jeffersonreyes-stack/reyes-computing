@@ -3,7 +3,7 @@
    ============================================================ */
 
 const REYES = {
-  // WhatsApp comercial: +57 333 070 0828 (formato internacional, sin + ni espacios).
+  // WhatsApp comercial: +57 312 808 4929 (formato internacional, sin + ni espacios).
   WHATSAPP_NUMERO: '573128084929',
 
   // ID de conversion de Google Ads. OJO: no es el numero de cliente (552-938-8450),
@@ -30,14 +30,16 @@ function registrarConversion(tipo, destino) {
     destino: destino || ''
   });
 
-  if (REYES.ADS_ETIQUETA_CONVERSION) {
+  if (tipo === 'whatsapp' && REYES.ADS_ETIQUETA_CONVERSION) {
     gtag('event', 'conversion', { send_to: `${REYES.ADS_ID}/${REYES.ADS_ETIQUETA_CONVERSION}` });
   }
 }
 
 function activarEnlacesWhatsApp() {
-  document.querySelectorAll('[data-wa]').forEach((enlace) => {
-    enlace.href = construirEnlaceWhatsApp(enlace.dataset.waMsg);
+  document.querySelectorAll('[data-wa], a[href^="https://wa.me/"]').forEach((enlace) => {
+    if (enlace.hasAttribute('data-wa')) {
+      enlace.href = construirEnlaceWhatsApp(enlace.dataset.waMsg);
+    }
     enlace.target = '_blank';
     enlace.rel = 'noopener noreferrer';
     enlace.addEventListener('click', () => registrarConversion('whatsapp', enlace.dataset.waOrigen || 'cta'));
@@ -52,12 +54,63 @@ function activarEnlacesTelefono() {
 
 function activarFormularios() {
   document.querySelectorAll('form').forEach((form) => {
-    form.addEventListener('submit', () => registrarConversion('formulario', form.id || 'form'));
+    form.addEventListener('submit', (event) => {
+      queueMicrotask(() => {
+        if (event.defaultPrevented || typeof gtag !== 'function') return;
+        gtag('event', 'formulario_intento', {
+          pagina: window.location.pathname,
+          formulario: form.id || 'form'
+        });
+      });
+    });
+  });
+}
+
+function activarMenuMovil() {
+  let button = document.getElementById('mobile-menu-btn');
+  if (!button) {
+    const navigation = document.querySelector('nav.fixed, header.fixed');
+    if (!navigation) return;
+    button = document.createElement('button');
+    button.id = 'mobile-menu-btn';
+    button.className = 'xl:hidden text-white text-2xl';
+    navigation.firstElementChild.appendChild(button);
+  }
+  let menu = document.getElementById('mobile-menu');
+  if (!menu) {
+    menu = document.createElement('div');
+    menu.id = 'mobile-menu';
+    menu.className = 'fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center gap-6 px-6 pt-24 pb-6 overflow-y-auto';
+    button.closest('nav, header').querySelectorAll('a').forEach((link) => {
+      if (link.querySelector('img')) return;
+      const item = link.cloneNode(true);
+      item.className = 'mobile-link text-lg text-white text-center';
+      menu.appendChild(item);
+    });
+    document.body.appendChild(menu);
+  }
+  const setOpen = (open) => {
+    menu.classList.toggle('hidden', !open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Cerrar menu principal' : 'Abrir menu principal');
+    document.body.style.overflow = open ? 'hidden' : '';
+    button.innerHTML = open ? '<i class="fa-solid fa-times"></i>' : '<i class="fa-solid fa-bars"></i>';
+  };
+  button.type = 'button';
+  button.setAttribute('aria-controls', menu.id);
+  setOpen(false);
+  button.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+  menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1280) setOpen(false);
   });
 }
 
 function inyectarBotonFlotante() {
-  if (document.querySelector('.reyes-wa-flotante')) return;
+  if (document.querySelector('.reyes-wa-flotante, .sticky-bar')) return;
 
   const boton = document.createElement('a');
   boton.className = 'reyes-wa-flotante fixed bottom-6 right-6 z-[60] flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-4 font-sans text-sm font-bold text-black shadow-[0_0_25px_rgba(37,211,102,0.5)] transition hover:scale-105 hover:bg-white';
@@ -74,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('[Reyes Computing] Falta ADS_ETIQUETA_CONVERSION en assets/js/reyes-conversion.js: los contactos no se registraran como conversion en Google Ads.');
   }
 
+  activarMenuMovil();
   inyectarBotonFlotante();
   activarEnlacesWhatsApp();
   activarEnlacesTelefono();

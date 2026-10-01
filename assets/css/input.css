@@ -89,3 +89,73 @@ body p, body li {
   outline: none !important;
   box-shadow: 0 0 10px rgba(0, 243, 255, 0.3) !important;
 }
+
+nav.fixed > div > a:first-child,
+header.fixed > div > a:first-child {
+  min-width: 0;
+}
+
+@media (max-width: 1279px) {
+  nav.fixed .md\:flex,
+  nav.fixed .sm\:flex,
+  nav.fixed .lg\:flex,
+  header.fixed .lg\:flex {
+    display: none !important;
+  }
+
+  nav.fixed .lg\:hidden,
+  header.fixed .lg\:hidden {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 639px) {
+  nav.fixed > div > a:first-child > span,
+  header.fixed > div > a:first-child > span {
+    font-size: 0.8125rem;
+    letter-spacing: 0;
+  }
+
+  nav.fixed > div > a:first-child > img,
+  header.fixed > div > a:first-child > img {
+    max-height: 2.25rem;
+    width: auto;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    overflow-wrap: anywhere;
+  }
+
+  h2, h3, h4, p, li, .new-price, footer a {
+    overflow-wrap: anywhere;
+  }
+
+  .grid > *, .pricing-grid > *, .benefits-grid > * {
+    min-width: 0;
+  }
+
+  .new-price {
+    font-size: 2rem !important;
+  }
+
+  footer .flex {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  footer .font-orbitron {
+    font-size: 0.875rem;
+    letter-spacing: 0;
+  }
+
+  .footer-meta span, .footer-meta a {
+    white-space: normal;
+  }
+
+  a[class*="px-"], button {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

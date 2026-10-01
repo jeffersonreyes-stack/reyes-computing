@@ -44,30 +44,7 @@
 <body class="antialiased bg-reyes-black text-reyes-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-reyes-cyan/20 bg-reyes-black/90">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                 <img src="assets/images/logo.png" alt="Reyes Computing" class="h-16 w-auto">
-                 <span class="font-orbitron text-xl font-bold tracking-widest uppercase text-white group-hover:text-reyes-cyan transition">Reyes<span class="text-reyes-cyan">Computing</span></span>
-            </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-sans tracking-wide text-reyes-silver">
-                <a href="desarrollo-web.html" class="hover:text-reyes-cyan transition">Desarrollo Web</a>
-                <a href="publicidad-web.html" class="hover:text-reyes-cyan transition">Google Ads</a>
-                <a href="sistemas-de-ventas.html" class="text-reyes-cyan font-bold transition">Ventas</a>
-                <a href="contacto.html" class="px-6 py-2 border border-reyes-cyan text-reyes-cyan hover:bg-reyes-cyan hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon">
-                    Incrementar Ventas
-                </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-reyes-cyan text-2xl focus:outline-none z-50">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </nav>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
@@ -196,7 +173,7 @@
             </h2>
             <div class="bg-[#050505] border border-reyes-cyan/30 p-8 md:p-12 shadow-[0_0_30px_rgba(0,243,255,0.1)]">
                 <p class="font-sans text-lg md:text-xl text-reyes-silver leading-relaxed font-light">
-                    "Nuestro compromiso es directo: incrementamos tus ventas. No hacemos páginas de adorno que nadie visita; implementamos un Combo Digital estratégico enfocado 100% en que el usuario deje sus datos o compre. Si tu objetivo es llegar a más clientes y hacer crecer tu negocio, construimos la presencia digital exacta para que lo logres."
+                    "Nuestro compromiso es mejorar tu captación y medir los resultados. No hacemos páginas de adorno que nadie visita; implementamos un Combo Digital estratégico enfocado 100% en que el usuario deje sus datos o compre. Si tu objetivo es llegar a más clientes y hacer crecer tu negocio, construimos la presencia digital exacta para que lo logres."
                 </p>
             </div>
             <div class="mt-12">
@@ -221,46 +198,14 @@
             <div class="footer-meta text-center font-sans text-xs text-reyes-silver/50 uppercase tracking-widest flex flex-col md:flex-row gap-4 items-center justify-center">
                 <span>&copy; 2025 Reyes Computing S.A.S.</span>
                 <span class="hidden md:inline text-reyes-cyan/30">|</span>
-                <a href="#" class="hover:text-gray-400 transition">Política de Privacidad</a>
+                <a href="contacto.html#privacidad" class="hover:text-gray-400 transition">Política de Privacidad</a>
                 <span class="hidden md:inline text-reyes-cyan/30">|</span>
-                <a href="#" class="hover:text-gray-400 transition">Aviso Legal</a>
+                <a href="contacto.html#privacidad" class="hover:text-gray-400 transition">Aviso Legal</a>
             </div>
         </div>
     </footer>
 
     <!-- Mobile Menu Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
 
-            function setMenuState(isOpen) {
-                mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-                mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menu principal' : 'Abrir menu principal');
-            }
-
-            function toggleMenu() {
-                const willOpen = mobileMenu.classList.contains('hidden');
-                if (willOpen) {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                    document.body.style.overflow = 'auto';
-                }
-                setMenuState(willOpen);
-            }
-
-            setMenuState(false);
-            mobileMenuBtn.addEventListener('click', toggleMenu);
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-        });
-    </script>
 </body>
 </html>
