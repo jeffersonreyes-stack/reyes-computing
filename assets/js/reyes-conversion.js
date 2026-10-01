@@ -4,7 +4,7 @@
 
 const REYES = {
   // WhatsApp comercial: +57 333 070 0828 (formato internacional, sin + ni espacios).
-  WHATSAPP_NUMERO: '573330700828',
+  WHATSAPP_NUMERO: '573128084929',
 
   // ID de conversion de Google Ads. OJO: no es el numero de cliente (552-938-8450),
   // es el "ID de conversion" que aparece junto a la etiqueta en Objetivos > Conversiones.
