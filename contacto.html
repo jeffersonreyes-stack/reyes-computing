@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google tag (gtag.js) - Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
@@ -146,6 +148,14 @@
         </div>
     </section>
 
+    <section id="privacidad" class="max-w-4xl mx-auto px-6 pb-16 scroll-mt-24">
+        <h2 class="font-orbitron text-xl text-white mb-4">Uso de tus datos y condiciones del servicio</h2>
+        <p class="text-reyes-silver mb-4">Reyes Computing S.A.S. utiliza los datos que compartes para responder tu solicitud y preparar una propuesta. Los formularios se envían mediante FormSubmit; los enlaces de WhatsApp abren el servicio de Meta. Estos proveedores procesan información conforme a sus propias políticas.</p>
+        <p class="text-reyes-silver mb-4">El sitio utiliza Google Ads para medir interacciones publicitarias. Un clic de contacto no confirma una conversación, una contratación ni una venta. Consulta las políticas de <a href="https://policies.google.com/privacy" class="text-reyes-cyan underline">Google</a> y <a href="https://www.whatsapp.com/legal/privacy-policy" class="text-reyes-cyan underline">WhatsApp</a>.</p>
+        <p class="text-reyes-silver mb-4">Para consultas sobre tus datos o solicitudes de acceso, corrección o eliminación, escribe a <a href="mailto:control@reyescomputing.com" class="text-reyes-cyan underline">control@reyescomputing.com</a>.</p>
+        <p class="text-reyes-silver">El alcance, los impuestos aplicables, el presupuesto de pauta y las condiciones finales se confirman por escrito antes de contratar. No garantizamos posiciones en Google, ausencia total de ataques ni un volumen de ventas.</p>
+    </section>
+
     <footer class="border-t border-white/5 py-12 text-center text-gray-600 text-sm font-sans bg-[#020202]">
         <div class="mb-4">
             <span class="text-white font-bold text-lg uppercase font-orbitron">Reyes<span class="text-reyes-cyan">Computing</span></span>
@@ -165,32 +175,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            function toggleMenu() {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                }
-            }
-
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', toggleMenu);
-            }
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                });
-            });
-
             const contactForm = document.getElementById('contactForm');
 
             if (contactForm) {

@@ -26,7 +26,19 @@ npm run dev
 npm run build
 ```
 
-## 📦 Deployment
+## Validación de Contactos
+
+Ejecutar `npm test`, `npm run build` y `python3 test_services_suite.py` antes de publicar.
+
+La etiqueta de Google Ads existente mide clics en WhatsApp, no conversaciones ni ventas. Las llamadas generan un evento separado y los formularios válidos generan `formulario_intento`; un intento no confirma recepción. No se reutiliza la etiqueta de WhatsApp para envíos ni llamadas.
+
+Los formularios usan FormSubmit. El propietario debe confirmar que `control@reyescomputing.com` esté activado en ese servicio y probar la recepción de un mensaje autorizado. Una conversión de formulario confirmado requiere una acción propia en Google Ads y verificación de recepción; no se inventa una etiqueta.
+
+El aviso de datos está en `contacto.html#privacidad`. Describe los proveedores actuales, pero no sustituye una revisión legal ni configura consentimiento de cookies. Las condiciones fiscales y de facturación deben validarse antes de ofrecerlas.
+
+Las URL recomendadas de campañas están en `google_ads_campaign_urls.md`; su configuración real en Google Ads queda fuera del código del sitio.
+
+## Despliegue
 
 El sitio se despliega automáticamente a AWS S3 con CloudFront cuando se hace push a `main` vía GitHub Actions.
 
