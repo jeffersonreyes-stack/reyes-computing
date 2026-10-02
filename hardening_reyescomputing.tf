@@ -36,7 +36,7 @@ resource "aws_cloudfront_response_headers_policy" "reyes_security_headers" {
 
     # Content Security Policy (CSP) para prevenir XSS e inyecciones
     content_security_policy {
-      content_security_policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests;"
+      content_security_policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://googleads.g.doubleclick.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com https://ad.doubleclick.net https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests;"
       override                = true
     }
   }
