@@ -1,0 +1,13 @@
+parametro,valor,unidad,formula,estado,fuente,nota
+COSTO_MAXIMO_SOBRE_PRECIO,45,porcentaje,precio_objetivo=costo_total/0.45,CONFIRMADO_USUARIO,Conversacion 2026-10-01,El costo total representa 45 por ciento del precio de venta
+MARGEN_BRUTO_OBJETIVO,55,porcentaje,margen_bruto=precio-costo_total,DERIVADO,100-45,Antes de impuestos sobre utilidad
+COSTO_BASE_MENSUAL,7589939,COP,suma_costos_operativos,DERIVADO,costos_operativos.csv,Incluye al fundador a costo total cargado de 7000000 y los proveedores compartidos con las facturas aportadas
+FACTURACION_OBJETIVO_MENSUAL,16866531,COP,7589939/0.45,DERIVADO,Politica 45 por ciento,Facturacion minima proyectada sin costos variables adicionales
+HORAS_JEFFERSON_POR_ALTA,6,horas,definido_por_propietario,CONFIRMADO_USUARIO,Conversacion 2026-10-01,Incluye configuracion y puesta en marcha inicial
+ALTAS_MAXIMAS_TEORICAS_MES,21,altas,entero_inferior_130/6,DERIVADO,Capacidad mensual Jefferson,No limita bots activos ni contempla ventas administracion o incidencias
+FACTURACION_MEDIA_POR_ALTA_A_CAPACIDAD,803168,COP,16866531/21,DERIVADO,Facturacion objetivo y 21 altas,Referencia de mezcla comercial; no es precio obligatorio por producto
+CUOTA_COSTO_MEDIA_POR_ALTA_A_CAPACIDAD,361426,COP,7589939/21,DERIVADO,Costos mensuales y 21 altas,Referencia de reparto cuando todas las altas pesan igual
+OPERACION_POSTERIOR,AUTOMATIZADA,texto,VM_GCP_mas_SaaS,CONFIRMADO_USUARIO,Conversacion 2026-10-01,Bot de WhatsApp y monitoreos no consumen horas humanas por defecto
+COSTO_FUNDADOR_CARGADO,7000000,COP,dato_del_propietario,CONFIRMADO_USUARIO,Conversacion 2026-10-01,Es costo total y no salario; incluye prestaciones y seguridad social
+FACTOR_PRESTACIONAL_FUNDADOR,1.56,factor,costo=salario*1.56,CONFIRMADO_USUARIO,Conversacion 2026-10-01,Factor indicado por el propietario
+SALARIO_IMPLICITO_FUNDADOR,4487179,COP,7000000/1.56,DERIVADO,Costo cargado y factor,Base para el desglose en costo_fundador_desglose.csv
