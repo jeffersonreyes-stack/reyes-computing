@@ -1,0 +1,6 @@
+proveedor,plan,precio_lista_usuario_mes_cop,precio_con_iva_usuario_mes_cop,costo_anual_usuario_cop,uso_en_combo,estado,fuente,nota
+Google Workspace,Business Starter,29200,34748,416976,Landing con Correo Corporativo (1 usuario),PRECIO_OFICIAL_MAS_IVA,https://workspace.google.com/intl/es-419_co/pricing.html,Lista sin impuestos; se suma IVA del 19 por ciento porque la factura propia de Business Plus (109000) es 1.199 veces la lista (90900)
+Google Workspace,Business Standard,58400,69496,833952,Sitio Web con Correo Corporativo (1 usuario),PRECIO_OFICIAL_MAS_IVA,https://workspace.google.com/intl/es-419_co/pricing.html,Incluye 2 TB y grabacion de reuniones
+Google Workspace,Business Plus,90900,108171,1298052,No incluido en combos,PRECIO_OFICIAL_MAS_IVA,https://workspace.google.com/intl/es-419_co/pricing.html,La factura real del propietario es 109000 al mes
+Microsoft 365,Business Basic,PENDIENTE,PENDIENTE,PENDIENTE,Alternativa a Starter,PENDIENTE_FUENTE,https://www.microsoft.com/es-co/microsoft-365/business,La pagina oficial exige inicio de sesion y no se obtuvo precio; cotizar al cliente
+Microsoft 365,Business Standard,PENDIENTE,PENDIENTE,PENDIENTE,Alternativa a Standard,PENDIENTE_FUENTE,https://www.microsoft.com/es-co/microsoft-365/business,La pagina oficial exige inicio de sesion y no se obtuvo precio; cotizar al cliente

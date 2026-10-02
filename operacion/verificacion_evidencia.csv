@@ -1,0 +1,8 @@
+proyecto,remoto,rama_local,hash_local,hash_remoto_misma_rama,estado_sincronizacion,commits_remotos_sin_merges,commits_bot,commits_humanos,primer_commit,ultimo_commit,fsck_errores_local,cambios_sin_commit_local
+conga-pacifico,https://github.com/jeffersonreyes-stack/conga-pacifico.git,conga-landing-page-4884545659073798584,fbd6d61,61befcc,LOCAL_DESACTUALIZADO,64,38,26,2026-01-16,2026-04-23,0,6
+ferretero,ReyesComputing/ferretero (SSH),main,6bf7615,06d8717,DIVERGENTE_1_COMMIT_LOCAL_NO_SUBIDO,25,12,13,2026-04-12,2026-05-11,0,2
+fexxa,https://github.com/jeffersonreyes-stack/fexxa.git,feat/fexxa-website-4860374102184618848,5e57a22,e42bedd,LOCAL_DESACTUALIZADO,43,24,19,2026-01-30,2026-04-23,0,0
+juanshop,ReyesComputing/juanshop (SSH),main,7ef065e,7ef065e,SINCRONIZADO,10,6,4,2026-04-13,2026-04-28,0,14
+listoshop,ReyesComputing/listoshop (SSH),feature/listoshop-full-app-implementation-17888156332215944641,cbd59d3,cbd59d3,SINCRONIZADO,15,2,13,2026-03-30,2026-03-30,0,1
+powerbud,https://github.com/jeffersonreyes-stack/powerbud.git,feature/powerbud-app-10732174570171587733,9b0d7ca,9b0d7ca,SINCRONIZADO,57,11,46,2026-02-27,2026-04-10,0,2
+reyes-computing,https://github.com/jeffersonreyes-stack/reyes-computing.git,fix/site-lead-capture,9c65472,9c65472,SINCRONIZADO,145,57,88,2025-12-31,2026-10-01,0,16

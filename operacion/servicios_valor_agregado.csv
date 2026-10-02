@@ -1,0 +1,6 @@
+servicio,alcance_minimo,material_de_partida,horas_estimadas,costo_hora_asignado_cop,costo_directo_cop,precio_piso_45pct_cop,estado,nota
+Kit de identidad visual basica,Logo simple y paleta tipografia para el sitio,Briefing del cliente,6,58384,0,778455,PRECIO_PISO_INTERNO_NO_APROBADO,Solo para clientes sin imagen corporativa; el cliente con logo y manual no lo necesita
+Tratamiento de fotos,Hasta 20 fotos recortadas y optimizadas para web,Fotos entregadas por el cliente,3,58384,0,389228,PRECIO_PISO_INTERNO_NO_APROBADO,No incluye sesion fotografica ni banco de imagenes
+Edicion de video corto,Un video de hasta 60 segundos con material entregado,Tomas entregadas por el cliente,5,58384,0,648713,PRECIO_PISO_INTERNO_NO_APROBADO,No incluye grabacion ni licencias de musica
+Piezas graficas para redes,Pack de 5 piezas con la identidad del cliente,Logo y textos entregados por el cliente,4,58384,0,518970,PRECIO_PISO_INTERNO_NO_APROBADO,Cambios adicionales se cotizan aparte
+Integracion de imagenes adicionales,Pack de 50 imagenes clasificadas recortadas optimizadas e integradas en carruseles,Imagenes entregadas por el cliente,1.1,58384,0,142717,PRECIO_PISO_INTERNO_NO_APROBADO,Calibrado con fexxa: 305 imagenes entregadas consumieron hasta 6.6 h; aplica al volumen superior al acordado en la propuesta

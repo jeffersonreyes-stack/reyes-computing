@@ -1,0 +1,2 @@
+fecha_hora_utc,pagina,proveedor,destino,asunto,http_estado,respuesta_proveedor,recepcion_bandeja,estado,nota
+2026-10-01T23:42:27Z,contacto.html,FormSubmit,control@reyescomputing.com,PRUEBA TECNICA FormSubmit - Reyes Computing - 2026-10-01,200,success_true,CONFIRMADA_EN_RECIBIDOS,EXTREMO_A_EXTREMO_OK,No es lead ni venta; recepcion confirmada por el propietario mediante captura

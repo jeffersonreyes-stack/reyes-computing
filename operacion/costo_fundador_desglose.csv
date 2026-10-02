@@ -1,0 +1,17 @@
+concepto,tarifa_pct_sobre_salario,monto_mensual_cop,estado,nota
+Salario basico implicito,100.000,4487179,DERIVADO,7000000 dividido entre 1.56
+Pension empleador,12.000,538462,APLICA,Tarifa legal vigente del empleador
+ARL riesgo I,0.522,23423,APLICA,Actividad de oficina
+Caja de compensacion,4.000,179487,APLICA,Verificado en gerencie.com el 2026-10-01
+Prima de servicios,8.333,373932,APLICA,Un mes de salario por ano repartido
+Cesantias,8.333,373932,APLICA,Un mes de salario por ano repartido
+Intereses de cesantias,1.000,44872,APLICA,12 por ciento anual sobre cesantias
+Vacaciones,4.167,186966,APLICA,15 dias habiles por ano
+Subtotal aplicable,38.355,1721073,DERIVADO,Costo legal total de 6208252
+Salud empleador,8.500,381410,EXONERADO_RESERVADO,Exonerado por ganar menos de 17509050 (10 SMMLV); se reserva por si se pierde la exoneracion
+SENA,2.000,89744,EXONERADO_RESERVADO,Exonerado por ganar menos de 17509050; se reserva
+ICBF,3.000,134615,EXONERADO_RESERVADO,Exonerado por ganar menos de 17509050; se reserva
+Dotacion,0.000,0,NO_APLICA,Aplica a quien gana hasta 2 SMMLV (3501810) y el salario implicito es mayor; regla legal no verificada en fuente hoy
+Auxilio de transporte,0.000,0,NO_APLICA,Aplica a quien gana hasta 2 SMMLV (3501810); verificado en Wikipedia el 2026-10-01
+Remanente sin concepto especifico,4.145,185978,SIN_ASIGNAR,Diferencia entre el factor 1.56 y el factor legal sin exoneracion de 1.5186 que cubre dotacion u otros costos
+Costo total cargado,156.000,7000000,CONFIRMADO_USUARIO,Costo total que el propietario asigna al fundador

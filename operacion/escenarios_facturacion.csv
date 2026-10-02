@@ -1,0 +1,7 @@
+escenario,mezcla_sitio_ads,correo_corporativo,costos_directos_pct_facturacion,facturacion_costo_45_cop,horas_requeridas,horas_disponibles,brecha_horas,facturacion_por_hora_cop,facturacion_a_130h_cop,costo_pct_a_130h
+E1_50_50,50-50,aparte,1.59,17484016,135.4,130,5.4,129149,16789332,46.8
+E2_65_35,65-35,aparte,2.03,17663593,144.3,130,14.3,122370,15908118,49.7
+E3_80_20,80-20,aparte,2.47,17846896,153.5,130,23.5,116268,15114795,52.7
+E1_50_50,50-50,incluido,14.01,24494262,189.7,130,59.7,129149,16789332,59.2
+E2_65_35,65-35,incluido,18.18,28301631,231.3,130,101.3,122370,15908118,65.9
+E3_80_20,80-20,incluido,22.35,33510473,288.2,130,158.2,116268,15114795,72.6

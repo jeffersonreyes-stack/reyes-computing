@@ -1,0 +1,4 @@
+id,tipo,mercado,producto,fuente_campana,impresiones,clics,contactos,propuestas,ventas_cobradas,gasto_cop,estado,motivo_perdida,proxima_accion,evidencia
+CO-DEVOPS-ADS-001,campana,Colombia,DevOps,reyesco-devops,722,53,0,0,0,208980,CERRADO_SIN_CONTACTOS,SIN_CONTACTOS,No reactivar pauta hasta validar oferta y recepcion de contactos,Reporte de Google Ads aportado por el propietario
+CO-STANDARD-ADS-001,campana,Colombia,Web y Google Ads,reyesco-standarsearch,166,8,0,0,0,11745,CERRADO_SIN_CONTACTOS,SIN_CONTACTOS,No aumentar pauta hasta validar oferta y recepcion de contactos,Reporte de grupos de anuncios aportado por el propietario
+AR-CONTACTOS-001,cohorte,Argentina,Landing y web,Seguimiento comercial,PENDIENTE,PENDIENTE,16,NO_DETERMINADO,0,PENDIENTE,CERRADO_SIN_VENTAS,NO_COMPRARON_TRAS_SEGUIMIENTO_Y_MOCKUPS,No reactivar ni reconstruir individualmente; conservar solo el agregado historico,Declaracion del propietario y evidencia visual de mockups enviados

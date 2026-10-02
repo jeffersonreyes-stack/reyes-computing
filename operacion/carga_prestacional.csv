@@ -1,0 +1,16 @@
+concepto,tarifa_pct_del_salario,base_o_regla,aplica_sin_exoneracion,aplica_con_exoneracion_114_1,estado,fuente
+Salud empleador,8.5,Aporte del empleador sobre el salario,SI,NO,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-a-seguridad-social.html
+Pension empleador,12,Aporte del empleador sobre el salario,SI,SI,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-a-seguridad-social.html
+ARL riesgo I,0.522,Trabajo de oficina; la clase la fija la actividad,SI,SI,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-a-seguridad-social.html
+Caja de compensacion,4,Todos los trabajadores,SI,SI,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-parafiscales.html
+SENA,2,Exonerado por salarios inferiores a 10 SMMLV (COP 17509050 en 2026),SI,NO,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-parafiscales.html
+ICBF,3,Exonerado por salarios inferiores a 10 SMMLV (COP 17509050 en 2026),SI,NO,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/aportes-parafiscales.html
+Prima de servicios,8.3333,30 dias de salario por año (1/12),SI,SI,VERIFICADO_FUENTE_SECUNDARIA,https://www.gerencie.com/prima-de-servicios.html
+Cesantias,8.3333,Un mes de salario por cada año (1/12),SI,SI,VERIFICADO_TEXTO_OFICIAL,http://www.secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr008.html articulo 249
+Intereses sobre cesantias,1,12% anual sobre las cesantias equivale a 1% del salario,SI,SI,NO_VERIFICADO_EN_ESTA_SESION,Ley 52 de 1975 sin texto consultado
+Vacaciones,4.1667,15 dias de salario por año (15/360),SI,SI,VERIFICADO_TEXTO_OFICIAL,http://www.secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr006.html articulo 186
+Dotacion,0,Solo trabajadores que ganan hasta 2 SMMLV (COP 3501810 en 2026); en especie y no se paga en dinero,NO,NO,VERIFICADO_TEXTO_OFICIAL,http://www.secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr007.html articulo 230
+TOTAL_SIN_EXONERACION,51.8553,Suma de los conceptos que aplican,,,DERIVADO,Suma de filas
+TOTAL_CON_EXONERACION,38.3553,Suma de los conceptos que aplican con exoneracion de salud SENA e ICBF,,,DERIVADO,Suma de filas
+FACTOR_INDICADO_POR_PROPIETARIO,56,Salario por 1.56,,,CONFIRMADO_USUARIO,Conversacion 2026-10-01
+DIFERENCIA_NO_SUSTENTADA,4.1447,56 menos TOTAL_SIN_EXONERACION,,,PENDIENTE_DE_EXPLICAR,Requiere identificar los conceptos adicionales o ajustar el factor

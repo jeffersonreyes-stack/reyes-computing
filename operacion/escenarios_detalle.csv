@@ -1,0 +1,31 @@
+escenario,correo_corporativo,producto,precio_referencia_cop,facturacion_cop,unidades_mes,horas_por_unidad,horas_mes,costos_directos_cop
+E1_50_50,aparte,Landing,990000,2914003,2.94,6,17.7,133564
+E1_50_50,aparte,Web empresarial,1790000,2914003,1.63,14,22.8,73871
+E1_50_50,aparte,Tienda online,2200000,2914003,1.32,30,39.7,60104
+E1_50_50,aparte,Ads de arranque,790000,4371004,5.53,8,44.3,0
+E1_50_50,aparte,Motor de Clientes,1600000,4371004,2.73,4,10.9,10329
+E2_65_35,aparte,Landing,990000,3827112,3.87,6,23.2,175417
+E2_65_35,aparte,Web empresarial,1790000,3827112,2.14,14,29.9,97018
+E2_65_35,aparte,Tienda online,2200000,3827112,1.74,30,52.2,78938
+E2_65_35,aparte,Ads de arranque,790000,3091129,3.91,8,31.3,0
+E2_65_35,aparte,Motor de Clientes,1600000,3091129,1.93,4,7.7,7305
+E3_80_20,aparte,Landing,990000,4759172,4.81,6,28.8,218138
+E3_80_20,aparte,Web empresarial,1790000,4759172,2.66,14,37.2,120646
+E3_80_20,aparte,Tienda online,2200000,4759172,2.16,30,64.9,98162
+E3_80_20,aparte,Ads de arranque,790000,1784690,2.26,8,18.1,0
+E3_80_20,aparte,Motor de Clientes,1600000,1784690,1.12,4,4.5,4217
+E1_50_50,incluido,Landing,990000,4082377,4.12,6,24.7,1632031
+E1_50_50,incluido,Web empresarial,1790000,4082377,2.28,14,31.9,1701774
+E1_50_50,incluido,Tienda online,2200000,4082377,1.86,30,55.7,84203
+E1_50_50,incluido,Ads de arranque,790000,6123566,7.75,8,62.0,0
+E1_50_50,incluido,Motor de Clientes,1600000,6123566,3.83,4,15.3,14471
+E2_65_35,incluido,Landing,990000,6132020,6.19,6,37.2,2451427
+E2_65_35,incluido,Web empresarial,1790000,6132020,3.43,14,48.0,2556186
+E2_65_35,incluido,Tienda online,2200000,6132020,2.79,30,83.6,126478
+E2_65_35,incluido,Ads de arranque,790000,4952785,6.27,8,50.2,0
+E2_65_35,incluido,Motor de Clientes,1600000,4952785,3.10,4,12.4,11704
+E3_80_20,incluido,Landing,990000,8936126,9.03,6,54.2,3572438
+E3_80_20,incluido,Web empresarial,1790000,8936126,4.99,14,69.9,3725102
+E3_80_20,incluido,Tienda online,2200000,8936126,4.06,30,121.9,184316
+E3_80_20,incluido,Ads de arranque,790000,3351047,4.24,8,33.9,0
+E3_80_20,incluido,Motor de Clientes,1600000,3351047,2.09,4,8.4,7919
