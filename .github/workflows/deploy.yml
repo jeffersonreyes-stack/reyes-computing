@@ -55,6 +55,12 @@ jobs:
             --exclude ".github/*" \
             --exclude ".gitignore" \
             --exclude "*.md" \
+            --exclude "*.py" \
+            --exclude "*.tf" \
+            --exclude "*.tfvars" \
+            --exclude "reyes_policy.json" \
+            --exclude "policy_update.json" \
+            --exclude "updated_dist_config.json" \
             --exclude "node_modules/*" \
             --exclude "package.json" \
             --exclude "package-lock.json" \
