@@ -151,6 +151,12 @@ Notas del grupo B:
 | "sincronizar inventario tienda en línea" | Frase |
 | "actualización automática de precios" | Frase |
 | "automatizar pedidos tienda en línea" | Frase |
+| "seguimiento de pedidos tienda en línea" | Frase |
+| "seguimiento de despachos" | Frase |
+| "software de logística y entregas" | Frase |
+| "evidencia de entrega" | Frase |
+| "prueba de entrega con foto" | Frase |
+| "pago en app tienda en línea" | Frase |
 | "tienda en línea con inteligencia artificial" | Frase |
 | "chatbot para tienda en línea" | Frase |
 | "tienda en línea cdmx" | Frase |
@@ -158,6 +164,8 @@ Notas del grupo B:
 | "tienda en línea monterrey" | Frase |
 
 Empieza con frase y exacta en todos los grupos; evita concordancia amplia hasta revisar términos de búsqueda.
+
+Alcance del anuncio 3 (sección «Del pago a la entrega, todo trazable» de la landing): parte es base ya construida y parte se desarrolla a la medida según el alcance (panel de logística, rol de conductor, pasarela de pago real validada). El texto usa «pago en la app», «seguimiento del pedido» y «evidencia de entrega» sin presentarlo como ya incluido ni como operando con clientes.
 
 ## Palabras clave negativas (nivel campaña)
 
@@ -255,8 +263,8 @@ URL final: `https://www.reyescomputing.com/mexico-tiendas-online.html?utm_source
 | H3 | App para tu Tienda | 18 |
 | H4 | Tienda Web y App de Celular | 27 |
 | H5 | Automatiza Inventarios | 22 |
-| H6 | Precios Sincronizados | 21 |
-| H7 | Pedidos Más Ordenados | 21 |
+| H6 | Seguimiento del Pedido | 22 |
+| H7 | Evidencia de Entrega | 20 |
 | H8 | Tienda en Línea con IA | 22 |
 | H9 | Catálogo y Carrito de Compras | 29 |
 | H10 | ¿Inventario en Excel y Chats? | 29 |
@@ -269,7 +277,7 @@ URL final: `https://www.reyescomputing.com/mexico-tiendas-online.html?utm_source
 | # | Descripción | Car. |
 |---|---|---|
 | D1 | Diseñamos tu tienda en línea y tu app para que tus clientes compren desde el celular. | 85 |
-| D2 | Conectamos inventario, precios y pedidos. Podemos sumar IA para atención y seguimiento. | 87 |
+| D2 | Pago en la app, seguimiento del pedido y evidencia de entrega, según el alcance acordado. | 89 |
 | D3 | Empresa colombiana con atención remota para negocios en CDMX, Guadalajara y Monterrey. | 86 |
 | D4 | Cuéntanos qué vendes y cómo manejas tu inventario. Alcance y honorarios en la cotización. | 89 |
 
@@ -283,7 +291,7 @@ URL final: `https://www.reyescomputing.com/mexico-tiendas-online.html?utm_source
 |---|---|---|---|---|---|
 | SL1 | Web y marketing | Sitios web y publicidad digital | Atención remota a México | https://www.reyescomputing.com/mexico-desarrollo-web-marketing-digital.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-web-marketing | 15/31/24 |
 | SL2 | Nube y seguridad web | Infraestructura y protección web | Atención remota a México | https://www.reyescomputing.com/mexico-nube-seguridad-web.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-nube-seguridad | 20/32/24 |
-| SL3 | Tiendas en línea | Tienda web, app y automatización | Atención remota a México | https://www.reyescomputing.com/mexico-tiendas-online.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-tiendas | 16/32/24 |
+| SL3 | Tiendas en línea | Del pago a la entrega | Atención remota a México | https://www.reyescomputing.com/mexico-tiendas-online.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-tiendas#flujo-entrega | 16/21/24 |
 | SL4 | Cómo funciona | Del contacto a la propuesta | Paso a paso, en remoto | https://www.reyescomputing.com/como-funciona.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-como-funciona | 13/27/22 |
 | SL5 | Ofertas | Revisa las ofertas vigentes | Condiciones en la página | https://www.reyescomputing.com/ofertas.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-ofertas | 7/27/24 |
 | SL6 | Contacto | Escríbenos por WhatsApp | O usa el formulario | https://www.reyescomputing.com/contacto.html?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=sitelink-contacto | 8/23/19 |

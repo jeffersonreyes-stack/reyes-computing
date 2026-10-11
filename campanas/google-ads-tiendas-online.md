@@ -5,7 +5,7 @@ Instrucciones paso a paso para montar la campaña de Búsqueda del nuevo servici
 | Anuncio | Enfoque | Grupo de anuncios | Landing |
 |---|---|---|---|
 | 1 | Tienda web + app de tienda | Grupo 3A | https://www.reyescomputing.com/tiendas-online.html |
-| 2 | Automatización de inventarios, precios y pedidos | Grupo 3B | https://www.reyescomputing.com/tiendas-online.html |
+| 2 | Automatización de inventarios, precios y pedidos; seguimiento y entrega | Grupo 3B | https://www.reyescomputing.com/tiendas-online.html |
 | 3 | IA para la tienda + llamada a la acción | Grupo 3C | https://www.reyescomputing.com/tiendas-online.html |
 
 Tiendas online **para México** (`mexico-tiendas-online.html`) se gestiona en `google-ads-mexico.md` (anuncio 3 y grupo C); no se duplica aquí.
@@ -103,6 +103,14 @@ URL final de todos los anuncios: la landing de la campaña con el UTM del anunci
 | "control de inventario para tienda online" | Frase |
 | "gestión de pedidos online" | Frase |
 | [software de inventario y pedidos] | Exacta |
+| "seguimiento de pedidos tienda online" | Frase |
+| "seguimiento de despachos" | Frase |
+| "software de logística y entregas" | Frase |
+| "evidencia de entrega" | Frase |
+| "prueba de entrega con foto" | Frase |
+| "pago en app tienda online" | Frase |
+
+Alcance en los anuncios y la landing (sección «Del pago a la entrega, todo trazable»): parte es base ya construida y parte se desarrolla a la medida según el alcance (panel de logística, rol de conductor, pasarela de pago real validada). Los textos usan «pago en la app», «seguimiento del pedido» y «evidencia de entrega» sin presentarlo como ya incluido ni como operando con clientes; no prometas integración con una pasarela o transportadora concretas.
 
 **Grupo 3C — Tienda online con IA** (anuncio 3)
 
@@ -160,7 +168,7 @@ URL final: `https://www.reyescomputing.com/tiendas-online.html?utm_source=google
 | D3 | Elige solo lo que necesitas: tienda web, app o automatizaciones. Alcance en la cotización. | 90 |
 | D4 | Cuéntanos qué vendes y cómo manejas tu inventario. Te enviamos una propuesta a tu medida. | 89 |
 
-### Anuncio 2 — Automatización de inventarios, precios y pedidos (Grupo 3B)
+### Anuncio 2 — Automatización de inventarios, precios y pedidos; seguimiento y entrega (Grupo 3B)
 
 URL final: `https://www.reyescomputing.com/tiendas-online.html?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=anuncio-2`
 
@@ -175,15 +183,15 @@ URL final: `https://www.reyescomputing.com/tiendas-online.html?utm_source=google
 | H2 | ¿Precios Desactualizados? | 25 |
 | H3 | ¿Pedidos Perdidos en WhatsApp? | 30 |
 | H4 | Deja el Inventario a Mano | 25 |
-| H5 | Menos Tareas Manuales | 21 |
+| H5 | Seguimiento del Pedido | 22 |
 | H6 | Mantén Stock y Precios al Día | 29 |
 | H7 | Pedidos en un Solo Lugar | 24 |
 | H8 | Automatización para Tiendas | 27 |
 | H9 | Automatiza Inventarios | 22 |
-| H10 | Tienda Web Conectada | 20 |
-| H11 | Revisamos tu Operación | 22 |
+| H10 | Evidencia de Entrega | 20 |
+| H11 | Del Pago a la Entrega | 21 |
 | H12 | Ordena tu Tienda Online | 23 |
-| H13 | Integra tu Inventario | 21 |
+| H13 | Pago en la App o Web | 20 |
 | H14 | Habla con Reyes Computing | 25 |
 | H15 | Escríbenos por WhatsApp | 23 |
 
@@ -191,7 +199,7 @@ URL final: `https://www.reyescomputing.com/tiendas-online.html?utm_source=google
 |---|---|---|
 | D1 | ¿Manejas inventario y precios en hojas de cálculo? Automatiza esas tareas con tu tienda. | 88 |
 | D2 | Conectamos tu tienda con tus pedidos y tu inventario para trabajar con datos ordenados. | 87 |
-| D3 | Podemos sumar IA donde aporte: clasificar pedidos y alertas de stock. | 69 |
+| D3 | Pago en la app, seguimiento del pedido y evidencia de entrega, según el alcance acordado. | 89 |
 | D4 | El alcance depende de tu operación. Te hacemos una propuesta al conocer tu negocio. | 83 |
 
 ### Anuncio 3 — IA para la tienda y llamada a la acción (Grupo 3C)
@@ -240,6 +248,7 @@ URL final: `https://www.reyescomputing.com/tiendas-online.html?utm_source=google
 | SL2 | Contacto | Escríbenos por WhatsApp | O usa el formulario | https://www.reyescomputing.com/contacto.html?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=sitelink-contacto | 8/23/19 |
 | SL3 | Cómo funciona | Del contacto a la propuesta | Paso a paso | https://www.reyescomputing.com/como-funciona.html?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=sitelink-como-funciona | 13/27/11 |
 | SL4 | Casos de éxito | Conoce proyectos de Reyes | Revisa ejemplos publicados | https://www.reyescomputing.com/casos-de-exito.html?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=sitelink-casos | 14/25/26 |
+| SL5 | Del pago a la entrega | Seguimiento y evidencia | Alcance según tu proyecto | https://www.reyescomputing.com/tiendas-online.html?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=sitelink-pago-entrega#flujo-entrega | 21/23/25 |
 
 **Textos destacados (callouts)** — ≤ 25 caracteres.
 
