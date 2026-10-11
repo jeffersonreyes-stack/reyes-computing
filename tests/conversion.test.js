@@ -309,7 +309,8 @@ const mexicoPages = ['mexico-desarrollo-web-marketing-digital.html', 'mexico-nub
 test('Mexico content lives only in the dedicated mexico-* pages', () => {
   const mexicoTerms = /m[ée]xico|CDMX|\bMXN\b|\bCFDI\b|\bSPEI\b|CNBV|Guadalajara|Monterrey|Conekta|🇲🇽/i;
   const satTerm = /\bSAT\b/;
-  for (const file of htmlFiles.filter((file) => !file.startsWith('mexico-'))) {
+  // tiendas-online.html solo enlaza a su versión mexicana (selector de país y hreflang)
+  for (const file of htmlFiles.filter((file) => !file.startsWith('mexico-') && file !== 'tiendas-online.html')) {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.doesNotMatch(html, mexicoTerms, file);
     assert.doesNotMatch(html, satTerm, file);
