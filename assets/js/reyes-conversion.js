@@ -16,6 +16,24 @@ const REYES = {
   MENSAJE_POR_DEFECTO: 'Hola Reyes Computing. Tengo una empresa en ____ y vendemos ____. Quiero conseguir clientes por Google. Mi presupuesto aproximado para web/anuncios es ____.'
 };
 
+// Servicios que pueden llegar a contacto.html?servicio=<slug>: opcion del selector y mensaje inicial.
+const SERVICIOS_CONTACTO = {
+  'diagnostico': { opcion: 'Diagnóstico digital gratuito', nombre: 'el diagnóstico digital gratuito' },
+  'landing': { opcion: 'Sitio web de alta conversión', nombre: 'una Landing Page de Ventas' },
+  'sitio-web': { opcion: 'Sitio web de alta conversión', nombre: 'un Sitio Web Empresarial' },
+  'tienda-online': { opcion: 'Tienda online', nombre: 'una Tienda Online' },
+  'google-ads': { opcion: 'Google Ads', nombre: 'una campaña de Google Ads de arranque' },
+  'motor-clientes': { opcion: 'Google Ads', nombre: 'el Motor de Clientes (Google Ads y landing)' },
+  'multicanal': { opcion: 'Social Ads B2B', nombre: 'una Estrategia Multicanal' },
+  'google-business': { opcion: 'Google Business Profile', nombre: 'la optimización de mi perfil de Google Business' },
+  'actualizacion-digital': { opcion: 'Actualización Digital Comercial', nombre: 'la Actualización Digital Comercial' },
+  'presencia-digital': { opcion: 'Presencia digital completa', nombre: 'mejorar mi presencia digital' },
+  'auditoria-express': { opcion: 'Ciberseguridad, DevSecOps y Cloud', nombre: 'la Auditoría Técnica Express' },
+  'ciberseguridad': { opcion: 'Ciberseguridad, DevSecOps y Cloud', nombre: 'un servicio de ciberseguridad' },
+  'devsecops': { opcion: 'Ciberseguridad, DevSecOps y Cloud', nombre: 'la Auditoría CI/CD y DevSecOps' },
+  'cloud': { opcion: 'Ciberseguridad, DevSecOps y Cloud', nombre: 'Soporte Cloud On-Demand' }
+};
+
 function construirEnlaceWhatsApp(mensaje) {
   const texto = encodeURIComponent(mensaje || REYES.MENSAJE_POR_DEFECTO);
   return `https://wa.me/${REYES.WHATSAPP_NUMERO}?text=${texto}`;
@@ -44,6 +62,37 @@ function activarEnlacesWhatsApp() {
     enlace.rel = 'noopener noreferrer';
     enlace.addEventListener('click', () => registrarConversion('whatsapp', enlace.dataset.waOrigen || 'cta'));
   });
+}
+
+function activarEnlacesContacto() {
+  document.querySelectorAll('a[href^="contacto.html"]').forEach((enlace) => {
+    enlace.addEventListener('click', () => registrarConversion('formulario', enlace.dataset.origen || 'cta'));
+  });
+}
+
+function prellenarFormularioContacto() {
+  const slug = new URLSearchParams((window.location && window.location.search) || '').get('servicio');
+  const servicio = slug && Object.prototype.hasOwnProperty.call(SERVICIOS_CONTACTO, slug) ? SERVICIOS_CONTACTO[slug] : null;
+  const form = document.getElementById('contactForm');
+  const select = form && form.querySelector('select[name="service_interest"]');
+  if (!servicio || !select) return;
+
+  const opcion = Array.from(select.options).find((item) => item.value === servicio.opcion);
+  if (opcion) select.value = opcion.value;
+
+  const mensaje = form.querySelector('textarea[name="message"]');
+  if (mensaje && !mensaje.value) {
+    mensaje.value = `Hola, quiero una propuesta o cotización para ${servicio.nombre}. Mi empresa es ____ y vendemos ____.`;
+  }
+
+  const asunto = form.querySelector('input[name="_subject"]');
+  if (asunto) asunto.value = `${asunto.value} - ${servicio.opcion}`;
+
+  const aviso = document.getElementById('servicio-seleccionado');
+  if (aviso) {
+    aviso.textContent = `Solicitud seleccionada: ${servicio.nombre}. Puedes cambiarla en el formulario.`;
+    aviso.classList.remove('hidden');
+  }
 }
 
 function activarEnlacesTelefono() {
@@ -130,6 +179,8 @@ document.addEventListener('DOMContentLoaded', () => {
   activarMenuMovil();
   inyectarBotonFlotante();
   activarEnlacesWhatsApp();
+  activarEnlacesContacto();
   activarEnlacesTelefono();
+  prellenarFormularioContacto();
   activarFormularios();
 });

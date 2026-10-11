@@ -159,3 +159,25 @@ header.fixed > div > a:first-child {
     overflow-wrap: anywhere;
   }
 }
+
+/* Navbar de escritorio: seis enlaces + logo + botón deben caber en una sola línea */
+@media (min-width: 1280px) {
+  :is(nav, header).fixed nav a {
+    white-space: nowrap;
+  }
+
+  :is(nav, header).fixed nav {
+    gap: 0.875rem;
+    letter-spacing: 0.025em;
+  }
+
+  :is(nav, header).fixed .max-w-7xl > a:first-child span {
+    font-size: 1rem;
+  }
+
+  :is(nav, header).fixed .max-w-7xl > div a {
+    white-space: nowrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
