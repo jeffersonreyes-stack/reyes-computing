@@ -40,7 +40,7 @@
           "@id": "https://www.reyescomputing.com/mexico-tiendas-online.html#service",
           "name": "Tiendas en línea para negocios en México: web, app y automatización de pedidos",
           "serviceType": "Desarrollo de tiendas en línea a la medida",
-          "description": "Tienda en línea a la medida compuesta por sitio web, app móvil, automatizaciones de inventario, precios y pedidos, y un módulo de asistente con IA opcional, con atención remota para negocios en México. Se cotiza según alcance.",
+          "description": "Tienda en línea a la medida compuesta por sitio web, app móvil, automatizaciones de inventario, precios y pedidos, y un módulo de asistente con IA opcional, con atención remota para negocios en México. Incluye el diseño del flujo del pago a la entrega: estados del pedido con bitácora, reporte a logística, entrega por conductor y evidencia con remisión firmada, con partes a la medida según alcance. Se cotiza según alcance.",
           "url": "https://www.reyescomputing.com/mexico-tiendas-online.html",
           "provider": {
             "@type": "Organization",
@@ -91,6 +91,11 @@
               "@type": "Question",
               "name": "¿Tienen oficinas en México?",
               "acceptedAnswer": { "@type": "Answer", "text": "No. Trabajamos de forma remota, por videollamada y WhatsApp, con negocios en México." }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El conductor puede reportar la entrega con la remisión firmada?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Es parte del nivel Completo y se desarrolla a la medida. Hoy nuestros sistemas guardan evidencia de entrega (foto, firma, nota y coordenadas) ligada al pedido, pero el rol de conductor, la asignación del envío y la remisión firmada como tipo de evidencia explícito se definen en el alcance." }
             },
             {
               "@type": "Question",
@@ -173,7 +178,7 @@
                 Tu catálogo, tu inventario y tus pedidos <span class="text-reyes-cyan">en un solo sistema.</span>
             </h1>
             <p class="font-sans text-lg md:text-xl text-reyes-silver mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Construimos tu tienda en línea como un sistema por módulos: sitio web, app móvil, automatizaciones de inventario, precios y pedidos, y un asistente con IA opcional. Trabajamos de forma remota con negocios en México: empiezas por lo que necesitas y sumas el resto cuando tu operación lo pida.
+                Construimos tu tienda en línea como un sistema por módulos: sitio web, app móvil, automatizaciones de inventario, precios y pedidos, y un asistente con IA opcional, con seguimiento del pedido del pago a la entrega. Trabajamos de forma remota con negocios en México: empiezas por lo que necesitas y sumas el resto cuando tu operación lo pida.
             </p>
 
             <div class="flex flex-col md:flex-row gap-4 w-full justify-center">
@@ -255,6 +260,7 @@
                     <p class="text-reyes-silver leading-relaxed mb-4">Una app para Android e iOS con una vista para el comprador (catálogo, carrito, pedidos, perfil) y otra para quien vende (panel, productos con control de stock y pedidos).</p>
                     <ul class="space-y-2 text-reyes-silver text-sm">
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Misma base de datos que la web</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Seguimiento del estado del envío con bitácora (ver <a href="#flujo-entrega" class="text-reyes-cyan underline">flujo del pago a la entrega</a>)</li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> La publicación en las tiendas de aplicaciones depende de la revisión de Apple y Google</li>
                     </ul>
                 </div>
@@ -267,6 +273,7 @@
                     <ul class="space-y-2 text-reyes-silver text-sm">
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Descuento de stock al confirmar el pedido</li>
                         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Estados de pedido con historial de cambios</li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Flujo del pago a la entrega con reporte a logística y evidencia de entrega (a la medida, según alcance)</li>
                     </ul>
                 </div>
 
@@ -379,6 +386,128 @@
         </div>
     </section>
 
+    <!-- FLUJO PAGO → LOGÍSTICA → ENTREGA -->
+    <section id="flujo-entrega" class="py-24 bg-[#050505] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-center text-white mb-4 tracking-wide">
+                DEL PAGO A LA ENTREGA, <span class="text-reyes-cyan font-light">TODO TRAZABLE</span>
+            </h2>
+            <p class="text-reyes-silver text-lg text-center max-w-3xl mx-auto mb-12 font-light">
+                El recorrido completo de un pedido en cinco pasos. Separamos lo que ya existe en nuestros sistemas propios de lo que se desarrolla a la medida. Es una base técnica propia: no presentamos este flujo como operando con clientes.
+            </p>
+
+            <!-- Diagrama -->
+            <ol class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-14" aria-label="Flujo del pago a la entrega">
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-credit-card text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 1</p>
+                    <p class="font-orbitron text-sm text-white">El cliente paga</p>
+                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                </li>
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-box-open text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 2</p>
+                    <p class="font-orbitron text-sm text-white">Pagado → listo para envío, y se reporta a logística</p>
+                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                </li>
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-route text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 3</p>
+                    <p class="font-orbitron text-sm text-white">El cliente sigue su envío en la app</p>
+                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                </li>
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-truck-fast text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 4</p>
+                    <p class="font-orbitron text-sm text-white">El conductor entrega y sube la remisión firmada</p>
+                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                </li>
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-file-signature text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 5</p>
+                    <p class="font-orbitron text-sm text-white">La evidencia queda en el pedido</p>
+                </li>
+            </ol>
+
+            <!-- Detalle por paso: base construida vs a la medida -->
+            <div class="space-y-6">
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">1.</span> El cliente paga desde la app o el sitio web</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Pedido con total recalculado en el servidor, una integración inicial con una pasarela de pagos pensada para Colombia y un modo de pruebas que simula el pago. También el pedido coordinado por WhatsApp con carga de comprobante.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Una pasarela de pagos de terceros para México, con la transacción creada en el servidor y un webhook con firma verificada. Hoy ningún sistema nuestro tiene un pago real validado de punta a punta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">2.</span> Pagado → listo para envío, y se reporta a logística</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Estados controlados del pedido (pendiente de pago, pagado, listo para envío, enviado, entregado) con validación de transiciones y bitácora. Hoy el vendedor marca el pedido como listo para envío.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Paso automático a "pagado" y "listo para envío" al confirmarse el pago, un rol y panel de logística con cola de envíos, y la notificación automática a logística. Los roles actuales son solo comprador y vendedor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">3.</span> El cliente sigue su envío en la app</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Pantalla de pedido con el estado actual y una línea de tiempo con la bitácora de cada cambio (pagado, listo para envío, enviado, entregado). El comprador puede confirmar la recepción.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Avisos automáticos de cada cambio de estado por correo o WhatsApp (la API oficial de WhatsApp es de Meta y se paga aparte).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">4.</span> El conductor entrega y reporta con foto de la remisión firmada</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Captura de la foto con la cámara del celular y subida a almacenamiento, con el pedido pasando a entregado (Ferretero, desde la vista del vendedor). Tabla de evidencia con foto, firma, nota y coordenadas, y servicio de subida (JuanShop y ListoShop); todavía sin pantalla que la use.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Rol y app del conductor (repartidor), asignación del envío a un conductor, y la remisión firmada como tipo de evidencia explícito con su plantilla (hoy la evidencia es una foto, firma o nota genérica), con firma y ubicación en pantalla.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">5.</span> La evidencia queda ligada al pedido y la ven comprador y vendedor</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">La evidencia se guarda asociada al pedido y las reglas de acceso de la base de datos permiten verla al comprador y al vendedor de ese pedido.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Mostrar la remisión y la evidencia en la app del comprador, en la del vendedor y en el panel de logística, y que el conductor pueda subirla con su propio perfil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SISTEMAS DE REFERENCIA -->
     <section id="sistemas" class="py-24 bg-[#020202] border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
@@ -468,6 +597,7 @@
                         <ul class="space-y-3 text-reyes-silver text-sm mb-8">
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Todo lo del nivel Básico</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> App móvil para Android e iOS con vista de comprador y de vendedor</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Seguimiento del pedido en la app: estado del envío y bitácora</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Misma base de datos que la web</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Configuración de compilación y envío a las tiendas de aplicaciones</li>
                         </ul>
@@ -487,6 +617,7 @@
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Todo lo del nivel Intermedio</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Automatizaciones de inventario, precios y pedidos a la medida</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Avisos automáticos de pedido y chat por pedido</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Flujo del pago a la entrega a la medida: panel de envíos para logística, rol de conductor (repartidor) y evidencia con foto de la remisión firmada</li>
                             <li class="flex items-start gap-2"><i class="fa-solid fa-check text-reyes-cyan mt-1"></i> Módulo de asistente con IA en contenedor Docker, con revisión humana</li>
                         </ul>
                     </div>
@@ -580,6 +711,10 @@
                 <details class="bg-[#050505] border border-white/10 rounded-lg p-6 group">
                     <summary class="font-orbitron text-base text-white cursor-pointer">¿Los sistemas de referencia son tiendas de clientes?</summary>
                     <p class="text-reyes-silver mt-4 leading-relaxed">No. Ferretero, JuanShop, ListoShop y PowerBud son desarrollos propios en distintos niveles de madurez. Los usamos como base técnica y no publicamos métricas de ventas ni de usuarios de ellos.</p>
+                </details>
+                <details class="bg-[#050505] border border-white/10 rounded-lg p-6 group">
+                    <summary class="font-orbitron text-base text-white cursor-pointer">¿El conductor puede reportar la entrega con la remisión firmada?</summary>
+                    <p class="text-reyes-silver mt-4 leading-relaxed">Es parte del nivel Completo y se desarrolla a la medida. Hoy nuestros sistemas ya guardan evidencia de entrega (foto, firma, nota y coordenadas) ligada al pedido y visible para comprador y vendedor, pero el rol de conductor, la asignación del envío y la remisión firmada como tipo de evidencia explícito aún no existen y se definen en el alcance. Ver <a href="#flujo-entrega" class="text-reyes-cyan underline">el flujo del pago a la entrega</a>.</p>
                 </details>
                 <details class="bg-[#050505] border border-white/10 rounded-lg p-6 group">
                     <summary class="font-orbitron text-base text-white cursor-pointer">¿Quién es dueño de mi tienda y de mis datos?</summary>
@@ -705,7 +840,7 @@
                 <a href="mailto:control@reyescomputing.com" class="text-reyes-silver hover:text-reyes-cyan font-mono text-sm flex items-center"><i class="fa-solid fa-envelope mr-2"></i>control@reyescomputing.com</a>
             </div>
             <div class="footer-meta text-center font-sans text-xs text-reyes-silver/50 uppercase tracking-widest flex flex-col md:flex-row gap-4 items-center justify-center">
-                <span>&copy; 2025 Reyes Computing S.A.S. · Empresa colombiana con atención remota a México</span>
+                <span>&copy; 2026 Reyes Computing S.A.S. · Empresa colombiana con atención remota a México</span>
                 <span class="hidden md:inline text-reyes-cyan/30">|</span>
                 <a href="tiendas-online.html" hreflang="es-CO" class="hover:text-gray-400 transition">Versión Colombia</a>
                 <span class="hidden md:inline text-reyes-cyan/30">|</span>

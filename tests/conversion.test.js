@@ -184,6 +184,25 @@ test('Tiendas Online pages do not publish prices, discounts, guarantees or unver
   }
 });
 
+test('Tiendas Online pages show the payment-to-delivery flow with built vs custom scope', () => {
+  for (const { file } of storePages) {
+    const { html, visible } = readStorePage(file);
+    const section = html.match(/<section id="flujo-entrega"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(section, `${file}: missing #flujo-entrega`);
+    assert.match(section, /Del pago a la entrega|DEL PAGO A LA ENTREGA/i, file);
+    assert.equal((section.match(/PASO [1-5]/g) || []).length, 5, file);
+    assert.ok((section.match(/Base ya construida/g) || []).length >= 5, file);
+    assert.ok((section.match(/A (?:la )?medida, según alcance/g) || []).length >= 5, file);
+    for (const term of [/remisi[oó]n/i, /conductor/i, /log[ií]stica/i, /a[uú]n no existen|Hoy los roles|roles actuales/i]) {
+      assert.match(visible, term, `${file}: ${term}`);
+    }
+    assert.match(visible, /no presentamos este flujo como operando con clientes/, file);
+    assert.match(html, /remisión firmada como tipo de evidencia explícito/, file);
+    assert.match(html, /&copy; 2026 Reyes Computing S\.A\.S\./, file);
+    assert.doesNotMatch(html, /&copy; 2025/, file);
+  }
+});
+
 test('Colombian Tiendas Online page only mentions Mexico in the country selector', () => {
   const { visible } = readStorePage('tiendas-online.html');
   assert.doesNotMatch(visible.replace(/<p id="selector-pais"[\s\S]*?<\/p>/, ''), /M[eé]xico|MXN|CFDI/i);

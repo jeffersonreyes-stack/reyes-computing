@@ -107,6 +107,25 @@ Flujo de datos recomendado: apps y web → Supabase (Auth, Postgres con RLS, Sto
 
 Presentado como "a medida, según alcance" (no existe en el código): carga masiva Excel/CSV, sincronización con POS/contabilidad, listas de precios por cliente/categoría, pago confirmado automáticamente con pasarela, avisos automáticos por correo/WhatsApp, y la adaptación de la IA a tienda.
 
+## 6b. Flujo pago → logística → entrega (sección `#flujo-entrega` de las páginas)
+
+Cinco pasos publicados en ambas páginas, cada uno con "Base ya construida" vs "A medida, según alcance". Verificado en el código local (solo lectura); **ningún flujo completo está operando con clientes** y la web lo dice.
+
+| Paso | Base ya construida (evidencia) | A medida (no existe en el código) |
+|---|---|---|
+| 1. Cliente paga | `juanshop/services/payment.ts`: modo sandbox simulado y rama Wompi en el cliente; `payment.ts` cita ePayco en comentarios pero solo implementa Wompi. Pedido con total recalculado (`checkout_atomic`). Pedido por WhatsApp con comprobante (`payment_receipts`). `listoshop` tiene `confirm_payment` en SQL | Pasarela real (Wompi/ePayco en Colombia; terceros en México) con transacción creada en servidor y webhook con firma verificada. Ningún pago real está validado de punta a punta |
+| 2. Pagado → listo para despacho → logística | `advance_order_status` valida `pending_payment → paid → ready_for_dispatch → shipped → delivered` y registra `order_events`. Hoy el **vendedor** pulsa "listo para despacho" en `app/order/[id].tsx` | Paso automático a `paid` al aprobarse el pago; rol y panel de logística; cola de despachos; notificación automática a logística. Los roles son solo comprador y vendedor |
+| 3. Cliente sigue su despacho | `app/order/[id].tsx`: estado + línea de tiempo desde `order_events`; el comprador confirma recepción cuando el estado es `shipped` | Avisos automáticos por correo/WhatsApp (API oficial de Meta, costo aparte) |
+| 4. Conductor entrega con foto de remisión | `ferretero/app/(vendor_tabs)/order/[id].tsx`: foto con cámara (`expo-image-picker`), subida a storage y `delivered`, **desde la vista del vendedor**. `juanshop`/`listoshop`: tabla `delivery_evidence` (`photo`/`signature`/`note`, lat/lon) y `services/delivery.ts` con subida a storage, **pero ninguna pantalla importa `delivery.ts`** | Rol y app de conductor; asignación de despacho a un conductor; "remisión firmada" como `evidence_type` explícito con plantilla (hoy el CHECK solo admite photo/signature/note); captura de firma y ubicación en pantalla |
+| 5. Evidencia ligada al pedido, visible a comprador y vendedor | Políticas RLS `de_select_buyer` / `de_select_vendor` sobre `delivery_evidence` (juanshop v2) | La política de inserción hoy es solo del **vendedor** (`de_insert_vendor`); el conductor requeriría nueva política/rol; mostrar la evidencia en las pantallas y en el panel de logística |
+
+Brechas adicionales de este flujo:
+- Ferretero salta la máquina de estados: actualiza `orders.status` a `delivered` directamente con `update`, sin pasar por una función con validación ni bitácora; juanshop/listoshop sí usan `advance_order_status`.
+- `juanshop_schema_v2.sql` hace `DROP` de `confirm_payment` y no la recrea (solo existe en `supabase_schema.sql` antiguo y en `listoshop`): decidir una única versión.
+- Las tablas y servicios de evidencia (juanshop/listoshop) no tienen UI; el bucket de evidencias está referenciado por nombre en `delivery.ts` y devuelve URL pública (revisar privacidad: remisiones con datos del cliente deberían usar URLs firmadas).
+- Propuesta de modelo para lo "a medida": nuevo rol `logistics` y `driver` en `profiles.role`; tabla `dispatches` (pedido, conductor, estado) con RLS; trigger o Edge Function que, al pasar a `paid`, avance a `ready_for_dispatch` y encole el despacho; ampliar `evidence_type` con `signed_delivery_note`.
+- Sin plazos publicados ni promesas de resultado; estimar horas por separado (ver sección 5, Comerciales).
+
 ## 7. Siguientes pasos propuestos
 
 1. Atender los hallazgos de seguridad entregados por canal privado (rotación de credenciales, limpieza de historial, webhook verificado) y limpiar `node_modules` y archivos locales versionados de `powerbud`.
@@ -115,7 +134,7 @@ Presentado como "a medida, según alcance" (no existe en el código): carga masi
 4. Integrar una pasarela (Wompi o ePayco) con Edge Function y verificación de firma; probar en sandbox del proveedor.
 5. Validar la exportación web estática de la app (o decidir una web separada) y publicar una demo propia con datos de muestra.
 6. Prototipo del módulo de IA para tienda (borrador de descripciones con revisión humana) sobre el patrón de `powerbud`, en contenedor con `node:20`/LTS.
-7. Reestimar horas por nivel y que el propietario apruebe precios y condiciones (propiedad del código/datos, soporte, revisiones) antes de publicar cifras. Registrar la decisión en `operacion/`.
+7. Reestimar horas por nivel (incluyendo el flujo pago → logística → entrega a medida) y que el propietario apruebe precios y condiciones (propiedad del código/datos, soporte, revisiones) antes de publicar cifras. Registrar la decisión en `operacion/`.
 8. Cuando haya un caso real autorizado por un cliente, sustituir "sistemas propios" por un caso con permiso y métricas verificables.
 
 ## 8. Publicación: qué sube el workflow y qué no
