@@ -42,32 +42,36 @@
 
 ---
 
-### 6. Campaña Servicios en México — Agencia de desarrollo web y marketing digital
-- **Público Objetivo**: Empresas y pymes en México (CDMX, Guadalajara, Monterrey) que buscan sitio web y/o publicidad digital con atención remota (empresa colombiana, sin oficina en México).
-- **Palabras Clave**: desarrollo web México, agencia de desarrollo web, agencia de marketing digital, diseño de páginas web, publicidad en Google Ads.
-- **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/mexico-desarrollo-web-marketing-digital.html
-- **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=mx-desarrollo-web-marketing&utm_content=anuncio-1|anuncio-2|anuncio-3`
+### 6. Campaña Servicios en México (1 campaña, 3 grupos de anuncios, 3 anuncios en total)
+Campaña única con atención remota a México (CDMX, Guadalajara, Monterrey; empresa colombiana, sin oficina en México). Cada servicio tiene su grupo, su anuncio y su landing. UTM común: `utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=anuncio-N`.
+
+- **6.1 Agencia de desarrollo web y marketing digital (anuncio 1)**
+  - **Público Objetivo**: Empresas y pymes en México que buscan sitio web y/o publicidad digital.
+  - **Palabras Clave**: desarrollo web México, agencia de desarrollo web, agencia de marketing digital, diseño de páginas web, publicidad en Google Ads.
+  - **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/mexico-desarrollo-web-marketing-digital.html
+  - **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=anuncio-1`
+- **6.2 Computación en la nube y seguridad web, contexto fintech (anuncio 2)**
+  - **Público Objetivo**: Empresas, startups y fintechs en México que buscan apoyo en nube y seguridad web. Sin afirmar cumplimiento ni certificaciones.
+  - **Palabras Clave**: computación en la nube, migración a la nube, seguridad web para empresas, WAF, seguridad web para fintech.
+  - **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/mexico-nube-seguridad-web.html
+  - **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=anuncio-2`
+- **6.3 Tiendas en línea para México (anuncio 3)**
+  - **Público Objetivo**: Negocios en México que quieren vender en línea y automatizar inventarios, precios y pedidos.
+  - **Palabras Clave**: crear tienda en línea, app para mi tienda, automatización de inventarios, tienda en línea con inteligencia artificial.
+  - **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/mexico-tiendas-online.html
+  - **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=mx-servicios&utm_content=anuncio-3`
 - **Instrucciones**: `campanas/google-ads-mexico.md`
 
 ---
 
-### 7. Campaña Servicios en México — Computación en la nube y seguridad web (contexto fintech)
-- **Público Objetivo**: Empresas, startups y fintechs en México (CDMX, Guadalajara, Monterrey) que buscan apoyo en nube y seguridad web con atención remota. Sin afirmar cumplimiento ni certificaciones.
-- **Palabras Clave**: computación en la nube, migración a la nube, seguridad web para empresas, WAF, seguridad web para fintech.
-- **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/mexico-nube-seguridad-web.html
-- **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=mx-nube-seguridad-web&utm_content=anuncio-1|anuncio-2|anuncio-3`
-- **Instrucciones**: `campanas/google-ads-mexico.md`
-
----
-
-### 8. Campaña Nuevo servicio Tiendas Online (tienda web, app, automatizaciones e IA)
-- **Público Objetivo**: Negocios en Colombia (Cali, Bogotá, Medellín; ciudades a confirmar por el dueño) que quieren vender en línea y automatizar inventarios, precios y pedidos.
+### 7. Campaña Nuevo servicio Tiendas Online — Colombia (1 campaña, 3 grupos de anuncios, 3 anuncios en total)
+- **Público Objetivo**: Negocios en Colombia (Cali, Bogotá, Medellín; ciudades a confirmar por el dueño) que quieren vender en línea y automatizar inventarios, precios y pedidos (tienda web, app, automatizaciones e IA).
 - **Palabras Clave**: crear tienda online, app para mi tienda, automatización de inventarios, tienda online con inteligencia artificial.
 - **URL Final Recomendada (Landing Page)**: https://www.reyescomputing.com/tiendas-online.html
 - **UTM**: `?utm_source=google&utm_medium=cpc&utm_campaign=tiendas-online&utm_content=anuncio-1|anuncio-2|anuncio-3`
 - **Instrucciones**: `campanas/google-ads-tiendas-online.md`
 
-**Dependencia de las campañas 6, 7 y 8:** estas URL solo funcionan cuando las landings nuevas (`mexico-desarrollo-web-marketing-digital.html`, `mexico-nube-seguridad-web.html` y `tiendas-online.html`) estén publicadas, junto con `ofertas.html` y `contacto.html` usadas en sitelinks. No activar anuncios antes de comprobar que responden 200. Ver `campanas/README.md`.
+**Dependencia de las campañas 6 y 7:** estas URL solo funcionan cuando las landings nuevas (`mexico-desarrollo-web-marketing-digital.html`, `mexico-nube-seguridad-web.html`, `mexico-tiendas-online.html` y `tiendas-online.html`) estén publicadas, junto con `ofertas.html` y `contacto.html` usadas en sitelinks. No activar anuncios antes de comprobar que responden 200. Ver `campanas/README.md`.
 
 ---
 
