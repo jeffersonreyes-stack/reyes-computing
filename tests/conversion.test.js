@@ -85,7 +85,7 @@ test('Google Business audit submits named contact fields to the delivery service
   }
 });
 
-test('all seven contact forms remain connected to FormSubmit', () => {
+test('all contact forms remain connected to FormSubmit', () => {
   const formPages = [
     'ciberseguridad-fintech.html',
     'ciberseguridad-ia-cali.html',
@@ -93,11 +93,19 @@ test('all seven contact forms remain connected to FormSubmit', () => {
     'devsecops-startups.html',
     'google-business-profile.html',
     'infraestructura-nube-startups.html',
+    'mexico-desarrollo-web-marketing-digital.html',
+    'mexico-nube-seguridad-web.html',
     'startups-fintech.html'
   ];
   for (const file of formPages) {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.match(html, /<form\b[^>]*action="https:\/\/formsubmit\.co\/control@reyescomputing\.com"[^>]*method="POST"/i, file);
+  }
+  for (const file of ['mexico-desarrollo-web-marketing-digital.html', 'mexico-nube-seguridad-web.html']) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.match(html, /name="_honey"/, file);
+    assert.match(html, /class="cf-turnstile/, file);
+    assert.match(html, /name="_next" value="https:\/\/www\.reyescomputing\.com\/success[\w-]*\.html"/, file);
   }
 });
 
@@ -180,4 +188,75 @@ test('plans do not include corporate email and offer it only as a distinctly nam
     const correoParagraph = html.match(/<span class="text-reyes-cyan font-bold">Correo corporativo:<\/span>[^<]*(?:<[^\/][^>]*>[^<]*<\/[^>]*>)*[^<]*/i)?.[0] || '';
     assert.doesNotMatch(correoParagraph, /Combo Digital/, `${file}: el parrafo de correo no debe reutilizar el nombre del combo de servicios existente`);
   }
+});
+
+const mexicoPages = ['mexico-desarrollo-web-marketing-digital.html', 'mexico-nube-seguridad-web.html'];
+
+test('Mexico content lives only in the dedicated mexico-* pages', () => {
+  const mexicoTerms = /m[ée]xico|CDMX|\bMXN\b|\bCFDI\b|\bSPEI\b|CNBV|Guadalajara|Monterrey|Conekta|🇲🇽/i;
+  const satTerm = /\bSAT\b/;
+  for (const file of htmlFiles.filter((file) => !file.startsWith('mexico-'))) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.doesNotMatch(html, mexicoTerms, file);
+    assert.doesNotMatch(html, satTerm, file);
+  }
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  for (const file of mexicoPages) {
+    assert.ok(sitemap.includes(`<loc>https://www.reyescomputing.com/${file}</loc>`), file);
+  }
+});
+
+test('Mexico pages have es-MX SEO, structured data and honest remote-service positioning', () => {
+  for (const file of mexicoPages) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.match(html, /<html lang="es-MX"/, file);
+    assert.ok(html.includes(`<link rel="canonical" href="https://www.reyescomputing.com/${file}">`), file);
+    assert.ok(html.includes(`hreflang="es-MX" href="https://www.reyescomputing.com/${file}"`), file);
+    assert.match(html, /property="og:title"/, file);
+    assert.match(html, /src="assets\/js\/reyes-conversion\.js"/, file);
+    assert.match(html, /https:\/\/wa\.me\/573128084929/, file);
+    assert.doesNotMatch(html, /wa\.me\/52|\+52/, file);
+
+    const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+    assert.ok(jsonLd.length >= 1, file);
+    const serialized = JSON.stringify(jsonLd);
+    for (const place of ['Mexico', 'Ciudad de México', 'Guadalajara', 'Monterrey']) {
+      assert.ok(serialized.includes(place), `${file}: ${place}`);
+    }
+    assert.ok(serialized.includes('FAQPage'), file);
+
+    assert.match(html, /atención remota a empresas en México/i, file);
+    assert.match(html, /no (?:somos una entidad mexicana|tenemos oficinas en México)/i, file);
+    assert.match(html, /CFDI[^<]*(?:valida|confirma)/i, file);
+    assert.doesNotMatch(html, /PostalAddress|streetAddress|Calle |Av\. /, file);
+  }
+});
+
+test('Mexico pages avoid invented prices, discounts, currency conversions and unverifiable promises', () => {
+  for (const file of mexicoPages) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    assert.doesNotMatch(html, /[$€]\s?\d|\d+(?:[.,]\d+)?\s?(?:USD|COP|MXN|pesos)\b|\b(?:USD|COP|MXN)\s?\d/i, `${file}: precios o monedas`);
+    assert.doesNotMatch(html, /descuento|\bpromo(?:ci[oó]n)?\b|\d+\s?% ?OFF|~\s?[\d,.]+/i, `${file}: descuentos`);
+    assert.doesNotMatch(html, /24\/7|24 horas|ROI garantizado|retorno garantizado|resultados garantizados|primer lugar en Google|#1 en Google/i, `${file}: promesas`);
+    assert.doesNotMatch(html, /Homologación SPEI|Compliance Bancario|Supera auditorías|certifica tu infraestructura|Certificado formal firmado|te certificamos|cumplimiento garantizado|Elimina caídas/i, `${file}: certificaciones`);
+    assert.doesNotMatch(html, /sucursal en México|oficinas? en (?:CDMX|Ciudad de México|Guadalajara|Monterrey)|S\.A\. de C\.V\.|RFC/i, `${file}: entidad mexicana`);
+  }
+});
+
+test('Mexico cloud page keeps the technical disclaimers of the other technical landings', () => {
+  const html = fs.readFileSync(path.join(root, 'mexico-nube-seguridad-web.html'), 'utf8');
+  assert.match(html, /Monitoreo automatizado continuo/);
+  assert.match(html, /no incluye certificación ni homologación de terceros/);
+  for (const topic of ['Cloud on-demand', 'DevSecOps', 'CI/CD', 'Cloudflare', 'backups', 'FinOps', 'Hardening', 'Ley Fintech', 'CNBV', 'SPEI', 'STP', 'CFDI 4.0']) {
+    assert.ok(html.includes(topic), topic);
+  }
+});
+
+test('Mexico web and marketing page covers its service scope and media-budget disclaimer', () => {
+  const html = fs.readFileSync(path.join(root, 'mexico-desarrollo-web-marketing-digital.html'), 'utf8');
+  for (const topic of ['Landing pages', 'Tiendas online básicas', 'Google Ads', 'Meta Ads', 'Google Business Profile', 'Medición']) {
+    assert.ok(html.includes(topic), topic);
+  }
+  assert.match(html, /se paga directamente a Google o Meta/);
+  assert.match(html, /aparte/);
 });
