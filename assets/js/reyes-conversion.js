@@ -87,6 +87,13 @@ function activarMenuMovil() {
       item.className = 'mobile-link text-lg text-white text-center';
       menu.appendChild(item);
     });
+    if (!menu.querySelector('a[href="powerbud.html"]')) {
+      const pbLink = document.createElement('a');
+      pbLink.href = 'powerbud.html';
+      pbLink.className = 'mobile-link text-lg text-cyan-400 hover:text-white font-bold flex items-center gap-2';
+      pbLink.innerHTML = '<i class="fa-solid fa-bolt text-[#39ff14]"></i> PowerBud (App Fitness & IA)';
+      menu.appendChild(pbLink);
+    }
     document.body.appendChild(menu);
   }
   const setOpen = (open) => {
