@@ -190,9 +190,9 @@ test('Tiendas Online pages show the payment-to-delivery flow with built vs custo
     const section = html.match(/<section id="flujo-entrega"[\s\S]*?<\/section>/)?.[0];
     assert.ok(section, `${file}: missing #flujo-entrega`);
     assert.match(section, /Del pago a la entrega|DEL PAGO A LA ENTREGA/i, file);
-    assert.equal((section.match(/PASO [1-5]/g) || []).length, 5, file);
-    assert.ok((section.match(/Base ya construida/g) || []).length >= 5, file);
-    assert.ok((section.match(/A (?:la )?medida, según alcance/g) || []).length >= 5, file);
+    assert.equal((section.match(/PASO [1-6]/g) || []).length, 6, file);
+    assert.ok((section.match(/Base ya construida/g) || []).length >= 6, file);
+    assert.ok((section.match(/A (?:la )?medida, según alcance/g) || []).length >= 6, file);
     for (const term of [/remisi[oó]n/i, /conductor/i, /log[ií]stica/i, /a[uú]n no existen|Hoy los roles|roles actuales/i]) {
       assert.match(visible, term, `${file}: ${term}`);
     }

@@ -392,45 +392,52 @@
     <section id="flujo-entrega" class="py-24 bg-[#050505] border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="font-orbitron text-3xl md:text-5xl font-bold text-center text-white mb-4 tracking-wide">
-                DEL PAGO A LA ENTREGA, <span class="text-reyes-cyan font-light">TODO TRAZABLE</span>
+                DE LA COTIZACIÓN AL PAGO Y LA ENTREGA, <span class="text-reyes-cyan font-light">TODO TRAZABLE</span>
             </h2>
             <p class="text-reyes-silver text-lg text-center max-w-3xl mx-auto mb-12 font-light">
-                El recorrido completo de un pedido en cinco pasos. Separamos lo que ya existe en nuestros sistemas propios de lo que se desarrolla a la medida. Es una base técnica propia: no presentamos este flujo como operando con clientes.
+                El recorrido completo de un pedido en seis pasos: desde el acceso al inventario para cotizar hasta la entrega con remisión firmada. Separamos lo que ya existe en nuestros sistemas propios de lo que se desarrolla a la medida. Del pago a la entrega, es una base técnica propia: no presentamos este flujo como operando con clientes.
             </p>
 
             <!-- Diagrama -->
-            <ol class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-14" aria-label="Flujo del pago a la entrega">
+            <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-14" aria-label="Flujo de cotización, pago y entrega">
                 <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
-                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-credit-card text-2xl text-reyes-cyan"></i></div>
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-boxes-stacked text-2xl text-reyes-cyan"></i></div>
                     <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 1</p>
-                    <p class="font-orbitron text-sm text-white">El cliente paga</p>
-                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
-                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <p class="font-orbitron text-sm text-white">Inventario disponible y cotización formal</p>
+                    <i class="fa-solid fa-arrow-right hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                </li>
+                <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
+                    <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-link text-2xl text-reyes-cyan"></i></div>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 2</p>
+                    <p class="font-orbitron text-sm text-white">Si decide comprar: enlace al socio de pago elegido</p>
+                    <i class="fa-solid fa-arrow-right hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
                 </li>
                 <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
                     <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-box-open text-2xl text-reyes-cyan"></i></div>
-                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 2</p>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 3</p>
                     <p class="font-orbitron text-sm text-white">Pagado → listo para envío, y se reporta a logística</p>
-                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
-                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-right hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
                 </li>
                 <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
                     <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-route text-2xl text-reyes-cyan"></i></div>
-                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 3</p>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 4</p>
                     <p class="font-orbitron text-sm text-white">El cliente sigue su envío en la app</p>
-                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
-                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-right hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
                 </li>
                 <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
                     <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-truck-fast text-2xl text-reyes-cyan"></i></div>
-                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 4</p>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 5</p>
                     <p class="font-orbitron text-sm text-white">El conductor entrega y sube la remisión firmada</p>
-                    <i class="fa-solid fa-arrow-right hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
-                    <i class="fa-solid fa-arrow-down md:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-right hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
+                    <i class="fa-solid fa-arrow-down lg:hidden absolute -bottom-4 left-1/2 -translate-x-1/2 text-reyes-cyan z-10" aria-hidden="true"></i>
                 </li>
                 <li class="relative bg-reyes-black border border-reyes-cyan/30 rounded-lg p-5 text-center">
                     <div class="w-14 h-14 mx-auto bg-reyes-cyan/10 rounded-full flex items-center justify-center mb-3"><i class="fa-solid fa-file-signature text-2xl text-reyes-cyan"></i></div>
-                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 5</p>
+                    <p class="font-orbitron text-xs text-reyes-cyan mb-1">PASO 6</p>
                     <p class="font-orbitron text-sm text-white">La evidencia queda en el pedido</p>
                 </li>
             </ol>
@@ -438,21 +445,35 @@
             <!-- Detalle por paso: base construida vs a la medida -->
             <div class="space-y-6">
                 <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">1.</span> El cliente paga desde la app o el sitio web</h3>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">1.</span> Inventario a disposición del cliente y cotización formal</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
-                            <p class="text-reyes-silver text-sm leading-relaxed">Pedido con total recalculado en el servidor, una integración inicial con una pasarela de pagos pensada para Colombia y un modo de pruebas que simula el pago. También el pedido coordinado por WhatsApp con carga de comprobante.</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">El cliente tiene a su disposición todo el inventario con disponibilidad en tiempo real, selector de cantidades, recálculo de precios desde el servidor y generación de cotización formal previa sin compromiso de pago.</p>
                         </div>
                         <div>
                             <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
-                            <p class="text-reyes-silver text-sm leading-relaxed">Una pasarela de pagos de terceros para México, con la transacción creada en el servidor y un webhook con firma verificada. Hoy ningún sistema nuestro tiene un pago real validado de punta a punta.</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Generación de cotización formal descargable en PDF con consecutivo y membrete, vigencia temporal de precios cotizados y reglas de reserva temporal de existencias durante la cotización.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">2.</span> Pagado → listo para envío, y se reporta a logística</h3>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">2.</span> Si decide comprar: enlace de pago con el socio elegido</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Pedido con total recalculado en el servidor, generación de enlace de cobro y modo de pruebas que simula el pago. También el pedido coordinado por WhatsApp con carga de comprobante.</p>
+                        </div>
+                        <div>
+                            <p class="font-orbitron text-xs text-gray-400 uppercase tracking-widest mb-2">A la medida, según alcance</p>
+                            <p class="text-reyes-silver text-sm leading-relaxed">Una pasarela de pagos de terceros para México (por ejemplo Stripe o Mercado Pago), con la transacción creada en el servidor y un webhook con firma verificada. Hoy ningún sistema nuestro tiene un pago real validado de punta a punta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">3.</span> Pagado → listo para envío, y se reporta a logística</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
@@ -466,7 +487,7 @@
                 </div>
 
                 <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">3.</span> El cliente sigue su envío en la app</h3>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">4.</span> El cliente sigue su envío en la app</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
@@ -480,7 +501,7 @@
                 </div>
 
                 <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">4.</span> El conductor entrega y reporta con foto de la remisión firmada</h3>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">5.</span> El conductor entrega y reporta con foto de la remisión firmada</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
@@ -494,7 +515,7 @@
                 </div>
 
                 <div class="bg-reyes-black border border-white/10 rounded-lg p-6 service-card">
-                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">5.</span> La evidencia queda ligada al pedido y la ven comprador y vendedor</h3>
+                    <h3 class="font-orbitron text-lg font-bold text-white mb-4"><span class="text-reyes-cyan">6.</span> La evidencia queda ligada al pedido y la ven comprador y vendedor</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <p class="font-orbitron text-xs text-reyes-cyan uppercase tracking-widest mb-2">Base ya construida</p>
