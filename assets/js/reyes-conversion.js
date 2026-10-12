@@ -138,6 +138,12 @@ const MENU_LATERAL = [
     ]
   },
   {
+    titulo: 'Productos & Apps',
+    enlaces: [
+      ['fa-bolt', 'PowerBud (Fitness & IA)', 'powerbud.html']
+    ]
+  },
+  {
     titulo: 'Empresa',
     enlaces: [
       ['fa-tags', 'Planes & Precios', 'planes.html'],
