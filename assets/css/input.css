@@ -316,6 +316,25 @@ header.fixed > div > a:first-child {
   font-weight: 600;
 }
 
+.menu-lateral-enlace[href="ofertas.html"] {
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-left: 3px solid #00f0ff;
+  color: #00f0ff;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.menu-lateral-enlace[href="ofertas.html"] i {
+  color: #fbbf24;
+}
+
+.menu-lateral-enlace[href="ofertas.html"]:hover {
+  background: rgba(0, 240, 255, 0.18);
+  border-color: #00f0ff;
+  color: #fff;
+}
+
 .menu-lateral-pie {
   display: flex;
   flex-direction: column;

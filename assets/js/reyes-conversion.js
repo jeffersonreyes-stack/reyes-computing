@@ -117,6 +117,12 @@ function activarFormularios() {
 
 const MENU_LATERAL = [
   {
+    titulo: 'Destacado',
+    enlaces: [
+      ['fa-fire', 'Ofertas', 'ofertas.html']
+    ]
+  },
+  {
     titulo: 'Servicios',
     enlaces: [
       ['fa-code', 'Desarrollo Web', 'desarrollo-web.html'],
@@ -147,7 +153,6 @@ const MENU_LATERAL = [
     titulo: 'Empresa',
     enlaces: [
       ['fa-tags', 'Planes & Precios', 'planes.html'],
-      ['fa-fire', 'Ofertas', 'ofertas.html'],
       ['fa-trophy', 'Casos de éxito', 'casos-de-exito.html'],
       ['fa-list-check', 'Cómo funciona', 'como-funciona.html'],
       ['fa-envelope', 'Contacto', 'contacto.html']

@@ -195,12 +195,12 @@
       </a>
       
       <nav class="hidden lg:flex items-center gap-5 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+        <a href="ofertas.html" class="px-3.5 py-1.5 text-cyan-400 bg-cyan-400/10 border border-cyan-400/50 rounded-full font-bold hover:bg-cyan-400 hover:text-black transition shadow-[0_0_15px_rgba(0,240,255,0.3)]">Ofertas</a>
         <a href="desarrollo-web.html" class="hover:text-cyan-400 transition">Desarrollo Web</a>
         <a href="publicidad-web.html" class="hover:text-cyan-400 transition">Google Ads</a>
         <a href="google-business-profile.html" class="hover:text-cyan-400 transition">Google Business</a>
         <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Startups & Fintech</a>
         <a href="planes.html" class="hover:text-cyan-400 transition">Planes & Precios</a>
-        <a href="ofertas.html" class="hover:text-cyan-400 transition">Ofertas</a>
       </nav>
 
       <div class="flex items-center gap-4 flex-shrink-0">
@@ -216,12 +216,12 @@
 
   <!-- MOBILE MENU OVERLAY -->
   <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+    <a href="ofertas.html" class="text-2xl font-orbitron text-cyan-400 font-bold hover:text-white transition mobile-link">Ofertas</a>
     <a href="desarrollo-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Desarrollo Web</a>
     <a href="publicidad-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Google Ads</a>
     <a href="google-business-profile.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Google Business</a>
     <a href="startups-fintech.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Startups & Fintech</a>
     <a href="planes.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Planes & Precios</a>
-    <a href="ofertas.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Ofertas</a>
     <a href="contacto.html?servicio=diagnostico" data-origen="navbar" class="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-sm font-bold tracking-widest shadow-neon mobile-link font-orbitron">
       Diagnóstico Gratis
     </a>
@@ -766,20 +766,29 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Reyes Computing S.A.S. — NIT 901.815.420-5 · Cobertura en Colombia (Bogotá, Medellín, Cali)</p>
-      <p style="margin-top: 8px; font-size: 0.85rem;">Páginas web, combos de captación con Google Ads y tiendas online diseñadas para facilitar el contacto comercial.</p>
-      <p style="margin-top: 8px; font-size: 0.85rem;"><a href="ofertas.html" style="color: var(--cyan); text-decoration: underline;">Ofertas</a></p>
+  <footer class="border-t border-white/10 py-10 bg-[#060911]">
+    <div class="container flex flex-col items-center justify-center">
+      <a href="index.html" class="flex items-center gap-3 mb-4 opacity-60 hover:opacity-100 transition">
+        <img src="assets/images/logo.png" alt="Reyes Computing" class="h-8 w-auto">
+        <span class="font-orbitron text-base font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
+      </a>
+      <div class="text-center font-sans text-xs text-gray-500 uppercase tracking-widest flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <span>© 2026 Reyes Computing S.A.S. · Colombia</span>
+        <span class="hidden sm:inline text-gray-700">|</span>
+        <a href="contacto.html#privacidad" class="hover:text-gray-400 transition">Aviso Legal</a>
+        <span class="hidden sm:inline text-gray-700">|</span>
+        <a href="ofertas.html" class="hover:text-cyan-400 transition">Ofertas</a>
+      </div>
     </div>
   </footer>
 
-  <!-- BARRA FIJA FLOTANTE PARA CELULARES (STICKY MOBILE) -->
-  <div class="sticky-bar">
-    <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20recibir%20una%20propuesta%20para%20mi%20Landing%20Page" class="sticky-btn" target="_blank" rel="noopener">
-      <i class="fa-brands fa-whatsapp text-xl mr-1"></i> Solicitar propuesta por WhatsApp
-    </a>
-  </div>
+  <!-- BOTÓN FLOTANTE WHATSAPP FIJO (DISPONIBLE AL SCROLLEAR) -->
+  <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20cotizar%20por%20WhatsApp" 
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3.5 rounded-full font-bold shadow-[0_4px_25px_rgba(37,211,102,0.5)] hover:scale-105 transition duration-300 group" 
+     target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="font-sans text-sm font-extrabold tracking-wide hidden sm:inline">Cotizar por WhatsApp</span>
+  </a>
 
 </body>
 </html>
