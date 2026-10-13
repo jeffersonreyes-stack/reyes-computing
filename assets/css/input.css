@@ -161,7 +161,8 @@ header.fixed > div > a:first-child {
 }
 
 /* Navbar: logo, diagnóstico y botón de menú; los enlaces viven en el menú lateral */
-:is(nav, header).fixed nav {
+:is(nav, header).fixed nav,
+:is(nav, header).fixed .hidden.lg\:flex.gap-5 {
   display: none !important;
 }
 
