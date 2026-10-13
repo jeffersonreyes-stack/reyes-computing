@@ -133,13 +133,19 @@
     .ws-card h4 { font-family: 'Orbitron', sans-serif; color: #fff; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .ws-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; }
 
-    /* UPSELLS / ADDONS GRID */
-    .addons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
-    .addon-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; }
-    .addon-card:hover { border-color: rgba(255,255,255,0.25); }
-    .addon-card h4 { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
-    .addon-card .addon-price { font-size: 1.35rem; font-weight: 800; color: var(--cyan); margin-bottom: 10px; font-family: 'Orbitron', sans-serif; }
-    .addon-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+    /* SCENARIO BLOCKS (SECTION 5 REFINED) */
+    .scenario-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 28px; }
+    .scenario-badge { display: inline-flex; align-items: center; gap: 8px; font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .scenario-badge.has-material { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; }
+    .scenario-badge.no-material { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; }
+    .scenario-badge.traffic { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.4); color: #60a5fa; }
+
+    .addons-subgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 18px; }
+    .addon-item { background: #0c1220; border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .addon-item h5 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .addon-item .price-tag { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--cyan); margin-bottom: 8px; }
+    .addon-item p { font-size: 0.88rem; color: #9ca3af; line-height: 1.5; }
+    .addon-item .meta-h { font-size: 0.78rem; color: #6b7280; margin-top: 12px; }
 
     /* CONDITIONS GRID */
     .conditions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
@@ -166,7 +172,7 @@
     }
 
     @media (max-width: 1024px) {
-      .concept-grid, .pricing-grid, .addons-grid, .conditions-grid { grid-template-columns: 1fr; }
+      .concept-grid, .pricing-grid, .conditions-grid { grid-template-columns: 1fr; }
       .p-card.featured-card { transform: scale(1); }
       .workspace-grid { grid-template-columns: 1fr; }
     }
@@ -248,7 +254,7 @@
         <a href="#arquitectura" class="nav-pill">1. ¿Qué vende cada producto?</a>
         <a href="#combos" class="nav-pill">2. Combos Principales</a>
         <a href="#comparativa" class="nav-pill">3. Tabla Maestra & Google Workspace</a>
-        <a href="#complementos" class="nav-pill">4. Servicios de Valor Agregado</a>
+        <a href="#adicionales" class="nav-pill">4. Material Cliente vs. Generación desde Cero</a>
         <a href="#condiciones" class="nav-pill">5. Condiciones & Renovación</a>
       </div>
     </div>
@@ -574,90 +580,131 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 4: COMPLEMENTOS Y SERVICIOS DE VALOR AGREGADO (UPSELLS) -->
-  <section class="container py-16" id="complementos">
+  <!-- SECCIÓN 4: ADICIONALES DE CONTENIDO Y MARKETING (ESCENARIO A VS B) -->
+  <section class="container py-16" id="adicionales">
     <div class="section-header">
-      <div class="tagline">Servicios de Valor Agregado</div>
-      <h2>Complementos y Mejoras con Precios Auditados</h2>
-      <p>En lugar de utilizar textos negativos sobre lo que "no incluye" el servicio, cualquier requerimiento adicional de diseño, fotografía, video o gestión continua se ofrece como un complemento auditado:</p>
+      <div class="tagline">Claridad Operativa</div>
+      <h2>Adicionales de Contenido y Marketing</h2>
+      <p>Para evitar confusiones, separamos con total transparencia cuándo el cliente <strong>entrega el material</strong> (y solo lo incorporamos o retocamos) y cuándo el cliente <strong>no tiene material y debemos generarlo desde cero</strong> bajo la misma tarifa auditada de $129.743 COP/hora:</p>
     </div>
 
-    <div class="addons-grid">
-      <!-- Campaña avanzada -->
-      <div class="addon-card">
-        <div>
-          <div class="text-cyan-400 text-lg mb-2"><i class="fa-solid fa-chart-line"></i></div>
-          <h4>Campaña Google Ads de Arranque (Avanzada)</h4>
-          <div class="addon-price">$1.040.000 <span class="text-xs font-normal text-gray-400">(+ pauta)</span></div>
-          <p>Investigación avanzada de palabras clave, estructura de grupos de anuncios, copys RSA persuasivos, extensiones, negativas, tracking de conversiones y 1 mes de optimización.</p>
+    <!-- ESCENARIO A: EL CLIENTE SÍ ENTREGA EL MATERIAL -->
+    <div class="scenario-box">
+      <div class="scenario-badge has-material"><i class="fa-solid fa-file-arrow-up"></i> 5.1. Escenario A: El cliente SÍ entrega el material (Incorporación y Retoque)</div>
+      <p class="text-gray-300 text-sm">
+        Aplica cuando el cliente ya cuenta con sus propias fotografías o videos tomados, pero supera el límite de imágenes incluido en su paquete base (10 en Landing, 40 en Sitio Web, 150 en Tienda) o sus tomas requieren corrección antes de salir al aire:
+      </p>
+
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Incorporación de Imágenes Adicionales (Pack 50 fotos)</h5>
+            <div class="price-tag">$142.717 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega las fotos listas; nosotros las clasificamos, renombramos, comprimimos a formato ligero de carga rápida (WebP) y las subimos a galerías o catálogo por encima del tope acordado.</p>
+          </div>
+          <div class="meta-h">Alcance: 1,1 horas de gestión técnica de catálogo.</div>
         </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 8,0 horas de ingeniería de tráfico.</p>
+
+        <div class="addon-item">
+          <div>
+            <h5>Retoque y Limpieza de Fotos del Cliente (Pack 20 fotos)</h5>
+            <div class="price-tag">$389.228 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega fotos crudas tomadas con celular o cámara; nosotros realizamos recorte, eliminación de fondo, corrección de iluminación/color y ajuste dimensional para web.</p>
+          </div>
+          <div class="meta-h">Alcance: 3,0 horas de posproducción digital.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Edición de Video Corto con Tomas del Cliente (Hasta 60 s)</h5>
+            <div class="price-tag">$648.713 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega los clips grabados; nosotros armamos el video comercial con cortes dinámicos, subtítulos llamativos, música libre de derechos y formato adaptado para web o pauta.</p>
+          </div>
+          <div class="meta-h">Alcance: 5,0 horas de edición audiovisual.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESCENARIO B: EL CLIENTE NO TIENE MATERIAL -->
+    <div class="scenario-box">
+      <div class="scenario-badge no-material"><i class="fa-solid fa-wand-magic-sparkles"></i> 5.2. Escenario B: El cliente NO tiene material (Generación de Contenido desde Cero)</div>
+      <p class="text-gray-300 text-sm">
+        Aplica cuando el cliente no cuenta con logo, ni fotografías utilizables, ni piezas publicitarias, y Reyes Computing debe <strong>producir y generar el contenido digitalmente</strong> mediante diseño gráfico profesional, IA de alta resolución, bancos comerciales licenciados, fotomontaje y redacción persuasiva:
+      </p>
+
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Generación de Imágenes Comerciales (Pack 10 imágenes)</h5>
+            <div class="price-tag">$389.228 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación de las 10 imágenes requeridas para una Landing Page cuando el cliente no tiene fotos: generación con IA profesional, curaduría de banco de imágenes comercial o fotomontaje de producto/servicio.</p>
+          </div>
+          <div class="meta-h">Alcance: 3,0 horas de generación digital en estudio.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Pack de 5 Piezas Gráficas / Banners Publicitarios</h5>
+            <div class="price-tag">$518.970 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación desde cero de 5 creatividades publicitarias (composiciones visuales + textos de oferta de alta conversión) listos para anuncios de Google Display, pauta o banners web.</p>
+          </div>
+          <div class="meta-h">Alcance: 4,0 horas de producción gráfica.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Kit de Identidad Visual Básica (Creación de Marca)</h5>
+            <div class="price-tag">$778.455 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación desde cero del logotipo del negocio (2 propuestas conceptuales + 2 rondas de ajustes), definición de colores corporativos, tipografías y manual básico para construir el sitio web.</p>
+          </div>
+          <div class="meta-h">Alcance: 6,0 horas de diseño de identidad.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Producción de Video Comercial Digital (Hasta 60 s sin tomas)</h5>
+            <div class="price-tag">$778.455 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Guion comercial + producción con escenas de stock/IA, locución digital o música licenciada, textos animados y llamado a la acción cuando el cliente no tiene videos grabados.</p>
+          </div>
+          <div class="meta-h">Alcance: 6,0 horas de producción digital completa.</div>
+        </div>
       </div>
 
-      <!-- Plan Motor de Clientes Mensual -->
-      <div class="addon-card">
-        <div>
-          <div class="text-emerald-400 text-lg mb-2"><i class="fa-solid fa-arrows-spin"></i></div>
-          <h4>Plan Motor de Clientes (Gestión Mensual)</h4>
-          <div class="addon-price text-emerald-400 text-base">Cotización según alcance</div>
-          <p>Administración continua mensual de campañas en Google Ads + mantenimiento técnico, ajustes de conversión CRO y soporte sobre tu página web para acelerar cotizaciones.</p>
-        </div>
-        <p class="text-xs text-gray-500 mt-4">Gestión y landing por separado del presupuesto pagado a Google Ads.</p>
+      <div class="mt-4 p-4 bg-black/40 border border-white/10 rounded-lg text-xs text-gray-300">
+        <i class="fa-solid fa-camera-retro text-cyan-400 mr-1"></i> <strong>Nota sobre fotografía o grabación presencial:</strong> Todos los paquetes anteriores son de <strong>producción digital en estudio</strong>. Si el cliente requiere que un fotógrafo o camarógrafo acuda físicamente a su local, bodega o planta, la sesión presencial se cotiza por separado según ciudad, traslados y horas en locación.
       </div>
+    </div>
 
-      <!-- Kit de Identidad Visual -->
-      <div class="addon-card">
-        <div>
-          <div class="text-purple-400 text-lg mb-2"><i class="fa-solid fa-palette"></i></div>
-          <h4>Kit de Identidad Visual Básica</h4>
-          <div class="addon-price">$778.455 <span class="text-xs font-normal text-gray-400">COP</span></div>
-          <p>Diseño de logotipo profesional desde cero (2 propuestas conceptuales + 2 rondas de ajustes), definición de paleta cromática, tipografías y manual básico de marca digital.</p>
+    <!-- 5.3 SERVICIOS DE TRÁFICO Y CONTINUIDAD -->
+    <div class="scenario-box">
+      <div class="scenario-badge traffic"><i class="fa-solid fa-chart-line"></i> 5.3. Servicios de Tráfico y Continuidad Mensual (Google Ads + Mantenimiento)</div>
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Paquete Mínimo Google Ads (Incluido en Combo 1)</h5>
+            <div class="price-tag">$600.000 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Presupuesto mínimo de pauta directa para 30 días de anuncios activos ($20.000 COP/día) llevando tráfico de búsqueda intencionado a la Landing Page.</p>
+          </div>
+          <div class="meta-h">Pauta activa directa en Google Ads.</div>
         </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 6,0 horas de diseño gráfico.</p>
-      </div>
 
-      <!-- Tratamiento de Fotos -->
-      <div class="addon-card">
-        <div>
-          <div class="text-yellow-400 text-lg mb-2"><i class="fa-solid fa-images"></i></div>
-          <h4>Tratamiento de Fotos del Cliente (Pack 20)</h4>
-          <div class="addon-price">$389.228 <span class="text-xs font-normal text-gray-400">COP</span></div>
-          <p>Recorte, corrección de iluminación, balance de color, compresión de alta fidelidad a formatos modernos WebP/AVIF y renombrado optimizado para SEO en 20 fotografías.</p>
+        <div class="addon-item">
+          <div>
+            <h5>Campaña Google Ads de Arranque (Individual / Avanzada)</h5>
+            <div class="price-tag">$1.040.000 <span class="text-xs font-normal text-gray-400">(+ pauta)</span></div>
+            <p>Investigación avanzada de palabras clave, estructura de campaña, redacción de anuncios RSA, extensiones, lista de palabras negativas, etiquetas de conversión y 1 mes de gestión y optimización.</p>
+          </div>
+          <div class="meta-h">Alcance: 8,0 horas de ingeniería de tráfico.</div>
         </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 3,0 horas de posproducción digital.</p>
-      </div>
 
-      <!-- Pack 50 Imágenes -->
-      <div class="addon-card">
-        <div>
-          <div class="text-blue-400 text-lg mb-2"><i class="fa-solid fa-folder-plus"></i></div>
-          <h4>Pack de 50 Imágenes Adicionales</h4>
-          <div class="addon-price">$142.717 <span class="text-xs font-normal text-gray-400">COP</span></div>
-          <p>Carga, compresión, nombrado semántico y etiquetado para hasta 50 imágenes adicionales sobre el tope incluido en tu plan o catálogo de productos.</p>
+        <div class="addon-item">
+          <div>
+            <h5>Plan Motor de Clientes (Mensual Recurrente)</h5>
+            <div class="price-tag text-emerald-400 text-base">Cotización según alcance</div>
+            <p>Administración y optimización mensual continua de campañas en Google Ads + ajustes, mejoras y soporte continuo sobre la página web para maximizar contactos comerciales.</p>
+          </div>
+          <div class="meta-h">Gestión y soporte continuo; saldo de clics pagado a Google por separado.</div>
         </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 1,1 horas de gestión de catálogo.</p>
-      </div>
-
-      <!-- Edición de Video Corto -->
-      <div class="addon-card">
-        <div>
-          <div class="text-pink-400 text-lg mb-2"><i class="fa-solid fa-video"></i></div>
-          <h4>Edición de Video Corto (Hasta 60 segundos)</h4>
-          <div class="addon-price">$648.713 <span class="text-xs font-normal text-gray-400">COP</span></div>
-          <p>Edición dinámica con tomas y material aportado por el cliente, subtítulos llamativos, música con licencia comercial y exportación optimizada para reels, shorts o tu web.</p>
-        </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 5,0 horas de edición audiovisual.</p>
-      </div>
-
-      <!-- Piezas Gráficas -->
-      <div class="addon-card">
-        <div>
-          <div class="text-cyan-400 text-lg mb-2"><i class="fa-solid fa-cubes"></i></div>
-          <h4>Pack de 5 Piezas Gráficas para Campañas</h4>
-          <div class="addon-price">$518.970 <span class="text-xs font-normal text-gray-400">COP</span></div>
-          <p>Diseño de 5 creatividades estáticas adaptadas a formatos de anuncios de Google Display, redes sociales o banners promocionales de tu tienda online.</p>
-        </div>
-        <p class="text-xs text-gray-500 mt-4">Alcance: 4,0 horas de producción creativa.</p>
       </div>
     </div>
   </section>
@@ -674,7 +721,7 @@
       <!-- 1. Rondas de Revisión -->
       <div class="cond-card">
         <h3><i class="fa-solid fa-pen-ruler text-cyan-400"></i> 1. Rondas de Revisión</h3>
-        <p>Todos los paquetes de desarrollo web incluyen <strong>2 rondas de ajustes</strong> de diseño y textos antes de la publicación final. Cualquier cambio estructural posterior a la aprobación definitiva se cotiza por hora de ingeniería o mediante los complementos de valor agregado.</p>
+        <p>Todos los paquetes de desarrollo web incluyen <strong>2 rondas de ajustes</strong> de diseño y textos antes de la publicación final. Cualquier cambio estructural posterior a la aprobación definitiva se cotiza por hora de ingeniería ($129.743 COP/h) o mediante los complementos de valor agregado.</p>
       </div>
 
       <!-- 2. Límite de Fotos e Imágenes -->
@@ -682,11 +729,11 @@
         <h3><i class="fa-solid fa-camera text-blue-400"></i> 2. Límite de Fotos e Imágenes</h3>
         <p>Para asegurar velocidades óptimas de carga y control operativo:</p>
         <ul>
-          <li><strong>Landing Page:</strong> Hasta 10 fotografías aportadas por el cliente.</li>
-          <li><strong>Sitio Web Oficial de Empresa:</strong> Hasta 40 imágenes de equipo, instalaciones o servicios.</li>
-          <li><strong>Tienda Online:</strong> Hasta 150 productos e imágenes iniciales.</li>
+          <li><strong>Landing Page (Combo 1):</strong> Carga y optimización de hasta <strong>10 imágenes</strong> entregadas por el cliente.</li>
+          <li><strong>Sitio Web Oficial (Combo 2):</strong> Carga y optimización de hasta <strong>40 imágenes</strong> entregadas por el cliente.</li>
+          <li><strong>Tienda Online (Combo 3):</strong> Carga y optimización de hasta <strong>150 imágenes</strong> entregadas por el cliente.</li>
         </ul>
-        <p class="mt-2 text-xs text-gray-400">Volumen superior al acordado se integra mediante el Pack de 50 Imágenes o Tratamiento de Fotos.</p>
+        <p class="mt-2 text-xs text-gray-400">Si el cliente envía un volumen superior al acordado, aplica el Pack de Incorporación de 50 imágenes ($142.717 COP). Si el cliente no tiene imágenes, aplica el Pack de Generación de 10 imágenes ($389.228 COP).</p>
       </div>
 
       <!-- 3. Soporte Post-Entrega -->
@@ -700,7 +747,7 @@
         <h3><i class="fa-solid fa-arrows-rotate text-purple-400"></i> 4. Renovación Año 2 a Costo Directo</h3>
         <p>A partir del segundo año no te cobramos rediseño. Pagas únicamente el costo real de infraestructura y licencias a los proveedores:</p>
         <ul>
-          <li><strong>Dominio .com / .co + Hosting básico:</strong> <strong>$45.377 COP / año</strong> (tarifa de costo de registrador Cloudflare/Namecheap).</li>
+          <li><strong>Solo Dominio .com / .co + Hosting básico:</strong> <strong>$45.377 COP / año</strong> (tarifa de costo de registrador Cloudflare/Namecheap).</li>
           <li><strong>Renovación Combo con Google Workspace Starter (1 usuario):</strong> <strong>$462.373 COP / año</strong> (Dominio $45.377 + licencia anual Business Starter con IVA $416.976).</li>
           <li><strong>Renovación Combo con Google Workspace Standard (1 usuario):</strong> <strong>$879.329 COP / año</strong> (Dominio $45.377 + licencia anual Business Standard con IVA $833.952).</li>
         </ul>
