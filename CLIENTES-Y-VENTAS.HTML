@@ -14,14 +14,14 @@
   </script>
 
   <!-- SEO & Meta Tags -->
-  <title>Páginas Web y Sistemas de Venta por WhatsApp | Reyes Computing</title>
-  <meta name="description" content="Diseño de páginas web y tiendas online en Colombia. Aprovecha nuestra promo 50% OFF en Landing Pages de Venta por tiempo limitado.">
+  <title>Captación Google Ads, Sitios Web y Tiendas Online | Reyes Computing</title>
+  <meta name="description" content="Mostrador de Anuncios con Google Ads, Sedes Digitales Corporativas y Tiendas Online con catálogo y pedidos. Precios transparentes y alcance definido.">
   <link rel="canonical" href="https://www.reyescomputing.com/clientes-y-ventas.html">
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/output.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -30,71 +30,138 @@
     :root {
       --bg: #090d16;
       --card-bg: #111726;
+      --card-hover: #162035;
       --border: #1f293d;
       --primary: #3b82f6;
       --primary-hover: #2563eb;
       --accent: #10b981;
       --promo: #ef4444;
+      --cyan: #00f0ff;
       --text: #f3f4f6;
       --text-muted: #9ca3af;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 70px; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
     
     /* HERO */
     .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
     .badge-promo {
-      display: inline-flex; align-items: center; gap: 8px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; padding: 8px 18px; border-radius: 9999px; font-size: 0.9rem; font-weight: 800; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em;
+      display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.35); color: #00f0ff; padding: 8px 18px; border-radius: 9999px; font-size: 0.85rem; font-weight: 800; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.06em;
     }
-    h1 { font-size: 2.9rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
-    h1 span { background: linear-gradient(135deg, #60a5fa, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-p { font-size: 1.2rem; color: var(--text-muted); max-width: 780px; margin: 0 auto 32px; }
+    h1 { font-size: 2.8rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
+    h1 span { background: linear-gradient(135deg, #00f0ff, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-p { font-size: 1.15rem; color: var(--text-muted); max-width: 820px; margin: 0 auto 32px; }
     .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-hero { background: #25D366; color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 10px; font-weight: 800; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 25px rgba(37, 211, 102, 0.35); transition: 0.2s; }
     .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.45); }
-    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); text-decoration: none; padding: 16px 28px; border-radius: 10px; font-weight: 700; font-size: 1.05rem; transition: 0.2s; }
-    .btn-secondary:hover { border-color: var(--text-muted); }
+    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); text-decoration: none; padding: 16px 28px; border-radius: 10px; font-weight: 700; font-size: 1.05rem; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
 
-    /* BENEFICIOS */
-    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 60px 0 40px; }
-    .b-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 32px; text-align: left; }
-    .b-icon { font-size: 2rem; margin-bottom: 16px; }
-    .b-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: #fff; }
-    .b-card p { color: var(--text-muted); font-size: 0.95rem; }
+    /* QUICK NAV PILLS */
+    .nav-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 36px; }
+    .nav-pill { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 9999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); text-decoration: none; transition: 0.2s; }
+    .nav-pill:hover { border-color: var(--cyan); color: #fff; }
 
-    /* PRECIOS */
-    .pricing-section { padding: 60px 0; }
-    .section-title { text-align: center; margin-bottom: 48px; }
-    .section-title h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 12px; }
-    .section-title p { color: var(--text-muted); font-size: 1.1rem; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; }
+    /* SECTION TITLES */
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header .tagline { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); margin-bottom: 8px; }
+    .section-header h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 14px; letter-spacing: -0.01em; color: #fff; }
+    .section-header p { color: var(--text-muted); font-size: 1.05rem; max-width: 820px; margin: 0 auto; }
+
+    /* CONCEPT ARCHITECTURE GRID */
+    .concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 60px; }
+    .concept-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 32px; text-align: left; display: flex; flex-direction: column; justify-content: space-between; position: relative; transition: 0.3s; }
+    .concept-card:hover { border-color: rgba(0, 240, 255, 0.4); transform: translateY(-4px); }
+    .concept-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .concept-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; color: #fff; }
+    .concept-card .product-name { font-size: 0.85rem; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+    .concept-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; }
+    .concept-target { background: rgba(0,0,0,0.3); border-left: 3px solid var(--cyan); padding: 12px 14px; border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #e5e7eb; }
+    .concept-target strong { color: #fff; }
+
+    /* COMBOS GRID */
+    .pricing-section { padding: 70px 0; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: stretch; margin-top: 36px; }
+    .p-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
     
-    .p-card {
-      background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative;
+    .p-card.featured-card {
+      border: 2px solid var(--cyan); background: linear-gradient(180deg, #101c30 0%, #111726 100%); box-shadow: 0 0 35px rgba(0, 240, 255, 0.18); transform: scale(1.02);
     }
-    
-    /* PROMO CARD DESTACADA */
-    .p-card.promo-card {
-      border: 2px solid #ef4444; background: linear-gradient(180deg, #181423 0%, #111726 100%); box-shadow: 0 0 35px rgba(239, 68, 68, 0.2); transform: scale(1.03);
+    .p-card.store-card {
+      border: 1px solid #3b82f6; background: linear-gradient(180deg, #131728 0%, #111726 100%);
     }
-    .tag-promo {
-      position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #ef4444; color: #fff; font-weight: 800; font-size: 0.75rem; padding: 4px 14px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em;
+    .tag-featured {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #00f0ff !important; color: #000000 !important; font-weight: 900 !important; font-size: 0.72rem; padding: 6px 16px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Orbitron', sans-serif; box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); white-space: nowrap;
     }
-    .old-price { font-size: 1.1rem; color: #9ca3af; text-decoration: line-through; font-weight: 600; margin-top: 12px; }
-    .new-price { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1; margin: 8px 0 16px; }
-    .new-price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
-    .features-list { list-style: none; margin: 24px 0 32px; font-size: 0.95rem; }
-    .features-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: #e5e7eb; }
-    .features-list li::before { content: "✔"; color: var(--accent); font-weight: bold; }
-    .btn-card { display: block; text-align: center; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: 0.2s; }
-    .btn-card.green { background: #25D366; color: #fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-    .btn-card.green:hover { background: #20bd5a; }
-    .btn-card.blue { background: var(--primary); color: #fff; }
-    .btn-card.blue:hover { background: var(--primary-hover); }
+    .tag-standard {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #1f293d; border: 1px solid #3b82f6; color: #93c5fd; font-weight: 800; font-size: 0.72rem; padding: 5px 14px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Orbitron', sans-serif;
+    }
+    .price-headline { font-size: 2.5rem; font-weight: 900; color: #fff; line-height: 1; margin: 12px 0 6px; }
+    .price-headline span { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+    .price-suboption { background: rgba(0,0,0,0.25); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 14px 0; font-size: 0.85rem; }
+    .price-suboption strong { color: #fff; }
+    .delivery-badge { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px; margin-bottom: 16px; }
+    .delivery-badge.fast { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .delivery-badge.standard { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .delivery-badge.store { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+
+    .promise-box { font-style: italic; font-size: 0.9rem; color: #cbd5e1; border-left: 2px solid rgba(255,255,255,0.2); padding-left: 12px; margin: 14px 0 20px; line-height: 1.5; }
+
+    .features-list { list-style: none; margin: 20px 0 28px; font-size: 0.92rem; }
+    .features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: #e5e7eb; }
+    .features-list li i { margin-top: 4px; flex-shrink: 0; }
+    .btn-card { display: block; text-align: center; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: 800; font-size: 0.95rem; transition: 0.2s; font-family: 'Orbitron', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+    .btn-card.green { background: #00f0ff; color: #000; box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3); }
+    .btn-card.green:hover { background: #fff; box-shadow: 0 6px 25px rgba(0, 240, 255, 0.5); }
+    .btn-card.blue { background: #3b82f6; color: #fff; }
+    .btn-card.blue:hover { background: #2563eb; }
+    .btn-card.outline { background: transparent; border: 1px solid var(--border); color: #fff; margin-top: 8px; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: none; }
+    .btn-card.outline:hover { border-color: #25D366; color: #25D366; }
+
+    /* COMPARISON TABLE */
+    .table-container { overflow-x: auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; margin-top: 28px; }
+    table.comparison-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+    table.comparison-table th { background: #0c1220; padding: 16px 20px; font-family: 'Orbitron', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cyan); border-bottom: 1px solid var(--border); }
+    table.comparison-table td { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #d1d5db; vertical-align: middle; }
+    table.comparison-table tr:hover td { background: rgba(255,255,255,0.02); }
+    table.comparison-table td strong { color: #fff; }
+
+    /* WORKSPACE SPEC BOX */
+    .workspace-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
+    .ws-card { background: #0c1220; border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .ws-card h4 { font-family: 'Orbitron', sans-serif; color: #fff; font-size: 1.1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .ws-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; }
+
+    /* SCENARIO BLOCKS */
+    .scenario-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 28px; }
+    .scenario-badge { display: inline-flex; align-items: center; gap: 8px; font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .scenario-badge.has-material { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; }
+    .scenario-badge.no-material { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; }
+    .scenario-badge.traffic { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.4); color: #60a5fa; }
+
+    .addons-subgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 18px; }
+    .addon-item { background: #0c1220; border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .addon-item h5 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .addon-item .price-tag { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--cyan); margin-bottom: 8px; }
+    .addon-item p { font-size: 0.88rem; color: #9ca3af; line-height: 1.5; }
+    .addon-item .meta-h { font-size: 0.78rem; color: #6b7280; margin-top: 12px; }
+
+    /* CONDITIONS GRID */
+    .conditions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    .cond-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; }
+    .cond-card h3 { font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .cond-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
+    .cond-card ul { margin-top: 10px; padding-left: 18px; font-size: 0.9rem; color: #d1d5db; }
+    .cond-card ul li { margin-bottom: 6px; }
+
+    /* DISCLAIMER BANNER */
+    .disclaimer-banner { background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border); border-left: 4px solid var(--cyan); border-radius: 10px; padding: 24px; margin: 36px 0; }
+    .disclaimer-banner h4 { font-family: 'Orbitron', sans-serif; color: #fff; font-size: 1rem; margin-bottom: 8px; }
+    .disclaimer-banner p { font-size: 0.92rem; color: #94a3b8; line-height: 1.6; margin-bottom: 8px; }
 
     /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 40px 0 80px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    footer { border-top: 1px solid var(--border); padding: 50px 0 90px; text-align: center; color: var(--text-muted); font-size: 0.9rem; background: #060911; }
 
     /* STICKY BOTTOM BAR (MOBILE) */
     .sticky-bar {
@@ -104,195 +171,624 @@
       background: #25D366; color: #fff; text-decoration: none; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 14px; border-radius: 10px; font-weight: 800; font-size: 1rem; width: 100%; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     }
 
+    @media (max-width: 1024px) {
+      .concept-grid, .pricing-grid, .conditions-grid { grid-template-columns: 1fr; }
+      .p-card.featured-card { transform: scale(1); }
+      .workspace-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 900px) {
-      h1 { font-size: 2.2rem; }
-      .benefits-grid, .pricing-grid { grid-template-columns: 1fr; }
-      .p-card.promo-card { transform: scale(1); margin-top: 20px; }
+      h1 { font-size: 2.1rem; }
       .sticky-bar { display: block; }
     }
   </style>
-    <script defer src="assets/js/reyes-conversion.js"></script>
+  <script defer src="assets/js/reyes-conversion.js"></script>
 </head>
 <body>
 
   <!-- NAVEGACIÓN CORPORATIVA FIJA -->
   <nav class="fixed top-0 left-0 w-full z-50 bg-[#060911]/95 backdrop-blur-md border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-12 w-auto group-hover:scale-105 transition">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+        <img src="assets/images/logo.png" alt="Reyes Computing Logo" class="h-10 w-auto group-hover:scale-105 transition" style="height: 40px; max-height: 40px;">
         <span class="font-orbitron text-lg md:text-xl font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
       </a>
       
-      <div class="hidden lg:flex items-center gap-5 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+      <nav class="hidden lg:flex items-center gap-5 font-orbitron text-xs font-semibold tracking-wider text-gray-300">
+        <a href="ofertas.html" class="px-3.5 py-1.5 text-cyan-400 bg-cyan-400/10 border border-cyan-400/50 rounded-full font-bold hover:bg-cyan-400 hover:text-black transition shadow-[0_0_15px_rgba(0,240,255,0.3)]">Ofertas</a>
         <a href="desarrollo-web.html" class="hover:text-cyan-400 transition">Desarrollo Web</a>
         <a href="publicidad-web.html" class="hover:text-cyan-400 transition">Google Ads</a>
         <a href="google-business-profile.html" class="hover:text-cyan-400 transition">Google Business</a>
         <a href="startups-fintech.html" class="hover:text-cyan-400 transition">Startups & Fintech</a>
         <a href="planes.html" class="hover:text-cyan-400 transition">Planes & Precios</a>
-        <a href="ofertas.html" class="hover:text-cyan-400 transition">Ofertas</a>
-      </div>
+      </nav>
 
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="contacto.html?servicio=diagnostico" data-origen="navbar" class="px-5 py-2.5 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon flex items-center gap-2 font-orbitron">
+      <div class="flex items-center gap-4 flex-shrink-0">
+        <a href="contacto.html?servicio=diagnostico" data-origen="navbar" class="hidden sm:flex px-5 py-2.5 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-xs font-bold tracking-widest shadow-neon items-center gap-2 font-orbitron">
           <i class="fa-solid fa-envelope text-sm"></i> Diagnóstico Gratis
         </a>
+        <button id="mobile-menu-btn" class="text-white text-2xl hover:text-cyan-400 transition p-2 cursor-pointer" aria-label="Abrir menu principal">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-
-      <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl" aria-label="Abrir menu principal">
-        <i class="fa-solid fa-bars"></i>
-      </button>
     </div>
   </nav>
 
   <!-- MOBILE MENU OVERLAY -->
   <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-40 hidden flex flex-col justify-center items-center space-y-8 backdrop-blur-xl">
+    <a href="ofertas.html" class="text-2xl font-orbitron text-cyan-400 font-bold hover:text-white transition mobile-link">Ofertas</a>
     <a href="desarrollo-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Desarrollo Web</a>
     <a href="publicidad-web.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Google Ads</a>
     <a href="google-business-profile.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Google Business</a>
     <a href="startups-fintech.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Startups & Fintech</a>
     <a href="planes.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Planes & Precios</a>
-    <a href="ofertas.html" class="text-2xl font-orbitron text-white hover:text-reyes-cyan transition mobile-link">Ofertas</a>
     <a href="contacto.html?servicio=diagnostico" data-origen="navbar" class="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition uppercase text-sm font-bold tracking-widest shadow-neon mobile-link font-orbitron">
       Diagnóstico Gratis
     </a>
   </div>
 
   <!-- HERO SECTION -->
-  <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden text-center">
+  <header class="relative min-h-[85vh] flex items-center justify-center pt-28 pb-20 overflow-hidden text-center">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
       <img src="assets/images/hero-bg.png" alt="Background" class="w-full h-full object-cover opacity-60">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#090d16]/50 via-[#090d16]/80 to-[#090d16]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#090d16]/60 via-[#090d16]/85 to-[#090d16]"></div>
     </div>
     <div class="container relative z-10 max-w-5xl mx-auto px-6">
-      <div class="badge-promo">🔥 PROMO LIMITADA: 50% OFF EN TU LANDING PAGE DE VENTAS</div>
-      <h1 class="font-orbitron text-4xl md:text-6xl font-bold text-white leading-tight mb-6">Páginas Web y Sistemas de Venta por WhatsApp para <span class="text-cyan-400 text-reyes-cyan">Empresas en Colombia</span></h1>
+      <div class="badge-promo"><i class="fa-solid fa-shield-halved mr-2"></i> COMBOS COMERCIALES CON ALCANCE DEFINIDO</div>
+      <h1 class="font-orbitron text-4xl md:text-6xl font-bold text-white leading-tight mb-6">Captación con Google Ads, Sedes Digitales y <span class="text-cyan-400 text-reyes-cyan">Tiendas Online</span></h1>
       <p class="hero-p text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light leading-relaxed">
-        Creamos tu sitio web profesional o tienda online de alta conversión para captar clientes en Google. Y por tiempo limitado: adquiere tu <strong>Landing Page de Ventas con 50% de descuento</strong> para tu negocio en Colombia.
+        Modelos comerciales claros y sin tecnicismos para empresas en Colombia. Elige el objetivo real de tu negocio: captar clientes nuevos hoy mismo con pauta en Google, respaldar tu empresa con una sede digital corporativa o automatizar ventas por catálogo.
       </p>
       <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20aprovechar%20la%20promo%20del%2050%25%20en%20la%20Landing%20Page" class="btn-hero" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp text-xl mr-1"></i> Aprovechar Promo 50% por WhatsApp →
+        <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20quiero%20recibir%20una%20propuesta%20comercial%20para%20mi%20negocio" class="btn-hero" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp text-xl mr-1"></i> Solicitar propuesta por WhatsApp →
         </a>
-        <a href="#planes" class="btn-secondary">Ver Todos los Planes</a>
+        <a href="#combos" class="btn-secondary">
+          <i class="fa-solid fa-layer-group"></i> Ver Combos y Precios
+        </a>
+      </div>
+
+      <!-- ACCESOS RÁPIDOS -->
+      <div class="nav-pills">
+        <a href="#arquitectura" class="nav-pill">1. ¿Qué vende cada producto?</a>
+        <a href="#combos" class="nav-pill">2. Combos Principales</a>
+        <a href="#comparativa" class="nav-pill">3. Tabla Comparativa & Google Workspace</a>
+        <a href="#adicionales" class="nav-pill">4. Material Cliente vs. Generación desde Cero</a>
+        <a href="#condiciones" class="nav-pill">5. Condiciones & Renovación</a>
       </div>
     </div>
   </header>
 
-  <!-- BENEFICIOS -->
-  <div class="container">
-    <div class="benefits-grid">
-      <div class="b-card">
-        <div class="b-icon">⚡</div>
-        <h3>Optimización de carga en móviles</h3>
-        <p>Optimizamos imágenes y recursos para facilitar la navegación desde celulares. El tiempo de carga depende del dispositivo y la conexión.</p>
+  <!-- SECCIÓN 1: ARQUITECTURA CONCEPTUAL: ¿QUÉ VENDE CADA PRODUCTO? -->
+  <section class="container py-16" id="arquitectura">
+    <div class="section-header">
+      <div class="tagline">Arquitectura Conceptual</div>
+      <h2>¿Qué vende cada producto en lenguaje sencillo?</h2>
+      <p>Para que cualquier comerciante o empresario entienda con total exactitud qué está comprando, dividimos nuestra oferta según el objetivo real de negocio:</p>
+    </div>
+
+    <div class="concept-grid">
+      <!-- 1. Mostrador de Anuncios -->
+      <div class="concept-card">
+        <div>
+          <div class="concept-icon text-cyan-400"><i class="fa-solid fa-bullhorn"></i></div>
+          <div class="product-name">1. Mostrador de Anuncios</div>
+          <h3>Combo Captación (Landing Page + Google Ads)</h3>
+          <p>La página donde aterriza la gente que hace clic en un anuncio de Google para que no se pierda y escriba directo al WhatsApp lista para cotizar. <strong>Va unida a anuncios porque una landing sin publicidad no recibe visitas.</strong></p>
+        </div>
+        <div class="concept-target">
+          <strong>¿Para quién es?</strong> Negocios que quieren recibir mensajes y llamadas de clientes nuevos de inmediato mediante publicidad en Google.
+        </div>
       </div>
-      <div class="b-card">
-        <div class="b-icon">💬</div>
-        <h3>Cierre Directo en WhatsApp</h3>
-        <p>Botones estratégicos en toda la página para que el cliente solo tenga que dar un toque y empiece a chatear contigo listo para comprar.</p>
+
+      <!-- 2. Sede Digital -->
+      <div class="concept-card">
+        <div>
+          <div class="concept-icon text-blue-400"><i class="fa-solid fa-building-shield"></i></div>
+          <div class="product-name">2. Sede Digital / Presentación</div>
+          <h3>Sitio Web Oficial de Empresa (Hasta 5 Secciones)</h3>
+          <p>La página formal de la empresa o de un producto único para compartir por tarjeta de presentación, firma de correo, licitaciones o búsqueda directa por nombre en Google, sin depender de anuncios pagos.</p>
+        </div>
+        <div class="concept-target">
+          <strong>¿Para quién es?</strong> Empresas que necesitan respaldo institucional, mostrar trayectoria, portafolio de servicios y correo bajo su propio dominio.
+        </div>
       </div>
-      <div class="b-card">
-        <div class="b-icon">🎯</div>
-        <h3>Diseño 100% para Móviles</h3>
-        <p>Diseñamos para que tus clientes puedan leer la oferta y contactarte desde un teléfono o una computadora.</p>
+
+      <!-- 3. Mostrador de Ventas -->
+      <div class="concept-card">
+        <div>
+          <div class="concept-icon text-emerald-400"><i class="fa-solid fa-cash-register"></i></div>
+          <div class="product-name">3. Mostrador de Ventas</div>
+          <h3>Tienda Online (Catálogo, Carrito y Pedidos)</h3>
+          <p>El mostrador comercial con decenas de productos, precios publicados, buscador, carrito de compras, inventario y recepción de pedidos automatizada sin depender de responder uno a uno.</p>
+        </div>
+        <div class="concept-target">
+          <strong>¿Para quién es?</strong> Comercios, distribuidores y marcas que venden múltiples referencias y quieren tomar pedidos 24/7 sin fricción.
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SECCIÓN DE PRECIOS TRANSPARENTES -->
-  <section class="container pricing-section" id="planes">
-    <div class="section-title">
-      <h2>Precios Claros y Sin Sorpresas</h2>
-      <p>Elige el plan ideal para tu negocio. Facturación oficial y entrega rápida.</p>
+  <!-- SECCIÓN 2: COMBOS PRINCIPALES Y TARIFAS -->
+  <section class="container pricing-section" id="combos">
+    <div class="section-header">
+      <div class="tagline">Estructura Comercial</div>
+      <h2>Combos Principales para tu Negocio</h2>
+      <p>Propuestas comerciales con alcance, especificaciones y tiempos de entrega definidos desde el inicio.</p>
+    </div>
+
+    <!-- DISCLAIMER OBLIGATORIO DE POLÍTICA Y CONDICIONES -->
+    <div class="disclaimer-banner">
+      <h4><i class="fa-solid fa-clipboard-check text-cyan-400 mr-2"></i> Alcances Claros y Sin Sorpresas</h4>
+      <p>Elige el servicio adecuado. La propuesta confirma facturación, requisitos y plazo estimado. Todos los paquetes incluyen dominio (.com o .co) y hosting con certificado SSL por 1 año.</p>
+      <p>Logo, fotos, videos y textos los aporta el cliente. La producción de material visual nuevo es un servicio de valor agregado, cotizado aparte. Clasificar, recortar, optimizar o integrar un volumen de imágenes superior al acordado en la propuesta también se cotiza aparte. El correo corporativo no está incluido en los paquetes base: se conecta a tu Google Workspace o Microsoft 365, o se adquiere en los combos con licencias Google Workspace incluidas.</p>
     </div>
 
     <div class="pricing-grid">
 
-      <!-- PLAN 1: LANDING PAGE PROMO 50% -->
-      <div class="p-card promo-card">
-        <div class="tag-promo">🔥 PROMO 50% OFF</div>
+      <!-- COMBO 1: MOSTRADOR DE ANUNCIOS (LANDING + GOOGLE ADS) -->
+      <div class="p-card featured-card">
+        <span class="tag-featured" style="background:#00f0ff !important; color:#000000 !important; font-weight:900 !important;">COMBO CAPTACIÓN RECOMENDADO</span>
         <div>
-          <h3>Landing Page de Ventas</h3>
-          <p style="color:var(--text-muted); font-size: 0.9rem;">Ideal para promocionar un producto, servicio o campaña.</p>
-          <div class="old-price">Antes: $1.200.000 COP / $300 USD</div>
-          <div class="new-price">$599.000 <span>COP / $150 USD</span></div>
-          <p style="color: #f87171; font-weight: 700; font-size: 0.85rem;">⚡ Entrega en 5 días hábiles</p>
+          <div class="delivery-badge fast"><i class="fa-solid fa-clock"></i> Plazo estimado: 5 días hábiles</div>
+          <h3 class="text-2xl font-orbitron font-bold text-white mb-1">Mostrador de Anuncios</h3>
+          <p class="text-cyan-400 font-semibold text-xs tracking-wider uppercase mb-2">Landing Page + Google Ads</p>
+          
+          <div class="promise-box">
+            "Porque una página para anuncios sin publicidad no recibe visitas. Te entregamos el anuncio en Google trayendo gente hoy mismo y la página lista para convertirlos en mensajes de WhatsApp."
+          </div>
+
+          <div class="price-headline">$1.590.000 <span>COP</span></div>
+          <p class="text-gray-400 text-xs mb-3">Opción A: Landing ($990.000) + Paquete mínimo en Google Ads ($600.000)</p>
+
+          <div class="price-suboption">
+            <span class="text-cyan-400 font-bold block text-xs uppercase mb-1">Opción B (+ Google Workspace 1 año):</span>
+            <strong class="text-white text-base">$2.630.000 COP</strong>
+            <p class="text-gray-400 text-xs mt-1">Landing con 1 año Google Workspace Business Starter ($2.030.000) + Google Ads ($600.000).</p>
+          </div>
+
+          <p class="text-xs text-gray-400 italic mb-4">
+            *Venta individual sin anuncios: Web de 1 Producto por <strong>$990.000 COP</strong> (o <strong>$2.030.000 COP</strong> con Google Workspace).
+          </p>
+
           <ul class="features-list">
-            <li>1 Página de ventas de alto impacto</li>
-            <li>Enlace directo y botón flotante de WhatsApp</li>
-            <li>Dominio (.com o .co) y Hosting por 1 año</li>
-            <li>Optimización ultra-rápida para celulares</li>
-            <li>Formulario de cotización directa</li>
-            <li>Facturación e impuestos según servicio y país</li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>1 página de aterrizaje persuasiva:</strong> enfocada 100% en tu oferta para cotizar sin distracciones.</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>Conversión directa a WhatsApp y Formulario:</strong> botón flotante contextualizado + protección anti-bots (Cloudflare Turnstile).</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>Dominio .com o .co + Hosting</strong> de alta velocidad con certificado SSL por 1 año.</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>Hasta 10 fotos optimizadas</strong> aportadas por el cliente en formato ligero de carga rápida.</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>2 rondas de ajustes</strong> de diseño y texto antes de salir al aire.</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><strong>Etiquetas de conversión de Google Ads instaladas</strong> y anuncio activo con el paquete de $600.000 COP en Google Ads.</span></li>
+            <li><i class="fa-solid fa-check text-cyan-400"></i><span><em>(En Opción B)</em> 1 cuenta con Google Workspace Business Starter (30 GB) por 12 meses + blindaje DNS (MX, SPF, DKIM, DMARC).</span></li>
           </ul>
         </div>
-        <a href="ofertas.html" data-origen="promo-landing" class="btn-card green">
-          Quiero la Promo del 50%
-        </a>
+
+        <div class="space-y-2 mt-4">
+          <a href="contacto.html?servicio=landing#contactForm" data-origen="landing" class="btn-card green">
+            Solicitar propuesta
+          </a>
+          <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20me%20interesa%20el%20Combo%201%20de%20Landing%20Page%20y%20Google%20Ads" class="btn-card outline" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> Cotizar por WhatsApp
+          </a>
+        </div>
       </div>
 
-      <!-- PLAN 2: WEB EMPRESARIAL -->
+      <!-- COMBO 2: SEDE DIGITAL OFICIAL DE EMPRESA -->
       <div class="p-card">
+        <span class="tag-standard">PRESENCIA INSTITUCIONAL</span>
         <div>
-          <h3>Sitio Web Empresarial</h3>
-          <p style="color:var(--text-muted); font-size: 0.9rem;">Para empresas consolidadas que ofrecen múltiples servicios.</p>
-          <div class="new-price" style="margin-top: 36px;">$1.350.000 <span>COP / $350 USD</span></div>
-          <p style="color: var(--accent); font-weight: 700; font-size: 0.85rem;">Entrega en 7 a 10 días</p>
+          <div class="delivery-badge standard"><i class="fa-solid fa-clock"></i> Plazo estimado: 10 días hábiles</div>
+          <h3 class="text-2xl font-orbitron font-bold text-white mb-1">Sede Digital Oficial</h3>
+          <p class="text-blue-400 font-semibold text-xs tracking-wider uppercase mb-2">Sitio Web Empresarial (Hasta 5 Secciones)</p>
+          
+          <div class="promise-box">
+            "La sede digital oficial de tu empresa para generar confianza ante clientes corporativos, proveedores y licitaciones, mostrando todos tus servicios y trayectoria."
+          </div>
+
+          <div class="price-headline">$2.090.000 <span>COP</span></div>
+          <p class="text-gray-400 text-xs mb-3">Opción A: Sitio Web Oficial de Empresa (pago único, sin correo)</p>
+
+          <div class="price-suboption">
+            <span class="text-blue-400 font-bold block text-xs uppercase mb-1">Opción B (+ Google Workspace 1 año):</span>
+            <strong class="text-white text-base">$4.090.000 COP</strong>
+            <p class="text-gray-400 text-xs mt-1">Sitio Web + 1 cuenta anual Google Workspace Business Standard (2 TB de almacenamiento, Meet con grabación).</p>
+          </div>
+
           <ul class="features-list">
-            <li>Hasta 5 secciones completas (Inicio, Servicios, etc.)</li>
-            <li>Catálogo de productos o portafolio de proyectos</li>
-            <li>Integración con Google Maps y WhatsApp</li>
-            <li>Correos corporativos con tu dominio</li>
-            <li>Optimización SEO para aparecer en Google</li>
-            <li>Facturación e impuestos según servicio y país</li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>Hasta 5 secciones o páginas internas independientes:</strong> Inicio, Nosotros, Servicios/Portafolio, Proyectos y Contacto.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>Dominio .com o .co + Hosting</strong> de alta velocidad con certificado SSL por 1 año.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>Hasta 40 fotos optimizadas:</strong> integración de imágenes de equipo, instalaciones o proyectos entregadas por el cliente.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>Indexación en Google (SEO técnico base):</strong> configuración de metadatos, sitemap.xml, canonicals y registro en Google Search Console.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>Canales de contacto:</strong> integración a WhatsApp corporativo y formulario seguro anti-spam.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><strong>2 rondas de revisión y ajustes</strong> antes de la entrega formal.</span></li>
+            <li><i class="fa-solid fa-check text-blue-400"></i><span><em>(En Opción B)</em> Google Workspace Business Standard (2 TB) por 12 meses + configuración técnica de DNS (MX, SPF, DKIM, DMARC).</span></li>
           </ul>
         </div>
-        <a href="contacto.html?servicio=sitio-web#contactForm" data-origen="sitio-web" class="btn-card blue">
-          Cotizar Web Empresarial
-        </a>
+
+        <div class="space-y-2 mt-4">
+          <a href="contacto.html?servicio=sitio-web#contactForm" data-origen="sitio-web" class="btn-card blue">
+            Cotizar Web Empresarial
+          </a>
+          <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20me%20interesa%20el%20Sitio%20Web%20Oficial%20de%20Empresa" class="btn-card outline" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp text-blue-400 mr-1"></i> Cotizar por WhatsApp
+          </a>
+        </div>
       </div>
 
-      <!-- PLAN 3: TIENDA ONLINE -->
-      <div class="p-card">
+      <!-- COMBO 3: MOSTRADOR DE VENTAS - TIENDA ONLINE -->
+      <div class="p-card store-card">
+        <span class="tag-standard" style="border-color:#10b981; color:#34d399;">VENTAS POR CATÁLOGO</span>
         <div>
-          <h3>Tienda Online (E-Commerce)</h3>
-          <p style="color:var(--text-muted); font-size: 0.9rem;">Para vender productos físicos por internet 24/7.</p>
-          <div class="new-price" style="margin-top: 36px;">$2.200.000 <span>COP / $550 USD</span></div>
-          <p style="color: var(--accent); font-weight: 700; font-size: 0.85rem;">Entrega en 10 a 14 días</p>
+          <div class="delivery-badge store"><i class="fa-solid fa-clock"></i> Plazo estimado: 15 a 20 días hábiles</div>
+          <h3 class="text-2xl font-orbitron font-bold text-white mb-1">Mostrador de Ventas</h3>
+          <p class="text-emerald-400 font-semibold text-xs tracking-wider uppercase mb-2">Tienda Online (Catálogo, Carrito y Pedidos)</p>
+          
+          <div class="promise-box">
+            "Deja de responder '¿qué precio tiene?' todo el día en WhatsApp. Tu propio mostrador de ventas abierto 24/7 con catálogo, precios actualizados, carrito de compras y recepción de pedidos."
+          </div>
+
+          <div class="price-headline">$4.460.000 <span>COP</span></div>
+          <p class="text-gray-400 text-xs mb-3">Precio base oficial (pago único)</p>
+
+          <div class="price-suboption">
+            <span class="text-emerald-400 font-bold block text-xs uppercase mb-1">Ecosistema Modular:</span>
+            <p class="text-gray-400 text-xs">Integración de pasarelas, app móvil o sincronización masiva de inventario cotizables en nuestra sección de <a href="tiendas-online.html" class="text-cyan-400 underline">Tiendas Online</a>.</p>
+          </div>
+
           <ul class="features-list">
-            <li>Catálogo autoadministrable de productos</li>
-            <li>Carrito de compras y cálculo de envíos</li>
-            <li>Pasarelas de pago (Stripe, Wompi, PSE)</li>
-            <li>Confirmación automática de pedidos por WhatsApp</li>
-            <li>Panel fácil para subir fotos y precios tú mismo</li>
-            <li>Capacitación en video para tu equipo</li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>Catálogo digital autoadministrable:</strong> carga inicial de hasta 150 productos/imágenes optimizadas.</span></li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>Buscador en tiempo real y filtros</strong> por categorías para navegación ágil.</span></li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>Fichas de producto con precios</strong> y carrito de compras sin fricción.</span></li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>Flujo de pedidos (Checkout)</strong> y panel para gestionar inventario, precios y estados.</span></li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>Dominio .com o .co + Hosting</strong> de alta capacidad con SSL por 1 año.</span></li>
+            <li><i class="fa-solid fa-check text-emerald-400"></i><span><strong>2 rondas de revisión</strong> y sesión de capacitación en video del panel administrativo.</span></li>
           </ul>
         </div>
-        <a href="contacto.html?servicio=tienda-online#contactForm" data-origen="tienda-online" class="btn-card blue">
-          Cotizar Tienda Online
-        </a>
+
+        <div class="space-y-2 mt-4">
+          <a href="contacto.html?servicio=tienda-online#contactForm" data-origen="tienda-online" class="btn-card blue">
+            Cotizar Tienda Online
+          </a>
+          <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing,%20me%20interesa%20la%20Tienda%20Online%20con%20catálogo%20y%20pedidos" class="btn-card outline" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> Cotizar por WhatsApp
+          </a>
+        </div>
       </div>
 
     </div>
   </section>
 
+  <!-- SECCIÓN 3: TABLA COMPARATIVA Y PLANES GOOGLE WORKSPACE -->
+  <section class="container py-16" id="comparativa">
+    <div class="section-header">
+      <div class="tagline">Especificaciones Técnicas</div>
+      <h2>Tabla Comparativa de Especificaciones</h2>
+      <p>Resumen detallado de especificaciones, horas estimadas, fotos incluidas y entregables de cada combo comercial.</p>
+    </div>
+
+    <div class="table-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Producto / Combo</th>
+            <th>Plazo Estimado</th>
+            <th>Fotos Incluidas</th>
+            <th>Precio Venta (COP)</th>
+            <th>Qué incluye el precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>COMBO-1A</strong></td>
+            <td><strong>Landing Page + Paquete Mínimo Google Ads</strong></td>
+            <td>5 días hábiles</td>
+            <td>Hasta 10</td>
+            <td class="text-cyan-400 font-bold">$1.590.000</td>
+            <td>Landing ($990.000) + Paquete mínimo en Google Ads ($600.000). Dominio y hosting 1 año.</td>
+          </tr>
+          <tr>
+            <td><strong>COMBO-1B</strong></td>
+            <td><strong>Landing + Google Workspace (1 año) + Google Ads</strong></td>
+            <td>5 días hábiles</td>
+            <td>Hasta 10</td>
+            <td class="text-cyan-400 font-bold">$2.630.000</td>
+            <td>Landing + 1 año Google Workspace Starter ($2.030.000) + Paquete mínimo Google Ads ($600.000).</td>
+          </tr>
+          <tr>
+            <td><strong>BASE-1A</strong></td>
+            <td><strong>Solo Landing Page / Web de 1 Producto (sin anuncios)</strong></td>
+            <td>5 días hábiles</td>
+            <td>Hasta 10</td>
+            <td class="text-white font-bold">$990.000</td>
+            <td>1 página enfocada en 1 producto/servicio, dominio .com/.co + hosting 1 año, WhatsApp y formulario.</td>
+          </tr>
+          <tr>
+            <td><strong>BASE-1B</strong></td>
+            <td><strong>Landing / Web 1 Producto + Google Workspace (1 año)</strong></td>
+            <td>5 días hábiles</td>
+            <td>Hasta 10</td>
+            <td class="text-white font-bold">$2.030.000</td>
+            <td>Igual a BASE-1A + 1 licencia anual Google Workspace Business Starter (30 GB) + DNS y seguridad.</td>
+          </tr>
+          <tr>
+            <td><strong>COMBO-2A</strong></td>
+            <td><strong>Sitio Web Oficial de Empresa (hasta 5 secciones)</strong></td>
+            <td>10 días hábiles</td>
+            <td>Hasta 40</td>
+            <td class="text-blue-400 font-bold">$2.090.000</td>
+            <td>Hasta 5 secciones, dominio .com/.co + hosting 1 año, SEO técnico base, WhatsApp y formulario.</td>
+          </tr>
+          <tr>
+            <td><strong>COMBO-2B</strong></td>
+            <td><strong>Sitio Web Oficial de Empresa + Google Workspace (1 año)</strong></td>
+            <td>10 días hábiles</td>
+            <td>Hasta 40</td>
+            <td class="text-blue-400 font-bold">$4.090.000</td>
+            <td>Igual a COMBO-2A + 1 licencia anual Google Workspace Business Standard (2 TB) + DNS y seguridad.</td>
+          </tr>
+          <tr>
+            <td><strong>COMBO-3</strong></td>
+            <td><strong>Mostrador de Ventas — Tienda Online</strong></td>
+            <td>15 a 20 días hábiles</td>
+            <td>Hasta 150</td>
+            <td class="text-emerald-400 font-bold">$4.460.000</td>
+            <td>Catálogo hasta 150 productos/fotos, filtros, carrito, pedidos, dominio .com/.co + hosting 1 año.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ESPECIFICACIÓN GOOGLE WORKSPACE -->
+    <div class="mt-12">
+      <h3 class="text-xl font-orbitron font-bold text-white mb-4">Especificación de Planes Google Workspace Oficiales</h3>
+      <div class="workspace-grid">
+        <div class="ws-card">
+          <h4><i class="fa-brands fa-google text-red-400"></i> Google Workspace Business Starter</h4>
+          <p class="text-xs uppercase text-cyan-400 font-bold">Incluido en COMBO-1B / BASE-1B (Landing con Correo)</p>
+          <ul class="text-sm space-y-2 text-gray-300">
+            <li><strong>Almacenamiento:</strong> 30 GB en la nube por usuario (Gmail + Google Drive).</li>
+            <li><strong>Reuniones:</strong> Google Meet para hasta 100 participantes.</li>
+            <li><strong>Seguridad y DNS:</strong> Configuración técnica de entrega incluida (registros MX, SPF, DKIM y política DMARC para máxima entregabilidad).</li>
+            <li><strong>Tarifa oficial del proveedor:</strong> $416.976 COP/año ($34.748 COP/mes con IVA incluido).</li>
+          </ul>
+        </div>
+
+        <div class="ws-card">
+          <h4><i class="fa-brands fa-google text-blue-400"></i> Google Workspace Business Standard</h4>
+          <p class="text-xs uppercase text-blue-400 font-bold">Incluido en COMBO-2B (Sitio Web con Correo)</p>
+          <ul class="text-sm space-y-2 text-gray-300">
+            <li><strong>Almacenamiento:</strong> 2 TB (2.000 GB) en la nube por usuario.</li>
+            <li><strong>Colaboración:</strong> Unidades Compartidas para todo tu equipo de trabajo.</li>
+            <li><strong>Reuniones:</strong> Google Meet para 150 participantes con grabación guardada en Google Drive.</li>
+            <li><strong>Seguridad y DNS:</strong> Configuración técnica de entrega y blindaje anti-suplantación.</li>
+            <li><strong>Tarifa oficial del proveedor:</strong> $833.952 COP/año ($69.496 COP/mes con IVA incluido).</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-4">
+        *Servicio suelto de configuración o migración de dominio en Google Workspace (sin desarrollo web): <strong>$334.236 COP</strong> (incluye registro de dominio y configuración técnica de seguridad y entregabilidad; no incluye licencias mensuales del proveedor).
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: ADICIONALES DE CONTENIDO Y MARKETING (ESCENARIO A VS B) -->
+  <section class="container py-16" id="adicionales">
+    <div class="section-header">
+      <div class="tagline">Claridad Operativa</div>
+      <h2>Adicionales de Contenido y Marketing</h2>
+      <p>Para evitar confusiones, separamos con total transparencia cuándo el cliente <strong>entrega el material</strong> (y solo lo incorporamos o retocamos) y cuándo el cliente <strong>no tiene material y debemos generarlo desde cero</strong>:</p>
+    </div>
+
+    <!-- ESCENARIO A: EL CLIENTE SÍ ENTREGA EL MATERIAL -->
+    <div class="scenario-box">
+      <div class="scenario-badge has-material"><i class="fa-solid fa-file-arrow-up"></i> 5.1. Escenario A: El cliente SÍ entrega el material (Incorporación y Retoque)</div>
+      <p class="text-gray-300 text-sm">
+        Aplica cuando el cliente ya cuenta con sus propias fotografías o videos tomados, pero supera el límite de imágenes incluido en su paquete base (10 en Landing, 40 en Sitio Web, 150 en Tienda) o sus tomas requieren corrección antes de salir al aire:
+      </p>
+
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Incorporación de Imágenes Adicionales (Pack 50 fotos)</h5>
+            <div class="price-tag">$142.717 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega las fotos listas; nosotros las clasificamos, renombramos, comprimimos a formato ligero de carga rápida (WebP) y las subimos a galerías o catálogo por encima del tope acordado.</p>
+          </div>
+          <div class="meta-h">Gestión y procesamiento técnico de catálogo.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Retoque y Limpieza de Fotos del Cliente (Pack 20 fotos)</h5>
+            <div class="price-tag">$389.228 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega fotos crudas tomadas con celular o cámara; nosotros realizamos recorte, eliminación de fondo, corrección de iluminación/color y ajuste dimensional para web.</p>
+          </div>
+          <div class="meta-h">Posproducción y retoque digital profesional.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Edición de Video Corto con Tomas del Cliente (Hasta 60 s)</h5>
+            <div class="price-tag">$648.713 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>El cliente entrega los clips grabados; nosotros armamos el video comercial con cortes dinámicos, subtítulos llamativos, música libre de derechos y formato adaptado para web o pauta.</p>
+          </div>
+          <div class="meta-h">Edición audiovisual comercial adaptada para web o pauta.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESCENARIO B: EL CLIENTE NO TIENE MATERIAL -->
+    <div class="scenario-box">
+      <div class="scenario-badge no-material"><i class="fa-solid fa-wand-magic-sparkles"></i> 5.2. Escenario B: El cliente NO tiene material (Generación de Contenido desde Cero)</div>
+      <p class="text-gray-300 text-sm">
+        Aplica cuando el cliente no cuenta con logo, ni fotografías utilizables, ni piezas publicitarias, y Reyes Computing debe <strong>producir y generar el contenido digitalmente</strong> mediante diseño gráfico profesional, IA de alta resolución, bancos comerciales licenciados, fotomontaje y redacción persuasiva:
+      </p>
+
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Generación de Imágenes Comerciales (Pack 10 imágenes)</h5>
+            <div class="price-tag">$389.228 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación de las 10 imágenes requeridas para una Landing Page cuando el cliente no tiene fotos: generación con IA profesional, curaduría de banco de imágenes comercial o fotomontaje de producto/servicio.</p>
+          </div>
+          <div class="meta-h">Generación digital y curaduría comercial de imágenes.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Pack de 5 Piezas Gráficas / Banners Publicitarios</h5>
+            <div class="price-tag">$518.970 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación desde cero de 5 creatividades publicitarias (composiciones visuales + textos de oferta de alta conversión) listos para anuncios de Google Display, pauta o banners web.</p>
+          </div>
+          <div class="meta-h">Producción gráfica comercial para anuncios y web.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Kit de Identidad Visual Básica (Creación de Marca)</h5>
+            <div class="price-tag">$778.455 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Creación desde cero del logotipo del negocio (2 propuestas conceptuales + 2 rondas de ajustes), definición de colores corporativos, tipografías y manual básico para construir el sitio web.</p>
+          </div>
+          <div class="meta-h">Diseño de identidad visual corporativa.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Producción de Video Comercial Digital (Hasta 60 s sin tomas)</h5>
+            <div class="price-tag">$778.455 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Guion comercial + producción con escenas de stock/IA, locución digital o música licenciada, textos animados y llamado a la acción cuando el cliente no tiene videos grabados.</p>
+          </div>
+          <div class="meta-h">Producción audiovisual digital completa.</div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-4 bg-black/40 border border-white/10 rounded-lg text-xs text-gray-300">
+        <i class="fa-solid fa-camera-retro text-cyan-400 mr-1"></i> <strong>Nota sobre fotografía o grabación presencial:</strong> Todos los paquetes anteriores son de <strong>producción digital en estudio</strong>. Si el cliente requiere que un fotógrafo o camarógrafo acuda físicamente a su local, bodega o planta, la sesión presencial se cotiza por separado según ciudad, traslados y horas en locación.
+      </div>
+    </div>
+
+    <!-- 5.3 SERVICIOS DE TRÁFICO Y CONTINUIDAD -->
+    <div class="scenario-box">
+      <div class="scenario-badge traffic"><i class="fa-solid fa-chart-line"></i> 5.3. Servicios de Tráfico y Continuidad Mensual (Google Ads + Mantenimiento)</div>
+      <div class="addons-subgrid">
+        <div class="addon-item">
+          <div>
+            <h5>Paquete Mínimo Google Ads (Incluido en Combo 1)</h5>
+            <div class="price-tag">$600.000 <span class="text-xs font-normal text-gray-400">COP</span></div>
+            <p>Presupuesto mínimo de pauta directa para 30 días de anuncios activos ($20.000 COP/día) llevando tráfico de búsqueda intencionado a la Landing Page.</p>
+          </div>
+          <div class="meta-h">Pauta activa directa en Google Ads.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Campaña Google Ads de Arranque (Individual / Avanzada)</h5>
+            <div class="price-tag">$1.040.000 <span class="text-xs font-normal text-gray-400">(+ pauta)</span></div>
+            <p>Investigación avanzada de palabras clave, estructura de campaña, redacción de anuncios RSA, extensiones, lista de palabras negativas, etiquetas de conversión y 1 mes de gestión y optimización.</p>
+          </div>
+          <div class="meta-h">Estructuración, montaje y optimización de campaña.</div>
+        </div>
+
+        <div class="addon-item">
+          <div>
+            <h5>Plan Motor de Clientes (Mensual Recurrente)</h5>
+            <div class="price-tag text-emerald-400 text-base">Cotización según alcance</div>
+            <p>Administración y optimización mensual continua de campañas en Google Ads + ajustes, mejoras y soporte continuo sobre la página web para maximizar contactos comerciales.</p>
+          </div>
+          <div class="meta-h">Gestión y soporte continuo; saldo de clics pagado a Google por separado.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: CONDICIONES OPERATIVAS Y RENOVACIONES TRANSPARENTES -->
+  <section class="container py-16" id="condiciones">
+    <div class="section-header">
+      <div class="tagline">Garantía y Operación</div>
+      <h2>Condiciones de Servicio y Renovaciones Año 2</h2>
+      <p>Reglas operativas claras para que trabajemos con total transparencia y confianza mutua:</p>
+    </div>
+
+    <div class="conditions-grid">
+      <!-- 1. Rondas de Revisión -->
+      <div class="cond-card">
+        <h3><i class="fa-solid fa-pen-ruler text-cyan-400"></i> 1. Rondas de Revisión</h3>
+        <p>Todos los paquetes de desarrollo web incluyen <strong>2 rondas de ajustes</strong> de diseño y textos antes de la publicación final. Cualquier cambio estructural posterior a la aprobación definitiva se cotiza según alcance o mediante los complementos de valor agregado.</p>
+      </div>
+
+      <!-- 2. Límite de Fotos e Imágenes -->
+      <div class="cond-card">
+        <h3><i class="fa-solid fa-camera text-blue-400"></i> 2. Límite de Fotos e Imágenes</h3>
+        <p>Para asegurar velocidades óptimas de carga y control operativo:</p>
+        <ul>
+          <li><strong>Landing Page (Combo 1):</strong> Carga y optimización de hasta <strong>10 imágenes</strong> entregadas por el cliente.</li>
+          <li><strong>Sitio Web Oficial (Combo 2):</strong> Carga y optimización de hasta <strong>40 imágenes</strong> entregadas por el cliente.</li>
+          <li><strong>Tienda Online (Combo 3):</strong> Carga y optimización de hasta <strong>150 imágenes</strong> entregadas por el cliente.</li>
+        </ul>
+        <p class="mt-2 text-xs text-gray-400">Si el cliente envía un volumen superior al acordado, aplica el Pack de Incorporación de 50 imágenes ($142.717 COP). Si el cliente no tiene imágenes, aplica el Pack de Generación de 10 imágenes ($389.228 COP).</p>
+      </div>
+
+      <!-- 3. Soporte Post-Entrega -->
+      <div class="cond-card">
+        <h3><i class="fa-solid fa-headset text-emerald-400"></i> 3. Soporte Post-Entrega</h3>
+        <p>Atención y soporte técnico por WhatsApp en <strong>horario laboral de lunes a viernes</strong>. No incluye cobertura humana 24/7 inmediata, la cual pertenece a nuestros contratos corporativos dedicados de SLA/retención mensual.</p>
+      </div>
+
+      <!-- 4. Renovaciones a Costo Directo (Año 2) -->
+      <div class="cond-card">
+        <h3><i class="fa-solid fa-arrows-rotate text-purple-400"></i> 4. Renovación Año 2 a Costo Directo</h3>
+        <p>A partir del segundo año no te cobramos rediseño. Pagas únicamente la renovación directa de infraestructura y licencias a los proveedores:</p>
+        <ul>
+          <li><strong>Solo Dominio .com / .co + Hosting:</strong> <strong>$45.377 COP / año</strong> (tarifa directa del proveedor).</li>
+          <li><strong>Renovación Combo con Google Workspace Starter (1 usuario):</strong> <strong>$462.373 COP / año</strong> (Dominio $45.377 + licencia anual Business Starter con IVA $416.976).</li>
+          <li><strong>Renovación Combo con Google Workspace Standard (1 usuario):</strong> <strong>$879.329 COP / año</strong> (Dominio $45.377 + licencia anual Business Standard con IVA $833.952).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL DE DIAGNÓSTICO -->
+  <section class="container py-16 text-center">
+    <div class="bg-gradient-to-r from-[#0c1322] via-[#111726] to-[#0c1322] border border-cyan-400/30 rounded-2xl p-10 md:p-14 shadow-[0_0_40px_rgba(0,240,255,0.1)] max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-4">¿Tienes dudas sobre cuál es la opción ideal para tu empresa?</h2>
+      <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 font-light">
+        Podemos revisar tu presencia digital actual, definir si necesitas anuncios inmediatos en Google o una sede digital institucional, y entregarte una recomendación formal sin costo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="contacto.html?servicio=diagnostico" class="px-8 py-4 bg-cyan-400 text-black font-orbitron font-bold uppercase tracking-wider hover:bg-white transition shadow-neon">
+          <i class="fa-solid fa-envelope mr-2"></i> Diagnóstico Gratis
+        </a>
+        <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20asesoría%20sobre%20los%20combos%20de%20desarrollo%20web" class="btn-secondary" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp text-emerald-400 mr-2 text-xl"></i> Cotizar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Reyes Computing S.A.S. — NIT 901.815.420-5 · Cobertura en Colombia (Bogotá, Medellín, Cali)</p>
-      <p style="margin-top: 8px; font-size: 0.8rem;">Páginas web y tiendas online diseñadas para maximizar tus ventas.</p>
-      <p style="margin-top: 8px; font-size: 0.8rem;"><a href="ofertas.html" style="color: inherit; text-decoration: underline;">Ofertas</a></p>
+  <footer class="border-t border-white/10 py-10 bg-[#060911]">
+    <div class="container flex flex-col items-center justify-center">
+      <a href="index.html" class="flex items-center gap-3 mb-4 opacity-60 hover:opacity-100 transition">
+        <img src="assets/images/logo.png" alt="Reyes Computing" class="h-8 w-auto">
+        <span class="font-orbitron text-base font-bold tracking-widest uppercase text-white">Reyes<span class="text-cyan-400 text-reyes-cyan">Computing</span></span>
+      </a>
+      <div class="text-center font-sans text-xs text-gray-500 uppercase tracking-widest flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <span>© 2026 Reyes Computing S.A.S. · Colombia</span>
+        <span class="hidden sm:inline text-gray-700">|</span>
+        <a href="contacto.html#privacidad" class="hover:text-gray-400 transition">Aviso Legal</a>
+        <span class="hidden sm:inline text-gray-700">|</span>
+        <a href="ofertas.html" class="hover:text-cyan-400 transition">Ofertas</a>
+      </div>
     </div>
   </footer>
 
-  <!-- BARRA FIJA FLOTANTE PARA CELULARES (STICKY MOBILE) -->
-  <div class="sticky-bar">
-    <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20vi%20la%20promo%20del%2050%25%20y%20quiero%20cotizar%20mi%20Landing%20Page" class="sticky-btn" target="_blank" rel="noopener">
-      🟢 <i class="fa-brands fa-whatsapp text-xl mr-1"></i> Aprovechar Promo 50% por WhatsApp
-    </a>
-  </div>
-
+  <!-- BOTÓN FLOTANTE WHATSAPP FIJO (DISPONIBLE AL SCROLLEAR) -->
+  <a href="https://wa.me/573128084929?text=Hola%20Jefferson,%20quiero%20cotizar%20por%20WhatsApp" 
+     class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3.5 rounded-full font-bold shadow-[0_4px_25px_rgba(37,211,102,0.5)] hover:scale-105 transition duration-300 group" 
+     target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="font-sans text-sm font-extrabold tracking-wide hidden sm:inline">Cotizar por WhatsApp</span>
+  </a>
 
 </body>
 </html>
