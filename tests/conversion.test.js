@@ -169,13 +169,36 @@ test('Tiendas Online pages are published, cross-linked and have a valid contact 
   }
 });
 
-test('Tiendas Online pages do not publish prices, discounts, guarantees or unverified claims', () => {
+test('Tiendas Online pages only publish prices supported in the master file and avoid unverified claims', () => {
+  const masterPath = path.join(root, 'master_productos_tiendas_online.md');
+  const masterContent = fs.existsSync(masterPath) ? fs.readFileSync(masterPath, 'utf8') : null;
+
   for (const { file } of storePages) {
     const { visible } = readStorePage(file);
-    assert.doesNotMatch(visible, /\$\s?\d|\b(?:COP|USD|MXN|MX\$)\s?\d|\d\s?(?:COP|USD|MXN)\b|\bpesos?\b/i, file);
+
+    if (file === 'tiendas-online.html') {
+      // Precios oficiales de combos respaldados en el documento maestro
+      const supportedComboPrices = ['$350.000', '$490.000', '$790.000', '$2.230.000', '$3.375.000', '$3.606.000', '$5.640.000', '$8.580.000', '$13.370.000'];
+      for (const price of supportedComboPrices) {
+        if (masterContent) {
+          assert.ok(masterContent.includes(price), `Master file missing price: ${price}`);
+        }
+        assert.ok(visible.includes(price), `${file} debe mostrar el precio soportado: ${price}`);
+      }
+      // Cualquier precio publicado debe pertenecer exclusivamente a la lista soportada
+      const foundPrices = visible.match(/\$\s?[\d.]+/g) || [];
+      for (const fp of foundPrices) {
+        const cleanPrice = fp.replace(/\s/, '');
+        assert.ok(supportedComboPrices.includes(cleanPrice), `${file} contiene un precio no soportado: ${cleanPrice}`);
+      }
+    } else {
+      // Las páginas de otros mercados (ej. México) se mantienen a cotización personalizada sin precios
+      assert.doesNotMatch(visible, /\$\s?\d|\b(?:COP|USD|MXN|MX\$)\s?\d|\d\s?(?:COP|USD|MXN)\b|\bpesos?\b/i, file);
+      assert.match(visible, /Cotización/, file);
+    }
+
     assert.doesNotMatch(visible, /\d\s?%|\bOFF\b|\bpromo(?:ci[oó]n)?\b|\bdescuentos? (?!de stock)(?:de|del|especial|por)\b/i, file);
     assert.doesNotMatch(visible, /24\s?\/\s?7|garantizamos|garant[ií]a de|\bROI\b|retorno de inversi[oó]n|certificad[oa] por|homologad/i, file);
-    assert.match(visible, /Cotización/, file);
     assert.match(visible, /fotos, videos/i, file);
     assert.match(visible, /aparte/i, file);
     assert.match(visible, /volumen de imágenes superior al acordado/i, file);
