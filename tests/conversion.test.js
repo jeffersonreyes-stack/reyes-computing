@@ -177,7 +177,7 @@ test('Tiendas Online pages only publish prices supported in the master file and 
 
     if (file === 'tiendas-online.html') {
       // Precios oficiales de combos respaldados en el documento maestro
-      const supportedComboPrices = ['$490.000', '$750.000', '$1.190.000', '$5.640.000', '$8.580.000', '$13.370.000'];
+      const supportedComboPrices = ['$350.000', '$490.000', '$790.000', '$2.230.000', '$3.375.000', '$3.606.000', '$5.640.000', '$8.580.000', '$13.370.000'];
       for (const price of supportedComboPrices) {
         assert.ok(masterContent.includes(price), `Master file missing price: ${price}`);
         assert.ok(visible.includes(price), `${file} debe mostrar el precio soportado: ${price}`);
