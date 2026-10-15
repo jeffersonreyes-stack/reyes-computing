@@ -21,7 +21,7 @@ test('side menu links point to existing pages and cover the new services', () =>
   const { items } = loadMenu();
   const hrefs = items.flatMap((group) => group.enlaces.map((link) => link[2]));
   for (const href of hrefs) assert.ok(fs.existsSync(path.join(root, href)), href);
-  for (const required of ['tiendas-online.html', 'mexico-tiendas-online.html', 'mexico-desarrollo-web-marketing-digital.html', 'mexico-nube-seguridad-web.html', 'ofertas.html', 'contacto.html']) {
+  for (const required of ['tiendas-online.html', 'mexico-tiendas-online.html', 'mexico-desarrollo-web-marketing-digital.html', 'mexico-nube-seguridad-web.html', 'clientes-y-ventas.html', 'contacto.html']) {
     assert.ok(hrefs.includes(required), required);
   }
   assert.equal(new Set(hrefs).size, hrefs.length);

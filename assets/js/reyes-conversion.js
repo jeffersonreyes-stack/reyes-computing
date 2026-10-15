@@ -119,7 +119,7 @@ const MENU_LATERAL = [
   {
     titulo: 'Destacado',
     enlaces: [
-      ['fa-fire', 'Ofertas', 'https://www.reyescomputing.com/clientes-y-ventas.html']
+      ['fa-fire', 'Ofertas', 'clientes-y-ventas.html']
     ]
   },
   {
