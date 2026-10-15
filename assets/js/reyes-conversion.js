@@ -146,6 +146,9 @@ const MENU_LATERAL = [
   {
     titulo: 'Productos & Apps',
     enlaces: [
+      ['fa-bag-shopping', 'ListoShop (Moda)', 'listoshop.html'],
+      ['fa-gem', 'JuanShop (Lujo)', 'juanshop.html'],
+      ['fa-helmet-safety', 'Ferretero (B2B)', 'ferretero.html'],
       ['fa-bolt', 'PowerBud (Fitness & IA)', 'powerbud.html']
     ]
   },
