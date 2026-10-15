@@ -119,7 +119,7 @@ const MENU_LATERAL = [
   {
     titulo: 'Destacado',
     enlaces: [
-      ['fa-fire', 'Ofertas', 'ofertas.html']
+      ['fa-fire', 'Ofertas', 'clientes-y-ventas.html']
     ]
   },
   {
