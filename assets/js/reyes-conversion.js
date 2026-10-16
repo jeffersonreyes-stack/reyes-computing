@@ -129,6 +129,7 @@ const MENU_LATERAL = [
       ['fa-store', 'Tiendas Online', 'tiendas-online.html'],
       ['fa-bullhorn', 'Google Ads', 'publicidad-web.html'],
       ['fa-location-dot', 'Google Business', 'google-business-profile.html'],
+      ['fa-user-shield', 'Seguridad Web', 'websec.html'],
       ['fa-rocket', 'Startups & Fintech', 'startups-fintech.html'],
       ['fa-infinity', 'DevSecOps', 'devsecops-startups.html'],
       ['fa-cloud', 'Cloud On-Demand', 'infraestructura-nube-startups.html'],
