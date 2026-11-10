@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de combos y servicios | Reyes Computing</title>
+    <meta name="description" content="Elige tus combos de desarrollo web, Google Ads, tiendas online, apps y ciberseguridad. Arma un solo carrito y envía tu pedido por WhatsApp. Precios en COP.">
+    <link rel="canonical" href="https://www.reyescomputing.com/tienda.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.reyescomputing.com/tienda.html">
+    <meta property="og:title" content="Tienda de combos | Reyes Computing">
+    <meta property="og:description" content="Todos tus servicios digitales en un solo pedido. Compara combos, agrega complementos y envía tu carrito por WhatsApp.">
+    <meta property="og:image" content="https://www.reyescomputing.com/assets/images/logo.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18025178697"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18025178697');
+    </script>
+    <script defer src="assets/js/reyes-conversion.js"></script>
+    <style>
+        :root { color-scheme: dark; --shop-cyan: #00f3ff; --shop-muted: #b5c2d3; --shop-border: #25313e; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body { margin: 0; background: #050505; color: #e2e8f0; font-family: Inter, sans-serif; line-height: 1.6; }
+        button, input, select { font: inherit; }
+        button, a { -webkit-tap-highlight-color: transparent; }
+        button { cursor: pointer; }
+        a { color: inherit; }
+        button:disabled { opacity: .45; cursor: not-allowed; }
+        :focus-visible { outline: 2px solid var(--shop-cyan); outline-offset: 4px; }
+        [hidden] { display: none !important; }
+        .shop-wrap { width: min(1320px, 100% - 48px); margin-inline: auto; }
+        .shop-skip { position: fixed; top: -100px; left: 16px; z-index: 100; padding: 12px; background: var(--shop-cyan); color: #050505; }
+        .shop-skip:focus { top: 8px; }
+        .shop-header { position: fixed; inset: 0 0 auto; z-index: 50; background: #060911f2; border-bottom: 1px solid #ffffff14; backdrop-filter: blur(16px); }
+        .shop-header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .shop-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: Orbitron, sans-serif; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .shop-brand img { height: 40px; width: auto; }
+        .shop-brand span span, .shop-accent { color: var(--shop-cyan); }
+        .shop-nav, .shop-header-actions { display: flex; align-items: center; gap: 22px; }
+        .shop-nav { font-size: .8rem; }
+        .shop-nav a { text-decoration: none; color: var(--shop-muted); }
+        .shop-nav a:hover, .shop-nav a[aria-current] { color: var(--shop-cyan); }
+        .shop-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; border: 1px solid var(--shop-cyan); background: var(--shop-cyan); color: #050505; font-weight: 700; text-decoration: none; border-radius: 4px; line-height: 1.4; }
+        .shop-button:hover { background: #fff; border-color: #fff; }
+        .shop-button-outline { background: transparent; color: var(--shop-cyan); }
+        .shop-button-outline:hover { color: #050505; }
+        .shop-menu-button { color: #fff; background: transparent; border: 0; font-size: 1.4rem; padding: 8px; }
+        .shop-cart-count { display: inline-grid; place-items: center; min-width: 24px; padding: 2px 5px; background: #050505; color: var(--shop-cyan); border-radius: 20px; font-size: .75rem; }
+        .shop-hero { position: relative; overflow: hidden; padding: 155px 0 65px; border-bottom: 1px solid #ffffff14; }
+        .shop-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .28; }
+        .shop-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #050505ee, #05050570), linear-gradient(0deg, #050505, transparent); }
+        .shop-hero-content { position: relative; z-index: 1; }
+        .shop-eyebrow { margin: 0 0 16px; color: var(--shop-cyan); text-transform: uppercase; font-size: .75rem; font-weight: 700; letter-spacing: .22em; }
+        h1, h2, h3 { font-family: Orbitron, sans-serif; }
+        h1 { max-width: 930px; font-size: clamp(2rem, 4.6vw, 3.7rem); line-height: 1.2; margin: 0 0 24px; }
+        .shop-lead { max-width: 670px; color: var(--shop-muted); font-size: 1.1rem; margin-bottom: 28px; }
+        .shop-promises { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 30px; color: var(--shop-muted); font-size: .8rem; }
+        .shop-promises i { color: var(--shop-cyan); margin-right: 8px; }
+        .shop-main { padding: 48px 0 64px; }
+        .shop-section-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+        .shop-section-heading h2 { font-size: 1.5rem; margin: 0; }
+        .shop-section-heading p { margin: 0; color: var(--shop-muted); font-size: .85rem; }
+        .shop-tools { display: grid; grid-template-columns: 1fr 240px; gap: 16px; margin-bottom: 20px; }
+        .shop-field { display: grid; gap: 6px; font-size: .8rem; color: var(--shop-muted); }
+        .shop-field input, .shop-field select { width: 100%; min-height: 46px; padding: 10px 14px; background: #0c1119; border: 1px solid var(--shop-border); color: #fff; border-radius: 4px; }
+        .shop-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+        .shop-filter { padding: 9px 14px; background: #0c1119; border: 1px solid var(--shop-border); color: var(--shop-muted); border-radius: 4px; font-size: .8rem; }
+        .shop-filter[aria-pressed="true"] { background: #00f3ff12; border-color: var(--shop-cyan); color: var(--shop-cyan); }
+        .shop-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+        .shop-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+        .shop-card { display: flex; flex-direction: column; border: 1px solid var(--shop-border); background: #0a0e14; border-radius: 6px; overflow: hidden; transition: border-color .2s; }
+        .shop-card:hover { border-color: #00f3ff80; }
+        .shop-card-image { position: relative; height: 140px; background: #101825; overflow: hidden; }
+        .shop-card-image img { width: 100%; height: 100%; object-fit: cover; opacity: .65; }
+        .shop-card-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #0a0e14, transparent); }
+        .shop-badge { position: absolute; top: 14px; left: 16px; z-index: 1; background: #050505d9; border: 1px solid #00f3ff55; color: var(--shop-cyan); padding: 4px 9px; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; }
+        .shop-card-body { padding: 4px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+        .shop-card h3 { font-size: 1.08rem; line-height: 1.5; margin: 0 0 10px; }
+        .shop-description { color: var(--shop-muted); font-size: .84rem; margin: 0 0 14px; }
+        .shop-features { padding-left: 18px; margin: 0 0 18px; color: #d2dbe6; font-size: .8rem; }
+        .shop-features li { margin-bottom: 6px; }
+        .shop-features li::marker { color: var(--shop-cyan); }
+        .shop-card-bottom { margin-top: auto; }
+        .shop-price { font-size: 1.55rem; font-weight: 800; letter-spacing: -.04em; margin: 0; }
+        .shop-price-note { font-size: .73rem; color: var(--shop-muted); margin: 2px 0 12px; }
+        .shop-card details { font-size: .77rem; color: var(--shop-muted); margin-bottom: 16px; }
+        .shop-card summary { cursor: pointer; color: var(--shop-cyan); padding: 6px 0; }
+        .shop-card details p { margin: 8px 0; }
+        .shop-card .shop-button { width: 100%; font-size: .85rem; }
+        .shop-empty { padding: 40px 20px; text-align: center; border: 1px dashed var(--shop-border); color: var(--shop-muted); }
+        .shop-cart { position: sticky; top: 104px; background: #0c1119; border: 1px solid #00f3ff50; padding: 24px; border-radius: 6px; }
+        .shop-cart h2 { font-size: 1.1rem; margin: 0 0 6px; }
+        .shop-cart-intro { color: var(--shop-muted); font-size: .8rem; margin: 0 0 20px; }
+        .shop-cart-items { max-height: 350px; overflow-y: auto; overscroll-behavior: contain; }
+        .shop-cart-item { border-top: 1px solid var(--shop-border); padding: 14px 0; }
+        .shop-cart-item h3 { margin: 0 0 4px; font-family: Inter, sans-serif; font-size: .85rem; }
+        .shop-cart-item p { margin: 0; color: var(--shop-muted); font-size: .75rem; }
+        .shop-quantity { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+        .shop-quantity button { min-width: 32px; min-height: 32px; background: #18212e; border: 1px solid var(--shop-border); color: #fff; border-radius: 3px; }
+        .shop-remove { margin-left: auto; padding: 4px 8px; font-size: .7rem; }
+        .shop-totals { margin: 18px 0; border-top: 1px solid var(--shop-border); padding-top: 14px; }
+        .shop-total-row { display: flex; justify-content: space-between; gap: 12px; margin: 7px 0; font-size: .78rem; }
+        .shop-total-row strong { white-space: nowrap; }
+        .shop-total-primary { font-size: .98rem; margin-top: 14px; color: var(--shop-cyan); }
+        .shop-checkout { width: 100%; background: #25d366; border-color: #25d366; font-size: .85rem; }
+        .shop-cart-note { margin: 12px 0 0; color: var(--shop-muted); font-size: .73rem; }
+        .shop-clear { background: transparent; border: 0; color: var(--shop-muted); text-decoration: underline; font-size: .75rem; padding: 12px 0 0; }
+        .shop-conditions { margin-top: 48px; border-top: 1px solid var(--shop-border); padding-top: 28px; }
+        .shop-conditions h2 { font-size: 1.15rem; }
+        .shop-conditions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .shop-conditions h3 { font: 700 .9rem Inter, sans-serif; }
+        .shop-conditions p { color: var(--shop-muted); font-size: .8rem; }
+        .shop-footer { border-top: 1px solid var(--shop-border); padding: 28px 0; color: var(--shop-muted); font-size: .78rem; }
+        .shop-footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+        .shop-footer a { margin-left: 16px; }
+        .shop-status { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 70; max-width: min(580px, 90vw); padding: 12px 20px; border: 1px solid var(--shop-cyan); background: #101825; border-radius: 4px; box-shadow: 0 10px 40px #0008; font-size: .85rem; }
+        .shop-status:empty { display: none; }
+        @media (min-width: 1250px) { .shop-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 1050px) { .shop-nav { display: none; } .shop-layout { grid-template-columns: minmax(0, 1fr) 310px; gap: 20px; } .shop-cart { padding: 18px; } }
+        @media (max-width: 850px) { .shop-layout { grid-template-columns: 1fr; } .shop-cart { position: static; } .shop-cart-items { max-height: none; } .shop-conditions-grid { grid-template-columns: 1fr; gap: 8px; } }
+        @media (max-width: 540px) {
+            .shop-wrap { width: calc(100% - 32px); }
+            .shop-header-inner { gap: 8px; min-height: 72px; }
+            .shop-brand { gap: 7px; font-size: .67rem; letter-spacing: 0; }
+            .shop-brand img { height: 30px; }
+            .shop-header-actions { gap: 4px; }
+            .shop-header-actions .shop-button { padding: 9px 10px; font-size: .75rem; }
+            .shop-menu-button { font-size: 1.2rem; }
+            .shop-hero { padding: 120px 0 40px; }
+            .shop-tools, .shop-grid { grid-template-columns: 1fr; }
+            .shop-card-image { height: 160px; }
+            .shop-section-heading h2 { font-size: 1.2rem; }
+            .shop-footer a { margin: 0 12px 0 0; }
+        }
+        @media (max-width: 380px) { .shop-brand > span { display: none; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .shop-card { transition: none; } }
+    </style>
+</head>
+<body>
+    <a href="#catalogo" class="shop-skip">Ir al catálogo</a>
+    <nav class="fixed shop-header" aria-label="Navegación principal">
+        <div class="shop-wrap shop-header-inner">
+            <a class="shop-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Reyes Computing">
+                <span>Reyes<span>Computing</span></span>
+            </a>
+            <div class="hidden lg:flex items-center gap-5 shop-nav">
+                <a href="desarrollo-web.html">Desarrollo web</a>
+                <a href="tiendas-online.html">Tiendas y apps</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="tienda.html" aria-current="page">Tienda</a>
+                <a href="contacto.html?servicio=diagnostico" data-origen="tienda-navbar">Diagnóstico Gratis</a>
+            </div>
+            <div class="shop-header-actions">
+                <a href="#carrito" class="shop-button shop-button-outline" aria-label="Ver carrito">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                    Carrito <span id="cart-count" class="shop-cart-count">0</span>
+                </a>
+                <button id="mobile-menu-btn" class="shop-menu-button" aria-label="Abrir menú principal"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="shop-hero">
+        <img src="assets/images/hero-bg.png" alt="" class="shop-hero-bg" fetchpriority="high">
+        <div class="shop-wrap shop-hero-content">
+            <p class="shop-eyebrow">Tienda Reyes Computing / Colombia</p>
+            <h1>Elige tus combos.<br><span class="shop-accent">Haz un solo pedido.</span></h1>
+            <p class="shop-lead">Tu web, tus anuncios, tu tienda y la seguridad de tu empresa, en un mismo lugar. Compara lo que incluye cada opción y arma el paquete que necesitas.</p>
+            <a href="#catalogo" class="shop-button">Explorar combos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+            <div class="shop-promises">
+                <span><i class="fa-solid fa-tags" aria-hidden="true"></i>Precios en pesos colombianos · IVA incluido</span>
+                <span><i class="fa-solid fa-list-check" aria-hidden="true"></i>Alcances definidos</span>
+                <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Pedido completo por WhatsApp</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="catalogo" class="shop-wrap shop-main">
+        <div class="shop-section-heading">
+            <h2>Encuentra tu próximo paso</h2>
+            <p id="result-count" role="status" aria-live="polite"></p>
+        </div>
+        <div class="shop-tools">
+            <label class="shop-field" for="product-search">Buscar combos y servicios
+                <input id="product-search" type="search" placeholder="Prueba: landing, correo, app, ESET…" autocomplete="off">
+            </label>
+            <label class="shop-field" for="product-sort">Ordenar por
+                <select id="product-sort">
+                    <option value="recommended">Recomendados</option>
+                    <option value="price-asc">Precio: menor a mayor</option>
+                    <option value="price-desc">Precio: mayor a menor</option>
+                    <option value="name">Nombre: A a Z</option>
+                </select>
+            </label>
+        </div>
+        <div id="category-filters" class="shop-filters" role="group" aria-label="Filtrar por categoría"></div>
+        <div class="shop-layout">
+            <section aria-label="Combos disponibles">
+                <noscript><p class="shop-empty">Activa JavaScript para explorar los combos y usar el carrito. También puedes <a href="https://wa.me/573128084929?text=Hola%20Reyes%20Computing%2C%20quiero%20conocer%20sus%20combos.">solicitar el catálogo por WhatsApp</a>.</p></noscript>
+                <div id="product-grid" class="shop-grid"></div>
+                <div id="no-results" class="shop-empty" hidden>
+                    <p>No encontramos combos con esos filtros.</p>
+                    <button id="reset-filters" class="shop-button shop-button-outline">Ver todo el catálogo</button>
+                </div>
+            </section>
+            <aside id="carrito" class="shop-cart" aria-labelledby="cart-title">
+                <h2 id="cart-title">Tu pedido</h2>
+                <p class="shop-cart-intro">Combina servicios y envíalos juntos.</p>
+                <p id="cart-empty" class="shop-cart-note">Tu carrito está vacío. Agrega tu primer combo para empezar.</p>
+                <div id="cart-items" class="shop-cart-items"></div>
+                <div class="shop-totals">
+                    <div class="shop-total-row"><span>Servicios de pago único</span><strong id="total-once">$0</strong></div>
+                    <div class="shop-total-row"><span>Primer mes de planes</span><strong id="total-monthly">$0</strong></div>
+                    <div id="setup-row" class="shop-total-row" hidden><span>Alta de planes</span><strong id="total-setup">$0</strong></div>
+                    <div class="shop-total-row shop-total-primary"><span>Total inicial · COP</span><strong id="total-initial">$0</strong></div>
+                    <p id="monthly-note" class="shop-cart-note" hidden></p>
+                </div>
+                <button id="checkout" type="button" class="shop-button shop-checkout" disabled><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Enviar pedido por WhatsApp</button>
+                <p class="shop-cart-note">Se abrirá WhatsApp con tus combos y el resumen. El pedido se envía cuando pulses enviar en WhatsApp; aquí no se procesa ningún pago.</p>
+                <p class="shop-cart-note">Los precios incluyen el IVA aplicable. Confirmaremos alcance, disponibilidad, renovación y forma de pago antes de iniciar. El carrito no reserva servicios.</p>
+                <button id="clear-cart" class="shop-clear" type="button" hidden>Vaciar carrito</button>
+            </aside>
+        </div>
+        <section class="shop-conditions" aria-labelledby="conditions-title">
+            <h2 id="conditions-title">Antes de contratar</h2>
+            <div class="shop-conditions-grid">
+                <div>
+                    <h3>Qué incluye tu precio</h3>
+                    <p>Los precios publicados incluyen el IVA aplicable; los componentes de dominio, hosting y computación en la nube excluidos conservan ese tratamiento, y el saldo de pauta de Google Ads es un ingreso para terceros. Cada ficha diferencia pago único, mensualidad y licencias incluidas. Las suscripciones anuales se renuevan después de 12 meses; los valores vigentes se confirman en la propuesta. Comisiones de pasarela y consumos adicionales no están incluidos.</p>
+                </div>
+                <div>
+                    <h3>Contenido y entregas</h3>
+                    <p>Los planes web incluyen 2 rondas de ajustes y la carga de imágenes aportadas por ti: hasta 10 en landing, 40 en sitio empresarial y 150 en tienda. Crear contenido nuevo es un complemento. Los plazos empiezan con el material y accesos completos; las apps dependen también de la revisión de Apple y Google.</p>
+                </div>
+                <div>
+                    <h3>Soporte y alcance técnico</h3>
+                    <p>La atención humana se presta de lunes a viernes en horario hábil de Colombia. El monitoreo es automatizado. Las evaluaciones técnicas requieren autorización sobre los sistemas; no otorgan certificaciones ni sustituyen una auditoría externa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="shop-footer">
+        <div class="shop-wrap shop-footer-inner">
+            <span>Reyes Computing · Soluciones digitales para empresas</span>
+            <div><a href="index.html">Inicio</a><a href="ofertas.html">Ofertas</a><a href="contacto.html">Contacto</a><a href="contacto.html#privacidad">Privacidad</a></div>
+        </div>
+    </footer>
+    <div id="shop-status" class="shop-status" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script>
+        (() => {
+            'use strict';
+
+            const categories = {
+                all: { name: 'Todos los combos' },
+                web: { name: 'Web y Google Ads', image: 'assets/images/crecimiento-comercial-producto.png' },
+                store: { name: 'Tiendas y apps', image: 'assets/images/sistema-ventas-producto.png' },
+                security: { name: 'Ciberseguridad', image: 'assets/images/security.png' },
+                devops: { name: 'DevSecOps', image: 'assets/images/devops.png' },
+                monthly: { name: 'Planes mensuales', image: 'assets/images/finops.png' },
+                extras: { name: 'Complementos', image: 'assets/images/crecimiento-comercial-proceso.png' }
+            };
+            const products = [
+                { id: 'landing-ads', category: 'web', name: 'Landing + Google Ads', price: 1770000, description: 'Una página enfocada en tu oferta y pauta de arranque para recibir visitas.', features: ['Landing con hasta 10 imágenes, WhatsApp y formulario', 'Dominio y hosting por 1 año', '$600.000 de pauta Google Ads para 30 días'], terms: 'Entrega: 5 días hábiles. No incluye continuidad mensual de anuncios.' },
+                { id: 'landing-ads-correo', category: 'web', name: 'Landing + Ads + correo', price: 2930000, description: 'Tu campaña de arranque con correo corporativo de Google.', features: ['Todo lo de Landing + Google Ads', '1 usuario Workspace Business Starter por 1 año', '30 GB y configuración de correo del dominio'], terms: 'Entrega: 5 días hábiles. La licencia de correo se renueva al finalizar el año.' },
+                { id: 'landing', category: 'web', name: 'Landing / web de un producto', price: 1170000, description: 'Presenta un producto o servicio y facilita el contacto directo.', features: ['1 página con hasta 10 imágenes del cliente', 'WhatsApp y formulario', 'Dominio y hosting por 1 año'], terms: 'Entrega: 5 días hábiles. No incluye anuncios ni correo corporativo.' },
+                { id: 'landing-correo', category: 'web', name: 'Landing + correo corporativo', price: 2330000, description: 'Tu página de un producto con correo bajo el nombre de tu negocio.', features: ['Landing, dominio y hosting por 1 año', 'Hasta 10 imágenes del cliente', '1 usuario Workspace Starter, 30 GB, por 1 año'], terms: 'Entrega: 5 días hábiles. No incluye anuncios. Renovación anual de correo aparte.' },
+                { id: 'web-empresa', category: 'web', name: 'Sitio web empresarial', price: 2480000, description: 'Tu sede digital para presentar empresa, servicios y trayectoria.', features: ['Hasta 5 secciones y 40 imágenes del cliente', 'SEO técnico base, WhatsApp y formulario', 'Dominio y hosting por 1 año'], terms: 'Entrega: 10 días hábiles. No incluye licencias de correo ni anuncios.' },
+                { id: 'web-empresa-correo', category: 'web', name: 'Sitio empresarial + correo', price: 4700000, description: 'Tu web corporativa con correo y herramientas de trabajo de Google.', features: ['Sitio de hasta 5 secciones y 40 imágenes', 'Dominio y hosting por 1 año', '1 usuario Workspace Standard, 2 TB, por 1 año'], terms: 'Entrega: 10 días hábiles. Renovación anual de correo aparte.' },
+                { id: 'tienda-web', category: 'store', name: 'Combo Tienda Web Pro', price: 6290000, description: 'Organiza tu catálogo y recibe pedidos con un inventario conectado.', features: ['Hasta 150 productos/imágenes del cliente', 'Buscador, filtros, carrito y panel de pedidos', 'Dominio, hosting y Supabase Pro por 1 año'], terms: 'Entrega: 15 días hábiles. Pedidos por WhatsApp y comprobante; integración de pasarela automática aparte. Renovación de infraestructura desde el año 2.' },
+                { id: 'tienda-app', category: 'store', name: 'Combo Tienda Web + App', price: 9660000, description: 'Tu catálogo en la web y en tu propia app para Android y iPhone.', features: ['Todo lo de Tienda Web Pro', 'App de comprador y vendedor con inventario compartido', 'Google Play, Apple por 1 año y 3 meses de compilación EAS'], terms: 'Entrega: 20 a 25 días hábiles, sujeta a revisión de las tiendas de apps. Renovaciones de infraestructura y Apple desde el año 2.' },
+                { id: 'tienda-ecosistema', category: 'store', name: 'Combo Ecosistema de Comercio', price: 15230000, description: 'Conecta ventas, pagos, despacho y asistencia de catálogo con IA.', features: ['Tienda web + app Android/iOS, hasta 150 productos', 'Pasarela de pagos y logística con evidencia de entrega', 'Infraestructura cloud, licencias móviles y servidor IA por 1 año'], terms: 'Entrega: 35 a 45 días hábiles por etapas. La IA genera borradores con revisión humana. Comisiones de transacción, consumos adicionales y renovaciones aparte.' },
+                { id: 'websec', category: 'security', name: 'Combo WebSec + Cloudflare Pro', price: 2570000, description: 'Controles perimetrales para tu web, API y correo corporativo.', features: ['Cloudflare Pro por 1 año', '1 dominio principal y hasta 2 subdominios/APIs', 'WAF, controles de tráfico y reporte antes/después'], terms: 'Entrega: 5 días hábiles. Hasta 5 rutas críticas con límites de peticiones. El WAF no reemplaza la corrección de errores en el código.' },
+                { id: 'websec-5', category: 'security', name: 'WebSec & Endpoints · 5 equipos', price: 7320000, description: 'Evalúa tu web y protege los computadores de tu equipo en un combo.', features: ['Auditoría inicial de seguridad web', 'Cloudflare Pro por 1 año', 'ESET PROTECT Advanced para 5 equipos por 1 año'], terms: 'Incluye configuración de WAF y despliegue de ESET con cifrado de disco. Plazo y compatibilidad de equipos se confirman antes de iniciar. Renovación anual aparte.' },
+                { id: 'websec-10', category: 'security', name: 'WebSec & Endpoints · 10 equipos', price: 8770000, description: 'Controles para tu plataforma y protección de diez puestos de trabajo.', features: ['Auditoría inicial de seguridad web', 'Cloudflare Pro por 1 año', 'ESET PROTECT Advanced para 10 equipos por 1 año'], terms: 'Incluye configuración de WAF y despliegue de ESET con cifrado de disco. Plazo y compatibilidad de equipos se confirman antes de iniciar. Renovación anual aparte.' },
+                { id: 'websec-pentest', category: 'security', name: 'WebSec Pentesting + WAF + ESET', price: 10890000, description: 'Pruebas autorizadas sobre tu aplicación con controles perimetrales.', features: ['Pentesting web/API en hasta 15 rutas críticas y re-test', 'Cloudflare Pro por 1 año', 'ESET Advanced para 5 equipos por 1 año'], terms: 'Re-test dentro de los 30 días posteriores a los parches del equipo del cliente. Requiere autorización escrita y alcance acordado. Renovaciones aparte.' },
+                { id: 'websec-full', category: 'security', name: 'WebSec Full AppSec + DevSecOps', price: 19310000, description: 'Conecta la evaluación de tu aplicación con controles de despliegue y equipos.', features: ['Pentesting focalizado y re-test + pipeline CI/CD', 'GitHub Team y Cloudflare Pro por 1 año', 'ESET Advanced para 10 equipos por 1 año'], terms: 'Requiere autorización y ventanas de cambio aprobadas. Plazo según alcance validado. Las licencias se renuevan al finalizar el año.' },
+                { id: 'diagnostico-tecnico', category: 'security', name: 'Diagnóstico de brechas técnicas', price: 1860000, description: 'Conoce tus controles actuales y prioriza lo que necesitas corregir.', features: ['Evaluación de infraestructura y despliegues', 'Matriz de brechas y evidencias técnicas', 'Plan de remediación priorizado'], terms: 'Entrega: 5 a 7 días hábiles. No es una certificación ni un dictamen de auditoría externa.' },
+                { id: 'devops-esencial', category: 'devops', name: 'Combo DevSecOps Esencial', price: 3400000, description: 'Automatiza las pruebas y la publicación de tu aplicación.', features: ['1 aplicación y 1 entorno de producción', 'Pipeline CI/CD, escaneo de secretos y reversión', 'GitHub Team para hasta 3 usuarios + Actions por 1 año'], terms: 'Entrega: 10 a 15 días hábiles. Incluye transferencia de 90 minutos. Alcance sobre la aplicación existente; desarrollos adicionales aparte.' },
+                { id: 'devops-pro', category: 'devops', name: 'Combo DevSecOps Pro', price: 4630000, description: 'Separa pruebas y producción con un flujo de despliegue controlado.', features: ['1 aplicación, staging + producción y Docker', 'Escaneo de código, dependencias y contenedores', 'GitHub Team para hasta 3 usuarios + Actions por 1 año'], terms: 'Entrega: 10 a 15 días hábiles. Incluye transferencia y procedimiento de reversión. Renovaciones y consumos adicionales aparte.' },
+                { id: 'motor-clientes', category: 'monthly', name: 'Motor de Clientes', price: 1900000, monthly: true, description: 'Gestión continua de tus campañas y mejoras de tu página.', features: ['Administración y optimización de Google Ads', 'Ajustes y soporte de la página', 'Continuidad mensual'], terms: 'No incluye el presupuesto de clics pagado a Google. Requiere una página y campañas disponibles para gestionar.' },
+                { id: 'tienda-activa', category: 'monthly', name: 'Plan Tienda Activa', price: 1160000, monthly: true, description: 'Mantén tu tienda con infraestructura y soporte operativo.', features: ['Supabase Pro mensual y copias de seguridad', 'Monitoreo automatizado', '4 horas mensuales de ingeniería en horario hábil'], terms: 'Para una tienda existente. No incluye construir la tienda. Revisamos las suscripciones ya incluidas para evitar duplicarlas.' },
+                { id: 'app-activa', category: 'monthly', name: 'Plan Tienda + App Activa', price: 1740000, monthly: true, description: 'Continuidad técnica para tu web y aplicaciones móviles.', features: ['Supabase Pro y Expo EAS Starter mensual', 'Mantenimiento de compatibilidad Android/iOS', '6 horas mensuales de ingeniería'], terms: 'Para tienda y app existentes. No incluye construirlas. Revisamos las suscripciones ya contratadas antes de iniciar.' },
+                { id: 'cloud-support', category: 'monthly', name: 'Cloud Support & Backups', price: 1770000, monthly: true, setup: 460000, description: 'Soporte para tu infraestructura con respaldos externos.', features: ['Monitoreo automatizado y backups hasta 500 GB', 'Prueba mensual de restauración', '6 horas mensuales de ingeniería'], terms: 'Alta única de $460.000; bonificable si vienes del combo WebSec o DevSecOps, previa validación. No incluye la factura de tus servidores AWS/GCP/VPS.' },
+                { id: 'cloud-waf', category: 'monthly', name: 'Cloud Support + WAF', price: 1870000, monthly: true, setup: 460000, description: 'Soporte de nube y administración del cortafuegos de tu web.', features: ['Monitoreo y backups externos hasta 500 GB', 'Cloudflare Pro mensual', '6 horas mensuales de ingeniería'], terms: 'Alta única de $460.000; bonificable si vienes del combo WebSec o DevSecOps, previa validación. La infraestructura del cliente se paga aparte.' },
+                { id: 'websec-mensual', category: 'monthly', name: 'WebSec Cloud & Endpoints IA', price: 2320000, monthly: true, setup: 820000, description: 'Monitoreo de amenazas y controles para web y puestos de trabajo.', features: ['ESET Advanced para 5 equipos + Cloudflare Pro', '1 app/servidor y backups hasta 500 GB', 'Monitoreo automatizado y 6 horas mensuales de ingeniería'], terms: 'Alta única de $820.000; bonificable en contrato anual o si vienes de WebSec & Endpoints, Pentesting o Full AppSec, previa validación.' },
+                { id: 'websec-enterprise', category: 'monthly', name: 'WebSec Enterprise IA & DevSecOps', price: 4040000, monthly: true, setup: 820000, description: 'Continuidad de controles para equipos, servidores y pipelines.', features: ['ESET Complete para 10 equipos y WAF administrado', '2 servidores y backups hasta 1 TB', 'Mantenimiento de pipelines y 10 horas mensuales de ingeniería'], terms: 'Alta única de $820.000; bonificable en contrato anual o si vienes de WebSec & Endpoints, Pentesting o Full AppSec, previa validación.' },
+                { id: 'fotos-50', category: 'extras', name: 'Carga de 50 imágenes adicionales', price: 169833, description: 'Amplía el contenido incluido en tu web o catálogo.', features: ['50 fotos listas aportadas por el cliente', 'Clasificación, compresión y carga', 'Para una web o tienda existente'], terms: 'No incluye crear fotografías ni redactar el catálogo. Complemento adicional al límite de tu plan.' },
+                { id: 'retoque-20', category: 'extras', name: 'Retoque de 20 fotos', price: 463181, description: 'Prepara tus fotos para una presentación más uniforme.', features: ['20 fotografías aportadas por el cliente', 'Recorte, fondo, luz y color', 'Tamaño adaptado a la web'], terms: 'Producción digital. No incluye sesión fotográfica presencial.' },
+                { id: 'imagenes-10', category: 'extras', name: 'Creación de 10 imágenes comerciales', price: 463181, description: 'Contenido visual para cuando tu negocio no tiene fotos utilizables.', features: ['10 imágenes de producción digital', 'IA, composición o banco comercial según el proyecto', 'Preparación para web o anuncios'], terms: 'No incluye desplazamiento ni sesión de fotografía presencial. Las imágenes se revisan antes de publicar.' },
+                { id: 'identidad', category: 'extras', name: 'Kit de identidad visual', price: 926361, description: 'Define una base visual para tu marca y tus canales digitales.', features: ['Logotipo con 2 propuestas', 'Colores y tipografías', '2 rondas de ajustes'], terms: 'Creación digital de identidad básica. Aplicaciones de marca adicionales se cotizan aparte.' },
+                { id: 'pasarela', category: 'extras', name: 'Integración de pasarela de pago', price: 1550000, description: 'Añade cobro online y confirmación automática a tu tienda.', features: ['Wompi, ePayco, MercadoPago o Stripe según viabilidad', 'Enlace de pago generado en servidor', 'Confirmación de pago con firma verificada'], terms: 'Requiere tienda y servidor compatibles, y cuenta aprobada por el proveedor. No incluye comisiones de transacción. Ya está incluido en Ecosistema de Comercio.' },
+                { id: 'cotizador', category: 'extras', name: 'Cotizador B2B en PDF', price: 1240000, description: 'Entrega cotizaciones formales a tus clientes empresariales.', features: ['PDF con membrete y consecutivo', 'Vigencia de precios', 'Reserva de stock'], terms: 'Complemento para una tienda con inventario y servidor compatibles. El alcance de integración se valida antes de iniciar.' }
+            ];
+            const byId = new Map(products.map(product => [product.id, product]));
+            const storageKey = 'reyes-tienda-cart-v1';
+            const cart = new Map();
+            const element = id => document.getElementById(id);
+            const money = value => new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(value);
+            const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+            let category = 'all';
+            let statusTimer;
+
+            function notify(message, persistent = false) {
+                clearTimeout(statusTimer);
+                element('shop-status').textContent = message;
+                if (!persistent) statusTimer = setTimeout(() => { element('shop-status').textContent = ''; }, 5000);
+            }
+
+            function totals(items = cart) {
+                let once = 0;
+                let monthly = 0;
+                let setup = 0;
+                for (const [id, quantity] of items) {
+                    const product = byId.get(id);
+                    if (product.monthly) monthly += product.price * quantity;
+                    else once += product.price * quantity;
+                    setup += (product.setup || 0) * quantity;
+                }
+                return { once, monthly, setup, initial: once + monthly + setup };
+            }
+
+            function validCart(items) {
+                for (const [id, quantity] of items) {
+                    if (!byId.has(id) || !Number.isSafeInteger(quantity) || quantity < 1) return false;
+                }
+                return Number.isSafeInteger(totals(items).initial) &&
+                    Number.isSafeInteger([...items.values()].reduce((sum, quantity) => sum + quantity, 0));
+            }
+
+            function restoreCart() {
+                let stored;
+                try {
+                    stored = localStorage.getItem(storageKey);
+                } catch (error) {
+                    console.warn('[Tienda Reyes Computing] No se pudo leer el carrito local.', error);
+                    notify('El navegador no permite guardar el carrito. Puedes usarlo mientras esta página siga abierta.', true);
+                    return;
+                }
+                if (!stored) return;
+                let entries;
+                try {
+                    entries = JSON.parse(stored);
+                } catch (error) {
+                    console.warn('[Tienda Reyes Computing] El carrito guardado no es JSON válido.', error);
+                    notify('El carrito guardado no se pudo recuperar. Agrega tus combos nuevamente.', true);
+                    return;
+                }
+                if (!Array.isArray(entries) || entries.some(entry => !Array.isArray(entry) || entry.length !== 2) ||
+                    new Set(entries.map(entry => entry[0])).size !== entries.length || !validCart(new Map(entries))) {
+                    notify('El carrito guardado contiene productos o cantidades no válidos. Agrega tus combos nuevamente.', true);
+                    return;
+                }
+                for (const [id, quantity] of entries) cart.set(id, quantity);
+            }
+
+            function saveCart() {
+                try {
+                    localStorage.setItem(storageKey, JSON.stringify([...cart]));
+                } catch (error) {
+                    console.warn('[Tienda Reyes Computing] No se pudo guardar el carrito local.', error);
+                    notify('Tu carrito está actualizado, pero no se pudo guardar en este navegador. No cierres la página antes de enviar el pedido.', true);
+                }
+            }
+
+            function renderProducts() {
+                const search = normalize(element('product-search').value.trim());
+                const sort = element('product-sort').value;
+                const visible = products.filter(product => (category === 'all' || product.category === category) &&
+                    normalize([product.name, product.description, ...product.features].join(' ')).includes(search));
+                if (sort === 'price-asc') visible.sort((a, b) => a.price - b.price);
+                if (sort === 'price-desc') visible.sort((a, b) => b.price - a.price);
+                if (sort === 'name') visible.sort((a, b) => a.name.localeCompare(b.name, 'es'));
+                element('product-grid').innerHTML = visible.map(product => `
+                    <article class="shop-card">
+                        <div class="shop-card-image">
+                            <img src="${categories[product.category].image}" alt="" loading="lazy" decoding="async">
+                            <span class="shop-badge">${categories[product.category].name}</span>
+                        </div>
+                        <div class="shop-card-body">
+                            <h3>${product.name}</h3>
+                            <p class="shop-description">${product.description}</p>
+                            <ul class="shop-features">${product.features.map(feature => `<li>${feature}</li>`).join('')}</ul>
+                            <div class="shop-card-bottom">
+                                <p class="shop-price">${money(product.price)}</p>
+                                <p class="shop-price-note">COP · IVA incluido · ${product.monthly ? 'por mes' : 'pago único'}${product.setup ? ` · alta: ${money(product.setup)}` : ''}</p>
+                                <details><summary>Ver alcance y condiciones</summary><p>${product.terms}</p></details>
+                                <button class="shop-button" type="button" data-add="${product.id}" aria-label="Agregar ${product.name} al carrito"><i class="fa-solid fa-plus" aria-hidden="true"></i>Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </article>`).join('');
+                element('result-count').textContent = `${visible.length} de ${products.length} opciones · COP · IVA incluido`;
+                element('no-results').hidden = visible.length > 0;
+                element('category-filters').querySelectorAll('button').forEach(button => {
+                    button.setAttribute('aria-pressed', String(button.dataset.category === category));
+                });
+            }
+
+            function renderCart() {
+                element('cart-items').innerHTML = [...cart].map(([id, quantity]) => {
+                    const product = byId.get(id);
+                    return `<div class="shop-cart-item">
+                        <h3>${product.name}</h3>
+                        <p>${money(product.price * quantity)} COP${product.monthly ? ' / mes' : ' · pago único'}</p>
+                        ${product.setup ? `<p>Alta: ${money(product.setup * quantity)} COP · bonificación sujeta a validación</p>` : ''}
+                        <div class="shop-quantity">
+                            <button type="button" data-change="${id}" data-delta="-1" aria-label="Reducir cantidad de ${product.name}">−</button>
+                            <span aria-label="Cantidad">${quantity}</span>
+                            <button type="button" data-change="${id}" data-delta="1" aria-label="Aumentar cantidad de ${product.name}">+</button>
+                            <button class="shop-remove" type="button" data-remove="${id}" aria-label="Quitar ${product.name}">Quitar</button>
+                        </div>
+                    </div>`;
+                }).join('');
+                const summary = totals();
+                element('cart-count').textContent = [...cart.values()].reduce((sum, quantity) => sum + quantity, 0);
+                element('cart-empty').hidden = cart.size > 0;
+                element('clear-cart').hidden = cart.size === 0;
+                element('checkout').disabled = cart.size === 0;
+                element('total-once').textContent = money(summary.once);
+                element('total-monthly').textContent = money(summary.monthly);
+                element('total-setup').textContent = money(summary.setup);
+                element('total-initial').textContent = money(summary.initial);
+                element('setup-row').hidden = summary.setup === 0;
+                element('monthly-note').hidden = summary.monthly === 0;
+                element('monthly-note').textContent = `Continuidad: ${money(summary.monthly)} COP / mes. El total inicial incluye el primer mes y las altas indicadas; los siguientes meses no incluyen el alta.`;
+            }
+
+            function changeQuantity(id, delta) {
+                const product = byId.get(id);
+                if (!product) {
+                    notify('Ese producto no está disponible en el catálogo.');
+                    return;
+                }
+                const candidate = new Map(cart);
+                const quantity = (candidate.get(id) || 0) + delta;
+                if (quantity <= 0) candidate.delete(id);
+                else candidate.set(id, quantity);
+                if (!validCart(candidate)) {
+                    notify('No se puede agregar esa cantidad. Revisa las unidades del pedido.');
+                    return;
+                }
+                cart.clear();
+                for (const [productId, count] of candidate) cart.set(productId, count);
+                renderCart();
+                notify(delta > 0 ? `${product.name} agregado al carrito.` : 'Cantidad actualizada.');
+                saveCart();
+            }
+
+            function checkout() {
+                if (!cart.size || !validCart(cart)) {
+                    notify('Agrega un combo válido antes de enviar tu pedido.');
+                    return;
+                }
+                const summary = totals();
+                const lines = ['Hola Reyes Computing, quiero contratar estos servicios:', 'Precios en COP con IVA aplicable incluido.', ''];
+                for (const [id, quantity] of cart) {
+                    const product = byId.get(id);
+                    lines.push(`${quantity} × ${product.name}: ${money(product.price * quantity)} COP${product.monthly ? ' / mes' : ' (pago único)'}`);
+                    if (product.setup) lines.push(`  Alta única: ${money(product.setup * quantity)} COP (bonificación por validar).`);
+                }
+                lines.push('', `Servicios de pago único: ${money(summary.once)} COP`,
+                    `Primer mes de planes: ${money(summary.monthly)} COP`);
+                if (summary.setup) lines.push(`Altas de planes: ${money(summary.setup)} COP`);
+                lines.push(`Total inicial: ${money(summary.initial)} COP`);
+                if (summary.monthly) lines.push(`Continuidad mensual: ${money(summary.monthly)} COP / mes`);
+                lines.push('', 'Por favor confirmar alcance, disponibilidad, renovaciones y forma de pago antes de iniciar.',
+                    'Mi empresa es: ____', 'Ciudad: ____', 'Necesito empezar: ____');
+                const message = lines.join('\n');
+                const destination = typeof construirEnlaceWhatsApp === 'function'
+                    ? construirEnlaceWhatsApp(message)
+                    : `https://wa.me/573128084929?text=${encodeURIComponent(message)}`;
+                // Navegación directa para evitar bloqueos de ventanas y conservar el carrito al volver.
+                window.location.assign(destination);
+                if (typeof registrarConversion === 'function') registrarConversion('whatsapp', 'tienda-carrito');
+            }
+
+            element('category-filters').innerHTML = Object.entries(categories).map(([id, info]) =>
+                `<button type="button" class="shop-filter" data-category="${id}" aria-pressed="${id === category}">${info.name}</button>`).join('');
+            element('category-filters').addEventListener('click', event => {
+                const button = event.target.closest('[data-category]');
+                if (!button) return;
+                category = button.dataset.category;
+                renderProducts();
+            });
+            element('product-search').addEventListener('input', renderProducts);
+            element('product-sort').addEventListener('change', renderProducts);
+            element('reset-filters').addEventListener('click', () => {
+                category = 'all';
+                element('product-search').value = '';
+                element('product-sort').value = 'recommended';
+                renderProducts();
+            });
+            element('product-grid').addEventListener('click', event => {
+                const button = event.target.closest('[data-add]');
+                if (button) changeQuantity(button.dataset.add, 1);
+            });
+            element('cart-items').addEventListener('click', event => {
+                const button = event.target.closest('button');
+                if (!button) return;
+                if (button.dataset.remove) {
+                    cart.delete(button.dataset.remove);
+                    renderCart();
+                    notify('Producto retirado del carrito.');
+                    saveCart();
+                    element(cart.size ? 'checkout' : 'product-search').focus();
+                } else if (button.dataset.change) {
+                    const position = [...element('cart-items').querySelectorAll('button')].indexOf(button);
+                    changeQuantity(button.dataset.change, Number(button.dataset.delta));
+                    const buttons = element('cart-items').querySelectorAll('button');
+                    const nextFocus = buttons[Math.min(position, buttons.length - 1)];
+                    if (nextFocus) nextFocus.focus();
+                    else element('product-search').focus();
+                }
+            });
+            element('clear-cart').addEventListener('click', () => {
+                if (!window.confirm('¿Quieres quitar todos los servicios del carrito?')) return;
+                cart.clear();
+                renderCart();
+                notify('Carrito vacío.');
+                saveCart();
+                element('product-search').focus();
+            });
+            element('checkout').addEventListener('click', checkout);
+            restoreCart();
+            renderProducts();
+            renderCart();
+        })();
+    </script>
+</body>
+</html>
