@@ -84,7 +84,6 @@
         .cart-btn:hover { border-color: var(--cyan); color: var(--cyan); }
         .cart-count { position: absolute; top: -6px; right: -6px; background: var(--cyan); color: #001014; font-size: 11px; font-weight: 800; min-width: 20px; height: 20px; border-radius: 10px; display: grid; place-items: center; padding: 0 5px; }
         .cart-count[data-n="0"] { display: none; }
-        .burger { display: none; font-size: 22px; padding: 8px; }
 
         /* Hero */
         .hero { position: relative; padding: 72px 0 64px; overflow: hidden; }
@@ -260,10 +259,33 @@
         .toast.show { transform: translateX(-50%) translateY(0); }
         .wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff; display: grid; place-items: center; font-size: 30px; z-index: 50; box-shadow: 0 10px 30px rgba(37,211,102,.35); }
 
-        /* Menú móvil */
-        .m-menu { display: none; border-top: 1px solid var(--line); padding: 10px 24px 18px; }
-        .m-menu a { display: block; padding: 10px 0; font-weight: 600; border-bottom: 1px solid var(--line); }
-        .m-menu.open { display: block; }
+        /* Menú lateral unificado (reyes-conversion.js) */
+        #mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(0, 240, 255, 0.4); color: #00f0ff; font-size: 20px; transition: background-color 0.2s, color 0.2s; }
+        #mobile-menu-btn:hover { background-color: #00f0ff; color: #000; }
+        .menu-lateral-fondo { position: fixed; inset: 0; z-index: 65; background: rgba(2, 4, 10, 0.7); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity 0.25s, visibility 0.25s; }
+        .menu-lateral { position: fixed; top: 0; right: 0; bottom: 0; z-index: 70; display: flex; flex-direction: column; width: 22rem; max-width: 90vw; background: #060911; border-left: 1px solid rgba(0, 240, 255, 0.25); box-shadow: -20px 0 60px rgba(0, 0, 0, 0.6); transform: translateX(100%); visibility: hidden; transition: transform 0.25s ease, visibility 0.25s; }
+        .menu-lateral-fondo.abierto { opacity: 1; visibility: visible; }
+        .menu-lateral.abierto { transform: translateX(0); visibility: visible; }
+        .menu-lateral-cabecera { display: flex; align-items: center; justify-content: space-between; height: 5rem; padding: 0 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); flex-shrink: 0; }
+        .menu-lateral-inicio { display: inline-flex; align-items: center; gap: 0.75rem; color: #fff; font-family: 'Orbitron', sans-serif; font-size: 0.875rem; letter-spacing: 0.15em; text-transform: uppercase; }
+        .menu-lateral-inicio i { color: #00f0ff; }
+        .menu-lateral-cerrar { width: 2.5rem; height: 2.5rem; color: #fff; font-size: 1.25rem; border: 1px solid rgba(255, 255, 255, 0.15); display: inline-flex; align-items: center; justify-content: center; transition: border-color 0.2s, color 0.2s; }
+        .menu-lateral-cerrar:hover, .menu-lateral-cerrar:focus-visible { color: #00f0ff; border-color: #00f0ff; }
+        .menu-lateral-cuerpo { flex: 1; overflow-y: auto; padding: 1rem 1.25rem 1.5rem; }
+        .menu-lateral section.menu-lateral-grupo { padding: 0; margin-top: 1.25rem; }
+        .menu-lateral-grupo h2 { margin-bottom: 0.5rem; padding: 0 0.75rem; color: #00f0ff; font-family: ui-monospace, monospace; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; }
+        .menu-lateral-grupo ul { list-style: none; margin: 0; padding: 0; }
+        .menu-lateral-enlace { display: flex; align-items: center; gap: 0.875rem; padding: 0.625rem 0.75rem; border-left: 2px solid transparent; color: #d1d5db; font-size: 0.9375rem; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+        .menu-lateral-enlace i { width: 1.25rem; color: #00f0ff; text-align: center; }
+        .menu-lateral-enlace:hover, .menu-lateral-enlace:focus-visible { background: rgba(0, 240, 255, 0.08); color: #fff; }
+        .menu-lateral-enlace[aria-current="page"] { background: rgba(0, 240, 255, 0.12); border-left-color: #00f0ff; color: #fff; font-weight: 600; }
+        .menu-lateral-pie { display: flex; flex-direction: column; gap: 0.75rem; padding: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.08); flex-shrink: 0; }
+        .menu-lateral-cta, .menu-lateral-wa { display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1rem; font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: background-color 0.2s, color 0.2s; }
+        .menu-lateral-cta { background: #00f0ff; color: #000; }
+        .menu-lateral-cta:hover { background: #fff; }
+        .menu-lateral-wa { border: 1px solid #25d366; color: #25d366; }
+        .menu-lateral-wa:hover { background: #25d366; color: #000; }
+        @media (prefers-reduced-motion: reduce) { .menu-lateral, .menu-lateral-fondo { transition: none; } }
 
         @media (max-width: 1024px) {
             .lines, .projects, .steps, .guide { grid-template-columns: repeat(2, 1fr); }
@@ -272,7 +294,6 @@
         }
         @media (max-width: 860px) {
             .menu, .nav-actions .btn { display: none; }
-            .burger { display: block; }
             .hero .wrap, .about { grid-template-columns: 1fr; }
             .conditions { grid-template-columns: 1fr; }
         }
@@ -288,7 +309,7 @@
 <body>
 
     <!-- NAVEGACIÓN -->
-    <header class="nav">
+    <header class="nav fixed">
         <div class="wrap">
             <a href="index.html" class="brand">
                 <img src="assets/images/logo.png" alt="Reyes Computing">
@@ -305,16 +326,8 @@
             <div class="nav-actions">
                 <a href="#" class="btn btn-ghost btn-sm js-wa" data-msg="Hola Reyes Computing, quiero información sobre sus servicios."><i class="fa-brands fa-whatsapp"></i> Contacto</a>
                 <a href="tienda.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-store"></i> Tienda</a>
-                <button class="burger" id="burger" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+                <button id="mobile-menu-btn" aria-label="Abrir menu principal"><i class="fa-solid fa-bars"></i></button>
             </div>
-        </div>
-        <div class="m-menu" id="mMenu">
-            <a href="#nosotros">Nosotros</a>
-            <a href="#soluciones">Soluciones</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#como-trabajamos">Cómo trabajamos</a>
-            <a href="ofertas.html">Ofertas</a>
-            <a href="tienda.html">Tienda</a>
         </div>
     </header>
 
@@ -628,8 +641,6 @@
             e.preventDefault();
             window.open(waLink(t.dataset.msg), '_blank', 'noopener');
         });
-        document.getElementById('burger').addEventListener('click', () => document.getElementById('mMenu').classList.toggle('open'));
-        document.querySelectorAll('#mMenu a').forEach(a => a.addEventListener('click', () => document.getElementById('mMenu').classList.remove('open')));
         document.getElementById('yr').textContent = new Date().getFullYear();
     </script>
 </body>
